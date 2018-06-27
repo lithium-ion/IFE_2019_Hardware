@@ -1,0 +1,32 @@
+RC Circuit Transient Response
+**** Models ****
+*---------------------------------------------------------------*
+* TE EV200 Contactor Model
+*    
+*    Simulate the Inrush Current + Steady State Current
+*
+*                         Positive Side of Coil
+*                         |     Negative Side of Coil
+*                         |     |
+*---------------------------------------------------------------*
+.SUBCKT EV200_CONTACTOR coila coilb
+Rsteady coila a 123
+Lsteady a coilb 100u
+.ends EV200_CONTACTOR
+
+
+**** Netlist ****
+Iin gnd vdd DC 0 PULSE(0 0.140 1us 1us 1us 5us)
+V0 n0 gnd DC 0
+D2 gnd vdd
+X2 vdd n0 EV200_CONTACTOR
+
+**** Simulation ****
+.tran 1n 8us
+.control
+run
+set color0 = white ; plot window - background color
+set color1 = black ; plot window - grid and text color
+plot v(vdd) i(V0)
+.endc
+.end
