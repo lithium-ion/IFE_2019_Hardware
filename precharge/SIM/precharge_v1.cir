@@ -15,11 +15,12 @@ RC Circuit Transient Response
 *---------------------------------------------------------------*
 .SUBCKT RELAY_SPDT wcoila wcoilb wcom wno wnc
 Rcoil wcoila 1 225
-Lcoil 1 wcoilb 1uH
-S1 wnc wcom wcoila wcoilb swclosed OFF
-S2 wcom wno wcoila wcoilb swopen OFF
-.model swopen SW vt = 6.3 vh = 5.4 ron = 0.1u roff = 10g
-.model swclosed SW vt = 6.3 vh = 5.4 ron = 10g roff = 0.1u
+Lcoil 2 wcoilb 1uH
+Vsense 1 2 0
+W1 wnc wcom Vsense swclosed OFF
+W2 wcom wno Vsense swopen OFF
+.model swopen CSW it = 0.028 ih = 0.004 ron = 0.1u roff = 10g
+.model swclosed CSW it = 0.028 ih = 0.004 ron = 10g roff = 0.1u
 .ends RELAY_SPDT
 
 
@@ -137,7 +138,7 @@ D4 0 6 MD3
 
 **** Netlist ****
 Rset vdd n2 7k
-Rdist n3 gnd 100
+Rdist n3 gnd 50
 Ru vdd n4 3.7k
 Rl n4 gnd 6.3k
 R0 vdd gnd 10k
@@ -145,7 +146,7 @@ R1 vdd pc_comp 10k
 C0 n1 gnd 1000u
 X0 vdd gnd n1 n2 n3 RELAY_SPDT
 X1 n1 n4 vdd gnd pc_comp LM393
-vin vdd gnd DC 0 PULSE(0v 16v 1s 1us 1us 10s) PULSE(0v 16v 10.5s 1us 1us 10s)
+vin vdd gnd DC 0 PWL(0s 0v 1s 0v 1.001s 16v 10s 16v 10.001s 0v 10.5s 0v 10.501s 16v 20s 16v 30s 16v 30.001s 0v 40s 0v) r=0
 
 X2 vdd n7 EV200_CONTACTOR
 Dflyback vdd n7 Da1N4004
@@ -155,12 +156,13 @@ Vdummy n8 gnd 0
 
 
 **** Simulation ****
-.tran 0.1m 15s
+.tran 0.1m 41s
 .control
 run
 set color0 = white ; plot window - background color
 set color1 = black ; plot window - grid and text color
 plot v(vdd) v(n1) v(n4) v(pc_comp)
+plot v(vdd) v(pc_comp)
 plot v(pc_comp) v(n7)
 .endc
 .end
