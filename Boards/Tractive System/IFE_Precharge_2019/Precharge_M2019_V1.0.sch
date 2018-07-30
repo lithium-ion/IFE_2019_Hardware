@@ -158,20 +158,6 @@
 <libraries>
 <library name="Display_Custom">
 <packages>
-<package name="JS-M.1C">
-<description>JS-M 1c Relay</description>
-<wire x1="-11" y1="-8" x2="11" y2="-8" width="0.127" layer="21"/>
-<wire x1="11" y1="-8" x2="11" y2="8" width="0.127" layer="21"/>
-<wire x1="11" y1="8" x2="-11" y2="8" width="0.127" layer="21"/>
-<wire x1="-11" y1="8" x2="-11" y2="-8" width="0.127" layer="21"/>
-<pad name="P$1" x="-8.7" y="0" drill="1.5"/>
-<pad name="P$2" x="-6.7" y="6" drill="1.5"/>
-<pad name="P$3" x="5.5" y="6" drill="1.5"/>
-<pad name="P$4" x="5.5" y="-6" drill="1.5"/>
-<pad name="P$5" x="-6.7" y="-6" drill="1.5"/>
-<text x="-10.9" y="8.4" size="0.8128" layer="25">&gt;NAME</text>
-<text x="-10.84" y="9.67" size="0.8128" layer="27">&gt;VALUE</text>
-</package>
 <package name="MINIFIT_JR_5566-04">
 <description>MOLEX Minifit JR Connector 5566-04
 &lt;p&gt;https://www.molex.com/pdm_docs/sd/039293026_sd.pdf&lt;/p&gt;</description>
@@ -241,46 +227,25 @@
 <rectangle x1="0.7112" y1="-1.2954" x2="1.1684" y2="-0.7112" layer="51"/>
 <rectangle x1="-1.1684" y1="-1.2954" x2="-0.7112" y2="-0.7112" layer="51"/>
 </package>
+<package name="TH_SPDT_MINI_POWER_RELAY_PB">
+<description>TE CONN
+
+&lt;p&gt;TE connectivity general purpose mini power relay&lt;/p&gt;
+
+&lt;p&gt; http://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&amp;DocNm=PB&amp;DocType=DS&amp;DocLang=English&lt;/p&gt;</description>
+<pad name="A1" x="-2.5" y="3.75" drill="1.45"/>
+<pad name="A2" x="-2.5" y="-3.75" drill="1.45"/>
+<pad name="11" x="3.75" y="5" drill="1.45"/>
+<pad name="14" x="3.75" y="-5" drill="1.45"/>
+<pad name="12" x="2.5" y="0" drill="1.45"/>
+<wire x1="-7.5" y1="7.5" x2="-7.5" y2="-7.5" width="0.127" layer="51"/>
+<wire x1="-7.5" y1="-7.5" x2="7.5" y2="-7.5" width="0.127" layer="51"/>
+<wire x1="7.5" y1="-7.5" x2="7.5" y2="7.5" width="0.127" layer="51"/>
+<wire x1="7.5" y1="7.5" x2="-7.5" y2="7.5" width="0.127" layer="51"/>
+<text x="-7.874" y="-7.493" size="0.8128" layer="25" rot="R90">&gt;NAME</text>
+</package>
 </packages>
 <symbols>
-<symbol name="SPDT">
-<description>SPDT Realy</description>
-<wire x1="4.445" y1="-2.54" x2="5.207" y2="-2.54" width="0.254" layer="94"/>
-<wire x1="5.207" y1="-2.54" x2="5.715" y2="-2.54" width="0.254" layer="94"/>
-<wire x1="10.795" y1="-2.54" x2="9.525" y2="-2.54" width="0.254" layer="94"/>
-<wire x1="7.62" y1="-6.35" x2="5.207" y2="-2.54" width="0.254" layer="94"/>
-<wire x1="7.62" y1="-6.35" x2="7.62" y2="-7.62" width="0.254" layer="94"/>
-<circle x="7.62" y="-6.35" radius="0.127" width="0.4064" layer="94"/>
-<pin name="NC" x="2.54" y="7.62" visible="pad" length="short" direction="pas" rot="R270"/>
-<pin name="NO" x="12.7" y="7.62" visible="pad" length="short" direction="pas" rot="R270"/>
-<pin name="COM" x="7.62" y="-10.16" visible="pad" length="short" direction="pas" rot="R90"/>
-<wire x1="2.54" y1="5.08" x2="2.54" y2="-2.54" width="0.2032" layer="94"/>
-<wire x1="2.54" y1="-2.54" x2="4.445" y2="-2.54" width="0.2032" layer="94"/>
-<wire x1="10.795" y1="-2.54" x2="12.7" y2="-2.54" width="0.2032" layer="94"/>
-<wire x1="12.7" y1="-2.54" x2="12.7" y2="5.08" width="0.2032" layer="94"/>
-<wire x1="-6.096" y1="0" x2="-5.08" y2="0" width="0.2032" layer="94"/>
-<wire x1="-5.08" y1="0" x2="-2.54" y2="0" width="0.2032" layer="94"/>
-<wire x1="-2.54" y1="0" x2="-2.54" y2="-2.54" width="0.2032" layer="94"/>
-<wire x1="-2.54" y1="-2.54" x2="-3.556" y2="-2.54" width="0.2032" layer="94"/>
-<wire x1="-3.556" y1="-2.54" x2="-5.08" y2="-2.54" width="0.2032" layer="94"/>
-<wire x1="-5.08" y1="-2.54" x2="-7.62" y2="-2.54" width="0.2032" layer="94"/>
-<wire x1="-7.62" y1="-2.54" x2="-7.62" y2="0" width="0.2032" layer="94"/>
-<wire x1="-7.62" y1="0" x2="-6.096" y2="0" width="0.2032" layer="94"/>
-<wire x1="-6.096" y1="0" x2="-3.556" y2="-2.54" width="0.2032" layer="94"/>
-<text x="-2.54" y="0" size="1.778" layer="94">+</text>
-<text x="-2.54" y="-3.81" size="1.778" layer="94">-</text>
-<wire x1="-5.08" y1="0" x2="-5.08" y2="5.08" width="0.2032" layer="94"/>
-<wire x1="-5.08" y1="-2.54" x2="-5.08" y2="-7.62" width="0.2032" layer="94"/>
-<pin name="COIL+" x="-5.08" y="7.62" visible="pad" length="short" rot="R270"/>
-<pin name="COIL-" x="-5.08" y="-10.16" visible="pad" length="short" rot="R90"/>
-<wire x1="15.24" y1="5.08" x2="-10.16" y2="5.08" width="0.2032" layer="94" style="shortdash"/>
-<wire x1="-10.16" y1="5.08" x2="-10.16" y2="-7.62" width="0.2032" layer="94" style="shortdash"/>
-<wire x1="-10.16" y1="-7.62" x2="7.62" y2="-7.62" width="0.2032" layer="94" style="shortdash"/>
-<wire x1="7.62" y1="-7.62" x2="15.24" y2="-7.62" width="0.2032" layer="94" style="shortdash"/>
-<wire x1="15.24" y1="-7.62" x2="15.24" y2="5.08" width="0.2032" layer="94" style="shortdash"/>
-<text x="16.256" y="3.81" size="1.778" layer="95">&gt;NAME</text>
-<text x="16.256" y="1.524" size="1.778" layer="95">&gt;VALUE</text>
-</symbol>
 <symbol name="PINH2X2">
 <wire x1="-8.89" y1="-2.54" x2="6.35" y2="-2.54" width="0.4064" layer="94"/>
 <wire x1="6.35" y1="-2.54" x2="6.35" y2="5.08" width="0.4064" layer="94"/>
@@ -340,29 +305,46 @@
 <vertex x="2.032" y="-0.762"/>
 </polygon>
 </symbol>
+<symbol name="SPDT">
+<description>SPDT Realy</description>
+<wire x1="4.445" y1="-2.54" x2="5.207" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="5.207" y1="-2.54" x2="5.715" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="10.795" y1="-2.54" x2="9.525" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="7.62" y1="-6.35" x2="5.207" y2="-2.54" width="0.254" layer="94"/>
+<wire x1="7.62" y1="-6.35" x2="7.62" y2="-7.62" width="0.254" layer="94"/>
+<circle x="7.62" y="-6.35" radius="0.127" width="0.4064" layer="94"/>
+<pin name="NC" x="2.54" y="7.62" visible="pad" length="short" direction="pas" rot="R270"/>
+<pin name="NO" x="12.7" y="7.62" visible="pad" length="short" direction="pas" rot="R270"/>
+<pin name="COM" x="7.62" y="-10.16" visible="pad" length="short" direction="pas" rot="R90"/>
+<wire x1="2.54" y1="5.08" x2="2.54" y2="-2.54" width="0.2032" layer="94"/>
+<wire x1="2.54" y1="-2.54" x2="4.445" y2="-2.54" width="0.2032" layer="94"/>
+<wire x1="10.795" y1="-2.54" x2="12.7" y2="-2.54" width="0.2032" layer="94"/>
+<wire x1="12.7" y1="-2.54" x2="12.7" y2="5.08" width="0.2032" layer="94"/>
+<wire x1="-6.096" y1="0" x2="-5.08" y2="0" width="0.2032" layer="94"/>
+<wire x1="-5.08" y1="0" x2="-2.54" y2="0" width="0.2032" layer="94"/>
+<wire x1="-2.54" y1="0" x2="-2.54" y2="-2.54" width="0.2032" layer="94"/>
+<wire x1="-2.54" y1="-2.54" x2="-3.556" y2="-2.54" width="0.2032" layer="94"/>
+<wire x1="-3.556" y1="-2.54" x2="-5.08" y2="-2.54" width="0.2032" layer="94"/>
+<wire x1="-5.08" y1="-2.54" x2="-7.62" y2="-2.54" width="0.2032" layer="94"/>
+<wire x1="-7.62" y1="-2.54" x2="-7.62" y2="0" width="0.2032" layer="94"/>
+<wire x1="-7.62" y1="0" x2="-6.096" y2="0" width="0.2032" layer="94"/>
+<wire x1="-6.096" y1="0" x2="-3.556" y2="-2.54" width="0.2032" layer="94"/>
+<text x="-2.54" y="0" size="1.778" layer="94">+</text>
+<text x="-2.54" y="-3.81" size="1.778" layer="94">-</text>
+<wire x1="-5.08" y1="0" x2="-5.08" y2="5.08" width="0.2032" layer="94"/>
+<wire x1="-5.08" y1="-2.54" x2="-5.08" y2="-7.62" width="0.2032" layer="94"/>
+<pin name="COIL+" x="-5.08" y="7.62" visible="pad" length="short" rot="R270"/>
+<pin name="COIL-" x="-5.08" y="-10.16" visible="pad" length="short" rot="R90"/>
+<wire x1="15.24" y1="5.08" x2="-10.16" y2="5.08" width="0.2032" layer="94" style="shortdash"/>
+<wire x1="-10.16" y1="5.08" x2="-10.16" y2="-7.62" width="0.2032" layer="94" style="shortdash"/>
+<wire x1="-10.16" y1="-7.62" x2="7.62" y2="-7.62" width="0.2032" layer="94" style="shortdash"/>
+<wire x1="7.62" y1="-7.62" x2="15.24" y2="-7.62" width="0.2032" layer="94" style="shortdash"/>
+<wire x1="15.24" y1="-7.62" x2="15.24" y2="5.08" width="0.2032" layer="94" style="shortdash"/>
+<text x="16.256" y="3.81" size="1.778" layer="95">&gt;NAME</text>
+<text x="16.256" y="1.524" size="1.778" layer="95">&gt;VALUE</text>
+</symbol>
 </symbols>
 <devicesets>
-<deviceset name="JS-M">
-<description>&lt;p&gt;JS-M 1c Relay&lt;/p&gt;
-&lt;p&gt;https://media.digikey.com/pdf/Data%20Sheets/Panasonic%20Electric%20Works%20PDFs/JS-M_Series_Rev_Dec_2011.pdf&lt;/p&gt;</description>
-<gates>
-<gate name="G$1" symbol="SPDT" x="-2.54" y="0"/>
-</gates>
-<devices>
-<device name="" package="JS-M.1C">
-<connects>
-<connect gate="G$1" pin="COIL+" pad="P$2"/>
-<connect gate="G$1" pin="COIL-" pad="P$5"/>
-<connect gate="G$1" pin="COM" pad="P$1"/>
-<connect gate="G$1" pin="NC" pad="P$4"/>
-<connect gate="G$1" pin="NO" pad="P$3"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
 <deviceset name="MINIFIT_JR_5566-04">
 <description>&lt;H3&gt; Molex Minifit JR 5566-04 &lt;/H3&gt;
 &lt;p&gt; Vertical 4 position headder &lt;/p&gt;
@@ -434,6 +416,32 @@
 <connect gate="G$1" pin="D" pad="3"/>
 <connect gate="G$1" pin="G" pad="1"/>
 <connect gate="G$1" pin="S" pad="2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="PB114012">
+<description>PB114012
+
+&lt;p&gt; TE Connectivity &lt;/p&gt;
+
+&lt;p&gt; Mini Power Pelay SPDT &lt;/p&gt;
+
+&lt;p&gt; http://www.te.com/commerce/DocumentDelivery/DDEController?Action=srchrtrv&amp;DocNm=PB&amp;DocType=DS&amp;DocLang=English &lt;/p&gt;</description>
+<gates>
+<gate name="G$1" symbol="SPDT" x="-2.54" y="0"/>
+</gates>
+<devices>
+<device name="" package="TH_SPDT_MINI_POWER_RELAY_PB">
+<connects>
+<connect gate="G$1" pin="COIL+" pad="A1"/>
+<connect gate="G$1" pin="COIL-" pad="A2"/>
+<connect gate="G$1" pin="COM" pad="11"/>
+<connect gate="G$1" pin="NC" pad="12"/>
+<connect gate="G$1" pin="NO" pad="14"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -18550,7 +18558,6 @@ Standard schematic elements and footprints for 5mm, 3mm, 1206, and 0603 sized LE
 </class>
 </classes>
 <parts>
-<part name="U$1" library="Display_Custom" deviceset="JS-M" device=""/>
 <part name="P+1" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="V+" device=""/>
 <part name="P+2" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="V+" device=""/>
 <part name="GND1" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
@@ -18565,7 +18572,6 @@ Standard schematic elements and footprints for 5mm, 3mm, 1206, and 0603 sized LE
 <part name="P+4" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="V+" device=""/>
 <part name="GND4" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="R1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0805" package3d_urn="urn:adsk.eagle:package:23553/2" value="10k"/>
-<part name="R2" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0805" package3d_urn="urn:adsk.eagle:package:23553/2" value="10k"/>
 <part name="P+5" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="V+" device=""/>
 <part name="U$3" library="Display_Custom" deviceset="NTD20N03L27" device=""/>
 <part name="GND5" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
@@ -18592,13 +18598,13 @@ Standard schematic elements and footprints for 5mm, 3mm, 1206, and 0603 sized LE
 <part name="RDIST" library="SparkFun-Resistors" deviceset="RESISTOR" device="PTH-1/2W" value="50"/>
 <part name="C1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="CPOL-US" device="E2.5-5" package3d_urn="urn:adsk.eagle:package:23344/1" value="33u"/>
 <part name="RSET" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="0207/10" package3d_urn="urn:adsk.eagle:package:23491/1" value="220k"/>
+<part name="U$1" library="Display_Custom" deviceset="PB114012" device=""/>
 </parts>
 <sheets>
 <sheet>
 <plain>
 </plain>
 <instances>
-<instance part="U$1" gate="G$1" x="53.34" y="43.18"/>
 <instance part="P+1" gate="1" x="48.26" y="68.58"/>
 <instance part="P+2" gate="1" x="66.04" y="68.58"/>
 <instance part="GND1" gate="1" x="48.26" y="17.78"/>
@@ -18613,7 +18619,6 @@ Standard schematic elements and footprints for 5mm, 3mm, 1206, and 0603 sized LE
 <instance part="P+4" gate="1" x="109.22" y="73.66"/>
 <instance part="GND4" gate="1" x="93.98" y="30.48"/>
 <instance part="R1" gate="G$1" x="109.22" y="63.5" rot="R90"/>
-<instance part="R2" gate="G$1" x="27.94" y="40.64" rot="R90"/>
 <instance part="P+5" gate="1" x="134.62" y="76.2"/>
 <instance part="U$3" gate="G$1" x="132.08" y="48.26"/>
 <instance part="GND5" gate="1" x="134.62" y="30.48"/>
@@ -18640,6 +18645,7 @@ Standard schematic elements and footprints for 5mm, 3mm, 1206, and 0603 sized LE
 <instance part="RDIST" gate="G$1" x="55.88" y="58.42" rot="R90"/>
 <instance part="C1" gate="G$1" x="60.96" y="27.94"/>
 <instance part="RSET" gate="G$1" x="66.04" y="58.42" rot="R90"/>
+<instance part="U$1" gate="G$1" x="53.34" y="43.18"/>
 </instances>
 <busses>
 </busses>
@@ -18652,17 +18658,13 @@ Standard schematic elements and footprints for 5mm, 3mm, 1206, and 0603 sized LE
 </segment>
 <segment>
 <pinref part="P+1" gate="1" pin="V+"/>
-<pinref part="U$1" gate="G$1" pin="COIL+"/>
 <wire x1="48.26" y1="66.04" x2="48.26" y2="55.88" width="0.1524" layer="91"/>
 <wire x1="48.26" y1="55.88" x2="48.26" y2="50.8" width="0.1524" layer="91"/>
-<wire x1="27.94" y1="45.72" x2="27.94" y2="55.88" width="0.1524" layer="91"/>
-<wire x1="27.94" y1="55.88" x2="38.1" y2="55.88" width="0.1524" layer="91"/>
 <junction x="48.26" y="55.88"/>
 <pinref part="D1" gate="1" pin="C"/>
 <wire x1="38.1" y1="55.88" x2="48.26" y2="55.88" width="0.1524" layer="91"/>
 <wire x1="38.1" y1="43.18" x2="38.1" y2="55.88" width="0.1524" layer="91"/>
-<junction x="38.1" y="55.88"/>
-<pinref part="R2" gate="G$1" pin="2"/>
+<pinref part="U$1" gate="G$1" pin="COIL+"/>
 </segment>
 <segment>
 <pinref part="U$4" gate="G1" pin="V+"/>
@@ -18720,37 +18722,33 @@ Standard schematic elements and footprints for 5mm, 3mm, 1206, and 0603 sized LE
 </net>
 <net name="N$1" class="0">
 <segment>
-<pinref part="U$1" gate="G$1" pin="NO"/>
 <wire x1="66.04" y1="53.34" x2="66.04" y2="50.8" width="0.1524" layer="91"/>
 <pinref part="RSET" gate="G$1" pin="1"/>
+<pinref part="U$1" gate="G$1" pin="NO"/>
 </segment>
 </net>
 <net name="N$2" class="0">
 <segment>
-<pinref part="U$1" gate="G$1" pin="COM"/>
 <wire x1="60.96" y1="33.02" x2="60.96" y2="30.48" width="0.1524" layer="91"/>
 <wire x1="60.96" y1="33.02" x2="78.74" y2="33.02" width="0.1524" layer="91"/>
-<junction x="60.96" y="33.02"/>
 <pinref part="U$4" gate="G1" pin="+IN"/>
 <wire x1="78.74" y1="33.02" x2="78.74" y2="43.18" width="0.1524" layer="91"/>
 <wire x1="78.74" y1="43.18" x2="88.9" y2="43.18" width="0.1524" layer="91"/>
 <pinref part="C1" gate="G$1" pin="+"/>
+<pinref part="U$1" gate="G$1" pin="COM"/>
+<junction x="60.96" y="33.02"/>
 </segment>
 </net>
 <net name="GND" class="0">
 <segment>
 <pinref part="GND1" gate="1" pin="GND"/>
-<pinref part="U$1" gate="G$1" pin="COIL-"/>
 <wire x1="48.26" y1="33.02" x2="48.26" y2="27.94" width="0.1524" layer="91"/>
 <wire x1="48.26" y1="27.94" x2="48.26" y2="20.32" width="0.1524" layer="91"/>
-<wire x1="27.94" y1="35.56" x2="27.94" y2="27.94" width="0.1524" layer="91"/>
-<wire x1="27.94" y1="27.94" x2="38.1" y2="27.94" width="0.1524" layer="91"/>
 <pinref part="D1" gate="1" pin="A"/>
 <wire x1="38.1" y1="38.1" x2="38.1" y2="27.94" width="0.1524" layer="91"/>
 <wire x1="38.1" y1="27.94" x2="48.26" y2="27.94" width="0.1524" layer="91"/>
-<junction x="38.1" y="27.94"/>
 <junction x="48.26" y="27.94"/>
-<pinref part="R2" gate="G$1" pin="1"/>
+<pinref part="U$1" gate="G$1" pin="COIL-"/>
 </segment>
 <segment>
 <pinref part="GND2" gate="1" pin="GND"/>
@@ -18801,9 +18799,9 @@ Standard schematic elements and footprints for 5mm, 3mm, 1206, and 0603 sized LE
 </net>
 <net name="N$3" class="0">
 <segment>
-<pinref part="U$1" gate="G$1" pin="NC"/>
 <wire x1="55.88" y1="53.34" x2="55.88" y2="50.8" width="0.1524" layer="91"/>
 <pinref part="RDIST" gate="G$1" pin="1"/>
+<pinref part="U$1" gate="G$1" pin="NC"/>
 </segment>
 </net>
 <net name="V_TRIG" class="0">
