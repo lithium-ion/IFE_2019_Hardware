@@ -54,7 +54,7 @@
 <layer number="44" name="Drills" color="7" fill="1" visible="no" active="yes"/>
 <layer number="45" name="Holes" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="46" name="Milling" color="3" fill="1" visible="no" active="yes"/>
-<layer number="47" name="Measures" color="7" fill="1" visible="no" active="yes"/>
+<layer number="47" name="Measures" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="48" name="Document" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="49" name="Reference" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="50" name="dxf" color="7" fill="1" visible="no" active="no"/>
@@ -165,6 +165,10 @@
 <hole x="29.21" y="35.56" drill="2.8956"/>
 <text x="30.353" y="28.194" size="0.8128" layer="25" rot="R90" align="center">IFE PRECHARGE</text>
 <text x="31.623" y="27.178" size="0.8128" layer="25" rot="R90" align="center">M2019 v1.0</text>
+<dimension x1="0" y1="39.37" x2="33.02" y2="39.37" x3="16.51" y3="40.64" textsize="0.8128" layer="47" visible="yes"/>
+<dimension x1="0" y1="39.37" x2="33.02" y2="39.37" x3="16.51" y3="43.18" textsize="0.8128" layer="47" unit="mil" visible="yes"/>
+<dimension x1="0" y1="39.37" x2="0" y2="0" x3="-5.08" y3="19.685" textsize="0.8128" layer="47" unit="mil" visible="yes"/>
+<dimension x1="0" y1="39.37" x2="0" y2="0" x3="-2.54" y3="19.685" textsize="0.8128" layer="47" visible="yes"/>
 </plain>
 <libraries>
 <library name="rcl" urn="urn:adsk.eagle:library:334">

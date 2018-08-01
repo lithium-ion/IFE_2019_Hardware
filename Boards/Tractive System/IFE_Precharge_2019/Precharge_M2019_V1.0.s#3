@@ -18551,7 +18551,6 @@ Standard schematic elements and footprints for 5mm, 3mm, 1206, and 0603 sized LE
 </classes>
 <parts>
 <part name="U$1" library="Display_Custom" deviceset="JS-M" device=""/>
-<part name="RSET" library="SparkFun-Resistors" deviceset="RESISTOR" device="PTH-1/2W" value="350k"/>
 <part name="P+1" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="V+" device=""/>
 <part name="P+2" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="V+" device=""/>
 <part name="GND1" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
@@ -18592,6 +18591,7 @@ Standard schematic elements and footprints for 5mm, 3mm, 1206, and 0603 sized LE
 <part name="GND10" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="RDIST" library="SparkFun-Resistors" deviceset="RESISTOR" device="PTH-1/2W" value="50"/>
 <part name="C1" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="CPOL-US" device="E2.5-5" package3d_urn="urn:adsk.eagle:package:23344/1" value="33u"/>
+<part name="RSET" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="0207/10" package3d_urn="urn:adsk.eagle:package:23491/1" value="220k"/>
 </parts>
 <sheets>
 <sheet>
@@ -18599,7 +18599,6 @@ Standard schematic elements and footprints for 5mm, 3mm, 1206, and 0603 sized LE
 </plain>
 <instances>
 <instance part="U$1" gate="G$1" x="53.34" y="43.18"/>
-<instance part="RSET" gate="G$1" x="66.04" y="58.42" rot="R90"/>
 <instance part="P+1" gate="1" x="48.26" y="68.58"/>
 <instance part="P+2" gate="1" x="66.04" y="68.58"/>
 <instance part="GND1" gate="1" x="48.26" y="17.78"/>
@@ -18640,6 +18639,7 @@ Standard schematic elements and footprints for 5mm, 3mm, 1206, and 0603 sized LE
 <instance part="GND10" gate="1" x="-7.62" y="40.64"/>
 <instance part="RDIST" gate="G$1" x="55.88" y="58.42" rot="R90"/>
 <instance part="C1" gate="G$1" x="60.96" y="27.94"/>
+<instance part="RSET" gate="G$1" x="66.04" y="58.42" rot="R90"/>
 </instances>
 <busses>
 </busses>
@@ -18647,8 +18647,8 @@ Standard schematic elements and footprints for 5mm, 3mm, 1206, and 0603 sized LE
 <net name="V+" class="0">
 <segment>
 <pinref part="P+2" gate="1" pin="V+"/>
-<pinref part="RSET" gate="G$1" pin="2"/>
 <wire x1="66.04" y1="66.04" x2="66.04" y2="63.5" width="0.1524" layer="91"/>
+<pinref part="RSET" gate="G$1" pin="2"/>
 </segment>
 <segment>
 <pinref part="P+1" gate="1" pin="V+"/>
@@ -18720,9 +18720,9 @@ Standard schematic elements and footprints for 5mm, 3mm, 1206, and 0603 sized LE
 </net>
 <net name="N$1" class="0">
 <segment>
-<pinref part="RSET" gate="G$1" pin="1"/>
 <pinref part="U$1" gate="G$1" pin="NO"/>
 <wire x1="66.04" y1="53.34" x2="66.04" y2="50.8" width="0.1524" layer="91"/>
+<pinref part="RSET" gate="G$1" pin="1"/>
 </segment>
 </net>
 <net name="N$2" class="0">
