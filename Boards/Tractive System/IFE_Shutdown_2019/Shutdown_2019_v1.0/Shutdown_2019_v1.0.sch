@@ -19112,6 +19112,68 @@ Rebel - DIO-09553&lt;br&gt;
 </deviceset>
 </devicesets>
 </library>
+<library name="DIODES_INC">
+<packages>
+<package name="SOT23-3">
+<wire x1="1.4224" y1="0.6604" x2="1.4224" y2="-0.6604" width="0.1524" layer="51"/>
+<wire x1="1.4224" y1="-0.6604" x2="-1.4224" y2="-0.6604" width="0.1524" layer="51"/>
+<wire x1="-1.4224" y1="-0.6604" x2="-1.4224" y2="0.6604" width="0.1524" layer="51"/>
+<wire x1="-1.4224" y1="0.6604" x2="1.4224" y2="0.6604" width="0.1524" layer="51"/>
+<wire x1="-0.8" y1="0.7" x2="-1.4" y2="0.7" width="0.2032" layer="21"/>
+<wire x1="-1.4" y1="0.7" x2="-1.4" y2="-0.1" width="0.2032" layer="21"/>
+<wire x1="0.8" y1="0.7" x2="1.4" y2="0.7" width="0.2032" layer="21"/>
+<wire x1="1.4" y1="0.7" x2="1.4" y2="-0.1" width="0.2032" layer="21"/>
+<smd name="3" x="0" y="1.1" dx="0.8" dy="0.9" layer="1"/>
+<smd name="2" x="0.95" y="-1" dx="0.8" dy="0.9" layer="1"/>
+<smd name="1" x="-0.95" y="-1" dx="0.8" dy="0.9" layer="1"/>
+<text x="-0.8255" y="1.778" size="0.4064" layer="25">&gt;NAME</text>
+<text x="-1.016" y="-0.1905" size="0.4064" layer="27">&gt;VALUE</text>
+</package>
+</packages>
+<symbols>
+<symbol name="NPN">
+<wire x1="2.54" y1="2.54" x2="0.508" y2="1.524" width="0.1524" layer="94"/>
+<wire x1="1.778" y1="-1.524" x2="2.54" y2="-2.54" width="0.1524" layer="94"/>
+<wire x1="2.54" y1="-2.54" x2="1.27" y2="-2.54" width="0.1524" layer="94"/>
+<wire x1="1.27" y1="-2.54" x2="1.778" y2="-1.524" width="0.1524" layer="94"/>
+<wire x1="1.54" y1="-2.04" x2="0.308" y2="-1.424" width="0.1524" layer="94"/>
+<wire x1="1.524" y1="-2.413" x2="2.286" y2="-2.413" width="0.254" layer="94"/>
+<wire x1="2.286" y1="-2.413" x2="1.778" y2="-1.778" width="0.254" layer="94"/>
+<wire x1="1.778" y1="-1.778" x2="1.524" y2="-2.286" width="0.254" layer="94"/>
+<wire x1="1.524" y1="-2.286" x2="1.905" y2="-2.286" width="0.254" layer="94"/>
+<wire x1="1.905" y1="-2.286" x2="1.778" y2="-2.032" width="0.254" layer="94"/>
+<text x="-10.16" y="7.62" size="1.778" layer="95">&gt;NAME</text>
+<text x="-10.16" y="5.08" size="1.778" layer="96">&gt;VALUE</text>
+<rectangle x1="-0.254" y1="-2.54" x2="0.508" y2="2.54" layer="94"/>
+<pin name="B" x="-2.54" y="0" visible="off" length="short" direction="pas" swaplevel="1"/>
+<pin name="E" x="2.54" y="-5.08" visible="off" length="short" direction="pas" swaplevel="3" rot="R90"/>
+<pin name="C" x="2.54" y="5.08" visible="off" length="short" direction="pas" swaplevel="2" rot="R270"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="DNBT8105">
+<description>&lt;h3&gt; DNBT8105 Diodes Inc&lt;/h3&gt;
+&lt;p&gt; 1A NPN SURFACE MOUNT TRANSISTOR &lt;/p&gt;
+&lt;p&gt; Vce = 60V, Ice = 1A, h=100, Vbe = 1.1V &lt;/p&gt;
+&lt;p&gt;https://www.diodes.com/assets/Datasheets/ds30513.pdf&lt;/p&gt;</description>
+<gates>
+<gate name="G$1" symbol="NPN" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="SOT23-3">
+<connects>
+<connect gate="G$1" pin="B" pad="1"/>
+<connect gate="G$1" pin="C" pad="3"/>
+<connect gate="G$1" pin="E" pad="2"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -19248,6 +19310,9 @@ Rebel - DIO-09553&lt;br&gt;
 <part name="FRAME7" library="frames" library_urn="urn:adsk.eagle:library:229" deviceset="FRAME_B_L" device=""/>
 <part name="FRAME8" library="frames" library_urn="urn:adsk.eagle:library:229" deviceset="FRAME_B_L" device=""/>
 <part name="FRAME9" library="frames" library_urn="urn:adsk.eagle:library:229" deviceset="FRAME_B_L" device=""/>
+<part name="U$4" library="DIODES_INC" deviceset="DNBT8105" device=""/>
+<part name="U$7" library="DIODES_INC" deviceset="DNBT8105" device=""/>
+<part name="U$8" library="DIODES_INC" deviceset="DNBT8105" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -19933,6 +19998,7 @@ Rebel - DIO-09553&lt;br&gt;
 <instances>
 <instance part="FRAME4" gate="G$1" x="-208.28" y="-129.54"/>
 <instance part="FRAME4" gate="G$2" x="116.84" y="-129.54"/>
+<instance part="U$4" gate="G$1" x="35.56" y="20.32"/>
 </instances>
 <busses>
 </busses>
@@ -19946,6 +20012,8 @@ Rebel - DIO-09553&lt;br&gt;
 <instances>
 <instance part="FRAME5" gate="G$1" x="-205.74" y="-132.08"/>
 <instance part="FRAME5" gate="G$2" x="119.38" y="-132.08"/>
+<instance part="U$7" gate="G$1" x="48.26" y="33.02"/>
+<instance part="U$8" gate="G$1" x="48.26" y="-10.16"/>
 </instances>
 <busses>
 </busses>

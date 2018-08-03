@@ -19546,6 +19546,13 @@ Rebel - DIO-09553&lt;br&gt;
 <part name="GND28" library="supply1" deviceset="GND" device=""/>
 <part name="GND29" library="supply1" deviceset="GND" device=""/>
 <part name="FRAME1" library="frames" library_urn="urn:adsk.eagle:library:229" deviceset="FRAME_B_L" device=""/>
+<part name="FRAME2" library="frames" library_urn="urn:adsk.eagle:library:229" deviceset="FRAME_B_L" device=""/>
+<part name="FRAME3" library="frames" library_urn="urn:adsk.eagle:library:229" deviceset="FRAME_B_L" device=""/>
+<part name="FRAME4" library="frames" library_urn="urn:adsk.eagle:library:229" deviceset="FRAME_B_L" device=""/>
+<part name="FRAME5" library="frames" library_urn="urn:adsk.eagle:library:229" deviceset="FRAME_B_L" device=""/>
+<part name="FRAME6" library="frames" library_urn="urn:adsk.eagle:library:229" deviceset="FRAME_B_L" device=""/>
+<part name="FRAME7" library="frames" library_urn="urn:adsk.eagle:library:229" deviceset="FRAME_B_L" device=""/>
+<part name="FRAME8" library="frames" library_urn="urn:adsk.eagle:library:229" deviceset="FRAME_B_L" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -19554,6 +19561,8 @@ Rebel - DIO-09553&lt;br&gt;
 </plain>
 <instances>
 <instance part="U1" gate="A" x="25.4" y="83.82"/>
+<instance part="FRAME2" gate="G$1" x="-177.8" y="-73.66"/>
+<instance part="FRAME2" gate="G$2" x="147.32" y="-73.66"/>
 </instances>
 <busses>
 </busses>
@@ -20028,6 +20037,8 @@ Rebel - DIO-09553&lt;br&gt;
 </instance>
 <instance part="GND28" gate="1" x="160.02" y="43.18"/>
 <instance part="GND29" gate="1" x="180.34" y="43.18"/>
+<instance part="FRAME3" gate="G$1" x="-152.4" y="-99.06"/>
+<instance part="FRAME3" gate="G$2" x="172.72" y="-99.06"/>
 </instances>
 <busses>
 </busses>
@@ -20225,6 +20236,8 @@ Rebel - DIO-09553&lt;br&gt;
 <plain>
 </plain>
 <instances>
+<instance part="FRAME4" gate="G$1" x="-208.28" y="-129.54"/>
+<instance part="FRAME4" gate="G$2" x="116.84" y="-129.54"/>
 </instances>
 <busses>
 </busses>
@@ -20236,6 +20249,8 @@ Rebel - DIO-09553&lt;br&gt;
 <plain>
 </plain>
 <instances>
+<instance part="FRAME5" gate="G$1" x="-205.74" y="-132.08"/>
+<instance part="FRAME5" gate="G$2" x="119.38" y="-132.08"/>
 </instances>
 <busses>
 </busses>
@@ -20247,6 +20262,8 @@ Rebel - DIO-09553&lt;br&gt;
 <plain>
 </plain>
 <instances>
+<instance part="FRAME6" gate="G$1" x="-205.74" y="-127"/>
+<instance part="FRAME6" gate="G$2" x="119.38" y="-127"/>
 </instances>
 <busses>
 </busses>
@@ -20274,6 +20291,8 @@ Rebel - DIO-09553&lt;br&gt;
 <instance part="H3" gate="G$1" x="-12.7" y="10.16"/>
 <instance part="H4" gate="G$1" x="-12.7" y="2.54"/>
 <instance part="GND3" gate="1" x="-17.78" y="-2.54"/>
+<instance part="FRAME7" gate="G$1" x="-172.72" y="-106.68"/>
+<instance part="FRAME7" gate="G$2" x="152.4" y="-106.68"/>
 </instances>
 <busses>
 </busses>
@@ -20517,6 +20536,8 @@ Rebel - DIO-09553&lt;br&gt;
 <instance part="D3" gate="G$1" x="48.26" y="73.66" rot="R90"/>
 <instance part="D5" gate="G$1" x="48.26" y="15.24" rot="R90"/>
 <instance part="D6" gate="G$1" x="48.26" y="-43.18" rot="R90"/>
+<instance part="FRAME8" gate="G$1" x="-132.08" y="-134.62"/>
+<instance part="FRAME8" gate="G$2" x="193.04" y="-134.62"/>
 </instances>
 <busses>
 </busses>

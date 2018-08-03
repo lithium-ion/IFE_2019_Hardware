@@ -19553,6 +19553,7 @@ Rebel - DIO-09553&lt;br&gt;
 <part name="FRAME6" library="frames" library_urn="urn:adsk.eagle:library:229" deviceset="FRAME_B_L" device=""/>
 <part name="FRAME7" library="frames" library_urn="urn:adsk.eagle:library:229" deviceset="FRAME_B_L" device=""/>
 <part name="FRAME8" library="frames" library_urn="urn:adsk.eagle:library:229" deviceset="FRAME_B_L" device=""/>
+<part name="FRAME9" library="frames" library_urn="urn:adsk.eagle:library:229" deviceset="FRAME_B_L" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -20692,6 +20693,8 @@ Rebel - DIO-09553&lt;br&gt;
 <instances>
 <instance part="U2" gate="A" x="35.56" y="66.04"/>
 <instance part="S1" gate="1" x="129.54" y="63.5"/>
+<instance part="FRAME9" gate="G$1" x="-172.72" y="-83.82"/>
+<instance part="FRAME9" gate="G$2" x="152.4" y="-83.82"/>
 </instances>
 <busses>
 </busses>

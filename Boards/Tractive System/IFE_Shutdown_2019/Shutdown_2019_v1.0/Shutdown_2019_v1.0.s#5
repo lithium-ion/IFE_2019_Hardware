@@ -19796,13 +19796,6 @@ Rebel - DIO-09553&lt;br&gt;
 <wire x1="73.66" y1="71.12" x2="73.66" y2="73.66" width="0.1524" layer="91"/>
 <junction x="73.66" y="73.66"/>
 </segment>
-<segment>
-<pinref part="Q5" gate="G$1" pin="G"/>
-<wire x1="-35.56" y1="-66.04" x2="-45.72" y2="-66.04" width="0.1524" layer="91"/>
-<pinref part="R16" gate="G$1" pin="2"/>
-<wire x1="-45.72" y1="-66.04" x2="-50.8" y2="-66.04" width="0.1524" layer="91"/>
-<junction x="-45.72" y="-66.04"/>
-</segment>
 </net>
 <net name="CURRENT_IN" class="0">
 <segment>
@@ -20174,10 +20167,14 @@ Rebel - DIO-09553&lt;br&gt;
 <segment>
 <wire x1="-71.12" y1="-66.04" x2="-55.88" y2="-66.04" width="0.1524" layer="91"/>
 <wire x1="-55.88" y1="-66.04" x2="-55.88" y2="-68.58" width="0.1524" layer="91"/>
-<wire x1="-55.88" y1="-66.04" x2="-50.8" y2="-66.04" width="0.1524" layer="91"/>
 <junction x="-55.88" y="-66.04"/>
 <label x="-71.12" y="-66.04" size="1.778" layer="95" rot="R180" xref="yes"/>
 <pinref part="C7" gate="G$1" pin="1"/>
+<pinref part="Q5" gate="G$1" pin="G"/>
+<wire x1="-35.56" y1="-66.04" x2="-45.72" y2="-66.04" width="0.1524" layer="91"/>
+<pinref part="R16" gate="G$1" pin="2"/>
+<wire x1="-55.88" y1="-66.04" x2="-45.72" y2="-66.04" width="0.1524" layer="91"/>
+<junction x="-45.72" y="-66.04"/>
 </segment>
 </net>
 </nets>
