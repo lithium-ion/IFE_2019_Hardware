@@ -27501,6 +27501,100 @@ Source: http://www.nxp.com/documents/data_sheet/PESD1CAN.pdf</description>
 </deviceset>
 </devicesets>
 </library>
+<library name="MICROCHIP">
+<packages>
+<package name="SOT23-6">
+<wire x1="1.422" y1="0.81" x2="1.422" y2="-0.81" width="0.1524" layer="21"/>
+<wire x1="1.422" y1="-0.81" x2="-1.422" y2="-0.81" width="0.1524" layer="51"/>
+<wire x1="-1.422" y1="-0.81" x2="-1.422" y2="0.81" width="0.1524" layer="21"/>
+<wire x1="-1.422" y1="0.81" x2="1.422" y2="0.81" width="0.1524" layer="51"/>
+<wire x1="-0.522" y1="0.81" x2="0.522" y2="0.81" width="0.1524" layer="21"/>
+<wire x1="-0.428" y1="-0.81" x2="-0.522" y2="-0.81" width="0.1524" layer="21"/>
+<wire x1="0.522" y1="-0.81" x2="0.428" y2="-0.81" width="0.1524" layer="21"/>
+<wire x1="-1.328" y1="-0.81" x2="-1.422" y2="-0.81" width="0.1524" layer="21"/>
+<wire x1="1.422" y1="-0.81" x2="1.328" y2="-0.81" width="0.1524" layer="21"/>
+<wire x1="1.328" y1="0.81" x2="1.422" y2="0.81" width="0.1524" layer="21"/>
+<wire x1="-1.422" y1="0.81" x2="-1.328" y2="0.81" width="0.1524" layer="21"/>
+<circle x="-1" y="-0.3" radius="0.1" width="0.127" layer="21"/>
+<smd name="1" x="-0.95" y="-1.3" dx="0.55" dy="1.2" layer="1"/>
+<smd name="2" x="0" y="-1.3" dx="0.55" dy="1.2" layer="1"/>
+<smd name="3" x="0.95" y="-1.3" dx="0.55" dy="1.2" layer="1"/>
+<smd name="4" x="0.95" y="1.3" dx="0.55" dy="1.2" layer="1"/>
+<smd name="6" x="-0.95" y="1.3" dx="0.55" dy="1.2" layer="1"/>
+<smd name="5" x="0" y="1.3" dx="0.55" dy="1.2" layer="1"/>
+<text x="-1.905" y="1.905" size="1.27" layer="25">&gt;NAME</text>
+<text x="-1.905" y="-3.429" size="1.27" layer="27">&gt;VALUE</text>
+<rectangle x1="-1.2" y1="-1.5" x2="-0.7" y2="-0.85" layer="51"/>
+<rectangle x1="-0.25" y1="-1.5" x2="0.25" y2="-0.85" layer="51"/>
+<rectangle x1="0.7" y1="-1.5" x2="1.2" y2="-0.85" layer="51"/>
+<rectangle x1="0.7" y1="0.85" x2="1.2" y2="1.5" layer="51"/>
+<rectangle x1="-1.2" y1="0.85" x2="-0.7" y2="1.5" layer="51"/>
+<rectangle x1="-0.3" y1="0.85" x2="0.2" y2="1.5" layer="51"/>
+</package>
+</packages>
+<symbols>
+<symbol name="MCP4018">
+<wire x1="2.54" y1="0" x2="2.921" y2="1.016" width="0.2032" layer="94"/>
+<wire x1="2.921" y1="1.016" x2="3.556" y2="-1.016" width="0.2032" layer="94"/>
+<wire x1="3.556" y1="-1.016" x2="4.191" y2="1.016" width="0.2032" layer="94"/>
+<wire x1="4.191" y1="1.016" x2="4.826" y2="-1.016" width="0.2032" layer="94"/>
+<wire x1="4.826" y1="-1.016" x2="5.461" y2="1.016" width="0.2032" layer="94"/>
+<wire x1="5.461" y1="1.016" x2="6.096" y2="-1.016" width="0.2032" layer="94"/>
+<wire x1="6.096" y1="-1.016" x2="6.731" y2="1.016" width="0.2032" layer="94"/>
+<wire x1="6.731" y1="1.016" x2="7.366" y2="-1.016" width="0.2032" layer="94"/>
+<wire x1="7.366" y1="-1.016" x2="7.62" y2="0" width="0.2032" layer="94"/>
+<text x="-2.54" y="8.3566" size="1.778" layer="95">&gt;NAME</text>
+<text x="-2.54" y="10.668" size="1.778" layer="96">&gt;VALUE</text>
+<pin name="B" x="12.7" y="0" visible="pin" length="short" direction="pas" swaplevel="1" rot="R180"/>
+<pin name="VSS" x="12.7" y="-5.08" visible="pin" length="short" direction="pas" swaplevel="1" rot="R180"/>
+<wire x1="-2.54" y1="7.62" x2="10.16" y2="7.62" width="0.254" layer="94"/>
+<wire x1="10.16" y1="7.62" x2="10.16" y2="5.08" width="0.254" layer="94"/>
+<wire x1="10.16" y1="5.08" x2="10.16" y2="0" width="0.254" layer="94"/>
+<wire x1="10.16" y1="0" x2="10.16" y2="-5.08" width="0.254" layer="94"/>
+<wire x1="10.16" y1="-5.08" x2="10.16" y2="-7.62" width="0.254" layer="94"/>
+<wire x1="10.16" y1="-7.62" x2="-2.54" y2="-7.62" width="0.254" layer="94"/>
+<wire x1="-2.54" y1="-7.62" x2="-2.54" y2="7.62" width="0.254" layer="94"/>
+<wire x1="10.16" y1="0" x2="7.62" y2="0" width="0.254" layer="94"/>
+<wire x1="2.54" y1="0" x2="0" y2="0" width="0.254" layer="94"/>
+<pin name="W" x="12.7" y="5.08" visible="pin" length="short" direction="pas" swaplevel="1" rot="R180"/>
+<pin name="VDD" x="-5.08" y="5.08" visible="pin" length="short" direction="pas" swaplevel="1"/>
+<pin name="SDA" x="-5.08" y="0" visible="pin" length="short" direction="pas" swaplevel="1"/>
+<pin name="SCL" x="-5.08" y="-5.08" visible="pin" length="short" direction="pas" swaplevel="1"/>
+<wire x1="10.16" y1="5.08" x2="5.08" y2="5.08" width="0.254" layer="94"/>
+<wire x1="5.08" y1="5.08" x2="5.08" y2="2.54" width="0.254" layer="94"/>
+<wire x1="5.08" y1="2.54" x2="5.08" y2="1.27" width="0.254" layer="94"/>
+<wire x1="5.08" y1="1.27" x2="4.826" y2="1.524" width="0.254" layer="94"/>
+<wire x1="4.826" y1="1.524" x2="5.334" y2="1.524" width="0.254" layer="94"/>
+<wire x1="5.334" y1="1.524" x2="5.08" y2="1.27" width="0.254" layer="94"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="MCP4018">
+<description>&lt;h3&gt;MICROCHIP MCP4018&lt;/h3&gt;
+
+&lt;p&gt;7-Bit Single I2C™ Digital POT with Volatile Memory in SC70&lt;/p&gt;
+&lt;p&gt;&lt;a href=http://ww1.microchip.com/downloads/en/DeviceDoc/22147a.pdf&gt;Datasheet&lt;/a&gt;&lt;/p&gt;</description>
+<gates>
+<gate name="G$1" symbol="MCP4018" x="-5.08" y="0"/>
+</gates>
+<devices>
+<device name="" package="SOT23-6">
+<connects>
+<connect gate="G$1" pin="B" pad="5"/>
+<connect gate="G$1" pin="SCL" pad="3"/>
+<connect gate="G$1" pin="SDA" pad="4"/>
+<connect gate="G$1" pin="VDD" pad="1"/>
+<connect gate="G$1" pin="VSS" pad="2"/>
+<connect gate="G$1" pin="W" pad="6"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -27712,6 +27806,9 @@ Source: http://www.nxp.com/documents/data_sheet/PESD1CAN.pdf</description>
 <part name="D10" library="SparkFun-LED" deviceset="LED-RED" device="0603" value="RED"/>
 <part name="D11" library="SparkFun-LED" deviceset="LED-GREEN" device="0603" value="GREEN"/>
 <part name="D12" library="SparkFun-LED" deviceset="LED-GREEN" device="0603" value="GREEN"/>
+<part name="U$12" library="MICROCHIP" deviceset="MCP4018" device=""/>
+<part name="R27" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/2" value="10k"/>
+<part name="+3V8" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+3V3" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -27747,6 +27844,8 @@ Source: http://www.nxp.com/documents/data_sheet/PESD1CAN.pdf</description>
 <instance part="+3V9" gate="G$1" x="233.68" y="226.06"/>
 <instance part="GND53" gate="1" x="167.64" y="187.96" rot="R270"/>
 <instance part="D10" gate="G$1" x="114.3" y="193.04"/>
+<instance part="R27" gate="G$1" x="114.3" y="203.2" rot="R270"/>
+<instance part="+3V8" gate="G$1" x="114.3" y="213.36"/>
 </instances>
 <busses>
 </busses>
@@ -27807,6 +27906,11 @@ Source: http://www.nxp.com/documents/data_sheet/PESD1CAN.pdf</description>
 <pinref part="R26" gate="G$1" pin="1"/>
 <wire x1="233.68" y1="220.98" x2="233.68" y2="223.52" width="0.1524" layer="91"/>
 <pinref part="+3V9" gate="G$1" pin="+3V3"/>
+</segment>
+<segment>
+<pinref part="+3V8" gate="G$1" pin="+3V3"/>
+<pinref part="R27" gate="G$1" pin="1"/>
+<wire x1="114.3" y1="210.82" x2="114.3" y2="208.28" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="GND" class="0">
@@ -27978,6 +28082,25 @@ Source: http://www.nxp.com/documents/data_sheet/PESD1CAN.pdf</description>
 <wire x1="312.42" y1="132.08" x2="304.8" y2="132.08" width="0.1524" layer="91"/>
 <wire x1="304.8" y1="132.08" x2="304.8" y2="129.54" width="0.1524" layer="91"/>
 <pinref part="R23" gate="G$1" pin="1"/>
+</segment>
+</net>
+<net name="DEBUG" class="0">
+<segment>
+<pinref part="U1" gate="A" pin="PC13-TAMPER-RTC"/>
+<wire x1="231.14" y1="193.04" x2="233.68" y2="193.04" width="0.1524" layer="91"/>
+<label x="233.68" y="193.04" size="1.27" layer="95" xref="yes"/>
+</segment>
+<segment>
+<pinref part="D10" gate="G$1" pin="C"/>
+<wire x1="114.3" y1="187.96" x2="114.3" y2="185.42" width="0.1524" layer="91"/>
+<label x="114.3" y="185.42" size="1.27" layer="95" rot="R270" xref="yes"/>
+</segment>
+</net>
+<net name="N$19" class="0">
+<segment>
+<pinref part="D10" gate="G$1" pin="A"/>
+<wire x1="114.3" y1="195.58" x2="114.3" y2="198.12" width="0.1524" layer="91"/>
+<pinref part="R27" gate="G$1" pin="2"/>
 </segment>
 </net>
 </nets>
@@ -29458,6 +29581,7 @@ Source: http://www.nxp.com/documents/data_sheet/PESD1CAN.pdf</description>
 <instances>
 <instance part="FRAME9" gate="G$1" x="0" y="0"/>
 <instance part="FRAME9" gate="G$2" x="325.12" y="0"/>
+<instance part="U$12" gate="G$1" x="269.24" y="162.56"/>
 </instances>
 <busses>
 </busses>
