@@ -27645,11 +27645,11 @@ Source: http://www.analog.com/UploadedFiles/Data_Sheets/346131962AD8067_a.pdf</d
 <classes>
 <class number="0" name="default" width="0.254" drill="0">
 </class>
-<class number="1" name="PWR" width="0.4064" drill="0">
+<class number="1" name="PWR" width="0.254" drill="0">
 </class>
 <class number="2" name="AIR" width="1.27" drill="0">
 </class>
-<class number="3" name="PWR_IN" width="0.9144" drill="0">
+<class number="3" name="PWR_IN" width="0.4064" drill="0">
 </class>
 </classes>
 <parts>

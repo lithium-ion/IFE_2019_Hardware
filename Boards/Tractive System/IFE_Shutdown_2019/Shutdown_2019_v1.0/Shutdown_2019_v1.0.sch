@@ -27653,15 +27653,15 @@ Source: http://www.analog.com/UploadedFiles/Data_Sheets/346131962AD8067_a.pdf</d
 </class>
 </classes>
 <parts>
-<part name="TSAL" library="Display_Custom" deviceset="MINIFIT_JR_5566-04" device=""/>
+<part name="DRIVERS" library="Display_Custom" deviceset="MINIFIT_JR_5566-04" device=""/>
 <part name="PWR" library="Display_Custom" deviceset="MINIFIT_JR_5566-02" device=""/>
 <part name="CAN" library="Display_Custom" deviceset="MINIFIT_JR_5566-02" device=""/>
 <part name="GND1" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="P+2" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+5V" device=""/>
-<part name="U$2" library="Display_Custom" deviceset="MINIFIT_JR_5566-04" device=""/>
-<part name="U$3" library="Display_Custom" deviceset="MINIFIT_JR_5566-04" device=""/>
-<part name="U$1" library="Display_Custom" deviceset="MINIFIT_JR_5566-02" device=""/>
-<part name="U$6" library="Display_Custom" deviceset="MINIFIT_JR_5566-02" device=""/>
+<part name="FAULT_INPUT" library="Display_Custom" deviceset="MINIFIT_JR_5566-04" device=""/>
+<part name="THROTTLE" library="Display_Custom" deviceset="MINIFIT_JR_5566-04" device=""/>
+<part name="AIR" library="Display_Custom" deviceset="MINIFIT_JR_5566-02" device=""/>
+<part name="ENABLE" library="Display_Custom" deviceset="MINIFIT_JR_5566-02" device=""/>
 <part name="HALL_SENSE" library="Display_Custom" deviceset="MINIFIT_JR_5566-04" device=""/>
 <part name="Q5" library="TRANS" deviceset="DMN6140L-7" device=""/>
 <part name="GND23" library="supply1" deviceset="GND" device=""/>
@@ -27886,7 +27886,7 @@ Source: http://www.analog.com/UploadedFiles/Data_Sheets/346131962AD8067_a.pdf</d
 <part name="P+31" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+5V" device=""/>
 <part name="GND67" library="supply1" deviceset="GND" device=""/>
 <part name="GND68" library="supply1" deviceset="GND" device=""/>
-<part name="U$19" library="Display_Custom" deviceset="MINIFIT_JR_5566-04" device=""/>
+<part name="TSAL_EN" library="Display_Custom" deviceset="MINIFIT_JR_5566-04" device=""/>
 <part name="GND63" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="U$25" library="DIODES_INC" deviceset="BZT52C" device="" value="BZT52C13"/>
 <part name="R33" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/2" value="100"/>
@@ -29568,7 +29568,7 @@ Source: http://www.analog.com/UploadedFiles/Data_Sheets/346131962AD8067_a.pdf</d
 <wire x1="-116.84" y1="27.94" x2="-116.84" y2="25.4" width="0.1524" layer="91"/>
 </segment>
 </net>
-<net name="HV_CONNECTED" class="0">
+<net name="TSAL_EN" class="0">
 <segment>
 <pinref part="Q10" gate="G$1" pin="G"/>
 <wire x1="-124.46" y1="2.54" x2="-127" y2="2.54" width="0.1524" layer="91"/>
@@ -29774,15 +29774,15 @@ Source: http://www.analog.com/UploadedFiles/Data_Sheets/346131962AD8067_a.pdf</d
 <plain>
 </plain>
 <instances>
-<instance part="TSAL" gate="G$1" x="-132.08" y="-15.24"/>
+<instance part="DRIVERS" gate="G$1" x="-132.08" y="-15.24"/>
 <instance part="PWR" gate="G$1" x="-132.08" y="93.98"/>
 <instance part="CAN" gate="G$1" x="-132.08" y="76.2"/>
 <instance part="GND1" gate="1" x="-121.92" y="96.52" rot="R90"/>
 <instance part="P+2" gate="1" x="-144.78" y="-30.48" rot="R90"/>
-<instance part="U$2" gate="G$1" x="-132.08" y="53.34"/>
-<instance part="U$3" gate="G$1" x="-132.08" y="38.1"/>
-<instance part="U$1" gate="G$1" x="-132.08" y="144.78"/>
-<instance part="U$6" gate="G$1" x="-132.08" y="132.08"/>
+<instance part="FAULT_INPUT" gate="G$1" x="-132.08" y="53.34"/>
+<instance part="THROTTLE" gate="G$1" x="-132.08" y="38.1"/>
+<instance part="AIR" gate="G$1" x="-132.08" y="144.78"/>
+<instance part="ENABLE" gate="G$1" x="-132.08" y="132.08"/>
 <instance part="HALL_SENSE" gate="G$1" x="-132.08" y="116.84"/>
 <instance part="H1" gate="G$1" x="-149.86" y="-66.04"/>
 <instance part="H2" gate="G$1" x="-149.86" y="-73.66"/>
@@ -29803,7 +29803,7 @@ Source: http://www.analog.com/UploadedFiles/Data_Sheets/346131962AD8067_a.pdf</d
 <instance part="P+31" gate="1" x="53.34" y="50.8"/>
 <instance part="GND67" gate="1" x="53.34" y="63.5"/>
 <instance part="GND68" gate="1" x="53.34" y="30.48"/>
-<instance part="U$19" gate="G$1" x="-132.08" y="0"/>
+<instance part="TSAL_EN" gate="G$1" x="-132.08" y="0"/>
 <instance part="GND63" gate="1" x="-144.78" y="0" rot="R270"/>
 <instance part="U$25" gate="G$1" x="165.1" y="111.76" rot="R90"/>
 <instance part="R33" gate="G$1" x="154.94" y="116.84"/>
@@ -29934,7 +29934,7 @@ Source: http://www.analog.com/UploadedFiles/Data_Sheets/346131962AD8067_a.pdf</d
 <pinref part="GND68" gate="1" pin="GND"/>
 </segment>
 <segment>
-<pinref part="U$19" gate="G$1" pin="3"/>
+<pinref part="TSAL_EN" gate="G$1" pin="3"/>
 <wire x1="-137.16" y1="0" x2="-142.24" y2="0" width="0.1524" layer="91"/>
 <pinref part="GND63" gate="1" pin="GND"/>
 </segment>
@@ -30047,34 +30047,34 @@ Source: http://www.analog.com/UploadedFiles/Data_Sheets/346131962AD8067_a.pdf</d
 <net name="BRAKE_LIGHT-" class="0">
 <segment>
 <label x="-142.24" y="-12.7" size="1.27" layer="95" rot="R180" xref="yes"/>
-<pinref part="TSAL" gate="G$1" pin="1"/>
+<pinref part="DRIVERS" gate="G$1" pin="1"/>
 <wire x1="-137.16" y1="-12.7" x2="-142.24" y2="-12.7" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="TSAL_LV-" class="0">
 <segment>
-<pinref part="TSAL" gate="G$1" pin="2"/>
+<pinref part="DRIVERS" gate="G$1" pin="2"/>
 <wire x1="-129.54" y1="-12.7" x2="-124.46" y2="-12.7" width="0.1524" layer="91"/>
 <label x="-124.46" y="-12.7" size="1.27" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="TSAL_HV-" class="0">
 <segment>
-<pinref part="TSAL" gate="G$1" pin="4"/>
+<pinref part="DRIVERS" gate="G$1" pin="4"/>
 <wire x1="-129.54" y1="-15.24" x2="-124.46" y2="-15.24" width="0.1524" layer="91"/>
 <label x="-124.46" y="-15.24" size="1.27" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="CURRENT_SENSE" class="0">
 <segment>
-<pinref part="U$2" gate="G$1" pin="2"/>
+<pinref part="FAULT_INPUT" gate="G$1" pin="2"/>
 <wire x1="-129.54" y1="55.88" x2="-124.46" y2="55.88" width="0.1524" layer="91"/>
 <label x="-124.46" y="55.88" size="1.27" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="BRAKE_PRESSURE" class="0">
 <segment>
-<pinref part="U$2" gate="G$1" pin="4"/>
+<pinref part="FAULT_INPUT" gate="G$1" pin="4"/>
 <wire x1="-129.54" y1="53.34" x2="-124.46" y2="53.34" width="0.1524" layer="91"/>
 <label x="-124.46" y="53.34" size="1.27" layer="95" xref="yes"/>
 </segment>
@@ -30086,7 +30086,7 @@ Source: http://www.analog.com/UploadedFiles/Data_Sheets/346131962AD8067_a.pdf</d
 </net>
 <net name="THROTTLE_A" class="0">
 <segment>
-<pinref part="U$3" gate="G$1" pin="1"/>
+<pinref part="THROTTLE" gate="G$1" pin="1"/>
 <wire x1="-137.16" y1="40.64" x2="-142.24" y2="40.64" width="0.1524" layer="91"/>
 <label x="-142.24" y="40.64" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
@@ -30098,7 +30098,7 @@ Source: http://www.analog.com/UploadedFiles/Data_Sheets/346131962AD8067_a.pdf</d
 </net>
 <net name="THROTTLE_B" class="0">
 <segment>
-<pinref part="U$3" gate="G$1" pin="2"/>
+<pinref part="THROTTLE" gate="G$1" pin="2"/>
 <wire x1="-129.54" y1="40.64" x2="-124.46" y2="40.64" width="0.1524" layer="91"/>
 <label x="-124.46" y="40.64" size="1.27" layer="95" xref="yes"/>
 </segment>
@@ -30110,22 +30110,22 @@ Source: http://www.analog.com/UploadedFiles/Data_Sheets/346131962AD8067_a.pdf</d
 </net>
 <net name="THROTTLE_OUT" class="0">
 <segment>
-<pinref part="U$3" gate="G$1" pin="4"/>
+<pinref part="THROTTLE" gate="G$1" pin="4"/>
 <wire x1="-129.54" y1="38.1" x2="-124.46" y2="38.1" width="0.1524" layer="91"/>
 <label x="-124.46" y="38.1" size="1.27" layer="95" xref="yes"/>
 </segment>
 </net>
-<net name="HV_CONNECTED" class="0">
+<net name="TSAL_EN" class="0">
 <segment>
 <wire x1="-129.54" y1="2.54" x2="-124.46" y2="2.54" width="0.1524" layer="91"/>
 <label x="-124.46" y="2.54" size="1.27" layer="95" xref="yes"/>
-<pinref part="U$19" gate="G$1" pin="2"/>
+<pinref part="TSAL_EN" gate="G$1" pin="2"/>
 </segment>
 </net>
 <net name="FAULT_RESET" class="0">
 <segment>
 <label x="-124.46" y="0" size="1.27" layer="95" xref="yes"/>
-<pinref part="U$19" gate="G$1" pin="4"/>
+<pinref part="TSAL_EN" gate="G$1" pin="4"/>
 <wire x1="-124.46" y1="0" x2="-129.54" y2="0" width="0.1524" layer="91"/>
 </segment>
 <segment>
@@ -30136,28 +30136,28 @@ Source: http://www.analog.com/UploadedFiles/Data_Sheets/346131962AD8067_a.pdf</d
 </net>
 <net name="AIR_IN" class="0">
 <segment>
-<pinref part="U$1" gate="G$1" pin="1"/>
+<pinref part="AIR" gate="G$1" pin="1"/>
 <wire x1="-137.16" y1="147.32" x2="-142.24" y2="147.32" width="0.1524" layer="91"/>
 <label x="-142.24" y="147.32" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="AIR_OUT" class="0">
 <segment>
-<pinref part="U$1" gate="G$1" pin="2"/>
+<pinref part="AIR" gate="G$1" pin="2"/>
 <wire x1="-129.54" y1="147.32" x2="-124.46" y2="147.32" width="0.1524" layer="91"/>
 <label x="-124.46" y="147.32" size="1.27" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="ENABLE_IN" class="0">
 <segment>
-<pinref part="U$6" gate="G$1" pin="1"/>
+<pinref part="ENABLE" gate="G$1" pin="1"/>
 <wire x1="-137.16" y1="134.62" x2="-142.24" y2="134.62" width="0.1524" layer="91"/>
 <label x="-142.24" y="134.62" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="ENABLE_OUT" class="0">
 <segment>
-<pinref part="U$6" gate="G$1" pin="2"/>
+<pinref part="ENABLE" gate="G$1" pin="2"/>
 <wire x1="-129.54" y1="134.62" x2="-124.46" y2="134.62" width="0.1524" layer="91"/>
 <label x="-124.46" y="134.62" size="1.27" layer="95" xref="yes"/>
 </segment>
@@ -30192,7 +30192,7 @@ Source: http://www.analog.com/UploadedFiles/Data_Sheets/346131962AD8067_a.pdf</d
 </net>
 <net name="PRECHARGE_COMPLETE" class="0">
 <segment>
-<pinref part="U$3" gate="G$1" pin="3"/>
+<pinref part="THROTTLE" gate="G$1" pin="3"/>
 <wire x1="-137.16" y1="38.1" x2="-142.24" y2="38.1" width="0.1524" layer="91"/>
 <label x="-142.24" y="38.1" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
@@ -30204,7 +30204,7 @@ Source: http://www.analog.com/UploadedFiles/Data_Sheets/346131962AD8067_a.pdf</d
 </net>
 <net name="RTDS-" class="0">
 <segment>
-<pinref part="TSAL" gate="G$1" pin="3"/>
+<pinref part="DRIVERS" gate="G$1" pin="3"/>
 <wire x1="-137.16" y1="-15.24" x2="-142.24" y2="-15.24" width="0.1524" layer="91"/>
 <label x="-142.24" y="-15.24" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
@@ -30218,7 +30218,7 @@ Source: http://www.analog.com/UploadedFiles/Data_Sheets/346131962AD8067_a.pdf</d
 <segment>
 <wire x1="-137.16" y1="2.54" x2="-142.24" y2="2.54" width="0.1524" layer="91"/>
 <pinref part="P+18" gate="1" pin="+5V"/>
-<pinref part="U$19" gate="G$1" pin="1"/>
+<pinref part="TSAL_EN" gate="G$1" pin="1"/>
 </segment>
 <segment>
 <pinref part="P+29" gate="1" pin="+5V"/>
@@ -30357,7 +30357,7 @@ Source: http://www.analog.com/UploadedFiles/Data_Sheets/346131962AD8067_a.pdf</d
 <label x="147.32" y="91.44" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
-<pinref part="U$2" gate="G$1" pin="1"/>
+<pinref part="FAULT_INPUT" gate="G$1" pin="1"/>
 <wire x1="-137.16" y1="55.88" x2="-142.24" y2="55.88" width="0.1524" layer="91"/>
 <label x="-142.24" y="55.88" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
@@ -30391,7 +30391,7 @@ Source: http://www.analog.com/UploadedFiles/Data_Sheets/346131962AD8067_a.pdf</d
 <label x="147.32" y="66.04" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
-<pinref part="U$2" gate="G$1" pin="3"/>
+<pinref part="FAULT_INPUT" gate="G$1" pin="3"/>
 <wire x1="-137.16" y1="53.34" x2="-142.24" y2="53.34" width="0.1524" layer="91"/>
 <label x="-142.24" y="53.34" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
