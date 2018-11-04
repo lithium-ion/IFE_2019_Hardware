@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="9.2.2">
+<eagle version="9.1.2">
 <drawing>
 <settings>
 <setting alwaysvectorfont="yes"/>
@@ -27554,65 +27554,6 @@ Source: http://www.analog.com/UploadedFiles/Data_Sheets/346131962AD8067_a.pdf</d
 </deviceset>
 </devicesets>
 </library>
-<library name="MURATA">
-<packages>
-<package name="PKMCS">
-<description>&lt;h3&gt; muRata PKMCS Series &lt;/h3&gt;
-
-&lt;p&gt; PKMCS Series footprint for piezo electric buzzer &lt;/p&gt;</description>
-<smd name="P$1" x="-4.5" y="0" dx="2" dy="4" layer="1"/>
-<smd name="P$2" x="4.5" y="0" dx="2" dy="4" layer="1"/>
-<wire x1="-4.5" y1="4.5" x2="-4.5" y2="-4.5" width="0.127" layer="21"/>
-<wire x1="-4.5" y1="-4.5" x2="4.5" y2="-4.5" width="0.127" layer="21"/>
-<wire x1="4.5" y1="-4.5" x2="4.5" y2="4.5" width="0.127" layer="21"/>
-<wire x1="4.5" y1="4.5" x2="-4.5" y2="4.5" width="0.127" layer="21"/>
-<wire x1="3" y1="3.5" x2="2.5" y2="3" width="0.127" layer="21" curve="90"/>
-<wire x1="3" y1="2.5" x2="3.5" y2="3" width="0.127" layer="21" curve="90"/>
-<wire x1="2.5" y1="3" x2="3" y2="2.5" width="0.127" layer="21" curve="90"/>
-<wire x1="3" y1="3.5" x2="3.5" y2="3" width="0.127" layer="21" curve="-90"/>
-<text x="-4.572" y="4.953" size="0.8128" layer="25">&gt;NAME</text>
-</package>
-</packages>
-<symbols>
-<symbol name="PIEZOELECTRIC">
-<description>&lt;p&gt; PiezoElectric Buzzer Symbol &lt;/p&gt;</description>
-<wire x1="-1.27" y1="0.762" x2="1.27" y2="0.762" width="0.254" layer="94"/>
-<wire x1="-1.27" y1="-0.762" x2="1.27" y2="-0.762" width="0.254" layer="94"/>
-<wire x1="-1.27" y1="0.762" x2="-1.27" y2="-0.762" width="0.254" layer="94"/>
-<wire x1="1.27" y1="0.762" x2="1.27" y2="-0.762" width="0.254" layer="94"/>
-<wire x1="-1.27" y1="1.27" x2="0" y2="1.27" width="0.254" layer="94"/>
-<wire x1="0" y1="1.27" x2="1.27" y2="1.27" width="0.254" layer="94"/>
-<wire x1="-1.27" y1="-1.27" x2="0" y2="-1.27" width="0.254" layer="94"/>
-<pin name="B" x="0" y="-2.54" visible="off" length="point" rot="R90"/>
-<pin name="A" x="0" y="2.54" visible="off" length="point" rot="R90"/>
-<wire x1="0" y1="-1.27" x2="1.27" y2="-1.27" width="0.254" layer="94"/>
-<wire x1="0" y1="2.54" x2="0" y2="1.27" width="0.254" layer="94"/>
-<wire x1="0" y1="-2.54" x2="0" y2="-1.27" width="0.254" layer="94"/>
-</symbol>
-</symbols>
-<devicesets>
-<deviceset name="PKMCS0909E4000">
-<description>&lt;h3&gt;muRata PKMCS0909E4000 &lt;/h3&gt;
-&lt;h4&gt;PiezoElectric Sounder SMD &lt;/h4&gt;
-&lt;p&gt; 12V 4kHz PE Sounder &lt;/p&gt;
-&lt;p&gt;&lt;a href=https://www.murata.com/~/media/webrenewal/products/sound/sounder/vppt-buzj083-d.ashx&gt;Datasheet&lt;/a&gt;&lt;/p&gt;</description>
-<gates>
-<gate name="G$1" symbol="PIEZOELECTRIC" x="0" y="0"/>
-</gates>
-<devices>
-<device name="" package="PKMCS">
-<connects>
-<connect gate="G$1" pin="A" pad="P$1"/>
-<connect gate="G$1" pin="B" pad="P$2"/>
-</connects>
-<technologies>
-<technology name=""/>
-</technologies>
-</device>
-</devices>
-</deviceset>
-</devicesets>
-</library>
 <library name="KEMET">
 <packages>
 <package name="DPDT_2.54">
@@ -27706,6 +27647,70 @@ Source: http://www.analog.com/UploadedFiles/Data_Sheets/346131962AD8067_a.pdf</d
 <connect gate="G$1" pin="$P5" pad="$P5"/>
 <connect gate="G$1" pin="$P8" pad="$P8"/>
 <connect gate="G$1" pin="$P9" pad="$P9"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
+<library name="MALLORY">
+<packages>
+<package name="MAS806Q">
+<description>&lt;h3&gt;Mallory MAS806Q &lt;/h3&gt;
+&lt;h4&gt;PiezoElectric Buzzer &lt;/h4&gt;
+&lt;p&gt;6-14V -- 103dB -- 50mA buzzer&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://www.mspindy.com/specifications/MAS806Q.pdf"&gt;Datasheet&lt;/a&gt;&lt;/p&gt;</description>
+<wire x1="0" y1="13" x2="13" y2="0" width="0.127" layer="21" curve="-90"/>
+<wire x1="-13" y1="0" x2="0" y2="13" width="0.127" layer="21" curve="-90"/>
+<wire x1="-6" y1="-14" x2="6" y2="-14" width="0.127" layer="21"/>
+<wire x1="-13" y1="0" x2="0" y2="-13" width="0.127" layer="21" curve="90"/>
+<wire x1="0" y1="-13" x2="13" y2="0" width="0.127" layer="21" curve="90"/>
+<wire x1="-6" y1="-14" x2="-6" y2="-11.5" width="0.127" layer="21"/>
+<wire x1="6" y1="-14" x2="6" y2="-11.5" width="0.127" layer="21"/>
+<wire x1="-1" y1="-4" x2="1" y2="-4" width="0.127" layer="21"/>
+<wire x1="0" y1="-3" x2="0" y2="-5" width="0.127" layer="21"/>
+<pad name="NEG" x="0" y="7" drill="1"/>
+<pad name="POS" x="0" y="-7" drill="1"/>
+<text x="-2.54" y="-2.54" size="1.27" layer="25" rot="R90">&gt;NAME</text>
+</package>
+</packages>
+<symbols>
+<symbol name="PIEZOELECTRIC">
+<description>&lt;p&gt; PiezoElectric Buzzer Symbol &lt;/p&gt;</description>
+<wire x1="-1.27" y1="0.762" x2="1.27" y2="0.762" width="0.254" layer="94"/>
+<wire x1="-1.27" y1="-0.762" x2="1.27" y2="-0.762" width="0.254" layer="94"/>
+<wire x1="-1.27" y1="0.762" x2="-1.27" y2="-0.762" width="0.254" layer="94"/>
+<wire x1="1.27" y1="0.762" x2="1.27" y2="-0.762" width="0.254" layer="94"/>
+<wire x1="-1.27" y1="1.27" x2="0" y2="1.27" width="0.254" layer="94"/>
+<wire x1="0" y1="1.27" x2="1.27" y2="1.27" width="0.254" layer="94"/>
+<wire x1="-1.27" y1="-1.27" x2="0" y2="-1.27" width="0.254" layer="94"/>
+<pin name="B" x="0" y="-2.54" visible="off" length="point" direction="out" rot="R90"/>
+<pin name="A" x="0" y="2.54" visible="off" length="point" direction="in" rot="R90"/>
+<wire x1="0" y1="-1.27" x2="1.27" y2="-1.27" width="0.254" layer="94"/>
+<wire x1="0" y1="2.54" x2="0" y2="1.27" width="0.254" layer="94"/>
+<wire x1="0" y1="-2.54" x2="0" y2="-1.27" width="0.254" layer="94"/>
+<wire x1="2.032" y1="2.794" x2="2.032" y2="1.778" width="0.254" layer="94"/>
+<wire x1="1.524" y1="2.286" x2="2.54" y2="2.286" width="0.254" layer="94"/>
+<text x="-2.54" y="-2.54" size="1.27" layer="95" rot="R90">&gt;NAME</text>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="MAS806Q">
+<description>&lt;h3&gt;Mallory MAS806Q &lt;/h3&gt;
+&lt;h4&gt;PiezoElectric Buzzer &lt;/h4&gt;
+&lt;p&gt;6-14V -- 103dB -- 50mA buzzer&lt;/p&gt;
+&lt;p&gt;&lt;a href="https://www.mspindy.com/specifications/MAS806Q.pdf"&gt;Datasheet&lt;/a&gt;&lt;/p&gt;</description>
+<gates>
+<gate name="G$1" symbol="PIEZOELECTRIC" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="MAS806Q">
+<connects>
+<connect gate="G$1" pin="A" pad="POS"/>
+<connect gate="G$1" pin="B" pad="NEG"/>
 </connects>
 <technologies>
 <technology name=""/>
@@ -28094,7 +28099,6 @@ Source: http://www.analog.com/UploadedFiles/Data_Sheets/346131962AD8067_a.pdf</d
 <part name="GND105" library="supply1" deviceset="GND" device=""/>
 <part name="P+46" library="supply1" deviceset="+5V" device=""/>
 <part name="C39" library="resistor" library_urn="urn:adsk.eagle:library:348" deviceset="C-US" device="C0603" package3d_urn="urn:adsk.eagle:package:26138/1" value="0.1u"/>
-<part name="BUZZER" library="MURATA" deviceset="PKMCS0909E4000" device=""/>
 <part name="P+4" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="+12V" device=""/>
 <part name="AGND1" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="AGND" device=""/>
 <part name="AGND2" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="AGND" device=""/>
@@ -28102,6 +28106,7 @@ Source: http://www.analog.com/UploadedFiles/Data_Sheets/346131962AD8067_a.pdf</d
 <part name="U$1" library="KEMET" deviceset="EC2" device=""/>
 <part name="U$2" library="KEMET" deviceset="EC2" device=""/>
 <part name="U$3" library="KEMET" deviceset="EC2" device=""/>
+<part name="U$6" library="MALLORY" deviceset="MAS806Q" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -32248,10 +32253,10 @@ Source: http://www.analog.com/UploadedFiles/Data_Sheets/346131962AD8067_a.pdf</d
 <instance part="GND4" gate="1" x="193.04" y="114.3" smashed="yes">
 <attribute name="VALUE" x="190.5" y="111.76" size="1.778" layer="96"/>
 </instance>
-<instance part="BUZZER" gate="G$1" x="193.04" y="139.7" smashed="yes"/>
 <instance part="P+4" gate="1" x="193.04" y="147.32" smashed="yes">
 <attribute name="VALUE" x="190.5" y="142.24" size="1.778" layer="96" rot="R90"/>
 </instance>
+<instance part="U$6" gate="G$1" x="193.04" y="139.7"/>
 </instances>
 <busses>
 </busses>
@@ -32272,16 +32277,16 @@ Source: http://www.analog.com/UploadedFiles/Data_Sheets/346131962AD8067_a.pdf</d
 </net>
 <net name="N$4" class="0">
 <segment>
-<pinref part="BUZZER" gate="G$1" pin="B"/>
 <pinref part="Q4" gate="G$1" pin="D"/>
 <wire x1="193.04" y1="137.16" x2="193.04" y2="134.62" width="0.1524" layer="91"/>
+<pinref part="U$6" gate="G$1" pin="B"/>
 </segment>
 </net>
 <net name="+12V" class="3">
 <segment>
-<pinref part="BUZZER" gate="G$1" pin="A"/>
 <wire x1="193.04" y1="142.24" x2="193.04" y2="144.78" width="0.1524" layer="91"/>
 <pinref part="P+4" gate="1" pin="+12V"/>
+<pinref part="U$6" gate="G$1" pin="A"/>
 </segment>
 </net>
 </nets>
