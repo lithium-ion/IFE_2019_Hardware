@@ -26750,26 +26750,26 @@ distributor RS Components</description>
 </net>
 <net name="PHONE_TX/U_RX" class="0">
 <segment>
-<pinref part="U$10" gate="G$1" pin="3"/>
-<wire x1="-20.32" y1="43.18" x2="-27.94" y2="43.18" width="0.1524" layer="91"/>
-<label x="-27.94" y="43.18" size="1.27" layer="95" rot="R180" xref="yes"/>
-</segment>
-<segment>
 <pinref part="IC1" gate="PORTA_L" pin="PA3"/>
 <wire x1="12.7" y1="-10.16" x2="7.62" y2="-10.16" width="0.1524" layer="91"/>
 <label x="7.62" y="-10.16" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
-</net>
-<net name="PHONE_RX/U_TX" class="0">
 <segment>
 <pinref part="U$10" gate="G$1" pin="4"/>
 <wire x1="-12.7" y1="43.18" x2="-2.54" y2="43.18" width="0.1524" layer="91"/>
 <label x="-2.54" y="43.18" size="1.27" layer="95" xref="yes"/>
 </segment>
+</net>
+<net name="PHONE_RX/U_TX" class="0">
 <segment>
 <pinref part="IC1" gate="PORTA_L" pin="PA2"/>
 <wire x1="12.7" y1="-7.62" x2="7.62" y2="-7.62" width="0.1524" layer="91"/>
 <label x="7.62" y="-7.62" size="1.27" layer="95" rot="R180" xref="yes"/>
+</segment>
+<segment>
+<pinref part="U$10" gate="G$1" pin="3"/>
+<wire x1="-20.32" y1="43.18" x2="-27.94" y2="43.18" width="0.1524" layer="91"/>
+<label x="-27.94" y="43.18" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="N$5" class="0">
