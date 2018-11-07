@@ -28922,7 +28922,7 @@ Source: http://www.analog.com/UploadedFiles/Data_Sheets/346131962AD8067_a.pdf</d
 <label x="137.16" y="66.04" size="1.27" layer="95" xref="yes"/>
 </segment>
 </net>
-<net name="FAULT_BSPD_F" class="0">
+<net name="FAULT_BSPD" class="0">
 <segment>
 <wire x1="114.3" y1="134.62" x2="129.54" y2="134.62" width="0.1524" layer="91"/>
 <wire x1="129.54" y1="134.62" x2="129.54" y2="132.08" width="0.1524" layer="91"/>
@@ -29877,18 +29877,11 @@ Source: http://www.analog.com/UploadedFiles/Data_Sheets/346131962AD8067_a.pdf</d
 <busses>
 </busses>
 <nets>
-<net name="CANH" class="0">
+<net name="CANL" class="0">
 <segment>
 <pinref part="CAN" gate="G$1" pin="1"/>
 <wire x1="-137.16" y1="78.74" x2="-142.24" y2="78.74" width="0.1524" layer="91"/>
 <label x="-142.24" y="78.74" size="1.27" layer="95" rot="R180" xref="yes"/>
-</segment>
-</net>
-<net name="CANL" class="0">
-<segment>
-<pinref part="CAN" gate="G$1" pin="2"/>
-<wire x1="-129.54" y1="78.74" x2="-124.46" y2="78.74" width="0.1524" layer="91"/>
-<label x="-124.46" y="78.74" size="1.27" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="PWR" class="3">
@@ -30544,6 +30537,13 @@ Source: http://www.analog.com/UploadedFiles/Data_Sheets/346131962AD8067_a.pdf</d
 <pinref part="R74" gate="G$1" pin="2"/>
 <wire x1="48.26" y1="-5.08" x2="48.26" y2="-7.62" width="0.1524" layer="91"/>
 <pinref part="+3V18" gate="G$1" pin="+3V3"/>
+</segment>
+</net>
+<net name="CANH" class="0">
+<segment>
+<pinref part="CAN" gate="G$1" pin="2"/>
+<wire x1="-129.54" y1="78.74" x2="-124.46" y2="78.74" width="0.1524" layer="91"/>
+<label x="-124.46" y="78.74" size="1.27" layer="95" xref="yes"/>
 </segment>
 </net>
 </nets>

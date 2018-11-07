@@ -7,9 +7,9 @@
 <setting keepoldvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="1" unitdist="mil" unit="mil" style="lines" multiple="1" display="yes" altdistance="5" altunitdist="mil" altunit="mil"/>
+<grid distance="20" unitdist="mil" unit="mil" style="lines" multiple="1" display="yes" altdistance="5" altunitdist="mil" altunit="mil"/>
 <layers>
-<layer number="1" name="Top" color="4" fill="1" visible="no" active="yes"/>
+<layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
 <layer number="3" name="Route3" color="4" fill="3" visible="no" active="no"/>
 <layer number="4" name="Route4" color="1" fill="4" visible="no" active="no"/>
@@ -24,19 +24,19 @@
 <layer number="13" name="Route13" color="4" fill="5" visible="no" active="no"/>
 <layer number="14" name="Route14" color="1" fill="6" visible="no" active="no"/>
 <layer number="15" name="Route15" color="4" fill="6" visible="no" active="no"/>
-<layer number="16" name="Bottom" color="1" fill="1" visible="no" active="yes"/>
-<layer number="17" name="Pads" color="2" fill="1" visible="no" active="yes"/>
-<layer number="18" name="Vias" color="2" fill="1" visible="no" active="yes"/>
-<layer number="19" name="Unrouted" color="6" fill="1" visible="no" active="yes"/>
-<layer number="20" name="Dimension" color="24" fill="1" visible="no" active="yes"/>
-<layer number="21" name="tPlace" color="7" fill="1" visible="no" active="yes"/>
-<layer number="22" name="bPlace" color="7" fill="1" visible="no" active="yes"/>
+<layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
+<layer number="17" name="Pads" color="2" fill="1" visible="yes" active="yes"/>
+<layer number="18" name="Vias" color="2" fill="1" visible="yes" active="yes"/>
+<layer number="19" name="Unrouted" color="6" fill="1" visible="yes" active="yes"/>
+<layer number="20" name="Dimension" color="24" fill="1" visible="yes" active="yes"/>
+<layer number="21" name="tPlace" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="22" name="bPlace" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="23" name="tOrigins" color="15" fill="1" visible="no" active="yes"/>
 <layer number="24" name="bOrigins" color="15" fill="1" visible="no" active="yes"/>
 <layer number="25" name="tNames" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="26" name="bNames" color="7" fill="1" visible="no" active="yes"/>
-<layer number="27" name="tValues" color="7" fill="1" visible="no" active="yes"/>
-<layer number="28" name="bValues" color="7" fill="1" visible="no" active="yes"/>
+<layer number="26" name="bNames" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="27" name="tValues" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="28" name="bValues" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="29" name="tStop" color="7" fill="3" visible="no" active="yes"/>
 <layer number="30" name="bStop" color="7" fill="6" visible="no" active="yes"/>
 <layer number="31" name="tCream" color="7" fill="4" visible="no" active="yes"/>
@@ -53,9 +53,9 @@
 <layer number="42" name="bRestrict" color="1" fill="10" visible="yes" active="yes"/>
 <layer number="43" name="vRestrict" color="2" fill="10" visible="yes" active="yes"/>
 <layer number="44" name="Drills" color="7" fill="1" visible="no" active="yes"/>
-<layer number="45" name="Holes" color="7" fill="1" visible="no" active="yes"/>
+<layer number="45" name="Holes" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="46" name="Milling" color="3" fill="1" visible="no" active="yes"/>
-<layer number="47" name="Measures" color="7" fill="1" visible="no" active="yes"/>
+<layer number="47" name="Measures" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="48" name="Document" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="49" name="Reference" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="50" name="dxf" color="7" fill="1" visible="no" active="no"/>
@@ -1256,6 +1256,24 @@
 <rectangle x1="48.8696" y1="54.864" x2="48.9204" y2="54.8894" layer="25" rot="R90"/>
 <rectangle x1="48.8442" y1="54.8894" x2="48.895" y2="54.9148" layer="25" rot="R90"/>
 <rectangle x1="48.8188" y1="54.8894" x2="48.8696" y2="54.9148" layer="25" rot="R90"/>
+<rectangle x1="52.578" y1="40.386" x2="53.086" y2="40.894" layer="25" rot="R90"/>
+<rectangle x1="52.578" y1="44.45" x2="53.086" y2="44.958" layer="25" rot="R90"/>
+<rectangle x1="52.07" y1="40.894" x2="52.578" y2="41.402" layer="25" rot="R90"/>
+<rectangle x1="52.07" y1="43.942" x2="52.578" y2="44.45" layer="25" rot="R90"/>
+<rectangle x1="49.53" y1="42.418" x2="54.102" y2="42.926" layer="25" rot="R90"/>
+<rectangle x1="48.514" y1="42.418" x2="54.102" y2="42.926" layer="25" rot="R90"/>
+<rectangle x1="50.038" y1="40.386" x2="51.562" y2="40.894" layer="25" rot="R90"/>
+<rectangle x1="50.038" y1="42.418" x2="51.562" y2="42.926" layer="25" rot="R90"/>
+<rectangle x1="50.038" y1="44.45" x2="51.562" y2="44.958" layer="25" rot="R90"/>
+<rectangle x1="50.038" y1="39.878" x2="50.546" y2="40.386" layer="25" rot="R90"/>
+<rectangle x1="48.514" y1="42.418" x2="52.07" y2="42.926" layer="25" rot="R90"/>
+<rectangle x1="50.038" y1="44.958" x2="50.546" y2="45.466" layer="25" rot="R90"/>
+<rectangle x1="49.53" y1="39.878" x2="50.038" y2="40.386" layer="25" rot="R90"/>
+<rectangle x1="49.53" y1="41.402" x2="50.038" y2="41.91" layer="25" rot="R90"/>
+<rectangle x1="49.53" y1="43.434" x2="50.038" y2="43.942" layer="25" rot="R90"/>
+<rectangle x1="49.53" y1="44.958" x2="50.038" y2="45.466" layer="25" rot="R90"/>
+<rectangle x1="49.022" y1="40.894" x2="49.53" y2="41.402" layer="25" rot="R90"/>
+<rectangle x1="49.022" y1="43.942" x2="49.53" y2="44.45" layer="25" rot="R90"/>
 </plain>
 <libraries>
 <library name="Display_Custom">

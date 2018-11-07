@@ -7,7 +7,7 @@
 <setting keepoldvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="20" unitdist="mil" unit="mil" style="lines" multiple="1" display="yes" altdistance="5" altunitdist="mil" altunit="mil"/>
+<grid distance="50" unitdist="mil" unit="mil" style="lines" multiple="1" display="no" altdistance="5" altunitdist="mil" altunit="mil"/>
 <layers>
 <layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
@@ -166,8 +166,7 @@
 <plain>
 <wire x1="4.064" y1="0" x2="84.836" y2="0" width="0" layer="20"/>
 <wire x1="88.9" y1="4.064" x2="88.9" y2="72.136" width="0" layer="20"/>
-<wire x1="84.836" y1="76.2" x2="0" y2="76.2" width="0" layer="20"/>
-<wire x1="0" y1="76.2" x2="0" y2="4.064" width="0" layer="20"/>
+<wire x1="84.836" y1="76.2" x2="4.064" y2="76.2" width="0" layer="20"/>
 <dimension x1="0" y1="0" x2="0" y2="76.2" x3="-3.81" y3="38.1" textsize="1.27" layer="47" unit="mil" visible="yes"/>
 <dimension x1="88.9" y1="76.2" x2="0" y2="76.2" x3="44.45" y3="80.01" textsize="1.27" layer="47" unit="mil" visible="yes"/>
 <text x="44.196" y="23.368" size="1.778" layer="25" font="fixed" ratio="15" rot="R90">Illini Formula Electric</text>
@@ -1274,9 +1273,11 @@
 <rectangle x1="49.53" y1="44.958" x2="50.038" y2="45.466" layer="25" rot="R90"/>
 <rectangle x1="49.022" y1="40.894" x2="49.53" y2="41.402" layer="25" rot="R90"/>
 <rectangle x1="49.022" y1="43.942" x2="49.53" y2="44.45" layer="25" rot="R90"/>
+<wire x1="0" y1="72.136" x2="0" y2="4.064" width="0" layer="20"/>
 <wire x1="0" y1="4.064" x2="4.064" y2="0" width="0" layer="20" curve="90"/>
 <wire x1="84.836" y1="0" x2="88.9" y2="4.064" width="0" layer="20" curve="90"/>
 <wire x1="84.836" y1="76.2" x2="88.9" y2="72.136" width="0" layer="20" curve="-90"/>
+<wire x1="0" y1="72.136" x2="4.064" y2="76.2" width="0" layer="20" curve="-90"/>
 </plain>
 <libraries>
 <library name="Display_Custom">
@@ -4900,7 +4901,7 @@ design rules under a new name.</description>
 <element name="U$18" library="STM" package="SOT23-5" value="LMV321L" x="44.45" y="7.112" smashed="yes" rot="R270">
 <attribute name="NAME" x="43.053" y="4.699" size="0.8128" layer="25"/>
 </element>
-<element name="C21" library="rcl" library_urn="urn:adsk.eagle:library:334" package="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="" x="44.45" y="9.906" smashed="yes" rot="R180">
+<element name="C21" library="rcl" library_urn="urn:adsk.eagle:library:334" package="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="1u" x="44.45" y="9.906" smashed="yes" rot="R180">
 <attribute name="NAME" x="42.037" y="11.303" size="0.8128" layer="25" rot="R270"/>
 <attribute name="SPICEPREFIX" value="C" x="44.45" y="9.906" size="1.778" layer="27" rot="R180" display="off"/>
 <attribute name="VALUE" x="45.085" y="11.811" size="1.27" layer="27" rot="R180"/>

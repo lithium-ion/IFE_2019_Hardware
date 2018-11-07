@@ -164,10 +164,10 @@
 </layers>
 <board>
 <plain>
-<wire x1="0" y1="0" x2="88.9" y2="0" width="0" layer="20"/>
-<wire x1="88.9" y1="0" x2="88.9" y2="76.2" width="0" layer="20"/>
+<wire x1="4.064" y1="0" x2="84.836" y2="0" width="0" layer="20"/>
+<wire x1="88.9" y1="4.064" x2="88.9" y2="76.2" width="0" layer="20"/>
 <wire x1="88.9" y1="76.2" x2="0" y2="76.2" width="0" layer="20"/>
-<wire x1="0" y1="76.2" x2="0" y2="0" width="0" layer="20"/>
+<wire x1="0" y1="76.2" x2="0" y2="4.064" width="0" layer="20"/>
 <dimension x1="0" y1="0" x2="0" y2="76.2" x3="-3.81" y3="38.1" textsize="1.27" layer="47" unit="mil" visible="yes"/>
 <dimension x1="88.9" y1="76.2" x2="0" y2="76.2" x3="44.45" y3="80.01" textsize="1.27" layer="47" unit="mil" visible="yes"/>
 <text x="44.196" y="23.368" size="1.778" layer="25" font="fixed" ratio="15" rot="R90">Illini Formula Electric</text>
@@ -1274,6 +1274,8 @@
 <rectangle x1="49.53" y1="44.958" x2="50.038" y2="45.466" layer="25" rot="R90"/>
 <rectangle x1="49.022" y1="40.894" x2="49.53" y2="41.402" layer="25" rot="R90"/>
 <rectangle x1="49.022" y1="43.942" x2="49.53" y2="44.45" layer="25" rot="R90"/>
+<wire x1="0" y1="4.064" x2="4.064" y2="0" width="0" layer="20" curve="90"/>
+<wire x1="84.836" y1="0" x2="88.9" y2="4.064" width="0" layer="20" curve="90"/>
 </plain>
 <libraries>
 <library name="Display_Custom">

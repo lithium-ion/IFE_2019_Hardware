@@ -1,0 +1,141 @@
+RC Circuit Transient Response
+**** Models ****
+
+*---------------------------------------------------------------*
+* Panasonic JS-M Automotive SPDT Relay Model
+*    
+*    Simulate the behavior of the SPDT Relay
+*    Caution - No 10ms Delay
+*
+*                   Positive Side of Coil
+*                   |     Negative Side of Coil
+*                   |     |      Common
+*                   |     |      |     Normally Open
+*                   |     |      |     |   Normally Closed
+*---------------------------------------------------------------*
+.SUBCKT RELAY_SPDT wcoila wcoilb wcom wno wnc
+Rcoil wcoila 1 225
+Lcoil 2 wcoilb 1uH
+Vsense 1 2 0
+W1 wnc wcom Vsense swclosed OFF
+W2 wcom wno Vsense swopen OFF
+.model swopen CSW it = 0.028 ih = 0.004 ron = 0.1u roff = 10g
+.model swclosed CSW it = 0.028 ih = 0.004 ron = 10g roff = 0.1u
+.ends RELAY_SPDT
+
+
+*---------------------------------------------------------------*
+* LM393 VOLTAGE COMPARATOR "MACROMODEL" SUBCIRCUIT
+* CREATED USING PARTS VERSION 4.03 ON 03/07/90 AT 14:17
+* REV (N/A)
+* CONNECTIONS:   NON-INVERTING INPUT
+*                | INVERTING INPUT
+*                | | POSITIVE POWER SUPPLY
+*                | | | NEGATIVE POWER SUPPLY
+*                | | | | OPEN COLLECTOR OUTPUT
+*                | | | | |
+*---------------------------------------------------------------*
+.SUBCKT LM393    1 2 3 4 5
+  F1    9  3 V1 1
+  IEE   3  7 DC 100.0E-6
+  VI1  21  1 DC .75
+  VI2  22  2 DC .75
+  Q1    9 21  7 QIN
+  Q2    8 22  7 QIN
+  Q3    9  8  4 QMO
+  Q4    8  8  4 QMI
+.MODEL QIN PNP(IS=800.0E-18 BF=2.000E3)
+.MODEL QMI NPN(IS=800.0E-18 BF=1002)
+.MODEL QMO NPN(IS=800.0E-18 BF=1000 CJC=1E-15 TR=807.4E-9)
+  E1   10  4  9  4  1
+  V1   10 11 DC 0
+  Q5    5 11  4 QOC
+.MODEL QOC NPN(IS=800.0E-18 BF=20.29E3 CJC=1E-15 TF=942.6E-12 TR=543.8E-9)
+  DP    4  3 DX
+  RP 3  4 46.3E3
+.MODEL DX  D(IS=800.0E-18)
+.ENDS LM393
+
+
+* LM348 OPERATIONAL AMPLIFIER "MACROMODEL" SUBCIRCUIT
+* CREATED USING PARTS RELEASE 4.01 ON 09/14/89 AT 15:56
+* (REV N/A)      SUPPLY VOLTAGE: +/-15V
+* CONNECTIONS:   NON-INVERTING INPUT
+*                | INVERTING INPUT
+*                | | POSITIVE POWER SUPPLY
+*                | | | NEGATIVE POWER SUPPLY
+*                | | | | OUTPUT
+*                | | | | |
+.SUBCKT LM348    1 2 3 4 5
+*
+  C1   11 12 9.461E-12
+  C2    6  7 30.00E-12
+  DC    5 53 DX
+  DE   54  5 DX
+  DLP  90 91 DX
+  DLN  92 90 DX
+  DP    4  3 DX
+  EGND 99  0 POLY(2) (3,0) (4,0) 0 .5 .5
+  FB    7 99 POLY(5) VB VC VE VLP VLN 0 4.715E6 -5E6 5E6 5E6 -5E6
+  GA 6  0 11 12 256.2E-6
+  GCM   0  6 10 99 4.023E-9
+  IEE  10  4 DC 15.06E-6
+  HLIM 90  0 VLIM 1K
+  Q1   11  2 13 QX
+  Q2   12  1 14 QX
+  R2    6  9 100.0E3
+  RC1   3 11 4.420E3
+  RC2   3 12 4.420E3
+  RE1  13 10 968
+  RE2  14 10 968
+  REE  10 99 13.28E6
+  RO1   8  5 150
+  RO2   7 99 150
+  RP    3  4 51.28E3
+  VB    9  0 DC 0
+  VC    3 53 DC 3.600
+  VE   54  4 DC 3.600
+  VLIM  7  8 DC 0
+  VLP  91  0 DC 25
+  VLN   0 92 DC 25
+.MODEL DX D(IS=800.0E-18)
+.MODEL QX NPN(IS=800.0E-18 BF=250)
+.ENDS
+
+
+
+**** Netlist ****
+Vp        vref gnd DC 5
+Vsensor   vin gnd SIN(0 5 1 0 0)
+X1        
+
+
+Rset vdd n2 7k
+Rdist n3 gnd 50
+Ru vdd n4 3.7k
+Rl n4 gnd 6.3k
+R0 vdd gnd 10k
+R1 vdd pc_comp 10k
+C0 n1 gnd 1000u
+X0 vdd gnd n1 n2 n3 RELAY_SPDT
+X1 n1 n4 vdd gnd pc_comp LM393
+vin vdd gnd DC 0 PWL(0s 0v 1s 0v 1.001s 16v 10s 16v 10.001s 0v 10.5s 0v 10.501s 16v 20s 16v 30s 16v 30.001s 0v 40s 0v) r=0
+
+X2 vdd n7 EV200_CONTACTOR
+Dflyback vdd n7 Da1N4004
+.model Da1N4004 D (IS=18.8n RS=0 BV=400 IBV=5.00u CJO=30 M=0.333 N=2)
+X3 n7 pc_comp n8 ntd20n03l27
+Vdummy n8 gnd 0
+
+
+**** Simulation ****
+.tran 0.1m 41s
+.control
+run
+set color0 = white ; plot window - background color
+set color1 = black ; plot window - grid and text color
+plot v(vdd) v(n1) v(n4) v(pc_comp)
+plot v(vdd) v(pc_comp)
+plot v(pc_comp) v(n7)
+.endc
+.end
