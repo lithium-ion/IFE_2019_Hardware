@@ -25811,6 +25811,8 @@ reflow soldering</description>
 <part name="GND19" library="supply1" deviceset="GND" device=""/>
 <part name="P+11" library="supply1" deviceset="+5V" device=""/>
 <part name="D7" library="SparkFun-LED" deviceset="LED-GREEN" device="0603" value="TC_BLUE"/>
+<part name="GND20" library="supply1" deviceset="GND" device=""/>
+<part name="GND21" library="supply1" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -26396,6 +26398,12 @@ reflow soldering</description>
 <attribute name="NAME" x="-80.264" y="-80.772" size="1.778" layer="95" rot="R90"/>
 <attribute name="VALUE" x="-78.105" y="-80.772" size="1.778" layer="96" rot="R90"/>
 </instance>
+<instance part="GND20" gate="1" x="43.18" y="-119.38" smashed="yes">
+<attribute name="VALUE" x="40.64" y="-121.92" size="1.778" layer="96"/>
+</instance>
+<instance part="GND21" gate="1" x="60.96" y="-10.16" smashed="yes">
+<attribute name="VALUE" x="58.42" y="-12.7" size="1.778" layer="96"/>
+</instance>
 </instances>
 <busses>
 </busses>
@@ -26695,6 +26703,11 @@ reflow soldering</description>
 <pinref part="U$9" gate="G$1" pin="S"/>
 <pinref part="GND19" gate="1" pin="GND"/>
 <wire x1="-83.82" y1="-91.44" x2="-83.82" y2="-104.14" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="IC1" gate="PORTB_L" pin="PB2"/>
+<pinref part="GND21" gate="1" pin="GND"/>
+<wire x1="58.42" y1="-7.62" x2="60.96" y2="-7.62" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="+3V3" class="0">
@@ -27574,9 +27587,9 @@ reflow soldering</description>
 <wire x1="-220.98" y1="58.42" x2="-220.98" y2="55.88" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="IC1" gate="PORTB_L" pin="PB2"/>
-<wire x1="58.42" y1="-7.62" x2="60.96" y2="-7.62" width="0.1524" layer="91"/>
-<label x="60.96" y="-7.62" size="1.27" layer="95" xref="yes"/>
+<pinref part="IC1" gate="PORTB_L" pin="PB0"/>
+<wire x1="58.42" y1="-2.54" x2="60.96" y2="-2.54" width="0.1524" layer="91"/>
+<label x="60.96" y="-2.54" size="1.27" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="RGB_BLUE" class="0">
