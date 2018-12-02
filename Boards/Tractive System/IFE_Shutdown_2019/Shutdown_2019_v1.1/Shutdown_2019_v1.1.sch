@@ -30505,9 +30505,9 @@ Source: http://www.analog.com/UploadedFiles/Data_Sheets/346131962AD8067_a.pdf</d
 <label x="48.26" y="139.7" size="1.27" layer="95" xref="yes"/>
 </segment>
 <segment>
-<pinref part="U$28" gate="G$1" pin="C0"/>
-<wire x1="139.7" y1="129.54" x2="137.16" y2="129.54" width="0.1524" layer="91"/>
-<label x="137.16" y="129.54" size="1.27" layer="95" rot="R180" xref="yes"/>
+<pinref part="U$28" gate="G$1" pin="B0"/>
+<wire x1="139.7" y1="132.08" x2="137.16" y2="132.08" width="0.1524" layer="91"/>
+<label x="137.16" y="132.08" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="SC_TH" class="0">
@@ -30573,9 +30573,9 @@ Source: http://www.analog.com/UploadedFiles/Data_Sheets/346131962AD8067_a.pdf</d
 <label x="109.22" y="109.22" size="1.27" layer="95" xref="yes"/>
 </segment>
 <segment>
-<pinref part="U$28" gate="G$1" pin="B0"/>
-<wire x1="139.7" y1="132.08" x2="137.16" y2="132.08" width="0.1524" layer="91"/>
-<label x="137.16" y="132.08" size="1.27" layer="95" rot="R180" xref="yes"/>
+<pinref part="U$28" gate="G$1" pin="C0"/>
+<wire x1="139.7" y1="129.54" x2="137.16" y2="129.54" width="0.1524" layer="91"/>
+<label x="137.16" y="129.54" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="BSPD_CS_SC" class="0">
@@ -32327,14 +32327,14 @@ Source: http://www.analog.com/UploadedFiles/Data_Sheets/346131962AD8067_a.pdf</d
 <label x="-114.3" y="101.6" size="1.27" layer="95" xref="yes"/>
 </segment>
 </net>
-<net name="APPS_STAT" class="0">
+<net name="APPS_EN" class="0">
 <segment>
 <pinref part="SOFT_FAULT_STAT" gate="G$1" pin="1"/>
 <wire x1="-147.32" y1="119.38" x2="-144.78" y2="119.38" width="0.1524" layer="91"/>
 <label x="-144.78" y="119.38" size="1.27" layer="95" xref="yes"/>
 </segment>
 </net>
-<net name="BTSF_STAT" class="0">
+<net name="BTSF_EN" class="0">
 <segment>
 <pinref part="SOFT_FAULT_STAT" gate="G$1" pin="2"/>
 <wire x1="-147.32" y1="116.84" x2="-144.78" y2="116.84" width="0.1524" layer="91"/>
