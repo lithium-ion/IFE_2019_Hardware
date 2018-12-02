@@ -28377,7 +28377,6 @@ Source: http://www.analog.com/UploadedFiles/Data_Sheets/346131962AD8067_a.pdf</d
 <part name="R7" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="R-US_" device="R0603" package3d_urn="urn:adsk.eagle:package:23555/2" value="50k"/>
 <part name="U$18" library="STM" deviceset="LMV321L" device=""/>
 <part name="C21" library="rcl" library_urn="urn:adsk.eagle:library:334" deviceset="C-US" device="C0603" package3d_urn="urn:adsk.eagle:package:23616/2" value="1u"/>
-<part name="GND9" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
 <part name="U$22" library="STM" deviceset="LMV321L" device=""/>
 <part name="U$23" library="STM" deviceset="LMV321L" device=""/>
 <part name="U$24" library="STM" deviceset="LMV321L" device=""/>
@@ -28615,6 +28614,7 @@ Source: http://www.analog.com/UploadedFiles/Data_Sheets/346131962AD8067_a.pdf</d
 <part name="U$8" library="Display_Custom" deviceset="0805_INDUCTOR" device=""/>
 <part name="AGND5" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="AGND" device=""/>
 <part name="GND8" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="GND" device=""/>
+<part name="AGND6" library="supply1" library_urn="urn:adsk.eagle:library:371" deviceset="AGND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -31549,13 +31549,6 @@ Source: http://www.analog.com/UploadedFiles/Data_Sheets/346131962AD8067_a.pdf</d
 <busses>
 </busses>
 <nets>
-<net name="CANL" class="0">
-<segment>
-<pinref part="CAN" gate="G$1" pin="1"/>
-<wire x1="-147.32" y1="104.14" x2="-144.78" y2="104.14" width="0.1524" layer="91"/>
-<label x="-144.78" y="104.14" size="1.27" layer="95" xref="yes"/>
-</segment>
-</net>
 <net name="GND" class="0">
 <segment>
 <pinref part="H1" gate="G$1" pin="MOUNT"/>
@@ -32270,9 +32263,9 @@ Source: http://www.analog.com/UploadedFiles/Data_Sheets/346131962AD8067_a.pdf</d
 </net>
 <net name="CANH" class="0">
 <segment>
-<pinref part="CAN" gate="G$1" pin="2"/>
-<wire x1="-147.32" y1="101.6" x2="-144.78" y2="101.6" width="0.1524" layer="91"/>
-<label x="-144.78" y="101.6" size="1.27" layer="95" xref="yes"/>
+<pinref part="CAN" gate="G$1" pin="1"/>
+<wire x1="-147.32" y1="104.14" x2="-144.78" y2="104.14" width="0.1524" layer="91"/>
+<label x="-144.78" y="104.14" size="1.27" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="FAULT_BSPD_STAT" class="0">
@@ -32305,33 +32298,33 @@ Source: http://www.analog.com/UploadedFiles/Data_Sheets/346131962AD8067_a.pdf</d
 </net>
 <net name="THROTTLE_OUT" class="0">
 <segment>
-<pinref part="THROTTLE_TC" gate="G$1" pin="3"/>
-<wire x1="-116.84" y1="104.14" x2="-114.3" y2="104.14" width="0.1524" layer="91"/>
-<label x="-114.3" y="104.14" size="1.27" layer="95" xref="yes"/>
+<pinref part="THROTTLE_TC" gate="G$1" pin="5"/>
+<wire x1="-116.84" y1="99.06" x2="-114.3" y2="99.06" width="0.1524" layer="91"/>
+<label x="-114.3" y="99.06" size="1.27" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="STEERING_POS" class="0">
-<segment>
-<pinref part="THROTTLE_TC" gate="G$1" pin="4"/>
-<wire x1="-116.84" y1="101.6" x2="-114.3" y2="101.6" width="0.1524" layer="91"/>
-<label x="-114.3" y="101.6" size="1.27" layer="95" xref="yes"/>
-</segment>
 <segment>
 <pinref part="R78" gate="G$1" pin="1"/>
 <wire x1="134.62" y1="5.08" x2="132.08" y2="5.08" width="0.1524" layer="91"/>
 <label x="132.08" y="5.08" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
+<segment>
+<pinref part="THROTTLE_TC" gate="G$1" pin="3"/>
+<wire x1="-116.84" y1="104.14" x2="-114.3" y2="104.14" width="0.1524" layer="91"/>
+<label x="-114.3" y="104.14" size="1.27" layer="95" xref="yes"/>
+</segment>
 </net>
 <net name="BRAKE_POS" class="0">
-<segment>
-<pinref part="THROTTLE_TC" gate="G$1" pin="5"/>
-<wire x1="-116.84" y1="99.06" x2="-114.3" y2="99.06" width="0.1524" layer="91"/>
-<label x="-114.3" y="99.06" size="1.27" layer="95" xref="yes"/>
-</segment>
 <segment>
 <pinref part="R10" gate="G$1" pin="1"/>
 <wire x1="2.54" y1="7.62" x2="0" y2="7.62" width="0.1524" layer="91"/>
 <label x="0" y="7.62" size="1.27" layer="95" rot="R180" xref="yes"/>
+</segment>
+<segment>
+<pinref part="THROTTLE_TC" gate="G$1" pin="4"/>
+<wire x1="-116.84" y1="101.6" x2="-114.3" y2="101.6" width="0.1524" layer="91"/>
+<label x="-114.3" y="101.6" size="1.27" layer="95" xref="yes"/>
 </segment>
 </net>
 <net name="APPS_STAT" class="0">
@@ -32469,6 +32462,13 @@ Source: http://www.analog.com/UploadedFiles/Data_Sheets/346131962AD8067_a.pdf</d
 <wire x1="-48.26" y1="144.78" x2="-48.26" y2="147.32" width="0.1524" layer="91"/>
 <pinref part="U$8" gate="G$1" pin="1"/>
 <wire x1="-48.26" y1="147.32" x2="-45.72" y2="147.32" width="0.1524" layer="91"/>
+</segment>
+</net>
+<net name="CANL" class="0">
+<segment>
+<pinref part="CAN" gate="G$1" pin="2"/>
+<wire x1="-147.32" y1="101.6" x2="-144.78" y2="101.6" width="0.1524" layer="91"/>
+<label x="-144.78" y="101.6" size="1.27" layer="95" xref="yes"/>
 </segment>
 </net>
 </nets>
@@ -32692,9 +32692,6 @@ Source: http://www.analog.com/UploadedFiles/Data_Sheets/346131962AD8067_a.pdf</d
 <attribute name="NAME" x="315.976" y="206.375" size="1.778" layer="95"/>
 <attribute name="VALUE" x="315.976" y="201.549" size="1.778" layer="96"/>
 </instance>
-<instance part="GND9" gate="1" x="314.96" y="195.58" smashed="yes">
-<attribute name="VALUE" x="312.42" y="193.04" size="1.778" layer="96"/>
-</instance>
 <instance part="R47" gate="G$1" x="246.38" y="198.12" smashed="yes" rot="R270">
 <attribute name="NAME" x="247.8786" y="201.93" size="1.778" layer="95" rot="R270"/>
 <attribute name="VALUE" x="243.078" y="201.93" size="1.778" layer="96" rot="R270"/>
@@ -32834,6 +32831,9 @@ Source: http://www.analog.com/UploadedFiles/Data_Sheets/346131962AD8067_a.pdf</d
 <instance part="AGND3" gate="VR1" x="292.1" y="180.34" smashed="yes">
 <attribute name="VALUE" x="289.56" y="175.26" size="1.778" layer="96" rot="R90"/>
 </instance>
+<instance part="AGND6" gate="VR1" x="314.96" y="195.58" smashed="yes">
+<attribute name="VALUE" x="312.42" y="190.5" size="1.778" layer="96" rot="R90"/>
+</instance>
 </instances>
 <busses>
 </busses>
@@ -32929,11 +32929,6 @@ Source: http://www.analog.com/UploadedFiles/Data_Sheets/346131962AD8067_a.pdf</d
 <pinref part="U2" gate="A" pin="PB2"/>
 <wire x1="139.7" y1="162.56" x2="134.62" y2="162.56" width="0.1524" layer="91"/>
 <pinref part="GND58" gate="1" pin="GND"/>
-</segment>
-<segment>
-<pinref part="C21" gate="G$1" pin="2"/>
-<pinref part="GND9" gate="1" pin="GND"/>
-<wire x1="314.96" y1="200.66" x2="314.96" y2="198.12" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="C33" gate="G$1" pin="2"/>
@@ -33338,6 +33333,11 @@ Source: http://www.analog.com/UploadedFiles/Data_Sheets/346131962AD8067_a.pdf</d
 <wire x1="284.48" y1="185.42" x2="292.1" y2="185.42" width="0.1524" layer="91"/>
 <wire x1="292.1" y1="185.42" x2="292.1" y2="182.88" width="0.1524" layer="91"/>
 <pinref part="AGND3" gate="VR1" pin="AGND"/>
+</segment>
+<segment>
+<pinref part="C21" gate="G$1" pin="2"/>
+<wire x1="314.96" y1="200.66" x2="314.96" y2="198.12" width="0.1524" layer="91"/>
+<pinref part="AGND6" gate="VR1" pin="AGND"/>
 </segment>
 </net>
 </nets>
