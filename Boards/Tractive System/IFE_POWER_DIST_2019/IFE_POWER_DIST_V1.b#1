@@ -690,16 +690,14 @@ design rules under a new name.</description>
 <wire x1="9.974" y1="86.197" x2="29.174" y2="86.197" width="2.54" layer="1"/>
 <wire x1="40.054" y1="97.077" x2="41.014" y2="97.077" width="2.54" layer="1"/>
 <wire x1="29.174" y1="86.197" x2="40.054" y2="97.077" width="2.54" layer="1"/>
-<wire x1="41.014" y1="97.077" x2="43.554" y2="97.077" width="2.54" layer="1"/>
-<wire x1="43.554" y1="97.077" x2="43.554" y2="58.117" width="2.54" layer="1"/>
-<wire x1="43.554" y1="58.117" x2="41.014" y2="58.117" width="2.54" layer="1"/>
+<wire x1="41.014" y1="97.077" x2="41.014" y2="58.117" width="2.54" layer="1"/>
 <polygon width="2.54" layer="1" isolate="0.3048">
-<vertex x="44.704" y="97.917"/>
-<vertex x="2.794" y="97.917"/>
+<vertex x="40.894" y="96.647"/>
+<vertex x="2.794" y="96.647"/>
 <vertex x="2.794" y="85.217"/>
 <vertex x="16.764" y="85.217"/>
 <vertex x="16.764" y="57.277"/>
-<vertex x="44.704" y="57.277"/>
+<vertex x="40.894" y="57.277"/>
 </polygon>
 <contactref element="U$7" pad="1"/>
 </signal>
