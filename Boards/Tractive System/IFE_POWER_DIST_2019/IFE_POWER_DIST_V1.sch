@@ -620,6 +620,7 @@ Source: http://www.molex.com</description>
 <part name="GND5" library="SparkFun-Aesthetics" deviceset="GND" device=""/>
 <part name="FUSE13" library="Fuse" deviceset="MINI297-3568" device="" value="ACCUMLATOR_5V_5A"/>
 <part name="U$6" library="Display_Custom" deviceset="MINIFIT_JR_5566-02" device=""/>
+<part name="FUSE14" library="Fuse" deviceset="MINI297-3568" device="" value="V_BAT_12V"/>
 </parts>
 <sheets>
 <sheet>
@@ -794,6 +795,10 @@ Source: http://www.molex.com</description>
 <attribute name="NAME" x="62.23" y="71.755" size="1.778" layer="95"/>
 <attribute name="VALUE" x="62.23" y="63.5" size="1.778" layer="96"/>
 </instance>
+<instance part="FUSE14" gate="G$1" x="-27.94" y="7.62" smashed="yes" rot="R270">
+<attribute name="NAME" x="-26.543" y="11.43" size="1.778" layer="95" rot="R270"/>
+<attribute name="VALUE" x="-21.59" y="9.779" size="1.778" layer="96"/>
+</instance>
 </instances>
 <busses>
 </busses>
@@ -818,6 +823,10 @@ Source: http://www.molex.com</description>
 <pinref part="X2" gate="-5" pin="S"/>
 <wire x1="-68.58" y1="38.1" x2="-68.58" y2="35.56" width="0.1524" layer="91"/>
 <junction x="-68.58" y="38.1"/>
+<pinref part="FUSE14" gate="G$1" pin="1"/>
+<wire x1="-22.86" y1="12.7" x2="-27.94" y2="12.7" width="0.1524" layer="91"/>
+<junction x="-22.86" y="12.7"/>
+<junction x="-27.94" y="12.7"/>
 </segment>
 </net>
 <net name="N$2" class="0">
@@ -1042,8 +1051,9 @@ Source: http://www.molex.com</description>
 <segment>
 <wire x1="-33.02" y1="10.16" x2="-33.02" y2="2.54" width="0.1524" layer="91"/>
 <pinref part="FUSE11" gate="G$1" pin="2"/>
-<wire x1="-33.02" y1="2.54" x2="-22.86" y2="2.54" width="0.1524" layer="91"/>
+<wire x1="-33.02" y1="2.54" x2="-27.94" y2="2.54" width="0.1524" layer="91"/>
 <label x="-60.96" y="10.16" size="1.778" layer="95"/>
+<wire x1="-27.94" y1="2.54" x2="-22.86" y2="2.54" width="0.1524" layer="91"/>
 <wire x1="-33.02" y1="10.16" x2="-60.96" y2="10.16" width="0.1524" layer="91"/>
 <wire x1="-60.96" y1="10.16" x2="-60.96" y2="15.24" width="0.1524" layer="91"/>
 <pinref part="X1" gate="-8" pin="S"/>
@@ -1054,6 +1064,8 @@ Source: http://www.molex.com</description>
 <pinref part="X1" gate="-4" pin="S"/>
 <wire x1="-68.58" y1="5.08" x2="-68.58" y2="2.54" width="0.1524" layer="91"/>
 <junction x="-68.58" y="2.54"/>
+<pinref part="FUSE14" gate="G$1" pin="2"/>
+<junction x="-27.94" y="2.54"/>
 </segment>
 </net>
 <net name="V_BAT_5V" class="0">

@@ -483,8 +483,8 @@ design rules under a new name.</description>
 <element name="FUSE10" library="Fuse" package="3568" value="AIR_12V_5A" x="45.974" y="6.477" smashed="yes" rot="R180">
 <attribute name="NAME" x="37.664" y="10.167" size="1.778" layer="21" rot="R270" align="top-left"/>
 </element>
-<element name="FUSE11" library="Fuse" package="3568" value="V_BAT_12V" x="20.574" y="34.417" smashed="yes" rot="R270">
-<attribute name="NAME" x="16.074" y="41.917" size="1.778" layer="21" rot="R270" align="top-left"/>
+<element name="FUSE11" library="Fuse" package="3568" value="V_BAT_12V" x="16.764" y="34.417" smashed="yes" rot="R270">
+<attribute name="NAME" x="3.803" y="35.124" size="1.778" layer="21" align="top-left"/>
 </element>
 <element name="FUSE12" library="Fuse" package="3568" value="V_BAT_5V" x="6.604" y="68.707" smashed="yes" rot="R90">
 <attribute name="NAME" x="11.104" y="61.207" size="1.778" layer="21" rot="R90" align="top-left"/>
@@ -568,6 +568,9 @@ design rules under a new name.</description>
 <element name="U$6" library="Display_Custom" package="MINIFIT_JR_5566-02" value="MINIFIT_JR_5566-02" x="61.214" y="59.817" smashed="yes" rot="R90">
 <attribute name="NAME" x="67.3926" y="56.9198" size="0.8128" layer="25" rot="R180"/>
 </element>
+<element name="FUSE14" library="Fuse" package="3568" value="V_BAT_12V" x="24.765" y="34.29" smashed="yes" rot="R270">
+<attribute name="NAME" x="19.805" y="45.03" size="1.778" layer="21" align="top-left"/>
+</element>
 </elements>
 <signals>
 <signal name="VCC">
@@ -586,22 +589,25 @@ design rules under a new name.</description>
 <wire x1="9.71" y1="53.501" x2="10.624" y2="52.587" width="2.54" layer="1"/>
 <wire x1="10.624" y1="52.587" x2="10.624" y2="43.517" width="2.54" layer="1"/>
 <wire x1="10.624" y1="43.517" x2="10.414" y2="43.307" width="2.54" layer="1"/>
-<wire x1="10.414" y1="43.307" x2="15.367" y2="43.307" width="2.54" layer="1"/>
-<wire x1="18.874" y1="39.8" x2="18.874" y2="39.377" width="2.54" layer="1"/>
-<wire x1="15.367" y1="43.307" x2="18.874" y2="39.8" width="2.54" layer="1"/>
-<wire x1="22.274" y1="39.377" x2="19.424" y2="39.377" width="2.54" layer="1"/>
-<wire x1="19.001" y1="39.8" x2="18.874" y2="39.8" width="2.54" layer="1"/>
-<wire x1="19.424" y1="39.377" x2="19.001" y2="39.8" width="2.54" layer="1"/>
+<wire x1="18.464" y1="39.377" x2="18.464" y2="40.21" width="2.54" layer="1"/>
 <polygon width="0.4064" layer="1" isolate="0.3048" rank="2">
 <vertex x="18.102384375" y="66.167"/>
 <vertex x="2.794" y="66.167"/>
 <vertex x="2.794" y="54.737"/>
 <vertex x="7.874" y="54.737"/>
-<vertex x="7.874" y="36.957"/>
-<vertex x="25.654" y="36.957"/>
-<vertex x="25.654" y="57.277"/>
+<vertex x="7.874" y="35.687"/>
+<vertex x="28.194" y="35.687"/>
+<vertex x="28.194" y="57.277"/>
 <vertex x="17.907" y="57.277"/>
 </polygon>
+<contactref element="FUSE14" pad="P$1"/>
+<contactref element="FUSE14" pad="P$4"/>
+<wire x1="10.624" y1="44.187" x2="11.538" y2="43.273" width="2.54" layer="1"/>
+<wire x1="11.538" y1="43.273" x2="11.73221875" y2="43.273" width="2.54" layer="1"/>
+<wire x1="11.73221875" y1="43.273" x2="15.24" y2="39.76521875" width="2.54" layer="1"/>
+<wire x1="15.24" y1="39.76521875" x2="15.24" y2="39.37" width="2.54" layer="1"/>
+<wire x1="15.24" y1="39.37" x2="18.457" y2="39.37" width="2.54" layer="1"/>
+<wire x1="18.457" y1="39.37" x2="18.464" y2="39.377" width="2.54" layer="1"/>
 </signal>
 <signal name="N$2">
 <contactref element="FUSE7" pad="P$1"/>
@@ -666,8 +672,8 @@ design rules under a new name.</description>
 <contactref element="X1" pad="6"/>
 <polygon width="0.4064" layer="1">
 <vertex x="45.974" y="54.737"/>
-<vertex x="26.924" y="54.737"/>
-<vertex x="26.924" y="20.447"/>
+<vertex x="29.464" y="54.737"/>
+<vertex x="29.464" y="20.447"/>
 <vertex x="7.874" y="20.447"/>
 <vertex x="7.874" y="1.397"/>
 <vertex x="45.974" y="1.397"/>
@@ -844,24 +850,26 @@ design rules under a new name.</description>
 <signal name="V_BAT_12V">
 <contactref element="FUSE11" pad="P$2"/>
 <contactref element="FUSE11" pad="P$3"/>
-<wire x1="22.274" y1="29.457" x2="18.874" y2="29.457" width="2.54" layer="1"/>
+<wire x1="18.464" y1="29.457" x2="15.064" y2="29.457" width="2.54" layer="1"/>
 <contactref element="X1" pad="8"/>
 <contactref element="X1" pad="3"/>
 <contactref element="X1" pad="4"/>
 <wire x1="10.624" y1="22.937" x2="5.124" y2="22.937" width="2.54" layer="1"/>
 <wire x1="5.124" y1="18.737" x2="5.124" y2="22.937" width="2.54" layer="1"/>
-<wire x1="10.624" y1="22.937" x2="16.433" y2="22.937" width="2.54" layer="1"/>
-<wire x1="16.433" y1="22.937" x2="16.51" y2="22.86" width="2.54" layer="1"/>
-<wire x1="16.51" y1="22.86" x2="18.874" y2="25.224" width="2.54" layer="1"/>
-<wire x1="18.874" y1="25.224" x2="18.874" y2="29.457" width="2.54" layer="1"/>
 <polygon width="0.4064" layer="1" isolate="0.3048" rank="2">
 <vertex x="9.144" y="16.637"/>
 <vertex x="9.144" y="17.907"/>
-<vertex x="24.384" y="17.907"/>
-<vertex x="24.384" y="33.147"/>
+<vertex x="28.194" y="17.907"/>
+<vertex x="28.194" y="33.147"/>
 <vertex x="1.524" y="33.147"/>
 <vertex x="1.524" y="16.637"/>
 </polygon>
+<contactref element="FUSE14" pad="P$2"/>
+<contactref element="FUSE14" pad="P$3"/>
+<wire x1="10.624" y1="22.937" x2="11.538" y2="23.851" width="2.54" layer="1"/>
+<wire x1="11.538" y1="23.851" x2="11.73221875" y2="23.851" width="2.54" layer="1"/>
+<wire x1="11.73221875" y1="23.851" x2="15.064" y2="27.18278125" width="2.54" layer="1"/>
+<wire x1="15.064" y1="27.18278125" x2="15.064" y2="29.457" width="2.54" layer="1"/>
 </signal>
 <signal name="V_BAT_5V">
 <contactref element="FUSE12" pad="P$2"/>
