@@ -1,0 +1,16 @@
+Added Component: Designator=U1(455D-socket)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "Datasheet Link"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "CompType"; Value = "Used in BOM report"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "DigiKeyPartNumber"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Distributor"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "DistributorPartNumber"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "Texas Instruments"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MountType"; Value = "SMT"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageReference"; Value = "VHB80A"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PartNumber"; Value = "bq76PL455TPFCQ1"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "RoHS"; Value = "Y"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SymbolCreator"; Value = "Use LDAP id"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SymbolVersion"; Value = "use current date i.e. 2008-05-20"; VariantName = "[No Variations]"
+Added Member To Class: ClassName=ife19_TS_BMS_v2 Member=Component U1 bq76PL455TPFCQ1

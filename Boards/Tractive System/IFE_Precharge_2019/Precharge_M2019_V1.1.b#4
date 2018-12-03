@@ -6,9 +6,9 @@
 <setting alwaysvectorfont="yes"/>
 <setting verticaltext="up"/>
 </settings>
-<grid distance="50" unitdist="mil" unit="mil" style="lines" multiple="1" display="no" altdistance="5" altunitdist="mil" altunit="mil"/>
+<grid distance="50" unitdist="mil" unit="mil" style="lines" multiple="1" display="yes" altdistance="5" altunitdist="mil" altunit="mil"/>
 <layers>
-<layer number="1" name="Top" color="4" fill="1" visible="yes" active="yes"/>
+<layer number="1" name="Top" color="4" fill="1" visible="no" active="yes"/>
 <layer number="2" name="Route2" color="1" fill="3" visible="no" active="no"/>
 <layer number="3" name="Route3" color="4" fill="3" visible="no" active="no"/>
 <layer number="4" name="Route4" color="1" fill="4" visible="no" active="no"/>
@@ -23,7 +23,7 @@
 <layer number="13" name="Route13" color="4" fill="5" visible="no" active="no"/>
 <layer number="14" name="Route14" color="1" fill="6" visible="no" active="no"/>
 <layer number="15" name="Route15" color="4" fill="6" visible="no" active="no"/>
-<layer number="16" name="Bottom" color="1" fill="1" visible="yes" active="yes"/>
+<layer number="16" name="Bottom" color="1" fill="1" visible="no" active="yes"/>
 <layer number="17" name="Pads" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="18" name="Vias" color="2" fill="1" visible="yes" active="yes"/>
 <layer number="19" name="Unrouted" color="6" fill="1" visible="yes" active="yes"/>
@@ -158,10 +158,9 @@
 </layers>
 <board>
 <plain>
-<wire x1="0" y1="0" x2="33.02" y2="0" width="0" layer="20"/>
-<wire x1="33.02" y1="0" x2="33.02" y2="39.37" width="0" layer="20"/>
-<wire x1="33.02" y1="39.37" x2="0" y2="39.37" width="0" layer="20"/>
-<wire x1="0" y1="39.37" x2="0" y2="0" width="0" layer="20"/>
+<wire x1="3.81" y1="0" x2="29.21" y2="0" width="0" layer="20"/>
+<wire x1="33.02" y1="3.81" x2="33.02" y2="35.56" width="0" layer="20"/>
+<wire x1="29.21" y1="39.37" x2="3.81" y2="39.37" width="0" layer="20"/>
 <hole x="3.81" y="3.81" drill="2.8956"/>
 <hole x="29.21" y="3.81" drill="2.8956"/>
 <hole x="29.21" y="35.56" drill="2.8956"/>
@@ -171,6 +170,11 @@
 <dimension x1="0" y1="39.37" x2="33.02" y2="39.37" x3="16.51" y3="43.18" textsize="0.8128" layer="47" unit="mil" visible="yes"/>
 <dimension x1="0" y1="39.37" x2="0" y2="0" x3="-5.08" y3="19.685" textsize="0.8128" layer="47" unit="mil" visible="yes"/>
 <dimension x1="0" y1="39.37" x2="0" y2="0" x3="-2.54" y3="19.685" textsize="0.8128" layer="47" visible="yes"/>
+<wire x1="0" y1="35.56" x2="0" y2="3.81" width="0" layer="20"/>
+<wire x1="29.21" y1="39.37" x2="33.02" y2="35.56" width="0" layer="20" curve="-90"/>
+<wire x1="29.21" y1="0" x2="33.02" y2="3.81" width="0" layer="20" curve="90"/>
+<wire x1="0" y1="3.81" x2="3.81" y2="0" width="0" layer="20" curve="90"/>
+<wire x1="0" y1="35.56" x2="3.81" y2="39.37" width="0" layer="20" curve="-90"/>
 </plain>
 <libraries>
 <library name="rcl" urn="urn:adsk.eagle:library:334">
@@ -2823,7 +2827,7 @@ design rules under a new name.</description>
 <attribute name="NAME" x="0.2984" y="17.6972" size="0.8128" layer="25"/>
 </element>
 <element name="RELAY" library="Display_Custom" package="MINIFIT_JR_5566-02" value="MINIFIT_JR_5566-02" x="5.08" y="34.29" smashed="yes" rot="R270">
-<attribute name="NAME" x="0.2984" y="37.3142" size="0.8128" layer="25"/>
+<attribute name="NAME" x="6.6484" y="37.3142" size="0.8128" layer="25"/>
 </element>
 <element name="U$4" library="SparkFun-AnalogIC" package="SO08" value="LM393" x="22.733" y="26.289" smashed="yes" rot="R270">
 <attribute name="NAME" x="21.717" y="28.956" size="0.8128" layer="25"/>
@@ -2877,7 +2881,7 @@ design rules under a new name.</description>
 <attribute name="NAME" x="17.78" y="6.477" size="0.8128" layer="25" ratio="10" rot="R180"/>
 <attribute name="SPICEPREFIX" value="R" x="17.78" y="6.096" size="1.778" layer="27" rot="R180" display="off"/>
 </element>
-<element name="U$1" library="KEMET" package="DPDT_2.54" value="EC2" x="2.54" y="-5.08"/>
+<element name="U$1" library="KEMET" package="DPDT_2.54" value="EC2" x="16.51" y="15.24" rot="R90"/>
 </elements>
 <signals>
 <signal name="V+">
@@ -2932,14 +2936,14 @@ design rules under a new name.</description>
 <wire x1="29.21" y1="26.924" x2="28.26" y2="26.924" width="0.8128" layer="1"/>
 <contactref element="U$1" pad="$P1"/>
 <wire x1="12.7" y1="12.867" x2="15.681" y2="15.046" width="0" layer="19" extent="1-16"/>
-<wire x1="-3.81" y1="-2.54" x2="12.7" y2="2.667" width="0" layer="19" extent="1-1"/>
+<wire x1="13.97" y1="8.89" x2="12.7" y2="2.667" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$1">
 <contactref element="RSET" pad="1"/>
 <wire x1="25.4" y1="8.636" x2="22.86" y2="6.096" width="0.8128" layer="16"/>
 <wire x1="25.4" y1="18.148" x2="25.4" y2="8.636" width="0.8128" layer="16"/>
 <contactref element="U$1" pad="$P5"/>
-<wire x1="6.35" y1="-2.54" x2="22.86" y2="6.096" width="0" layer="19" extent="1-1"/>
+<wire x1="13.97" y1="19.05" x2="22.86" y2="6.096" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="GND">
 <contactref element="D1" pad="A"/>
@@ -2987,14 +2991,14 @@ design rules under a new name.</description>
 <wire x1="10.408" y1="19.711" x2="15.24" y2="27.305" width="0" layer="19" extent="1-1"/>
 <wire x1="22.86" y1="2.667" x2="9.8500375" y2="8.5800375" width="0" layer="19" extent="1-1"/>
 <wire x1="29.464" y1="8.255" x2="22.86" y2="2.667" width="0" layer="19" extent="1-1"/>
-<wire x1="-3.81" y1="-7.62" x2="3.81" y2="7.62" width="0" layer="19" extent="1-1"/>
+<wire x1="19.05" y1="8.89" x2="3.81" y2="7.62" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="N$3">
 <contactref element="RDIST" pad="P$1"/>
 <wire x1="29.464" y1="20.955" x2="22.225" y2="20.955" width="0.8128" layer="16"/>
 <wire x1="22.225" y1="20.955" x2="19.431" y2="18.161" width="0.8128" layer="16"/>
 <contactref element="U$1" pad="$P3"/>
-<wire x1="1.27" y1="-2.54" x2="19.431" y2="18.161" width="0" layer="19" extent="16-16"/>
+<wire x1="13.97" y1="13.97" x2="19.431" y2="18.161" width="0" layer="19" extent="16-16"/>
 </signal>
 <signal name="V_TRIG">
 <contactref element="U$4" pad="2"/>
@@ -3088,7 +3092,7 @@ design rules under a new name.</description>
 <wire x1="16.129" y1="25.654" x2="20.1168" y2="25.654" width="0.4064" layer="1"/>
 <contactref element="C1" pad="+"/>
 <wire x1="15.24" y1="24.765" x2="16.129" y2="25.654" width="0" layer="19" extent="1-1"/>
-<wire x1="3.81" y1="-2.54" x2="15.24" y2="24.765" width="0" layer="19" extent="1-1"/>
+<wire x1="13.97" y1="16.51" x2="15.24" y2="24.765" width="0" layer="19" extent="1-1"/>
 </signal>
 </signals>
 <mfgpreviewcolors>
