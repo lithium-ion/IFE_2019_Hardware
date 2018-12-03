@@ -1,0 +1,10 @@
+Added Component: Designator=Q?(LFPAK-56-8)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "CompType"; Value = "Used in BOM Report"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "Nexperia"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MountingType"; Value = "SMT"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MouserPartNumber"; Value = "PHPT610030NKX"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier 1"; Value = "Mouser"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 1"; Value = "771-PHPT610030NKX"; VariantName = "[No Variations]"
+Added Class: Name=ife19_TS_BMS_v2
+Added Room: Name=ife19_TS_BMS_v2

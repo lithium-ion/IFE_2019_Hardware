@@ -1,0 +1,4 @@
+Added Pin To Net: NetName=NetQ?_B_1 Pin=Q?-2
+Added Pin To Net: NetName=NetQ?_B_1 Pin=Q?-7_8
+Added Net: Name=NetQ?_B_1
+Added Member To Class: ClassName=ife19_TS_BMS_v2 Member=Component Q? PHPT610030NK
