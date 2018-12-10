@@ -13574,7 +13574,7 @@ wave soldering</description>
 <attribute name="NAME" x="-38.1" y="33.274" size="1.778" layer="94" rot="MR0"/>
 </instance>
 <instance part="C" gate="14" x="-38.1" y="25.4" smashed="yes" rot="MR0">
-<attribute name="NAME" x="-38.1" y="23.114" size="1.778" layer="94" rot="MR0"/>
+<attribute name="NAME" x="-83.82" y="28.194" size="1.778" layer="94" rot="MR0"/>
 </instance>
 <instance part="C" gate="13" x="-38.1" y="15.24" smashed="yes" rot="MR0">
 <attribute name="NAME" x="-38.1" y="12.954" size="1.778" layer="94" rot="MR0"/>
@@ -13911,7 +13911,6 @@ wave soldering</description>
 <segment>
 <pinref part="R33" gate="G$1" pin="2"/>
 <pinref part="R54" gate="G$1" pin="2"/>
-<pinref part="R54" gate="G$1" pin="2"/>
 <pinref part="R16" gate="G$1" pin="1"/>
 <junction x="-12.7" y="45.72"/>
 <wire x1="-20.32" y1="45.72" x2="-12.7" y2="45.72" width="0.1524" layer="91"/>
@@ -14196,7 +14195,6 @@ wave soldering</description>
 <pinref part="R34" gate="G$1" pin="2"/>
 <pinref part="R55" gate="G$1" pin="2"/>
 <junction x="-12.7" y="35.56"/>
-<pinref part="R55" gate="G$1" pin="2"/>
 <pinref part="R17" gate="G$1" pin="1"/>
 <wire x1="-20.32" y1="35.56" x2="-12.7" y2="35.56" width="0.1524" layer="91"/>
 </segment>
@@ -14207,7 +14205,6 @@ wave soldering</description>
 <pinref part="R35" gate="G$1" pin="2"/>
 <pinref part="R57" gate="G$1" pin="2"/>
 <junction x="-12.7" y="25.4"/>
-<pinref part="R57" gate="G$1" pin="2"/>
 <pinref part="R18" gate="G$1" pin="1"/>
 <wire x1="-20.32" y1="25.4" x2="-12.7" y2="25.4" width="0.1524" layer="91"/>
 </segment>
@@ -14218,7 +14215,6 @@ wave soldering</description>
 <pinref part="R36" gate="G$1" pin="2"/>
 <pinref part="R58" gate="G$1" pin="2"/>
 <junction x="-12.7" y="15.24"/>
-<pinref part="R58" gate="G$1" pin="2"/>
 <pinref part="R19" gate="G$1" pin="1"/>
 <wire x1="-20.32" y1="15.24" x2="-12.7" y2="15.24" width="0.1524" layer="91"/>
 </segment>
@@ -14229,7 +14225,6 @@ wave soldering</description>
 <pinref part="R39" gate="G$1" pin="2"/>
 <pinref part="R60" gate="G$1" pin="2"/>
 <junction x="-12.7" y="-15.24"/>
-<pinref part="R60" gate="G$1" pin="2"/>
 <pinref part="R22" gate="G$1" pin="1"/>
 <wire x1="-20.32" y1="-15.24" x2="-12.7" y2="-15.24" width="0.1524" layer="91"/>
 </segment>
@@ -14240,7 +14235,6 @@ wave soldering</description>
 <pinref part="R40" gate="G$1" pin="2"/>
 <pinref part="R61" gate="G$1" pin="2"/>
 <junction x="-12.7" y="-25.4"/>
-<pinref part="R61" gate="G$1" pin="2"/>
 <pinref part="R23" gate="G$1" pin="1"/>
 <wire x1="-20.32" y1="-25.4" x2="-12.7" y2="-25.4" width="0.1524" layer="91"/>
 </segment>
@@ -14251,7 +14245,6 @@ wave soldering</description>
 <pinref part="R41" gate="G$1" pin="2"/>
 <pinref part="R62" gate="G$1" pin="2"/>
 <junction x="-12.7" y="-35.56"/>
-<pinref part="R62" gate="G$1" pin="2"/>
 <pinref part="R24" gate="G$1" pin="1"/>
 <wire x1="-20.32" y1="-35.56" x2="-12.7" y2="-35.56" width="0.1524" layer="91"/>
 </segment>
@@ -14262,7 +14255,6 @@ wave soldering</description>
 <pinref part="R42" gate="G$1" pin="2"/>
 <pinref part="R63" gate="G$1" pin="2"/>
 <junction x="-12.7" y="-45.72"/>
-<pinref part="R63" gate="G$1" pin="2"/>
 <pinref part="R25" gate="G$1" pin="1"/>
 <wire x1="-20.32" y1="-45.72" x2="-12.7" y2="-45.72" width="0.1524" layer="91"/>
 </segment>
@@ -14273,7 +14265,6 @@ wave soldering</description>
 <pinref part="R43" gate="G$1" pin="2"/>
 <pinref part="R64" gate="G$1" pin="2"/>
 <junction x="-12.7" y="-55.88"/>
-<pinref part="R64" gate="G$1" pin="2"/>
 <pinref part="R26" gate="G$1" pin="1"/>
 <wire x1="-20.32" y1="-55.88" x2="-12.7" y2="-55.88" width="0.1524" layer="91"/>
 </segment>
@@ -14284,7 +14275,6 @@ wave soldering</description>
 <pinref part="R44" gate="G$1" pin="2"/>
 <pinref part="R65" gate="G$1" pin="2"/>
 <junction x="-12.7" y="-66.04"/>
-<pinref part="R65" gate="G$1" pin="2"/>
 <pinref part="R27" gate="G$1" pin="1"/>
 <wire x1="-20.32" y1="-66.04" x2="-12.7" y2="-66.04" width="0.1524" layer="91"/>
 </segment>
@@ -14295,7 +14285,6 @@ wave soldering</description>
 <pinref part="R45" gate="G$1" pin="2"/>
 <pinref part="R66" gate="G$1" pin="2"/>
 <junction x="-12.7" y="-76.2"/>
-<pinref part="R66" gate="G$1" pin="2"/>
 <pinref part="R28" gate="G$1" pin="1"/>
 <wire x1="-20.32" y1="-76.2" x2="-12.7" y2="-76.2" width="0.1524" layer="91"/>
 </segment>
@@ -14306,7 +14295,6 @@ wave soldering</description>
 <pinref part="R46" gate="G$1" pin="2"/>
 <pinref part="R67" gate="G$1" pin="2"/>
 <junction x="-12.7" y="-86.36"/>
-<pinref part="R67" gate="G$1" pin="2"/>
 <pinref part="R29" gate="G$1" pin="1"/>
 <wire x1="-20.32" y1="-86.36" x2="-12.7" y2="-86.36" width="0.1524" layer="91"/>
 </segment>
@@ -14317,7 +14305,6 @@ wave soldering</description>
 <pinref part="R48" gate="G$1" pin="2"/>
 <pinref part="R68" gate="G$1" pin="2"/>
 <junction x="-12.7" y="-96.52"/>
-<pinref part="R68" gate="G$1" pin="2"/>
 <pinref part="R30" gate="G$1" pin="1"/>
 <wire x1="-20.32" y1="-96.52" x2="-12.7" y2="-96.52" width="0.1524" layer="91"/>
 </segment>
@@ -14576,7 +14563,6 @@ wave soldering</description>
 <pinref part="C11" gate="G$1" pin="2"/>
 <pinref part="GND4" gate="1" pin="GND"/>
 <junction x="-38.1" y="15.24"/>
-<pinref part="GND4" gate="1" pin="GND"/>
 </segment>
 <segment>
 <pinref part="C12" gate="G$1" pin="2"/>
@@ -14603,7 +14589,6 @@ wave soldering</description>
 <pinref part="R7" gate="G$1" pin="2"/>
 <pinref part="C10" gate="G$1" pin="1"/>
 <junction x="-38.1" y="22.86"/>
-<pinref part="C10" gate="G$1" pin="1"/>
 </segment>
 </net>
 <net name="N$16" class="0">
