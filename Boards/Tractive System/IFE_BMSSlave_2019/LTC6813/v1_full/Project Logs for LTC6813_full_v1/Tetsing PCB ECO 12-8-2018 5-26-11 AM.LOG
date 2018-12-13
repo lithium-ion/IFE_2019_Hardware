@@ -1,0 +1,21 @@
+Change Component Designator: OldDesignator=? NewDesignator=1
+Added Component: Designator=CELL+(6PT)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "DeviceName"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "DeviceSetName"; Value = "LI6PT"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "GateName_1"; Value = "G$1"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "GateName_2"; Value = "G$2"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LibraryName"; Value = "IFE_Energus"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "6PT"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SymbolName_1"; Value = "ENERGUS_CELL"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SymbolName_2"; Value = "TEMP_JST_XH"; VariantName = "[No Variations]"
+Added Component: Designator=U1(LQFP64_LWE_A)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "DeviceName"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "DeviceSetName"; Value = "LTC6813HLWE-1"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "GateName_1"; Value = "A"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LibraryName"; Value = "LTC6813_Official"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "LQFP64_LWE_A"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SymbolName_1"; Value = "LTC6813XLWE-1"; VariantName = "[No Variations]"
+Added Member To Class: ClassName=Cell Member=Component CELL+ LI6PT
+Added Member To Class: ClassName=Cell Member=Component U1 LTC6813HLWE-1

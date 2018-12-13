@@ -1,0 +1,7 @@
+Change Component Designator: OldDesignator=R3 NTC NewDesignator=R3_U_Cell1
+Change Component Description : Designator=F1_U_Cell1 Old Description=SF-0603FP New Description=
+Change Component Description : Designator=F2_U_Cell1 Old Description=SF-0603FP New Description=
+Added Member To Class: ClassName=U_Cell1 Member=Component LED1_U_Cell1 (LED1) 150060SS75000
+Added Member To Class: ClassName=U_Cell1 Member=Component R1_U_Cell1 (R1) 100 1% 0603(1608)
+Added Member To Class: ClassName=U_Cell1 Member=Component R2_U_Cell1 (R2) 2K 1% 0603(1608)
+Added Member To Class: ClassName=U_Cell1 Member=Component R4_U_Cell1 (R4) 330R 1% 0603(1608)

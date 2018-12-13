@@ -1,0 +1,6 @@
+Change Component Designator: OldDesignator=1 NewDesignator=F1
+Change Component Designator: OldDesignator=2 NewDesignator=F2
+Change Net Name : Old Net Name=Net1_1 New Net Name=NetF1_1
+Change Net Name : Old Net Name=Net1_2 New Net Name=NetCELL+1_CELL+
+Change Net Name : Old Net Name=Net2_2 New Net Name=Net3_3
+Added Member To Class: ClassName=Cell Member=Component F1 SF-0603FP

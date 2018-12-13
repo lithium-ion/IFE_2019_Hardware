@@ -1,0 +1,464 @@
+Removed Pin From Net: NetName=NEG2 Pin=F1_U_Cell1-2
+Removed Pin From Net: NetName=NEG3 Pin=F1_U_Cell2-2
+Removed Pin From Net: NetName=NEG4 Pin=F1_U_Cell3-2
+Removed Pin From Net: NetName=NEG5 Pin=F1_U_Cell4-2
+Removed Pin From Net: NetName=NEG6 Pin=F1_U_Cell5-2
+Removed Pin From Net: NetName=NEG7 Pin=F1_U_Cell6-2
+Removed Pin From Net: NetName=NEG8 Pin=F1_U_Cell7-2
+Removed Pin From Net: NetName=NEG9 Pin=F1_U_Cell8-2
+Removed Pin From Net: NetName=NEG10 Pin=F1_U_Cell9-2
+Removed Pin From Net: NetName=NEG11 Pin=F1_U_Cell10-2
+Removed Pin From Net: NetName=NEG12 Pin=F1_U_Cell11-2
+Removed Pin From Net: NetName=NEG13 Pin=F1_U_Cell12-2
+Removed Pin From Net: NetName=NEG14 Pin=F1_U_Cell13-2
+Removed Pin From Net: NetName=NEG15 Pin=F1_U_Cell14-2
+Removed Pin From Net: NetName=NEG16 Pin=F1_U_Cell15-2
+Removed Pin From Net: NetName=POS16 Pin=F1_U_Cell16-2
+Removed Pin From Net: NetName=NEG2 Pin=F2_U_Cell1-1
+Removed Pin From Net: NetName=F_U_Cell1 Pin=F2_U_Cell1-2
+Removed Pin From Net: NetName=NEG3 Pin=F2_U_Cell2-1
+Removed Pin From Net: NetName=F_U_Cell2 Pin=F2_U_Cell2-2
+Removed Pin From Net: NetName=NEG4 Pin=F2_U_Cell3-1
+Removed Pin From Net: NetName=F_U_Cell3 Pin=F2_U_Cell3-2
+Removed Pin From Net: NetName=NEG5 Pin=F2_U_Cell4-1
+Removed Pin From Net: NetName=F_U_Cell4 Pin=F2_U_Cell4-2
+Removed Pin From Net: NetName=NEG6 Pin=F2_U_Cell5-1
+Removed Pin From Net: NetName=F_U_Cell5 Pin=F2_U_Cell5-2
+Removed Pin From Net: NetName=NEG7 Pin=F2_U_Cell6-1
+Removed Pin From Net: NetName=F_U_Cell6 Pin=F2_U_Cell6-2
+Removed Pin From Net: NetName=NEG8 Pin=F2_U_Cell7-1
+Removed Pin From Net: NetName=F_U_Cell7 Pin=F2_U_Cell7-2
+Removed Pin From Net: NetName=NEG9 Pin=F2_U_Cell8-1
+Removed Pin From Net: NetName=F_U_Cell8 Pin=F2_U_Cell8-2
+Removed Pin From Net: NetName=NEG10 Pin=F2_U_Cell9-1
+Removed Pin From Net: NetName=F_U_Cell9 Pin=F2_U_Cell9-2
+Removed Pin From Net: NetName=NEG11 Pin=F2_U_Cell10-1
+Removed Pin From Net: NetName=F_U_Cell10 Pin=F2_U_Cell10-2
+Removed Pin From Net: NetName=NEG12 Pin=F2_U_Cell11-1
+Removed Pin From Net: NetName=F_U_Cell11 Pin=F2_U_Cell11-2
+Removed Pin From Net: NetName=NEG13 Pin=F2_U_Cell12-1
+Removed Pin From Net: NetName=F_U_Cell12 Pin=F2_U_Cell12-2
+Removed Pin From Net: NetName=NEG14 Pin=F2_U_Cell13-1
+Removed Pin From Net: NetName=F_U_Cell13 Pin=F2_U_Cell13-2
+Removed Pin From Net: NetName=NEG15 Pin=F2_U_Cell14-1
+Removed Pin From Net: NetName=F_U_Cell14 Pin=F2_U_Cell14-2
+Removed Pin From Net: NetName=NEG16 Pin=F2_U_Cell15-1
+Removed Pin From Net: NetName=F_U_Cell15 Pin=F2_U_Cell15-2
+Removed Pin From Net: NetName=POS16 Pin=F2_U_Cell16-1
+Removed Pin From Net: NetName=F_U_Cell16 Pin=F2_U_Cell16-2
+Change Component Footprint: Designator=F1_U_Cell1 Old Footprint=0603 New Footprint=2410SMD
+Change Component Footprint: Designator=F1_U_Cell2 Old Footprint=0603 New Footprint=2410SMD
+Change Component Footprint: Designator=F1_U_Cell3 Old Footprint=0603 New Footprint=2410SMD
+Change Component Footprint: Designator=F1_U_Cell4 Old Footprint=0603 New Footprint=2410SMD
+Change Component Footprint: Designator=F1_U_Cell5 Old Footprint=0603 New Footprint=2410SMD
+Change Component Footprint: Designator=F1_U_Cell6 Old Footprint=0603 New Footprint=2410SMD
+Change Component Footprint: Designator=F1_U_Cell7 Old Footprint=0603 New Footprint=2410SMD
+Change Component Footprint: Designator=F1_U_Cell8 Old Footprint=0603 New Footprint=2410SMD
+Change Component Footprint: Designator=F1_U_Cell9 Old Footprint=0603 New Footprint=2410SMD
+Change Component Footprint: Designator=F1_U_Cell10 Old Footprint=0603 New Footprint=2410SMD
+Change Component Footprint: Designator=F1_U_Cell11 Old Footprint=0603 New Footprint=2410SMD
+Change Component Footprint: Designator=F1_U_Cell12 Old Footprint=0603 New Footprint=2410SMD
+Change Component Footprint: Designator=F1_U_Cell13 Old Footprint=0603 New Footprint=2410SMD
+Change Component Footprint: Designator=F1_U_Cell14 Old Footprint=0603 New Footprint=2410SMD
+Change Component Footprint: Designator=F1_U_Cell15 Old Footprint=0603 New Footprint=2410SMD
+Change Component Footprint: Designator=F1_U_Cell16 Old Footprint=0603 New Footprint=2410SMD
+Change Component Footprint: Designator=F2_U_Cell1 Old Footprint=0603 New Footprint=2410SMD
+Change Component Footprint: Designator=F2_U_Cell2 Old Footprint=0603 New Footprint=2410SMD
+Change Component Footprint: Designator=F2_U_Cell3 Old Footprint=0603 New Footprint=2410SMD
+Change Component Footprint: Designator=F2_U_Cell4 Old Footprint=0603 New Footprint=2410SMD
+Change Component Footprint: Designator=F2_U_Cell5 Old Footprint=0603 New Footprint=2410SMD
+Change Component Footprint: Designator=F2_U_Cell6 Old Footprint=0603 New Footprint=2410SMD
+Change Component Footprint: Designator=F2_U_Cell7 Old Footprint=0603 New Footprint=2410SMD
+Change Component Footprint: Designator=F2_U_Cell8 Old Footprint=0603 New Footprint=2410SMD
+Change Component Footprint: Designator=F2_U_Cell9 Old Footprint=0603 New Footprint=2410SMD
+Change Component Footprint: Designator=F2_U_Cell10 Old Footprint=0603 New Footprint=2410SMD
+Change Component Footprint: Designator=F2_U_Cell11 Old Footprint=0603 New Footprint=2410SMD
+Change Component Footprint: Designator=F2_U_Cell12 Old Footprint=0603 New Footprint=2410SMD
+Change Component Footprint: Designator=F2_U_Cell13 Old Footprint=0603 New Footprint=2410SMD
+Change Component Footprint: Designator=F2_U_Cell14 Old Footprint=0603 New Footprint=2410SMD
+Change Component Footprint: Designator=F2_U_Cell15 Old Footprint=0603 New Footprint=2410SMD
+Change Component Footprint: Designator=F2_U_Cell16 Old Footprint=0603 New Footprint=2410SMD
+Change Component Comment : Designator=F1_U_Cell1 Old Comment=SF-0603FP New Comment=0679L
+Change Component Comment : Designator=F1_U_Cell2 Old Comment=SF-0603FP New Comment=0679L
+Change Component Comment : Designator=F1_U_Cell3 Old Comment=SF-0603FP New Comment=0679L
+Change Component Comment : Designator=F1_U_Cell4 Old Comment=SF-0603FP New Comment=0679L
+Change Component Comment : Designator=F1_U_Cell5 Old Comment=SF-0603FP New Comment=0679L
+Change Component Comment : Designator=F1_U_Cell6 Old Comment=SF-0603FP New Comment=0679L
+Change Component Comment : Designator=F1_U_Cell7 Old Comment=SF-0603FP New Comment=0679L
+Change Component Comment : Designator=F1_U_Cell8 Old Comment=SF-0603FP New Comment=0679L
+Change Component Comment : Designator=F1_U_Cell9 Old Comment=SF-0603FP New Comment=0679L
+Change Component Comment : Designator=F1_U_Cell10 Old Comment=SF-0603FP New Comment=0679L
+Change Component Comment : Designator=F1_U_Cell11 Old Comment=SF-0603FP New Comment=0679L
+Change Component Comment : Designator=F1_U_Cell12 Old Comment=SF-0603FP New Comment=0679L
+Change Component Comment : Designator=F1_U_Cell13 Old Comment=SF-0603FP New Comment=0679L
+Change Component Comment : Designator=F1_U_Cell14 Old Comment=SF-0603FP New Comment=0679L
+Change Component Comment : Designator=F1_U_Cell15 Old Comment=SF-0603FP New Comment=0679L
+Change Component Comment : Designator=F1_U_Cell16 Old Comment=SF-0603FP New Comment=0679L
+Change Component Comment : Designator=F2_U_Cell1 Old Comment=SF-0603FP New Comment=0679L
+Change Component Comment : Designator=F2_U_Cell2 Old Comment=SF-0603FP New Comment=0679L
+Change Component Comment : Designator=F2_U_Cell3 Old Comment=SF-0603FP New Comment=0679L
+Change Component Comment : Designator=F2_U_Cell4 Old Comment=SF-0603FP New Comment=0679L
+Change Component Comment : Designator=F2_U_Cell5 Old Comment=SF-0603FP New Comment=0679L
+Change Component Comment : Designator=F2_U_Cell6 Old Comment=SF-0603FP New Comment=0679L
+Change Component Comment : Designator=F2_U_Cell7 Old Comment=SF-0603FP New Comment=0679L
+Change Component Comment : Designator=F2_U_Cell8 Old Comment=SF-0603FP New Comment=0679L
+Change Component Comment : Designator=F2_U_Cell9 Old Comment=SF-0603FP New Comment=0679L
+Change Component Comment : Designator=F2_U_Cell10 Old Comment=SF-0603FP New Comment=0679L
+Change Component Comment : Designator=F2_U_Cell11 Old Comment=SF-0603FP New Comment=0679L
+Change Component Comment : Designator=F2_U_Cell12 Old Comment=SF-0603FP New Comment=0679L
+Change Component Comment : Designator=F2_U_Cell13 Old Comment=SF-0603FP New Comment=0679L
+Change Component Comment : Designator=F2_U_Cell14 Old Comment=SF-0603FP New Comment=0679L
+Change Component Comment : Designator=F2_U_Cell15 Old Comment=SF-0603FP New Comment=0679L
+Change Component Comment : Designator=F2_U_Cell16 Old Comment=SF-0603FP New Comment=0679L
+Change component parameters: Designator = "F1_U_Cell1"; Footprint = "2410SMD"; UniqueID = "\RJTYKPKE\1KSLPTKXT\TGWKAJFX"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "DeviceName"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "DeviceSetName"; Value = "0679L"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "GateName_1"; Value = "G$1"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "LibraryName"; Value = "IFE_Fuses"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Package"; Value = "2410SMD"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "SymbolName_1"; Value = "FUSE"; VariantName = "[No Variations]"
+Change component parameters: Designator = "F1_U_Cell2"; Footprint = "2410SMD"; UniqueID = "\RJTYKPKE\2KSLPTKXT\TGWKAJFX"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "DeviceName"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "DeviceSetName"; Value = "0679L"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "GateName_1"; Value = "G$1"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "LibraryName"; Value = "IFE_Fuses"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Package"; Value = "2410SMD"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "SymbolName_1"; Value = "FUSE"; VariantName = "[No Variations]"
+Change component parameters: Designator = "F1_U_Cell3"; Footprint = "2410SMD"; UniqueID = "\RJTYKPKE\3KSLPTKXT\TGWKAJFX"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "DeviceName"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "DeviceSetName"; Value = "0679L"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "GateName_1"; Value = "G$1"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "LibraryName"; Value = "IFE_Fuses"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Package"; Value = "2410SMD"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "SymbolName_1"; Value = "FUSE"; VariantName = "[No Variations]"
+Change component parameters: Designator = "F1_U_Cell4"; Footprint = "2410SMD"; UniqueID = "\RJTYKPKE\4KSLPTKXT\TGWKAJFX"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "DeviceName"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "DeviceSetName"; Value = "0679L"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "GateName_1"; Value = "G$1"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "LibraryName"; Value = "IFE_Fuses"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Package"; Value = "2410SMD"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "SymbolName_1"; Value = "FUSE"; VariantName = "[No Variations]"
+Change component parameters: Designator = "F1_U_Cell5"; Footprint = "2410SMD"; UniqueID = "\RJTYKPKE\5KSLPTKXT\TGWKAJFX"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "DeviceName"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "DeviceSetName"; Value = "0679L"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "GateName_1"; Value = "G$1"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "LibraryName"; Value = "IFE_Fuses"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Package"; Value = "2410SMD"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "SymbolName_1"; Value = "FUSE"; VariantName = "[No Variations]"
+Change component parameters: Designator = "F1_U_Cell6"; Footprint = "2410SMD"; UniqueID = "\RJTYKPKE\6KSLPTKXT\TGWKAJFX"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "DeviceName"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "DeviceSetName"; Value = "0679L"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "GateName_1"; Value = "G$1"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "LibraryName"; Value = "IFE_Fuses"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Package"; Value = "2410SMD"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "SymbolName_1"; Value = "FUSE"; VariantName = "[No Variations]"
+Change component parameters: Designator = "F1_U_Cell7"; Footprint = "2410SMD"; UniqueID = "\RJTYKPKE\7KSLPTKXT\TGWKAJFX"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "DeviceName"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "DeviceSetName"; Value = "0679L"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "GateName_1"; Value = "G$1"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "LibraryName"; Value = "IFE_Fuses"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Package"; Value = "2410SMD"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "SymbolName_1"; Value = "FUSE"; VariantName = "[No Variations]"
+Change component parameters: Designator = "F1_U_Cell8"; Footprint = "2410SMD"; UniqueID = "\RJTYKPKE\8KSLPTKXT\TGWKAJFX"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "DeviceName"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "DeviceSetName"; Value = "0679L"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "GateName_1"; Value = "G$1"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "LibraryName"; Value = "IFE_Fuses"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Package"; Value = "2410SMD"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "SymbolName_1"; Value = "FUSE"; VariantName = "[No Variations]"
+Change component parameters: Designator = "F1_U_Cell9"; Footprint = "2410SMD"; UniqueID = "\RJTYKPKE\9KSLPTKXT\TGWKAJFX"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "DeviceName"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "DeviceSetName"; Value = "0679L"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "GateName_1"; Value = "G$1"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "LibraryName"; Value = "IFE_Fuses"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Package"; Value = "2410SMD"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "SymbolName_1"; Value = "FUSE"; VariantName = "[No Variations]"
+Change component parameters: Designator = "F1_U_Cell10"; Footprint = "2410SMD"; UniqueID = "\RJTYKPKE\10KSLPTKXT\TGWKAJFX"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "DeviceName"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "DeviceSetName"; Value = "0679L"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "GateName_1"; Value = "G$1"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "LibraryName"; Value = "IFE_Fuses"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Package"; Value = "2410SMD"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "SymbolName_1"; Value = "FUSE"; VariantName = "[No Variations]"
+Change component parameters: Designator = "F1_U_Cell11"; Footprint = "2410SMD"; UniqueID = "\RJTYKPKE\11KSLPTKXT\TGWKAJFX"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "DeviceName"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "DeviceSetName"; Value = "0679L"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "GateName_1"; Value = "G$1"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "LibraryName"; Value = "IFE_Fuses"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Package"; Value = "2410SMD"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "SymbolName_1"; Value = "FUSE"; VariantName = "[No Variations]"
+Change component parameters: Designator = "F1_U_Cell12"; Footprint = "2410SMD"; UniqueID = "\RJTYKPKE\12KSLPTKXT\TGWKAJFX"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "DeviceName"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "DeviceSetName"; Value = "0679L"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "GateName_1"; Value = "G$1"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "LibraryName"; Value = "IFE_Fuses"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Package"; Value = "2410SMD"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "SymbolName_1"; Value = "FUSE"; VariantName = "[No Variations]"
+Change component parameters: Designator = "F1_U_Cell13"; Footprint = "2410SMD"; UniqueID = "\RJTYKPKE\13KSLPTKXT\TGWKAJFX"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "DeviceName"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "DeviceSetName"; Value = "0679L"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "GateName_1"; Value = "G$1"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "LibraryName"; Value = "IFE_Fuses"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Package"; Value = "2410SMD"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "SymbolName_1"; Value = "FUSE"; VariantName = "[No Variations]"
+Change component parameters: Designator = "F1_U_Cell14"; Footprint = "2410SMD"; UniqueID = "\RJTYKPKE\14KSLPTKXT\TGWKAJFX"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "DeviceName"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "DeviceSetName"; Value = "0679L"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "GateName_1"; Value = "G$1"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "LibraryName"; Value = "IFE_Fuses"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Package"; Value = "2410SMD"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "SymbolName_1"; Value = "FUSE"; VariantName = "[No Variations]"
+Change component parameters: Designator = "F1_U_Cell15"; Footprint = "2410SMD"; UniqueID = "\RJTYKPKE\15KSLPTKXT\TGWKAJFX"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "DeviceName"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "DeviceSetName"; Value = "0679L"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "GateName_1"; Value = "G$1"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "LibraryName"; Value = "IFE_Fuses"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Package"; Value = "2410SMD"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "SymbolName_1"; Value = "FUSE"; VariantName = "[No Variations]"
+Change component parameters: Designator = "F1_U_Cell16"; Footprint = "2410SMD"; UniqueID = "\RJTYKPKE\16KSLPTKXT\TGWKAJFX"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "DeviceName"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "DeviceSetName"; Value = "0679L"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "GateName_1"; Value = "G$1"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "LibraryName"; Value = "IFE_Fuses"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Package"; Value = "2410SMD"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "SymbolName_1"; Value = "FUSE"; VariantName = "[No Variations]"
+Change component parameters: Designator = "F2_U_Cell1"; Footprint = "2410SMD"; UniqueID = "\RJTYKPKE\1KSLPTKXT\BDLEIHKJ"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "DeviceName"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "DeviceSetName"; Value = "0679L"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "GateName_1"; Value = "G$1"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "LibraryName"; Value = "IFE_Fuses"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Package"; Value = "2410SMD"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "SymbolName_1"; Value = "FUSE"; VariantName = "[No Variations]"
+Change component parameters: Designator = "F2_U_Cell2"; Footprint = "2410SMD"; UniqueID = "\RJTYKPKE\2KSLPTKXT\BDLEIHKJ"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "DeviceName"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "DeviceSetName"; Value = "0679L"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "GateName_1"; Value = "G$1"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "LibraryName"; Value = "IFE_Fuses"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Package"; Value = "2410SMD"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "SymbolName_1"; Value = "FUSE"; VariantName = "[No Variations]"
+Change component parameters: Designator = "F2_U_Cell3"; Footprint = "2410SMD"; UniqueID = "\RJTYKPKE\3KSLPTKXT\BDLEIHKJ"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "DeviceName"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "DeviceSetName"; Value = "0679L"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "GateName_1"; Value = "G$1"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "LibraryName"; Value = "IFE_Fuses"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Package"; Value = "2410SMD"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "SymbolName_1"; Value = "FUSE"; VariantName = "[No Variations]"
+Change component parameters: Designator = "F2_U_Cell4"; Footprint = "2410SMD"; UniqueID = "\RJTYKPKE\4KSLPTKXT\BDLEIHKJ"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "DeviceName"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "DeviceSetName"; Value = "0679L"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "GateName_1"; Value = "G$1"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "LibraryName"; Value = "IFE_Fuses"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Package"; Value = "2410SMD"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "SymbolName_1"; Value = "FUSE"; VariantName = "[No Variations]"
+Change component parameters: Designator = "F2_U_Cell5"; Footprint = "2410SMD"; UniqueID = "\RJTYKPKE\5KSLPTKXT\BDLEIHKJ"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "DeviceName"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "DeviceSetName"; Value = "0679L"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "GateName_1"; Value = "G$1"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "LibraryName"; Value = "IFE_Fuses"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Package"; Value = "2410SMD"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "SymbolName_1"; Value = "FUSE"; VariantName = "[No Variations]"
+Change component parameters: Designator = "F2_U_Cell6"; Footprint = "2410SMD"; UniqueID = "\RJTYKPKE\6KSLPTKXT\BDLEIHKJ"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "DeviceName"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "DeviceSetName"; Value = "0679L"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "GateName_1"; Value = "G$1"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "LibraryName"; Value = "IFE_Fuses"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Package"; Value = "2410SMD"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "SymbolName_1"; Value = "FUSE"; VariantName = "[No Variations]"
+Change component parameters: Designator = "F2_U_Cell7"; Footprint = "2410SMD"; UniqueID = "\RJTYKPKE\7KSLPTKXT\BDLEIHKJ"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "DeviceName"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "DeviceSetName"; Value = "0679L"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "GateName_1"; Value = "G$1"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "LibraryName"; Value = "IFE_Fuses"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Package"; Value = "2410SMD"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "SymbolName_1"; Value = "FUSE"; VariantName = "[No Variations]"
+Change component parameters: Designator = "F2_U_Cell8"; Footprint = "2410SMD"; UniqueID = "\RJTYKPKE\8KSLPTKXT\BDLEIHKJ"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "DeviceName"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "DeviceSetName"; Value = "0679L"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "GateName_1"; Value = "G$1"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "LibraryName"; Value = "IFE_Fuses"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Package"; Value = "2410SMD"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "SymbolName_1"; Value = "FUSE"; VariantName = "[No Variations]"
+Change component parameters: Designator = "F2_U_Cell9"; Footprint = "2410SMD"; UniqueID = "\RJTYKPKE\9KSLPTKXT\BDLEIHKJ"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "DeviceName"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "DeviceSetName"; Value = "0679L"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "GateName_1"; Value = "G$1"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "LibraryName"; Value = "IFE_Fuses"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Package"; Value = "2410SMD"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "SymbolName_1"; Value = "FUSE"; VariantName = "[No Variations]"
+Change component parameters: Designator = "F2_U_Cell10"; Footprint = "2410SMD"; UniqueID = "\RJTYKPKE\10KSLPTKXT\BDLEIHKJ"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "DeviceName"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "DeviceSetName"; Value = "0679L"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "GateName_1"; Value = "G$1"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "LibraryName"; Value = "IFE_Fuses"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Package"; Value = "2410SMD"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "SymbolName_1"; Value = "FUSE"; VariantName = "[No Variations]"
+Change component parameters: Designator = "F2_U_Cell11"; Footprint = "2410SMD"; UniqueID = "\RJTYKPKE\11KSLPTKXT\BDLEIHKJ"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "DeviceName"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "DeviceSetName"; Value = "0679L"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "GateName_1"; Value = "G$1"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "LibraryName"; Value = "IFE_Fuses"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Package"; Value = "2410SMD"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "SymbolName_1"; Value = "FUSE"; VariantName = "[No Variations]"
+Change component parameters: Designator = "F2_U_Cell12"; Footprint = "2410SMD"; UniqueID = "\RJTYKPKE\12KSLPTKXT\BDLEIHKJ"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "DeviceName"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "DeviceSetName"; Value = "0679L"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "GateName_1"; Value = "G$1"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "LibraryName"; Value = "IFE_Fuses"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Package"; Value = "2410SMD"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "SymbolName_1"; Value = "FUSE"; VariantName = "[No Variations]"
+Change component parameters: Designator = "F2_U_Cell13"; Footprint = "2410SMD"; UniqueID = "\RJTYKPKE\13KSLPTKXT\BDLEIHKJ"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "DeviceName"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "DeviceSetName"; Value = "0679L"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "GateName_1"; Value = "G$1"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "LibraryName"; Value = "IFE_Fuses"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Package"; Value = "2410SMD"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "SymbolName_1"; Value = "FUSE"; VariantName = "[No Variations]"
+Change component parameters: Designator = "F2_U_Cell14"; Footprint = "2410SMD"; UniqueID = "\RJTYKPKE\14KSLPTKXT\BDLEIHKJ"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "DeviceName"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "DeviceSetName"; Value = "0679L"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "GateName_1"; Value = "G$1"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "LibraryName"; Value = "IFE_Fuses"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Package"; Value = "2410SMD"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "SymbolName_1"; Value = "FUSE"; VariantName = "[No Variations]"
+Change component parameters: Designator = "F2_U_Cell15"; Footprint = "2410SMD"; UniqueID = "\RJTYKPKE\15KSLPTKXT\BDLEIHKJ"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "DeviceName"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "DeviceSetName"; Value = "0679L"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "GateName_1"; Value = "G$1"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "LibraryName"; Value = "IFE_Fuses"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Package"; Value = "2410SMD"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "SymbolName_1"; Value = "FUSE"; VariantName = "[No Variations]"
+Change component parameters: Designator = "F2_U_Cell16"; Footprint = "2410SMD"; UniqueID = "\RJTYKPKE\16KSLPTKXT\BDLEIHKJ"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "DeviceName"; Value = ""; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "DeviceSetName"; Value = "0679L"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "GateName_1"; Value = "G$1"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "LibraryName"; Value = "IFE_Fuses"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Package"; Value = "2410SMD"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "SymbolName_1"; Value = "FUSE"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=NEG2 Pin=F1_U_Cell1-P$2
+Added Pin To Net: NetName=NEG3 Pin=F1_U_Cell2-P$2
+Added Pin To Net: NetName=NEG4 Pin=F1_U_Cell3-P$2
+Added Pin To Net: NetName=NEG5 Pin=F1_U_Cell4-P$2
+Added Pin To Net: NetName=NEG6 Pin=F1_U_Cell5-P$2
+Added Pin To Net: NetName=NEG7 Pin=F1_U_Cell6-P$2
+Added Pin To Net: NetName=NEG8 Pin=F1_U_Cell7-P$2
+Added Pin To Net: NetName=NEG9 Pin=F1_U_Cell8-P$2
+Added Pin To Net: NetName=NEG10 Pin=F1_U_Cell9-P$2
+Added Pin To Net: NetName=NEG11 Pin=F1_U_Cell10-P$2
+Added Pin To Net: NetName=NEG12 Pin=F1_U_Cell11-P$2
+Added Pin To Net: NetName=NEG13 Pin=F1_U_Cell12-P$2
+Added Pin To Net: NetName=NEG14 Pin=F1_U_Cell13-P$2
+Added Pin To Net: NetName=NEG15 Pin=F1_U_Cell14-P$2
+Added Pin To Net: NetName=NEG16 Pin=F1_U_Cell15-P$2
+Added Pin To Net: NetName=POS16 Pin=F1_U_Cell16-P$2
+Added Pin To Net: NetName=NEG2 Pin=F2_U_Cell1-P$1
+Added Pin To Net: NetName=F_U_Cell1 Pin=F2_U_Cell1-P$2
+Added Pin To Net: NetName=NEG3 Pin=F2_U_Cell2-P$1
+Added Pin To Net: NetName=F_U_Cell2 Pin=F2_U_Cell2-P$2
+Added Pin To Net: NetName=NEG4 Pin=F2_U_Cell3-P$1
+Added Pin To Net: NetName=F_U_Cell3 Pin=F2_U_Cell3-P$2
+Added Pin To Net: NetName=NEG5 Pin=F2_U_Cell4-P$1
+Added Pin To Net: NetName=F_U_Cell4 Pin=F2_U_Cell4-P$2
+Added Pin To Net: NetName=NEG6 Pin=F2_U_Cell5-P$1
+Added Pin To Net: NetName=F_U_Cell5 Pin=F2_U_Cell5-P$2
+Added Pin To Net: NetName=NEG7 Pin=F2_U_Cell6-P$1
+Added Pin To Net: NetName=F_U_Cell6 Pin=F2_U_Cell6-P$2
+Added Pin To Net: NetName=NEG8 Pin=F2_U_Cell7-P$1
+Added Pin To Net: NetName=F_U_Cell7 Pin=F2_U_Cell7-P$2
+Added Pin To Net: NetName=NEG9 Pin=F2_U_Cell8-P$1
+Added Pin To Net: NetName=F_U_Cell8 Pin=F2_U_Cell8-P$2
+Added Pin To Net: NetName=NEG10 Pin=F2_U_Cell9-P$1
+Added Pin To Net: NetName=F_U_Cell9 Pin=F2_U_Cell9-P$2
+Added Pin To Net: NetName=NEG11 Pin=F2_U_Cell10-P$1
+Added Pin To Net: NetName=F_U_Cell10 Pin=F2_U_Cell10-P$2
+Added Pin To Net: NetName=NEG12 Pin=F2_U_Cell11-P$1
+Added Pin To Net: NetName=F_U_Cell11 Pin=F2_U_Cell11-P$2
+Added Pin To Net: NetName=NEG13 Pin=F2_U_Cell12-P$1
+Added Pin To Net: NetName=F_U_Cell12 Pin=F2_U_Cell12-P$2
+Added Pin To Net: NetName=NEG14 Pin=F2_U_Cell13-P$1
+Added Pin To Net: NetName=F_U_Cell13 Pin=F2_U_Cell13-P$2
+Added Pin To Net: NetName=NEG15 Pin=F2_U_Cell14-P$1
+Added Pin To Net: NetName=F_U_Cell14 Pin=F2_U_Cell14-P$2
+Added Pin To Net: NetName=NEG16 Pin=F2_U_Cell15-P$1
+Added Pin To Net: NetName=F_U_Cell15 Pin=F2_U_Cell15-P$2
+Added Pin To Net: NetName=POS16 Pin=F2_U_Cell16-P$1
+Added Pin To Net: NetName=F_U_Cell16 Pin=F2_U_Cell16-P$2
+Added Pin To Net: NetName=NetF1_U_Cell1_P$1 Pin=F1_U_Cell1-P$1
+Added Pin To Net: NetName=NetF1_U_Cell1_P$1 Pin=R2_U_Cell1-2
+Added Net: Name=NetF1_U_Cell1_P$1
+Added Pin To Net: NetName=NetF1_U_Cell2_P$1 Pin=F1_U_Cell2-P$1
+Added Pin To Net: NetName=NetF1_U_Cell2_P$1 Pin=R2_U_Cell2-2
+Added Net: Name=NetF1_U_Cell2_P$1
+Added Pin To Net: NetName=NetF1_U_Cell3_P$1 Pin=F1_U_Cell3-P$1
+Added Pin To Net: NetName=NetF1_U_Cell3_P$1 Pin=R2_U_Cell3-2
+Added Net: Name=NetF1_U_Cell3_P$1
+Added Pin To Net: NetName=NetF1_U_Cell4_P$1 Pin=F1_U_Cell4-P$1
+Added Pin To Net: NetName=NetF1_U_Cell4_P$1 Pin=R2_U_Cell4-2
+Added Net: Name=NetF1_U_Cell4_P$1
+Added Pin To Net: NetName=NetF1_U_Cell5_P$1 Pin=F1_U_Cell5-P$1
+Added Pin To Net: NetName=NetF1_U_Cell5_P$1 Pin=R2_U_Cell5-2
+Added Net: Name=NetF1_U_Cell5_P$1
+Added Pin To Net: NetName=NetF1_U_Cell6_P$1 Pin=F1_U_Cell6-P$1
+Added Pin To Net: NetName=NetF1_U_Cell6_P$1 Pin=R2_U_Cell6-2
+Added Net: Name=NetF1_U_Cell6_P$1
+Added Pin To Net: NetName=NetF1_U_Cell7_P$1 Pin=F1_U_Cell7-P$1
+Added Pin To Net: NetName=NetF1_U_Cell7_P$1 Pin=R2_U_Cell7-2
+Added Net: Name=NetF1_U_Cell7_P$1
+Added Pin To Net: NetName=NetF1_U_Cell8_P$1 Pin=F1_U_Cell8-P$1
+Added Pin To Net: NetName=NetF1_U_Cell8_P$1 Pin=R2_U_Cell8-2
+Added Net: Name=NetF1_U_Cell8_P$1
+Added Pin To Net: NetName=NetF1_U_Cell9_P$1 Pin=F1_U_Cell9-P$1
+Added Pin To Net: NetName=NetF1_U_Cell9_P$1 Pin=R2_U_Cell9-2
+Added Net: Name=NetF1_U_Cell9_P$1
+Added Pin To Net: NetName=NetF1_U_Cell10_P$1 Pin=F1_U_Cell10-P$1
+Added Pin To Net: NetName=NetF1_U_Cell10_P$1 Pin=R2_U_Cell10-2
+Added Net: Name=NetF1_U_Cell10_P$1
+Added Pin To Net: NetName=NetF1_U_Cell11_P$1 Pin=F1_U_Cell11-P$1
+Added Pin To Net: NetName=NetF1_U_Cell11_P$1 Pin=R2_U_Cell11-2
+Added Net: Name=NetF1_U_Cell11_P$1
+Added Pin To Net: NetName=NetF1_U_Cell12_P$1 Pin=F1_U_Cell12-P$1
+Added Pin To Net: NetName=NetF1_U_Cell12_P$1 Pin=R2_U_Cell12-2
+Added Net: Name=NetF1_U_Cell12_P$1
+Added Pin To Net: NetName=NetF1_U_Cell13_P$1 Pin=F1_U_Cell13-P$1
+Added Pin To Net: NetName=NetF1_U_Cell13_P$1 Pin=R2_U_Cell13-2
+Added Net: Name=NetF1_U_Cell13_P$1
+Added Pin To Net: NetName=NetF1_U_Cell14_P$1 Pin=F1_U_Cell14-P$1
+Added Pin To Net: NetName=NetF1_U_Cell14_P$1 Pin=R2_U_Cell14-2
+Added Net: Name=NetF1_U_Cell14_P$1
+Added Pin To Net: NetName=NetF1_U_Cell15_P$1 Pin=F1_U_Cell15-P$1
+Added Pin To Net: NetName=NetF1_U_Cell15_P$1 Pin=R2_U_Cell15-2
+Added Net: Name=NetF1_U_Cell15_P$1
+Added Pin To Net: NetName=NetF1_U_Cell16_P$1 Pin=F1_U_Cell16-P$1
+Added Pin To Net: NetName=NetF1_U_Cell16_P$1 Pin=R2_U_Cell16-2
+Added Net: Name=NetF1_U_Cell16_P$1

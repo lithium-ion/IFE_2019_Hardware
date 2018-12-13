@@ -1,0 +1,52 @@
+Added Component: Designator=1(0603)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "DeviceName"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "DeviceSetName"; Value = "SF-0603FP"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "GateName_1"; Value = "G$1"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LibraryName"; Value = "IFE_Fuses"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "0603"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SymbolName_1"; Value = "FUSE"; VariantName = "[No Variations]"
+Added Component: Designator=2(TO252)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "DeviceName"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "DeviceSetName"; Value = "DMP10H400SK3-13"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "GateName_1"; Value = "G$1"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LibraryName"; Value = "IFE_Transistors"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "TO252"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SymbolName_1"; Value = "LABELED-PMOS"; VariantName = "[No Variations]"
+Added Component: Designator=3(TO252-TKH-45)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "DeviceName"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "DeviceSetName"; Value = "TKH45"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "GateName_1"; Value = "G$1"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LibraryName"; Value = "IFE_Resistors"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "TO252-TKH-45"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SymbolName_1"; Value = "R-US"; VariantName = "[No Variations]"
+Added Component: Designator=CELL+(6PT)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "DeviceName"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "DeviceSetName"; Value = "LI6PT"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "GateName_1"; Value = "G$1"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "GateName_2"; Value = "G$2"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LibraryName"; Value = "IFE_Energus"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "6PT"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SymbolName_1"; Value = "ENERGUS_CELL"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SymbolName_2"; Value = "TEMP_JST_XH"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=Net1_1 Pin=1-1
+Added Pin To Net: NetName=Net1_1 Pin=CELL+-CELL+
+Added Pin To Net: NetName=Net1_1 Pin=CELL+-CELL+
+Added Net: Name=Net1_1
+Added Pin To Net: NetName=Net1_2 Pin=1-2
+Added Pin To Net: NetName=Net1_2 Pin=2-3
+Added Net: Name=Net1_2
+Added Pin To Net: NetName=Net2_2 Pin=2-2
+Added Pin To Net: NetName=Net2_2 Pin=3-2
+Added Net: Name=Net2_2
+Added Pin To Net: NetName=Net3_1 Pin=3-1
+Added Pin To Net: NetName=Net3_1 Pin=3-3
+Added Pin To Net: NetName=Net3_1 Pin=CELL+-1
+Added Pin To Net: NetName=Net3_1 Pin=CELL+-CELL-
+Added Pin To Net: NetName=Net3_1 Pin=CELL+-CELL-
+Added Net: Name=Net3_1
+Added Class: Name=Cell
+Added Room: Name=Cell

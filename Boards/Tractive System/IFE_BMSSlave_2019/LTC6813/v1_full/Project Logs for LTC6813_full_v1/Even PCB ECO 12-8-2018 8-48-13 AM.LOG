@@ -1,0 +1,100 @@
+Removed Member From Class: ClassName=16 Member=3_15
+Removed Member From Class: ClassName=16 Member=4_15
+Removed Member From Class: ClassName=16 Member=F1_15
+Removed Member From Class: ClassName=16 Member=F2_15
+Removed Member From Class: ClassName=16 Member=LED1_15
+Removed Member From Class: ClassName=16 Member=R1_15
+Removed Member From Class: ClassName=16 Member=R3_15
+Change Component Designator: OldDesignator=3_81 NewDesignator=3_6
+Change Component Designator: OldDesignator=3_82 NewDesignator=3_8
+Change Component Designator: OldDesignator=3_121 NewDesignator=3_10
+Change Component Designator: OldDesignator=3_122 NewDesignator=3_12
+Change Component Designator: OldDesignator=4_81 NewDesignator=4_6
+Change Component Designator: OldDesignator=4_82 NewDesignator=4_8
+Change Component Designator: OldDesignator=4_121 NewDesignator=4_10
+Change Component Designator: OldDesignator=4_122 NewDesignator=4_12
+Change Component Designator: OldDesignator=CELL+1_81 NewDesignator=CELL+1_6
+Change Component Designator: OldDesignator=CELL+1_82 NewDesignator=CELL+1_8
+Change Component Designator: OldDesignator=CELL+1_121 NewDesignator=CELL+1_10
+Change Component Designator: OldDesignator=CELL+1_122 NewDesignator=CELL+1_12
+Change Component Designator: OldDesignator=F1_81 NewDesignator=F1_6
+Change Component Designator: OldDesignator=F1_82 NewDesignator=F1_8
+Change Component Designator: OldDesignator=F1_121 NewDesignator=F1_10
+Change Component Designator: OldDesignator=F1_122 NewDesignator=F1_12
+Change Component Designator: OldDesignator=F2_81 NewDesignator=F2_6
+Change Component Designator: OldDesignator=F2_82 NewDesignator=F2_8
+Change Component Designator: OldDesignator=F2_121 NewDesignator=F2_10
+Change Component Designator: OldDesignator=F2_122 NewDesignator=F2_12
+Change Component Designator: OldDesignator=LED1_81 NewDesignator=LED1_6
+Change Component Designator: OldDesignator=LED1_82 NewDesignator=LED1_8
+Change Component Designator: OldDesignator=LED1_121 NewDesignator=LED1_10
+Change Component Designator: OldDesignator=LED1_122 NewDesignator=LED1_12
+Change Component Designator: OldDesignator=R1_81 NewDesignator=R1_6
+Change Component Designator: OldDesignator=R1_82 NewDesignator=R1_8
+Change Component Designator: OldDesignator=R1_121 NewDesignator=R1_10
+Change Component Designator: OldDesignator=R1_122 NewDesignator=R1_12
+Change Component Designator: OldDesignator=R2_81 NewDesignator=R2_6
+Change Component Designator: OldDesignator=R2_82 NewDesignator=R2_8
+Change Component Designator: OldDesignator=R2_121 NewDesignator=R2_10
+Change Component Designator: OldDesignator=R2_122 NewDesignator=R2_12
+Change Component Designator: OldDesignator=R3_81 NewDesignator=R3_6
+Change Component Designator: OldDesignator=R3_82 NewDesignator=R3_8
+Change Component Designator: OldDesignator=R3_121 NewDesignator=R3_10
+Change Component Designator: OldDesignator=R3_122 NewDesignator=R3_12
+Change Component Designator: OldDesignator=R4_81 NewDesignator=R4_6
+Change Component Designator: OldDesignator=R4_82 NewDesignator=R4_8
+Change Component Designator: OldDesignator=R4_121 NewDesignator=R4_10
+Change Component Designator: OldDesignator=R4_122 NewDesignator=R4_12
+Change Component Designator: OldDesignator=R5_81 NewDesignator=R5_6
+Change Component Designator: OldDesignator=R5_82 NewDesignator=R5_8
+Change Component Designator: OldDesignator=R5_121 NewDesignator=R5_10
+Change Component Designator: OldDesignator=R5_122 NewDesignator=R5_12
+Change Net Name : Old Net Name=Net3_81_1 New Net Name=Net3_6_1
+Change Net Name : Old Net Name=Net3_81_2 New Net Name=Net3_6_2
+Change Net Name : Old Net Name=Net3_81_3 New Net Name=Net3_6_3
+Change Net Name : Old Net Name=Net3_82_1 New Net Name=Net3_8_1
+Change Net Name : Old Net Name=Net3_82_2 New Net Name=Net3_8_2
+Change Net Name : Old Net Name=Net3_82_3 New Net Name=Net3_8_3
+Change Net Name : Old Net Name=Net3_121_1 New Net Name=Net3_10_1
+Change Net Name : Old Net Name=Net3_121_2 New Net Name=Net3_10_2
+Change Net Name : Old Net Name=Net3_121_3 New Net Name=Net3_10_3
+Change Net Name : Old Net Name=Net3_122_1 New Net Name=Net3_12_1
+Change Net Name : Old Net Name=Net3_122_2 New Net Name=Net3_12_2
+Change Net Name : Old Net Name=Net3_122_3 New Net Name=Net3_12_3
+Change Net Name : Old Net Name=Net4_81_1 New Net Name=Net4_6_1
+Change Net Name : Old Net Name=Net4_82_1 New Net Name=Net4_8_1
+Change Net Name : Old Net Name=Net4_121_1 New Net Name=Net4_10_1
+Change Net Name : Old Net Name=Net4_122_1 New Net Name=Net4_12_1
+Change Net Name : Old Net Name=NetF1_81_1 New Net Name=NetF1_6_1
+Change Net Name : Old Net Name=NetF1_82_1 New Net Name=NetF1_8_1
+Change Net Name : Old Net Name=NetF1_121_1 New Net Name=NetF1_10_1
+Change Net Name : Old Net Name=NetF1_122_1 New Net Name=NetF1_12_1
+Change Net Name : Old Net Name=NetLED1_81_2 New Net Name=NetLED1_6_2
+Change Net Name : Old Net Name=NetLED1_82_2 New Net Name=NetLED1_8_2
+Change Net Name : Old Net Name=NetLED1_121_2 New Net Name=NetLED1_10_2
+Change Net Name : Old Net Name=NetLED1_122_2 New Net Name=NetLED1_12_2
+Change Net Name : Old Net Name=NetR1_81_1 New Net Name=NetR1_6_1
+Change Net Name : Old Net Name=NetR1_82_1 New Net Name=NetR1_8_1
+Change Net Name : Old Net Name=NetR1_121_1 New Net Name=NetR1_10_1
+Change Net Name : Old Net Name=NetR1_122_1 New Net Name=NetR1_12_1
+Change Net Name : Old Net Name=NetR5_81_1 New Net Name=NetR5_6_1
+Change Net Name : Old Net Name=NetR5_82_1 New Net Name=NetR5_8_1
+Change Net Name : Old Net Name=NetR5_121_1 New Net Name=NetR5_10_1
+Change Net Name : Old Net Name=NetR5_122_1 New Net Name=NetR5_12_1
+Change Class Name : Old Net Name=81 New Net Name=6
+Change Class Name : Old Net Name=82 New Net Name=8
+Change Class Name : Old Net Name=121 New Net Name=10
+Change Class Name : Old Net Name=122 New Net Name=12
+Added Member To Class: ClassName=16 Member=Component 3_16 (3) DMP10H400SK3-13
+Added Member To Class: ClassName=16 Member=Component 4_16 (4) TKH45
+Added Member To Class: ClassName=16 Member=Component F1_16 (F1) SF-0603FP
+Added Member To Class: ClassName=16 Member=Component F2_16 (F2) SF-0603FP
+Added Member To Class: ClassName=16 Member=Component LED1_16 (LED1) 150060SS75000
+Added Member To Class: ClassName=16 Member=Component R1_16 (R1) 100 1% 0603(1608)
+Added Member To Class: ClassName=16 Member=Component R3_16 (R3) 100K NTC 1% 0603(1608)
+Change Room Name: Old Name=81 New Name=12
+Change Room Scope: Old Scope=InComponentClass('81') New Scope=InComponentClass('12')
+Change Room Name: Old Name=122 New Name=10
+Change Room Scope: Old Scope=InComponentClass('122') New Scope=InComponentClass('10')
+Added Room: Name=6
+Added Room: Name=8

@@ -1,0 +1,18 @@
+Added Component: Designator=CELL+_U_Cell1(6PT)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "DeviceName"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "DeviceSetName"; Value = "LI6PT"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "GateName_1"; Value = "G$1"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "GateName_2"; Value = "G$2"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LibraryName"; Value = "IFE_Energus"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "6PT"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SymbolName_1"; Value = "ENERGUS_CELL"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SymbolName_2"; Value = "TEMP_JST_XH"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=T1 Pin=CELL+_U_Cell1-1
+Added Pin To Net: NetName=NEG1 Pin=CELL+_U_Cell1-2
+Added Pin To Net: NetName=NEG2 Pin=CELL+_U_Cell1-CELL+
+Added Pin To Net: NetName=NEG2 Pin=CELL+_U_Cell1-CELL+
+Added Pin To Net: NetName=NEG1 Pin=CELL+_U_Cell1-CELL-
+Added Pin To Net: NetName=NEG1 Pin=CELL+_U_Cell1-CELL-
+Added Member To Class: ClassName=U_Cell1 Member=Component CELL+_U_Cell1 (CELL+A) LI6PT
+Added Member To Class: ClassName=U_Cell1 Member=Component F1_U_Cell1 (F1) 0679L

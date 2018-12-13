@@ -1,0 +1,4 @@
+Removed Pin From Net: NetName=V_VREG Pin=J2-1
+Removed Pin From Net: NetName=T_VREG Pin=J3-1
+Added Pin To Net: NetName=T_VREG Pin=J2-1
+Added Pin To Net: NetName=V_VREG Pin=J3-1

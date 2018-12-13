@@ -1,0 +1,384 @@
+Removed Pin From Net: NetName=NEG1 Pin=CELL+1_U_Cell1-1
+Removed Pin From Net: NetName=T1 Pin=CELL+1_U_Cell1-2
+Removed Pin From Net: NetName=NEG2 Pin=CELL+1_U_Cell1-CELL+
+Removed Pin From Net: NetName=NEG2 Pin=CELL+1_U_Cell1-CELL+
+Removed Pin From Net: NetName=NEG1 Pin=CELL+1_U_Cell1-CELL-
+Removed Pin From Net: NetName=NEG1 Pin=CELL+1_U_Cell1-CELL-
+Removed Pin From Net: NetName=NEG2 Pin=CELL+1_U_Cell2-1
+Removed Pin From Net: NetName=T2 Pin=CELL+1_U_Cell2-2
+Removed Pin From Net: NetName=NEG3 Pin=CELL+1_U_Cell2-CELL+
+Removed Pin From Net: NetName=NEG3 Pin=CELL+1_U_Cell2-CELL+
+Removed Pin From Net: NetName=NEG2 Pin=CELL+1_U_Cell2-CELL-
+Removed Pin From Net: NetName=NEG2 Pin=CELL+1_U_Cell2-CELL-
+Removed Pin From Net: NetName=NEG3 Pin=CELL+1_U_Cell3-1
+Removed Pin From Net: NetName=T3 Pin=CELL+1_U_Cell3-2
+Removed Pin From Net: NetName=NEG4 Pin=CELL+1_U_Cell3-CELL+
+Removed Pin From Net: NetName=NEG4 Pin=CELL+1_U_Cell3-CELL+
+Removed Pin From Net: NetName=NEG3 Pin=CELL+1_U_Cell3-CELL-
+Removed Pin From Net: NetName=NEG3 Pin=CELL+1_U_Cell3-CELL-
+Removed Pin From Net: NetName=NEG4 Pin=CELL+1_U_Cell4-1
+Removed Pin From Net: NetName=T4 Pin=CELL+1_U_Cell4-2
+Removed Pin From Net: NetName=NEG5 Pin=CELL+1_U_Cell4-CELL+
+Removed Pin From Net: NetName=NEG5 Pin=CELL+1_U_Cell4-CELL+
+Removed Pin From Net: NetName=NEG4 Pin=CELL+1_U_Cell4-CELL-
+Removed Pin From Net: NetName=NEG4 Pin=CELL+1_U_Cell4-CELL-
+Removed Pin From Net: NetName=NEG5 Pin=CELL+1_U_Cell5-1
+Removed Pin From Net: NetName=T5 Pin=CELL+1_U_Cell5-2
+Removed Pin From Net: NetName=NEG6 Pin=CELL+1_U_Cell5-CELL+
+Removed Pin From Net: NetName=NEG6 Pin=CELL+1_U_Cell5-CELL+
+Removed Pin From Net: NetName=NEG5 Pin=CELL+1_U_Cell5-CELL-
+Removed Pin From Net: NetName=NEG5 Pin=CELL+1_U_Cell5-CELL-
+Removed Pin From Net: NetName=NEG6 Pin=CELL+1_U_Cell6-1
+Removed Pin From Net: NetName=T6 Pin=CELL+1_U_Cell6-2
+Removed Pin From Net: NetName=NEG7 Pin=CELL+1_U_Cell6-CELL+
+Removed Pin From Net: NetName=NEG7 Pin=CELL+1_U_Cell6-CELL+
+Removed Pin From Net: NetName=NEG6 Pin=CELL+1_U_Cell6-CELL-
+Removed Pin From Net: NetName=NEG6 Pin=CELL+1_U_Cell6-CELL-
+Removed Pin From Net: NetName=NEG7 Pin=CELL+1_U_Cell7-1
+Removed Pin From Net: NetName=T7 Pin=CELL+1_U_Cell7-2
+Removed Pin From Net: NetName=NEG8 Pin=CELL+1_U_Cell7-CELL+
+Removed Pin From Net: NetName=NEG8 Pin=CELL+1_U_Cell7-CELL+
+Removed Pin From Net: NetName=NEG7 Pin=CELL+1_U_Cell7-CELL-
+Removed Pin From Net: NetName=NEG7 Pin=CELL+1_U_Cell7-CELL-
+Removed Pin From Net: NetName=NEG8 Pin=CELL+1_U_Cell8-1
+Removed Pin From Net: NetName=T8 Pin=CELL+1_U_Cell8-2
+Removed Pin From Net: NetName=NEG9 Pin=CELL+1_U_Cell8-CELL+
+Removed Pin From Net: NetName=NEG9 Pin=CELL+1_U_Cell8-CELL+
+Removed Pin From Net: NetName=NEG8 Pin=CELL+1_U_Cell8-CELL-
+Removed Pin From Net: NetName=NEG8 Pin=CELL+1_U_Cell8-CELL-
+Removed Pin From Net: NetName=NEG9 Pin=CELL+1_U_Cell9-1
+Removed Pin From Net: NetName=T9 Pin=CELL+1_U_Cell9-2
+Removed Pin From Net: NetName=NEG10 Pin=CELL+1_U_Cell9-CELL+
+Removed Pin From Net: NetName=NEG10 Pin=CELL+1_U_Cell9-CELL+
+Removed Pin From Net: NetName=NEG9 Pin=CELL+1_U_Cell9-CELL-
+Removed Pin From Net: NetName=NEG9 Pin=CELL+1_U_Cell9-CELL-
+Removed Pin From Net: NetName=NEG10 Pin=CELL+1_U_Cell10-1
+Removed Pin From Net: NetName=T10 Pin=CELL+1_U_Cell10-2
+Removed Pin From Net: NetName=NEG11 Pin=CELL+1_U_Cell10-CELL+
+Removed Pin From Net: NetName=NEG11 Pin=CELL+1_U_Cell10-CELL+
+Removed Pin From Net: NetName=NEG10 Pin=CELL+1_U_Cell10-CELL-
+Removed Pin From Net: NetName=NEG10 Pin=CELL+1_U_Cell10-CELL-
+Removed Pin From Net: NetName=NEG11 Pin=CELL+1_U_Cell11-1
+Removed Pin From Net: NetName=T11 Pin=CELL+1_U_Cell11-2
+Removed Pin From Net: NetName=NEG12 Pin=CELL+1_U_Cell11-CELL+
+Removed Pin From Net: NetName=NEG12 Pin=CELL+1_U_Cell11-CELL+
+Removed Pin From Net: NetName=NEG11 Pin=CELL+1_U_Cell11-CELL-
+Removed Pin From Net: NetName=NEG11 Pin=CELL+1_U_Cell11-CELL-
+Removed Pin From Net: NetName=NEG12 Pin=CELL+1_U_Cell12-1
+Removed Pin From Net: NetName=T12 Pin=CELL+1_U_Cell12-2
+Removed Pin From Net: NetName=NEG13 Pin=CELL+1_U_Cell12-CELL+
+Removed Pin From Net: NetName=NEG13 Pin=CELL+1_U_Cell12-CELL+
+Removed Pin From Net: NetName=NEG12 Pin=CELL+1_U_Cell12-CELL-
+Removed Pin From Net: NetName=NEG12 Pin=CELL+1_U_Cell12-CELL-
+Removed Pin From Net: NetName=NEG13 Pin=CELL+1_U_Cell13-1
+Removed Pin From Net: NetName=T13 Pin=CELL+1_U_Cell13-2
+Removed Pin From Net: NetName=NEG14 Pin=CELL+1_U_Cell13-CELL+
+Removed Pin From Net: NetName=NEG14 Pin=CELL+1_U_Cell13-CELL+
+Removed Pin From Net: NetName=NEG13 Pin=CELL+1_U_Cell13-CELL-
+Removed Pin From Net: NetName=NEG13 Pin=CELL+1_U_Cell13-CELL-
+Removed Pin From Net: NetName=NEG14 Pin=CELL+1_U_Cell14-1
+Removed Pin From Net: NetName=T14 Pin=CELL+1_U_Cell14-2
+Removed Pin From Net: NetName=NEG15 Pin=CELL+1_U_Cell14-CELL+
+Removed Pin From Net: NetName=NEG15 Pin=CELL+1_U_Cell14-CELL+
+Removed Pin From Net: NetName=NEG14 Pin=CELL+1_U_Cell14-CELL-
+Removed Pin From Net: NetName=NEG14 Pin=CELL+1_U_Cell14-CELL-
+Removed Pin From Net: NetName=NEG15 Pin=CELL+1_U_Cell15-1
+Removed Pin From Net: NetName=T15 Pin=CELL+1_U_Cell15-2
+Removed Pin From Net: NetName=NEG16 Pin=CELL+1_U_Cell15-CELL+
+Removed Pin From Net: NetName=NEG16 Pin=CELL+1_U_Cell15-CELL+
+Removed Pin From Net: NetName=NEG15 Pin=CELL+1_U_Cell15-CELL-
+Removed Pin From Net: NetName=NEG15 Pin=CELL+1_U_Cell15-CELL-
+Removed Pin From Net: NetName=NEG16 Pin=CELL+1_U_Cell16-1
+Removed Pin From Net: NetName=T16 Pin=CELL+1_U_Cell16-2
+Removed Pin From Net: NetName=POS16 Pin=CELL+1_U_Cell16-CELL+
+Removed Pin From Net: NetName=POS16 Pin=CELL+1_U_Cell16-CELL+
+Removed Pin From Net: NetName=NEG16 Pin=CELL+1_U_Cell16-CELL-
+Removed Pin From Net: NetName=NEG16 Pin=CELL+1_U_Cell16-CELL-
+Removed Member From Class: ClassName=U_Cell1 Member=CELL+1_U_Cell1
+Removed Member From Class: ClassName=U_Cell2 Member=CELL+1_U_Cell2
+Removed Member From Class: ClassName=U_Cell3 Member=CELL+1_U_Cell3
+Removed Member From Class: ClassName=U_Cell4 Member=CELL+1_U_Cell4
+Removed Member From Class: ClassName=U_Cell5 Member=CELL+1_U_Cell5
+Removed Member From Class: ClassName=U_Cell6 Member=CELL+1_U_Cell6
+Removed Member From Class: ClassName=U_Cell7 Member=CELL+1_U_Cell7
+Removed Member From Class: ClassName=U_Cell8 Member=CELL+1_U_Cell8
+Removed Member From Class: ClassName=U_Cell9 Member=CELL+1_U_Cell9
+Removed Member From Class: ClassName=U_Cell10 Member=CELL+1_U_Cell10
+Removed Member From Class: ClassName=U_Cell11 Member=CELL+1_U_Cell11
+Removed Member From Class: ClassName=U_Cell12 Member=CELL+1_U_Cell12
+Removed Member From Class: ClassName=U_Cell13 Member=CELL+1_U_Cell13
+Removed Member From Class: ClassName=U_Cell14 Member=CELL+1_U_Cell14
+Removed Member From Class: ClassName=U_Cell15 Member=CELL+1_U_Cell15
+Removed Member From Class: ClassName=U_Cell16 Member=CELL+1_U_Cell16
+Added Component: Designator=CELL+_U_Cell1(6PT)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "DeviceName"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "DeviceSetName"; Value = "LI6PT"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "GateName_1"; Value = "G$1"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "GateName_2"; Value = "G$2"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LibraryName"; Value = "IFE_Energus"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "6PT"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SymbolName_1"; Value = "ENERGUS_CELL"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SymbolName_2"; Value = "TEMP_JST_XH"; VariantName = "[No Variations]"
+Added Component: Designator=CELL+_U_Cell2(6PT)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "DeviceName"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "DeviceSetName"; Value = "LI6PT"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "GateName_1"; Value = "G$1"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "GateName_2"; Value = "G$2"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LibraryName"; Value = "IFE_Energus"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "6PT"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SymbolName_1"; Value = "ENERGUS_CELL"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SymbolName_2"; Value = "TEMP_JST_XH"; VariantName = "[No Variations]"
+Added Component: Designator=CELL+_U_Cell3(6PT)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "DeviceName"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "DeviceSetName"; Value = "LI6PT"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "GateName_1"; Value = "G$1"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "GateName_2"; Value = "G$2"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LibraryName"; Value = "IFE_Energus"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "6PT"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SymbolName_1"; Value = "ENERGUS_CELL"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SymbolName_2"; Value = "TEMP_JST_XH"; VariantName = "[No Variations]"
+Added Component: Designator=CELL+_U_Cell4(6PT)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "DeviceName"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "DeviceSetName"; Value = "LI6PT"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "GateName_1"; Value = "G$1"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "GateName_2"; Value = "G$2"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LibraryName"; Value = "IFE_Energus"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "6PT"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SymbolName_1"; Value = "ENERGUS_CELL"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SymbolName_2"; Value = "TEMP_JST_XH"; VariantName = "[No Variations]"
+Added Component: Designator=CELL+_U_Cell5(6PT)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "DeviceName"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "DeviceSetName"; Value = "LI6PT"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "GateName_1"; Value = "G$1"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "GateName_2"; Value = "G$2"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LibraryName"; Value = "IFE_Energus"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "6PT"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SymbolName_1"; Value = "ENERGUS_CELL"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SymbolName_2"; Value = "TEMP_JST_XH"; VariantName = "[No Variations]"
+Added Component: Designator=CELL+_U_Cell6(6PT)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "DeviceName"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "DeviceSetName"; Value = "LI6PT"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "GateName_1"; Value = "G$1"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "GateName_2"; Value = "G$2"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LibraryName"; Value = "IFE_Energus"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "6PT"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SymbolName_1"; Value = "ENERGUS_CELL"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SymbolName_2"; Value = "TEMP_JST_XH"; VariantName = "[No Variations]"
+Added Component: Designator=CELL+_U_Cell7(6PT)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "DeviceName"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "DeviceSetName"; Value = "LI6PT"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "GateName_1"; Value = "G$1"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "GateName_2"; Value = "G$2"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LibraryName"; Value = "IFE_Energus"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "6PT"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SymbolName_1"; Value = "ENERGUS_CELL"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SymbolName_2"; Value = "TEMP_JST_XH"; VariantName = "[No Variations]"
+Added Component: Designator=CELL+_U_Cell8(6PT)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "DeviceName"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "DeviceSetName"; Value = "LI6PT"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "GateName_1"; Value = "G$1"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "GateName_2"; Value = "G$2"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LibraryName"; Value = "IFE_Energus"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "6PT"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SymbolName_1"; Value = "ENERGUS_CELL"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SymbolName_2"; Value = "TEMP_JST_XH"; VariantName = "[No Variations]"
+Added Component: Designator=CELL+_U_Cell9(6PT)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "DeviceName"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "DeviceSetName"; Value = "LI6PT"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "GateName_1"; Value = "G$1"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "GateName_2"; Value = "G$2"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LibraryName"; Value = "IFE_Energus"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "6PT"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SymbolName_1"; Value = "ENERGUS_CELL"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SymbolName_2"; Value = "TEMP_JST_XH"; VariantName = "[No Variations]"
+Added Component: Designator=CELL+_U_Cell10(6PT)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "DeviceName"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "DeviceSetName"; Value = "LI6PT"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "GateName_1"; Value = "G$1"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "GateName_2"; Value = "G$2"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LibraryName"; Value = "IFE_Energus"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "6PT"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SymbolName_1"; Value = "ENERGUS_CELL"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SymbolName_2"; Value = "TEMP_JST_XH"; VariantName = "[No Variations]"
+Added Component: Designator=CELL+_U_Cell11(6PT)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "DeviceName"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "DeviceSetName"; Value = "LI6PT"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "GateName_1"; Value = "G$1"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "GateName_2"; Value = "G$2"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LibraryName"; Value = "IFE_Energus"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "6PT"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SymbolName_1"; Value = "ENERGUS_CELL"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SymbolName_2"; Value = "TEMP_JST_XH"; VariantName = "[No Variations]"
+Added Component: Designator=CELL+_U_Cell12(6PT)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "DeviceName"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "DeviceSetName"; Value = "LI6PT"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "GateName_1"; Value = "G$1"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "GateName_2"; Value = "G$2"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LibraryName"; Value = "IFE_Energus"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "6PT"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SymbolName_1"; Value = "ENERGUS_CELL"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SymbolName_2"; Value = "TEMP_JST_XH"; VariantName = "[No Variations]"
+Added Component: Designator=CELL+_U_Cell13(6PT)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "DeviceName"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "DeviceSetName"; Value = "LI6PT"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "GateName_1"; Value = "G$1"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "GateName_2"; Value = "G$2"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LibraryName"; Value = "IFE_Energus"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "6PT"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SymbolName_1"; Value = "ENERGUS_CELL"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SymbolName_2"; Value = "TEMP_JST_XH"; VariantName = "[No Variations]"
+Added Component: Designator=CELL+_U_Cell14(6PT)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "DeviceName"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "DeviceSetName"; Value = "LI6PT"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "GateName_1"; Value = "G$1"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "GateName_2"; Value = "G$2"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LibraryName"; Value = "IFE_Energus"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "6PT"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SymbolName_1"; Value = "ENERGUS_CELL"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SymbolName_2"; Value = "TEMP_JST_XH"; VariantName = "[No Variations]"
+Added Component: Designator=CELL+_U_Cell15(6PT)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "DeviceName"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "DeviceSetName"; Value = "LI6PT"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "GateName_1"; Value = "G$1"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "GateName_2"; Value = "G$2"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LibraryName"; Value = "IFE_Energus"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "6PT"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SymbolName_1"; Value = "ENERGUS_CELL"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SymbolName_2"; Value = "TEMP_JST_XH"; VariantName = "[No Variations]"
+Added Component: Designator=CELL+_U_Cell16(6PT)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "DeviceName"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "DeviceSetName"; Value = "LI6PT"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "GateName_1"; Value = "G$1"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "GateName_2"; Value = "G$2"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LibraryName"; Value = "IFE_Energus"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "6PT"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SymbolName_1"; Value = "ENERGUS_CELL"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SymbolName_2"; Value = "TEMP_JST_XH"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=NEG1 Pin=CELL+_U_Cell1-1
+Added Pin To Net: NetName=T1 Pin=CELL+_U_Cell1-2
+Added Pin To Net: NetName=NEG2 Pin=CELL+_U_Cell1-CELL+
+Added Pin To Net: NetName=NEG2 Pin=CELL+_U_Cell1-CELL+
+Added Pin To Net: NetName=NEG1 Pin=CELL+_U_Cell1-CELL-
+Added Pin To Net: NetName=NEG1 Pin=CELL+_U_Cell1-CELL-
+Added Pin To Net: NetName=NEG2 Pin=CELL+_U_Cell2-1
+Added Pin To Net: NetName=T2 Pin=CELL+_U_Cell2-2
+Added Pin To Net: NetName=NEG3 Pin=CELL+_U_Cell2-CELL+
+Added Pin To Net: NetName=NEG3 Pin=CELL+_U_Cell2-CELL+
+Added Pin To Net: NetName=NEG2 Pin=CELL+_U_Cell2-CELL-
+Added Pin To Net: NetName=NEG2 Pin=CELL+_U_Cell2-CELL-
+Added Pin To Net: NetName=NEG3 Pin=CELL+_U_Cell3-1
+Added Pin To Net: NetName=T3 Pin=CELL+_U_Cell3-2
+Added Pin To Net: NetName=NEG4 Pin=CELL+_U_Cell3-CELL+
+Added Pin To Net: NetName=NEG4 Pin=CELL+_U_Cell3-CELL+
+Added Pin To Net: NetName=NEG3 Pin=CELL+_U_Cell3-CELL-
+Added Pin To Net: NetName=NEG3 Pin=CELL+_U_Cell3-CELL-
+Added Pin To Net: NetName=NEG4 Pin=CELL+_U_Cell4-1
+Added Pin To Net: NetName=T4 Pin=CELL+_U_Cell4-2
+Added Pin To Net: NetName=NEG5 Pin=CELL+_U_Cell4-CELL+
+Added Pin To Net: NetName=NEG5 Pin=CELL+_U_Cell4-CELL+
+Added Pin To Net: NetName=NEG4 Pin=CELL+_U_Cell4-CELL-
+Added Pin To Net: NetName=NEG4 Pin=CELL+_U_Cell4-CELL-
+Added Pin To Net: NetName=NEG5 Pin=CELL+_U_Cell5-1
+Added Pin To Net: NetName=T5 Pin=CELL+_U_Cell5-2
+Added Pin To Net: NetName=NEG6 Pin=CELL+_U_Cell5-CELL+
+Added Pin To Net: NetName=NEG6 Pin=CELL+_U_Cell5-CELL+
+Added Pin To Net: NetName=NEG5 Pin=CELL+_U_Cell5-CELL-
+Added Pin To Net: NetName=NEG5 Pin=CELL+_U_Cell5-CELL-
+Added Pin To Net: NetName=NEG6 Pin=CELL+_U_Cell6-1
+Added Pin To Net: NetName=T6 Pin=CELL+_U_Cell6-2
+Added Pin To Net: NetName=NEG7 Pin=CELL+_U_Cell6-CELL+
+Added Pin To Net: NetName=NEG7 Pin=CELL+_U_Cell6-CELL+
+Added Pin To Net: NetName=NEG6 Pin=CELL+_U_Cell6-CELL-
+Added Pin To Net: NetName=NEG6 Pin=CELL+_U_Cell6-CELL-
+Added Pin To Net: NetName=NEG7 Pin=CELL+_U_Cell7-1
+Added Pin To Net: NetName=T7 Pin=CELL+_U_Cell7-2
+Added Pin To Net: NetName=NEG8 Pin=CELL+_U_Cell7-CELL+
+Added Pin To Net: NetName=NEG8 Pin=CELL+_U_Cell7-CELL+
+Added Pin To Net: NetName=NEG7 Pin=CELL+_U_Cell7-CELL-
+Added Pin To Net: NetName=NEG7 Pin=CELL+_U_Cell7-CELL-
+Added Pin To Net: NetName=NEG8 Pin=CELL+_U_Cell8-1
+Added Pin To Net: NetName=T8 Pin=CELL+_U_Cell8-2
+Added Pin To Net: NetName=NEG9 Pin=CELL+_U_Cell8-CELL+
+Added Pin To Net: NetName=NEG9 Pin=CELL+_U_Cell8-CELL+
+Added Pin To Net: NetName=NEG8 Pin=CELL+_U_Cell8-CELL-
+Added Pin To Net: NetName=NEG8 Pin=CELL+_U_Cell8-CELL-
+Added Pin To Net: NetName=NEG9 Pin=CELL+_U_Cell9-1
+Added Pin To Net: NetName=T9 Pin=CELL+_U_Cell9-2
+Added Pin To Net: NetName=NEG10 Pin=CELL+_U_Cell9-CELL+
+Added Pin To Net: NetName=NEG10 Pin=CELL+_U_Cell9-CELL+
+Added Pin To Net: NetName=NEG9 Pin=CELL+_U_Cell9-CELL-
+Added Pin To Net: NetName=NEG9 Pin=CELL+_U_Cell9-CELL-
+Added Pin To Net: NetName=NEG10 Pin=CELL+_U_Cell10-1
+Added Pin To Net: NetName=T10 Pin=CELL+_U_Cell10-2
+Added Pin To Net: NetName=NEG11 Pin=CELL+_U_Cell10-CELL+
+Added Pin To Net: NetName=NEG11 Pin=CELL+_U_Cell10-CELL+
+Added Pin To Net: NetName=NEG10 Pin=CELL+_U_Cell10-CELL-
+Added Pin To Net: NetName=NEG10 Pin=CELL+_U_Cell10-CELL-
+Added Pin To Net: NetName=NEG11 Pin=CELL+_U_Cell11-1
+Added Pin To Net: NetName=T11 Pin=CELL+_U_Cell11-2
+Added Pin To Net: NetName=NEG12 Pin=CELL+_U_Cell11-CELL+
+Added Pin To Net: NetName=NEG12 Pin=CELL+_U_Cell11-CELL+
+Added Pin To Net: NetName=NEG11 Pin=CELL+_U_Cell11-CELL-
+Added Pin To Net: NetName=NEG11 Pin=CELL+_U_Cell11-CELL-
+Added Pin To Net: NetName=NEG12 Pin=CELL+_U_Cell12-1
+Added Pin To Net: NetName=T12 Pin=CELL+_U_Cell12-2
+Added Pin To Net: NetName=NEG13 Pin=CELL+_U_Cell12-CELL+
+Added Pin To Net: NetName=NEG13 Pin=CELL+_U_Cell12-CELL+
+Added Pin To Net: NetName=NEG12 Pin=CELL+_U_Cell12-CELL-
+Added Pin To Net: NetName=NEG12 Pin=CELL+_U_Cell12-CELL-
+Added Pin To Net: NetName=NEG13 Pin=CELL+_U_Cell13-1
+Added Pin To Net: NetName=T13 Pin=CELL+_U_Cell13-2
+Added Pin To Net: NetName=NEG14 Pin=CELL+_U_Cell13-CELL+
+Added Pin To Net: NetName=NEG14 Pin=CELL+_U_Cell13-CELL+
+Added Pin To Net: NetName=NEG13 Pin=CELL+_U_Cell13-CELL-
+Added Pin To Net: NetName=NEG13 Pin=CELL+_U_Cell13-CELL-
+Added Pin To Net: NetName=NEG14 Pin=CELL+_U_Cell14-1
+Added Pin To Net: NetName=T14 Pin=CELL+_U_Cell14-2
+Added Pin To Net: NetName=NEG15 Pin=CELL+_U_Cell14-CELL+
+Added Pin To Net: NetName=NEG15 Pin=CELL+_U_Cell14-CELL+
+Added Pin To Net: NetName=NEG14 Pin=CELL+_U_Cell14-CELL-
+Added Pin To Net: NetName=NEG14 Pin=CELL+_U_Cell14-CELL-
+Added Pin To Net: NetName=NEG15 Pin=CELL+_U_Cell15-1
+Added Pin To Net: NetName=T15 Pin=CELL+_U_Cell15-2
+Added Pin To Net: NetName=NEG16 Pin=CELL+_U_Cell15-CELL+
+Added Pin To Net: NetName=NEG16 Pin=CELL+_U_Cell15-CELL+
+Added Pin To Net: NetName=NEG15 Pin=CELL+_U_Cell15-CELL-
+Added Pin To Net: NetName=NEG15 Pin=CELL+_U_Cell15-CELL-
+Added Pin To Net: NetName=NEG16 Pin=CELL+_U_Cell16-1
+Added Pin To Net: NetName=T16 Pin=CELL+_U_Cell16-2
+Added Pin To Net: NetName=POS16 Pin=CELL+_U_Cell16-CELL+
+Added Pin To Net: NetName=POS16 Pin=CELL+_U_Cell16-CELL+
+Added Pin To Net: NetName=NEG16 Pin=CELL+_U_Cell16-CELL-
+Added Pin To Net: NetName=NEG16 Pin=CELL+_U_Cell16-CELL-
+Added Member To Class: ClassName=U_Cell1 Member=Component CELL+_U_Cell1 (CELL+A) LI6PT
+Added Member To Class: ClassName=U_Cell2 Member=Component CELL+_U_Cell2 (CELL+A) LI6PT
+Added Member To Class: ClassName=U_Cell3 Member=Component CELL+_U_Cell3 (CELL+A) LI6PT
+Added Member To Class: ClassName=U_Cell4 Member=Component CELL+_U_Cell4 (CELL+A) LI6PT
+Added Member To Class: ClassName=U_Cell5 Member=Component CELL+_U_Cell5 (CELL+A) LI6PT
+Added Member To Class: ClassName=U_Cell6 Member=Component CELL+_U_Cell6 (CELL+A) LI6PT
+Added Member To Class: ClassName=U_Cell7 Member=Component CELL+_U_Cell7 (CELL+A) LI6PT
+Added Member To Class: ClassName=U_Cell8 Member=Component CELL+_U_Cell8 (CELL+A) LI6PT
+Added Member To Class: ClassName=U_Cell9 Member=Component CELL+_U_Cell9 (CELL+A) LI6PT
+Added Member To Class: ClassName=U_Cell10 Member=Component CELL+_U_Cell10 (CELL+A) LI6PT
+Added Member To Class: ClassName=U_Cell11 Member=Component CELL+_U_Cell11 (CELL+A) LI6PT
+Added Member To Class: ClassName=U_Cell12 Member=Component CELL+_U_Cell12 (CELL+A) LI6PT
+Added Member To Class: ClassName=U_Cell13 Member=Component CELL+_U_Cell13 (CELL+A) LI6PT
+Added Member To Class: ClassName=U_Cell14 Member=Component CELL+_U_Cell14 (CELL+A) LI6PT
+Added Member To Class: ClassName=U_Cell15 Member=Component CELL+_U_Cell15 (CELL+A) LI6PT
+Added Member To Class: ClassName=U_Cell16 Member=Component CELL+_U_Cell16 (CELL+A) LI6PT

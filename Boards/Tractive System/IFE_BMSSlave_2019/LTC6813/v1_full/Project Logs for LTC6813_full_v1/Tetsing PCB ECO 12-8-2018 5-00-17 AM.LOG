@@ -1,0 +1,10 @@
+Added Component: Designator=?(TO252-TKH-45)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "DeviceName"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "DeviceSetName"; Value = "TKH45"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "GateName_1"; Value = "G$1"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LibraryName"; Value = "IFE_Resistors"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "TO252-TKH-45"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SymbolName_1"; Value = "R-US"; VariantName = "[No Variations]"
+Added Class: Name=Cell
+Added Room: Name=Cell

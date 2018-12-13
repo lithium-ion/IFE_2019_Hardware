@@ -1,0 +1,133 @@
+Removed Pin From Net: NetName=T16 Pin=CELL+1_Designator15-2
+Removed Pin From Net: NetName=Net4_Designator16_1 Pin=CELL+1_Designator15-CELL+
+Removed Pin From Net: NetName=Net4_Designator16_1 Pin=CELL+1_Designator15-CELL+
+Removed Pin From Net: NetName=Net4_Designator16_1 Pin=CELL+1_Designator16-1
+Removed Pin From Net: NetName=T17 Pin=CELL+1_Designator16-2
+Removed Pin From Net: NetName=Net4_Designator16_1 Pin=F1_Designator15-2
+Removed Pin From Net: NetName=Net4_Designator16_1 Pin=F2_Designator15-1
+Removed Pin From Net: NetName=T16 Pin=R2_Designator15-1
+Change Component Designator: OldDesignator=3_Designator16 NewDesignator=3
+Change Component Designator: OldDesignator=4_Designator16 NewDesignator=4
+Change Component Designator: OldDesignator=CELL+1_Designator16 NewDesignator=CELL+1
+Change Component Designator: OldDesignator=F1_Designator16 NewDesignator=F1
+Change Component Designator: OldDesignator=F2_Designator16 NewDesignator=F2
+Change Component Designator: OldDesignator=LED1_Designator16 NewDesignator=LED1
+Change Component Designator: OldDesignator=R1_Designator16 NewDesignator=R1
+Change Component Designator: OldDesignator=R2_Designator16 NewDesignator=R2
+Change Component Designator: OldDesignator=R3_Designator16 NewDesignator=R3
+Change Component Designator: OldDesignator=R4_Designator16 NewDesignator=R4
+Change Component Designator: OldDesignator=R5_Designator16 NewDesignator=R5
+Added Component: Designator=3(TO252)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "DeviceName"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "DeviceSetName"; Value = "DMP10H400SK3-13"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "GateName_1"; Value = "G$1"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LibraryName"; Value = "IFE_Transistors"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "TO252"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SymbolName_1"; Value = "LABELED-PMOS"; VariantName = "[No Variations]"
+Added Component: Designator=4(TO252-TKH-45)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "DeviceName"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "DeviceSetName"; Value = "TKH45"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "GateName_1"; Value = "G$1"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LibraryName"; Value = "IFE_Resistors"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "TO252-TKH-45"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SymbolName_1"; Value = "R-US"; VariantName = "[No Variations]"
+Added Component: Designator=CELL+1(6PT)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "DeviceName"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "DeviceSetName"; Value = "LI6PT"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "GateName_1"; Value = "G$1"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "GateName_2"; Value = "G$2"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LibraryName"; Value = "IFE_Energus"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "6PT"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SymbolName_1"; Value = "ENERGUS_CELL"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SymbolName_2"; Value = "TEMP_JST_XH"; VariantName = "[No Variations]"
+Added Component: Designator=F1(0603)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "DeviceName"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "DeviceSetName"; Value = "SF-0603FP"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "GateName_1"; Value = "G$1"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LibraryName"; Value = "IFE_Fuses"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "0603"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SymbolName_1"; Value = "FUSE"; VariantName = "[No Variations]"
+Added Component: Designator=F2(0603)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "DeviceName"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "DeviceSetName"; Value = "SF-0603FP"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "GateName_1"; Value = "G$1"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LibraryName"; Value = "IFE_Fuses"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "0603"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SymbolName_1"; Value = "FUSE"; VariantName = "[No Variations]"
+Added Component: Designator=LED1(0603_A)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Color"; Value = "Super Red"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "Manufacturer URL"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "http://www.we-online.com"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink2Description"; Value = "Datasheet"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink2URL"; Value = "http://katalog.we-online.com/led/datasheet/150060SS75000.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "Wuerth Elektronik"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageReference"; Value = "0603_A"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PartNumber"; Value = "150060SS75000"; VariantName = "[No Variations]"
+Added Component: Designator=R1(RESC0603(1608)_L)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Case-EIA"; Value = "0603"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Case-Metric"; Value = "1608"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Power"; Value = "0.1 W"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Technology"; Value = "SMT"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "1 %"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "2.94 Ohm"; VariantName = "[No Variations]"
+Added Component: Designator=R2(RESC0603(1608)_L)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Case-EIA"; Value = "0603"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Case-Metric"; Value = "1608"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Power"; Value = "0.1 W"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Technology"; Value = "SMT"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "1 %"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "2.94 Ohm"; VariantName = "[No Variations]"
+Added Component: Designator=R3(RESC0603(1608)_L)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Case-EIA"; Value = "0603"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Case-Metric"; Value = "1608"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Power"; Value = "0.1 W"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Technology"; Value = "SMT"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "1 %"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "2.94 Ohm"; VariantName = "[No Variations]"
+Added Component: Designator=R4(RESC0603(1608)_L)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Case-EIA"; Value = "0603"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Case-Metric"; Value = "1608"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Power"; Value = "0.1 W"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Technology"; Value = "SMT"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "1 %"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "2.94 Ohm"; VariantName = "[No Variations]"
+Added Component: Designator=R5(RESC0603(1608)_L)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Case-EIA"; Value = "0603"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Case-Metric"; Value = "1608"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Power"; Value = "0.1 W"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Technology"; Value = "SMT"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Tolerance"; Value = "1 %"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = "2.94 Ohm"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=Net4_Designator16_1 Pin=CELL+1-1
+Added Pin To Net: NetName=T16 Pin=CELL+1-2
+Added Pin To Net: NetName=T17 Pin=CELL+1-2
+Added Pin To Net: NetName=Net4_Designator16_1 Pin=CELL+1-CELL+
+Added Pin To Net: NetName=Net4_Designator16_1 Pin=CELL+1-CELL+
+Added Pin To Net: NetName=Net4_Designator16_1 Pin=F1-2
+Added Pin To Net: NetName=Net4_Designator16_1 Pin=F2-1
+Added Pin To Net: NetName=T16 Pin=R2-1
+Change Net Name : Old Net Name=Net3_Designator16_1 New Net Name=Net3_1
+Change Net Name : Old Net Name=Net3_Designator16_2 New Net Name=Net3_2
+Change Net Name : Old Net Name=Net3_Designator16_3 New Net Name=Net3_3
+Change Net Name : Old Net Name=Net4_Designator16_1 New Net Name=Net4_1
+Change Net Name : Old Net Name=NetCELL+1_Designator16_CELL+ New Net Name=NetCELL+1_CELL+
+Change Net Name : Old Net Name=NetF1_Designator16_1 New Net Name=NetF1_1
+Change Net Name : Old Net Name=NetLED1_Designator16_2 New Net Name=NetLED1_2
+Change Net Name : Old Net Name=NetR1_Designator16_1 New Net Name=NetR1_1
+Change Net Name : Old Net Name=NetR5_Designator16_1 New Net Name=NetR5_1
+Change Class Name : Old Net Name=Designator16 New Net Name=Cell
+Change Room Name: Old Name=Designator12 New Name=Cell
+Change Room Scope: Old Scope=InComponentClass('Designator12') New Scope=InComponentClass('Cell')
+Change Room Name: Old Name=Designator13 New Name=Cell
+Change Room Scope: Old Scope=InComponentClass('Designator13') New Scope=InComponentClass('Cell')
