@@ -1,7 +1,7 @@
 Protel Design System Design Rule Check
 PCB File : C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\v1_full\Even.PcbDoc
-Date     : 12/12/2018
-Time     : 7:03:18 AM
+Date     : 12/20/2018
+Time     : 6:04:05 PM
 
 Processing Rule : Clearance Constraint (Gap=0.089mm) (All),(All)
 Rule Violations :0
@@ -24,7 +24,7 @@ Processing Rule : Un-Routed Net Constraint ( (All) )
    Violation between Un-Routed Net Constraint: Net F_U_Cell6 Between Via (148.925mm,47.275mm) from Top Layer to Bottom Layer And Pad 3_U_Cell6-3(150.025mm,46.625mm) on Top Layer 
    Violation between Un-Routed Net Constraint: Net F_U_Cell8 Between Pad F2_U_Cell8-P$2(195.45mm,48.35mm) on Top Layer And Pad 3_U_Cell8-3(195.725mm,46.625mm) on Top Layer 
    Violation between Un-Routed Net Constraint: Net F_U_Cell8 Between Via (194.625mm,47.275mm) from Top Layer to Bottom Layer And Pad 3_U_Cell8-3(195.725mm,46.625mm) on Top Layer 
-   Violation between Un-Routed Net Constraint: Net F_U_Cell2 Between Track (58.175mm,46.625mm)(58.625mm,46.625mm) on Top Layer And Pad F2_U_Cell2-P$2(58.35mm,48.35mm) on Top Layer 
+   Violation between Un-Routed Net Constraint: Net F_U_Cell2 Between Track (57.525mm,47.275mm)(58.175mm,46.625mm) on Top Layer And Pad F2_U_Cell2-P$2(58.35mm,48.35mm) on Top Layer 
    Violation between Un-Routed Net Constraint: Net F_U_Cell11 Between Via (255.6mm,31.358mm) from Top Layer to Bottom Layer And Pad R3_U_Cell11-2(261mm,30.675mm) on Bottom Layer 
    Violation between Un-Routed Net Constraint: Net F_U_Cell13 Between Via (301.3mm,31.358mm) from Top Layer to Bottom Layer And Pad R3_U_Cell13-2(306.7mm,30.675mm) on Bottom Layer 
    Violation between Un-Routed Net Constraint: Net F_U_Cell15 Between Via (347mm,31.358mm) from Top Layer to Bottom Layer And Pad R3_U_Cell15-2(352.4mm,30.675mm) on Bottom Layer 
@@ -50,7 +50,71 @@ Processing Rule : Hole Size Constraint (Min=0.2mm) (Max=6.3mm) (All)
 Rule Violations :0
 
 Processing Rule : Hole To Hole Clearance (Gap=0.254mm) (All),(All)
-Rule Violations :0
+   Violation between Hole To Hole Clearance Constraint: (Collision < 0.254mm) Between Pad CELL+_U_Cell10-CELL-(236.265mm,13.36mm) on Multi-Layer And Via (233.81mm,11.97mm) from Top Layer to Bottom Layer Pad/Via Touching Holes
+   Violation between Hole To Hole Clearance Constraint: (Collision < 0.254mm) Between Pad CELL+_U_Cell10-CELL-(236.265mm,13.36mm) on Multi-Layer And Via (238.89mm,11.9mm) from Top Layer to Bottom Layer Pad/Via Touching Holes
+   Violation between Hole To Hole Clearance Constraint: (Collision < 0.254mm) Between Pad CELL+_U_Cell10-CELL+(236.265mm,58.36mm) on Multi-Layer And Via (233.795mm,59.899mm) from Top Layer to Bottom Layer Pad/Via Touching Holes
+   Violation between Hole To Hole Clearance Constraint: (Collision < 0.254mm) Between Pad CELL+_U_Cell10-CELL+(236.265mm,58.36mm) on Multi-Layer And Via (238.835mm,59.899mm) from Top Layer to Bottom Layer Pad/Via Touching Holes
+   Violation between Hole To Hole Clearance Constraint: (Collision < 0.254mm) Between Pad CELL+_U_Cell11-CELL-(259.11mm,58.36mm) on Multi-Layer And Via (256.655mm,59.899mm) from Top Layer to Bottom Layer Pad/Via Touching Holes
+   Violation between Hole To Hole Clearance Constraint: (Collision < 0.254mm) Between Pad CELL+_U_Cell11-CELL-(259.11mm,58.36mm) on Multi-Layer And Via (261.695mm,59.899mm) from Top Layer to Bottom Layer Pad/Via Touching Holes
+   Violation between Hole To Hole Clearance Constraint: (Collision < 0.254mm) Between Pad CELL+_U_Cell11-CELL+(259.11mm,13.36mm) on Multi-Layer And Via (256.67mm,11.97mm) from Top Layer to Bottom Layer Pad/Via Touching Holes
+   Violation between Hole To Hole Clearance Constraint: (Collision < 0.254mm) Between Pad CELL+_U_Cell11-CELL+(259.11mm,13.36mm) on Multi-Layer And Via (261.75mm,11.9mm) from Top Layer to Bottom Layer Pad/Via Touching Holes
+   Violation between Hole To Hole Clearance Constraint: (Collision < 0.254mm) Between Pad CELL+_U_Cell12-CELL-(281.965mm,13.36mm) on Multi-Layer And Via (279.53mm,11.97mm) from Top Layer to Bottom Layer Pad/Via Touching Holes
+   Violation between Hole To Hole Clearance Constraint: (Collision < 0.254mm) Between Pad CELL+_U_Cell12-CELL-(281.965mm,13.36mm) on Multi-Layer And Via (284.61mm,11.9mm) from Top Layer to Bottom Layer Pad/Via Touching Holes
+   Violation between Hole To Hole Clearance Constraint: (Collision < 0.254mm) Between Pad CELL+_U_Cell12-CELL+(281.965mm,58.36mm) on Multi-Layer And Via (279.515mm,59.899mm) from Top Layer to Bottom Layer Pad/Via Touching Holes
+   Violation between Hole To Hole Clearance Constraint: (Collision < 0.254mm) Between Pad CELL+_U_Cell12-CELL+(281.965mm,58.36mm) on Multi-Layer And Via (284.555mm,59.899mm) from Top Layer to Bottom Layer Pad/Via Touching Holes
+   Violation between Hole To Hole Clearance Constraint: (Collision < 0.254mm) Between Pad CELL+_U_Cell13-CELL-(304.81mm,58.36mm) on Multi-Layer And Via (302.375mm,59.899mm) from Top Layer to Bottom Layer Pad/Via Touching Holes
+   Violation between Hole To Hole Clearance Constraint: (Collision < 0.254mm) Between Pad CELL+_U_Cell13-CELL-(304.81mm,58.36mm) on Multi-Layer And Via (307.415mm,59.899mm) from Top Layer to Bottom Layer Pad/Via Touching Holes
+   Violation between Hole To Hole Clearance Constraint: (Collision < 0.254mm) Between Pad CELL+_U_Cell13-CELL+(304.81mm,13.36mm) on Multi-Layer And Via (302.39mm,11.97mm) from Top Layer to Bottom Layer Pad/Via Touching Holes
+   Violation between Hole To Hole Clearance Constraint: (Collision < 0.254mm) Between Pad CELL+_U_Cell13-CELL+(304.81mm,13.36mm) on Multi-Layer And Via (307.47mm,11.9mm) from Top Layer to Bottom Layer Pad/Via Touching Holes
+   Violation between Hole To Hole Clearance Constraint: (Collision < 0.254mm) Between Pad CELL+_U_Cell14-CELL-(327.665mm,13.36mm) on Multi-Layer And Via (325.25mm,11.97mm) from Top Layer to Bottom Layer Pad/Via Touching Holes
+   Violation between Hole To Hole Clearance Constraint: (Collision < 0.254mm) Between Pad CELL+_U_Cell14-CELL-(327.665mm,13.36mm) on Multi-Layer And Via (330.33mm,11.9mm) from Top Layer to Bottom Layer Pad/Via Touching Holes
+   Violation between Hole To Hole Clearance Constraint: (Collision < 0.254mm) Between Pad CELL+_U_Cell14-CELL+(327.665mm,58.36mm) on Multi-Layer And Via (325.235mm,59.899mm) from Top Layer to Bottom Layer Pad/Via Touching Holes
+   Violation between Hole To Hole Clearance Constraint: (Collision < 0.254mm) Between Pad CELL+_U_Cell14-CELL+(327.665mm,58.36mm) on Multi-Layer And Via (330.275mm,59.899mm) from Top Layer to Bottom Layer Pad/Via Touching Holes
+   Violation between Hole To Hole Clearance Constraint: (Collision < 0.254mm) Between Pad CELL+_U_Cell15-CELL-(350.51mm,58.36mm) on Multi-Layer And Via (348.095mm,59.899mm) from Top Layer to Bottom Layer Pad/Via Touching Holes
+   Violation between Hole To Hole Clearance Constraint: (Collision < 0.254mm) Between Pad CELL+_U_Cell15-CELL-(350.51mm,58.36mm) on Multi-Layer And Via (353.135mm,59.899mm) from Top Layer to Bottom Layer Pad/Via Touching Holes
+   Violation between Hole To Hole Clearance Constraint: (Collision < 0.254mm) Between Pad CELL+_U_Cell15-CELL+(350.51mm,13.36mm) on Multi-Layer And Via (348.11mm,11.97mm) from Top Layer to Bottom Layer Pad/Via Touching Holes
+   Violation between Hole To Hole Clearance Constraint: (Collision < 0.254mm) Between Pad CELL+_U_Cell15-CELL+(350.51mm,13.36mm) on Multi-Layer And Via (353.19mm,11.9mm) from Top Layer to Bottom Layer Pad/Via Touching Holes
+   Violation between Hole To Hole Clearance Constraint: (Collision < 0.254mm) Between Pad CELL+_U_Cell16-CELL-(373.365mm,13.36mm) on Multi-Layer And Via (370.97mm,11.97mm) from Top Layer to Bottom Layer Pad/Via Touching Holes
+   Violation between Hole To Hole Clearance Constraint: (Collision < 0.254mm) Between Pad CELL+_U_Cell16-CELL-(373.365mm,13.36mm) on Multi-Layer And Via (376.05mm,11.9mm) from Top Layer to Bottom Layer Pad/Via Touching Holes
+   Violation between Hole To Hole Clearance Constraint: (Collision < 0.254mm) Between Pad CELL+_U_Cell16-CELL+(373.365mm,58.36mm) on Multi-Layer And Via (370.955mm,59.899mm) from Top Layer to Bottom Layer Pad/Via Touching Holes
+   Violation between Hole To Hole Clearance Constraint: (Collision < 0.254mm) Between Pad CELL+_U_Cell16-CELL+(373.365mm,58.36mm) on Multi-Layer And Via (375.995mm,59.899mm) from Top Layer to Bottom Layer Pad/Via Touching Holes
+   Violation between Hole To Hole Clearance Constraint: (Collision < 0.254mm) Between Pad CELL+_U_Cell1-CELL-(30.61mm,58.36mm) on Multi-Layer And Via (28.07mm,59.9mm) from Top Layer to Bottom Layer Pad/Via Touching Holes
+   Violation between Hole To Hole Clearance Constraint: (Collision < 0.254mm) Between Pad CELL+_U_Cell1-CELL-(30.61mm,58.36mm) on Multi-Layer And Via (33.11mm,59.9mm) from Top Layer to Bottom Layer Pad/Via Touching Holes
+   Violation between Hole To Hole Clearance Constraint: (Collision < 0.254mm) Between Pad CELL+_U_Cell1-CELL+(30.61mm,13.36mm) on Multi-Layer And Via (28.07mm,11.97mm) from Top Layer to Bottom Layer Pad/Via Touching Holes
+   Violation between Hole To Hole Clearance Constraint: (Collision < 0.254mm) Between Pad CELL+_U_Cell1-CELL+(30.61mm,13.36mm) on Multi-Layer And Via (33.15mm,11.9mm) from Top Layer to Bottom Layer Pad/Via Touching Holes
+   Violation between Hole To Hole Clearance Constraint: (Collision < 0.254mm) Between Pad CELL+_U_Cell2-CELL-(53.465mm,13.36mm) on Multi-Layer And Via (50.93mm,11.97mm) from Top Layer to Bottom Layer Pad/Via Touching Holes
+   Violation between Hole To Hole Clearance Constraint: (Collision < 0.254mm) Between Pad CELL+_U_Cell2-CELL-(53.465mm,13.36mm) on Multi-Layer And Via (56.01mm,11.9mm) from Top Layer to Bottom Layer Pad/Via Touching Holes
+   Violation between Hole To Hole Clearance Constraint: (Collision < 0.254mm) Between Pad CELL+_U_Cell2-CELL+(53.465mm,58.36mm) on Multi-Layer And Via (50.915mm,59.899mm) from Top Layer to Bottom Layer Pad/Via Touching Holes
+   Violation between Hole To Hole Clearance Constraint: (Collision < 0.254mm) Between Pad CELL+_U_Cell2-CELL+(53.465mm,58.36mm) on Multi-Layer And Via (55.955mm,59.899mm) from Top Layer to Bottom Layer Pad/Via Touching Holes
+   Violation between Hole To Hole Clearance Constraint: (Collision < 0.254mm) Between Pad CELL+_U_Cell3-CELL-(76.31mm,58.36mm) on Multi-Layer And Via (73.775mm,59.899mm) from Top Layer to Bottom Layer Pad/Via Touching Holes
+   Violation between Hole To Hole Clearance Constraint: (Collision < 0.254mm) Between Pad CELL+_U_Cell3-CELL-(76.31mm,58.36mm) on Multi-Layer And Via (78.815mm,59.899mm) from Top Layer to Bottom Layer Pad/Via Touching Holes
+   Violation between Hole To Hole Clearance Constraint: (Collision < 0.254mm) Between Pad CELL+_U_Cell3-CELL+(76.31mm,13.36mm) on Multi-Layer And Via (73.79mm,11.97mm) from Top Layer to Bottom Layer Pad/Via Touching Holes
+   Violation between Hole To Hole Clearance Constraint: (Collision < 0.254mm) Between Pad CELL+_U_Cell3-CELL+(76.31mm,13.36mm) on Multi-Layer And Via (78.87mm,11.9mm) from Top Layer to Bottom Layer Pad/Via Touching Holes
+   Violation between Hole To Hole Clearance Constraint: (Collision < 0.254mm) Between Pad CELL+_U_Cell4-CELL-(99.165mm,13.36mm) on Multi-Layer And Via (101.73mm,11.9mm) from Top Layer to Bottom Layer Pad/Via Touching Holes
+   Violation between Hole To Hole Clearance Constraint: (Collision < 0.254mm) Between Pad CELL+_U_Cell4-CELL-(99.165mm,13.36mm) on Multi-Layer And Via (96.65mm,11.97mm) from Top Layer to Bottom Layer Pad/Via Touching Holes
+   Violation between Hole To Hole Clearance Constraint: (Collision < 0.254mm) Between Pad CELL+_U_Cell4-CELL+(99.165mm,58.36mm) on Multi-Layer And Via (101.675mm,59.899mm) from Top Layer to Bottom Layer Pad/Via Touching Holes
+   Violation between Hole To Hole Clearance Constraint: (Collision < 0.254mm) Between Pad CELL+_U_Cell4-CELL+(99.165mm,58.36mm) on Multi-Layer And Via (96.635mm,59.899mm) from Top Layer to Bottom Layer Pad/Via Touching Holes
+   Violation between Hole To Hole Clearance Constraint: (Collision < 0.254mm) Between Pad CELL+_U_Cell5-CELL-(122.01mm,58.36mm) on Multi-Layer And Via (119.495mm,59.899mm) from Top Layer to Bottom Layer Pad/Via Touching Holes
+   Violation between Hole To Hole Clearance Constraint: (Collision < 0.254mm) Between Pad CELL+_U_Cell5-CELL-(122.01mm,58.36mm) on Multi-Layer And Via (124.535mm,59.899mm) from Top Layer to Bottom Layer Pad/Via Touching Holes
+   Violation between Hole To Hole Clearance Constraint: (Collision < 0.254mm) Between Pad CELL+_U_Cell5-CELL+(122.01mm,13.36mm) on Multi-Layer And Via (119.51mm,11.97mm) from Top Layer to Bottom Layer Pad/Via Touching Holes
+   Violation between Hole To Hole Clearance Constraint: (Collision < 0.254mm) Between Pad CELL+_U_Cell5-CELL+(122.01mm,13.36mm) on Multi-Layer And Via (124.59mm,11.9mm) from Top Layer to Bottom Layer Pad/Via Touching Holes
+   Violation between Hole To Hole Clearance Constraint: (Collision < 0.254mm) Between Pad CELL+_U_Cell6-CELL-(144.865mm,13.36mm) on Multi-Layer And Via (142.37mm,11.97mm) from Top Layer to Bottom Layer Pad/Via Touching Holes
+   Violation between Hole To Hole Clearance Constraint: (Collision < 0.254mm) Between Pad CELL+_U_Cell6-CELL-(144.865mm,13.36mm) on Multi-Layer And Via (147.45mm,11.9mm) from Top Layer to Bottom Layer Pad/Via Touching Holes
+   Violation between Hole To Hole Clearance Constraint: (Collision < 0.254mm) Between Pad CELL+_U_Cell6-CELL+(144.865mm,58.36mm) on Multi-Layer And Via (142.355mm,59.899mm) from Top Layer to Bottom Layer Pad/Via Touching Holes
+   Violation between Hole To Hole Clearance Constraint: (Collision < 0.254mm) Between Pad CELL+_U_Cell6-CELL+(144.865mm,58.36mm) on Multi-Layer And Via (147.395mm,59.899mm) from Top Layer to Bottom Layer Pad/Via Touching Holes
+   Violation between Hole To Hole Clearance Constraint: (Collision < 0.254mm) Between Pad CELL+_U_Cell7-CELL-(167.71mm,58.36mm) on Multi-Layer And Via (165.215mm,59.899mm) from Top Layer to Bottom Layer Pad/Via Touching Holes
+   Violation between Hole To Hole Clearance Constraint: (Collision < 0.254mm) Between Pad CELL+_U_Cell7-CELL-(167.71mm,58.36mm) on Multi-Layer And Via (170.255mm,59.899mm) from Top Layer to Bottom Layer Pad/Via Touching Holes
+   Violation between Hole To Hole Clearance Constraint: (Collision < 0.254mm) Between Pad CELL+_U_Cell7-CELL+(167.71mm,13.36mm) on Multi-Layer And Via (165.23mm,11.97mm) from Top Layer to Bottom Layer Pad/Via Touching Holes
+   Violation between Hole To Hole Clearance Constraint: (Collision < 0.254mm) Between Pad CELL+_U_Cell7-CELL+(167.71mm,13.36mm) on Multi-Layer And Via (170.31mm,11.9mm) from Top Layer to Bottom Layer Pad/Via Touching Holes
+   Violation between Hole To Hole Clearance Constraint: (Collision < 0.254mm) Between Pad CELL+_U_Cell8-CELL-(190.565mm,13.36mm) on Multi-Layer And Via (188.09mm,11.97mm) from Top Layer to Bottom Layer Pad/Via Touching Holes
+   Violation between Hole To Hole Clearance Constraint: (Collision < 0.254mm) Between Pad CELL+_U_Cell8-CELL-(190.565mm,13.36mm) on Multi-Layer And Via (193.17mm,11.9mm) from Top Layer to Bottom Layer Pad/Via Touching Holes
+   Violation between Hole To Hole Clearance Constraint: (Collision < 0.254mm) Between Pad CELL+_U_Cell8-CELL+(190.565mm,58.36mm) on Multi-Layer And Via (188.075mm,59.899mm) from Top Layer to Bottom Layer Pad/Via Touching Holes
+   Violation between Hole To Hole Clearance Constraint: (Collision < 0.254mm) Between Pad CELL+_U_Cell8-CELL+(190.565mm,58.36mm) on Multi-Layer And Via (193.115mm,59.899mm) from Top Layer to Bottom Layer Pad/Via Touching Holes
+   Violation between Hole To Hole Clearance Constraint: (Collision < 0.254mm) Between Pad CELL+_U_Cell9-CELL-(213.41mm,58.36mm) on Multi-Layer And Via (210.935mm,59.899mm) from Top Layer to Bottom Layer Pad/Via Touching Holes
+   Violation between Hole To Hole Clearance Constraint: (Collision < 0.254mm) Between Pad CELL+_U_Cell9-CELL-(213.41mm,58.36mm) on Multi-Layer And Via (215.975mm,59.899mm) from Top Layer to Bottom Layer Pad/Via Touching Holes
+   Violation between Hole To Hole Clearance Constraint: (Collision < 0.254mm) Between Pad CELL+_U_Cell9-CELL+(213.41mm,13.36mm) on Multi-Layer And Via (210.95mm,11.97mm) from Top Layer to Bottom Layer Pad/Via Touching Holes
+   Violation between Hole To Hole Clearance Constraint: (Collision < 0.254mm) Between Pad CELL+_U_Cell9-CELL+(213.41mm,13.36mm) on Multi-Layer And Via (216.03mm,11.9mm) from Top Layer to Bottom Layer Pad/Via Touching Holes
+Rule Violations :64
 
 Processing Rule : Minimum Solder Mask Sliver (Gap=0.076mm) (All),(All)
    Violation between Minimum Solder Mask Sliver Constraint: (0.072mm < 0.076mm) Between Pad C1_U_Cell10-2(230.05mm,39.3mm) on Top Layer And Via (229.05mm,38.75mm) from Top Layer to Bottom Layer [Top Solder] Mask Sliver [0.072mm]
@@ -212,14 +276,14 @@ Processing Rule : Minimum Solder Mask Sliver (Gap=0.076mm) (All),(All)
 Rule Violations :156
 
 Processing Rule : Silk To Solder Mask (Clearance=0.076mm) (IsPad),(All)
-   Violation between Silk To Solder Mask Clearance Constraint: (0.069mm < 0.076mm) Between Pad CELL+_U_Cell11-CELL+(259.11mm,13.36mm) on Multi-Layer And Text "Fuse   1A" (253.35mm,15.748mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.069mm]
-   Violation between Silk To Solder Mask Clearance Constraint: (0.069mm < 0.076mm) Between Pad CELL+_U_Cell13-CELL+(304.81mm,13.36mm) on Multi-Layer And Text "Fuse   1A" (299.05mm,15.748mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.069mm]
-   Violation between Silk To Solder Mask Clearance Constraint: (0.069mm < 0.076mm) Between Pad CELL+_U_Cell15-CELL+(350.51mm,13.36mm) on Multi-Layer And Text "Fuse   1A" (344.75mm,15.748mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.069mm]
-   Violation between Silk To Solder Mask Clearance Constraint: (0.069mm < 0.076mm) Between Pad CELL+_U_Cell1-CELL+(30.61mm,13.36mm) on Multi-Layer And Text "Fuse   1A" (24.85mm,15.748mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.069mm]
-   Violation between Silk To Solder Mask Clearance Constraint: (0.069mm < 0.076mm) Between Pad CELL+_U_Cell3-CELL+(76.31mm,13.36mm) on Multi-Layer And Text "Fuse   1A" (70.55mm,15.748mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.069mm]
-   Violation between Silk To Solder Mask Clearance Constraint: (0.069mm < 0.076mm) Between Pad CELL+_U_Cell5-CELL+(122.01mm,13.36mm) on Multi-Layer And Text "Fuse   1A" (116.25mm,15.748mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.069mm]
-   Violation between Silk To Solder Mask Clearance Constraint: (0.069mm < 0.076mm) Between Pad CELL+_U_Cell7-CELL+(167.71mm,13.36mm) on Multi-Layer And Text "Fuse   1A" (161.95mm,15.748mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.069mm]
-   Violation between Silk To Solder Mask Clearance Constraint: (0.069mm < 0.076mm) Between Pad CELL+_U_Cell9-CELL+(213.41mm,13.36mm) on Multi-Layer And Text "Fuse   1A" (207.65mm,15.748mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.069mm]
+   Violation between Silk To Solder Mask Clearance Constraint: (0.06mm < 0.076mm) Between Pad CELL+_U_Cell11-CELL+(259.11mm,13.36mm) on Multi-Layer And Text "Fuse   1A" (253.35mm,15.748mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.06mm]
+   Violation between Silk To Solder Mask Clearance Constraint: (0.06mm < 0.076mm) Between Pad CELL+_U_Cell13-CELL+(304.81mm,13.36mm) on Multi-Layer And Text "Fuse   1A" (299.05mm,15.748mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.06mm]
+   Violation between Silk To Solder Mask Clearance Constraint: (0.06mm < 0.076mm) Between Pad CELL+_U_Cell15-CELL+(350.51mm,13.36mm) on Multi-Layer And Text "Fuse   1A" (344.75mm,15.748mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.06mm]
+   Violation between Silk To Solder Mask Clearance Constraint: (0.06mm < 0.076mm) Between Pad CELL+_U_Cell1-CELL+(30.61mm,13.36mm) on Multi-Layer And Text "Fuse   1A" (24.85mm,15.748mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.06mm]
+   Violation between Silk To Solder Mask Clearance Constraint: (0.06mm < 0.076mm) Between Pad CELL+_U_Cell3-CELL+(76.31mm,13.36mm) on Multi-Layer And Text "Fuse   1A" (70.55mm,15.748mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.06mm]
+   Violation between Silk To Solder Mask Clearance Constraint: (0.06mm < 0.076mm) Between Pad CELL+_U_Cell5-CELL+(122.01mm,13.36mm) on Multi-Layer And Text "Fuse   1A" (116.25mm,15.748mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.06mm]
+   Violation between Silk To Solder Mask Clearance Constraint: (0.06mm < 0.076mm) Between Pad CELL+_U_Cell7-CELL+(167.71mm,13.36mm) on Multi-Layer And Text "Fuse   1A" (161.95mm,15.748mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.06mm]
+   Violation between Silk To Solder Mask Clearance Constraint: (0.06mm < 0.076mm) Between Pad CELL+_U_Cell9-CELL+(213.41mm,13.36mm) on Multi-Layer And Text "Fuse   1A" (207.65mm,15.748mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.06mm]
    Violation between Silk To Solder Mask Clearance Constraint: (0.065mm < 0.076mm) Between Pad F1_U_Cell10-P$1(244.775mm,48.35mm) on Top Layer And Track (246.542mm,6.983mm)(246.542mm,70.737mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.065mm]
    Violation between Silk To Solder Mask Clearance Constraint: (0.065mm < 0.076mm) Between Pad F1_U_Cell10-P$2(244.775mm,53.35mm) on Top Layer And Track (246.542mm,6.983mm)(246.542mm,70.737mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.065mm]
    Violation between Silk To Solder Mask Clearance Constraint: (Collision < 0.076mm) Between Pad F1_U_Cell11-P$1(250.6mm,23mm) on Top Layer And Text "Fuse   1A" (249.675mm,29.75mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0mm]
@@ -339,7 +403,38 @@ Processing Rule : Silk to Silk (Clearance=0.076mm) (All),(All)
 Rule Violations :66
 
 Processing Rule : Net Antennae (Tolerance=0mm) (All)
-Rule Violations :0
+   Violation between Net Antennae: Via (122.035mm,67.519mm) from Top Layer to Bottom Layer 
+   Violation between Net Antennae: Via (122.06mm,4.29mm) from Top Layer to Bottom Layer 
+   Violation between Net Antennae: Via (144.895mm,67.519mm) from Top Layer to Bottom Layer 
+   Violation between Net Antennae: Via (144.92mm,4.29mm) from Top Layer to Bottom Layer 
+   Violation between Net Antennae: Via (167.755mm,67.519mm) from Top Layer to Bottom Layer 
+   Violation between Net Antennae: Via (167.78mm,4.29mm) from Top Layer to Bottom Layer 
+   Violation between Net Antennae: Via (190.615mm,67.519mm) from Top Layer to Bottom Layer 
+   Violation between Net Antennae: Via (190.64mm,4.29mm) from Top Layer to Bottom Layer 
+   Violation between Net Antennae: Via (213.475mm,67.519mm) from Top Layer to Bottom Layer 
+   Violation between Net Antennae: Via (213.5mm,4.29mm) from Top Layer to Bottom Layer 
+   Violation between Net Antennae: Via (236.335mm,67.519mm) from Top Layer to Bottom Layer 
+   Violation between Net Antennae: Via (236.36mm,4.29mm) from Top Layer to Bottom Layer 
+   Violation between Net Antennae: Via (259.195mm,67.519mm) from Top Layer to Bottom Layer 
+   Violation between Net Antennae: Via (259.22mm,4.29mm) from Top Layer to Bottom Layer 
+   Violation between Net Antennae: Via (282.055mm,67.519mm) from Top Layer to Bottom Layer 
+   Violation between Net Antennae: Via (282.08mm,4.29mm) from Top Layer to Bottom Layer 
+   Violation between Net Antennae: Via (30.61mm,67.52mm) from Top Layer to Bottom Layer 
+   Violation between Net Antennae: Via (304.915mm,67.519mm) from Top Layer to Bottom Layer 
+   Violation between Net Antennae: Via (304.94mm,4.29mm) from Top Layer to Bottom Layer 
+   Violation between Net Antennae: Via (327.775mm,67.519mm) from Top Layer to Bottom Layer 
+   Violation between Net Antennae: Via (327.8mm,4.29mm) from Top Layer to Bottom Layer 
+   Violation between Net Antennae: Via (350.635mm,67.519mm) from Top Layer to Bottom Layer 
+   Violation between Net Antennae: Via (350.66mm,4.29mm) from Top Layer to Bottom Layer 
+   Violation between Net Antennae: Via (373.495mm,67.519mm) from Top Layer to Bottom Layer 
+   Violation between Net Antennae: Via (373.52mm,4.29mm) from Top Layer to Bottom Layer 
+   Violation between Net Antennae: Via (53.455mm,67.519mm) from Top Layer to Bottom Layer 
+   Violation between Net Antennae: Via (53.48mm,4.29mm) from Top Layer to Bottom Layer 
+   Violation between Net Antennae: Via (76.315mm,67.519mm) from Top Layer to Bottom Layer 
+   Violation between Net Antennae: Via (76.34mm,4.29mm) from Top Layer to Bottom Layer 
+   Violation between Net Antennae: Via (99.175mm,67.519mm) from Top Layer to Bottom Layer 
+   Violation between Net Antennae: Via (99.2mm,4.29mm) from Top Layer to Bottom Layer 
+Rule Violations :31
 
 Processing Rule : Room U_Cell10 (Bounding Region = (225.65mm, 0.75mm, 248.5mm, 71mm) (InComponentClass('U_Cell10'))
 Rule Violations :0
@@ -399,6 +494,6 @@ Processing Rule : Height Constraint (Min=0mm) (Max=25.4mm) (Prefered=12.7mm) (Al
 Rule Violations :0
 
 
-Violations Detected : 299
+Violations Detected : 394
 Waived Violations : 0
-Time Elapsed        : 00:00:01
+Time Elapsed        : 00:00:02
