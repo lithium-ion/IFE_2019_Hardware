@@ -1,0 +1,141 @@
+Removed Member From Class: ClassName=T[1..16] Member=T0
+Removed Member From Class: ClassName=V[1..16] Member=V0
+Change Component Comment : Designator=LED_V_D_CELL1 Old Comment=LED New Comment=Discharging
+Change Component Comment : Designator=LED_V_D_CELL2 Old Comment=LED New Comment=Discharging
+Change Component Comment : Designator=LED_V_D_CELL3 Old Comment=LED New Comment=Discharging
+Change Component Comment : Designator=LED_V_D_CELL4 Old Comment=LED New Comment=Discharging
+Change Component Comment : Designator=LED_V_D_CELL5 Old Comment=LED New Comment=Discharging
+Change Component Comment : Designator=LED_V_D_CELL6 Old Comment=LED New Comment=Discharging
+Change Component Comment : Designator=LED_V_D_CELL7 Old Comment=LED New Comment=Discharging
+Change Component Comment : Designator=LED_V_D_CELL8 Old Comment=LED New Comment=Discharging
+Change Component Comment : Designator=LED_V_D_CELL9 Old Comment=LED New Comment=Discharging
+Change Component Comment : Designator=LED_V_D_CELL10 Old Comment=LED New Comment=Discharging
+Change Component Comment : Designator=LED_V_D_CELL11 Old Comment=LED New Comment=Discharging
+Change Component Comment : Designator=LED_V_D_CELL12 Old Comment=LED New Comment=Discharging
+Change Component Comment : Designator=LED_V_D_CELL13 Old Comment=LED New Comment=Discharging
+Change Component Comment : Designator=LED_V_D_CELL14 Old Comment=LED New Comment=Discharging
+Change Component Comment : Designator=LED_V_D_CELL15 Old Comment=LED New Comment=Discharging
+Change Component Comment : Designator=LED_V_D_CELL16 Old Comment=LED New Comment=Discharging
+Added Component: Designator=J_T_DTEN(SJ_2)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "DeviceName"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "DeviceSetName"; Value = "JUMPER_2W"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "GateName_1"; Value = "G$1"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LibraryName"; Value = "IFE_Jumpers"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "SJ_2"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SymbolName_1"; Value = "SJ_2"; VariantName = "[No Variations]"
+Added Component: Designator=J_T_ISOMD(SJ_2)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "DeviceName"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "DeviceSetName"; Value = "JUMPER_2W"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "GateName_1"; Value = "G$1"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LibraryName"; Value = "IFE_Jumpers"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "SJ_2"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SymbolName_1"; Value = "SJ_2"; VariantName = "[No Variations]"
+Added Component: Designator=J_V_DTEN(SJ_2)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "DeviceName"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "DeviceSetName"; Value = "JUMPER_2W"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "GateName_1"; Value = "G$1"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LibraryName"; Value = "IFE_Jumpers"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "SJ_2"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SymbolName_1"; Value = "SJ_2"; VariantName = "[No Variations]"
+Added Component: Designator=J_V_ISOMD(SJ_2)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "DeviceName"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "DeviceSetName"; Value = "JUMPER_2W"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "GateName_1"; Value = "G$1"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LibraryName"; Value = "IFE_Jumpers"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "SJ_2"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SymbolName_1"; Value = "SJ_2"; VariantName = "[No Variations]"
+Added Component: Designator=LED_T_ON(LED-0603)
+Add component. Clean all parameters for all variants
+Added Component: Designator=LED_V_ON(LED-0603)
+Add component. Clean all parameters for all variants
+Added Component: Designator=Q_Power(LFPAK56D)
+Add component. Clean all parameters for all variants
+Added Component: Designator=R_Power(TO252-TKH-45)
+Add component. Clean all parameters for all variants
+Added Component: Designator=R_T_ON(RES-0603)
+Add component. Clean all parameters for all variants
+Added Component: Designator=R_V_ON(RES-0603)
+Add component. Clean all parameters for all variants
+Added Pin To Net: NetName=T_VREG Pin=J_T_DTEN-1
+Added Pin To Net: NetName=T_DTEN Pin=J_T_DTEN-2
+Added Pin To Net: NetName=NEG1 Pin=J_T_DTEN-3
+Added Pin To Net: NetName=T_VREG Pin=J_T_ISOMD-1
+Added Pin To Net: NetName=T_ISOMD Pin=J_T_ISOMD-2
+Added Pin To Net: NetName=NEG1 Pin=J_T_ISOMD-3
+Added Pin To Net: NetName=V_VREG Pin=J_V_DTEN-1
+Added Pin To Net: NetName=V_DTEN Pin=J_V_DTEN-2
+Added Pin To Net: NetName=NEG1 Pin=J_V_DTEN-3
+Added Pin To Net: NetName=V_VREG Pin=J_V_ISOMD-1
+Added Pin To Net: NetName=V_ISOMD Pin=J_V_ISOMD-2
+Added Pin To Net: NetName=NEG1 Pin=J_V_ISOMD-3
+Added Pin To Net: NetName=T_VREG Pin=LED_T_ON-A
+Added Pin To Net: NetName=V_VREG Pin=LED_V_ON-A
+Added Pin To Net: NetName=V_DRIVE Pin=Q_Power-B1
+Added Pin To Net: NetName=T_DRIVE Pin=Q_Power-B2
+Added Pin To Net: NetName=V_VREG Pin=Q_Power-E1
+Added Pin To Net: NetName=T_VREG Pin=Q_Power-E2
+Added Pin To Net: NetName=POS16 Pin=R_Power-2
+Added Pin To Net: NetName=T_WDT Pin=R_T_ON-1
+Added Pin To Net: NetName=V_WDT Pin=R_V_ON-1
+Added Pin To Net: NetName=T16 Pin=Temperature-2
+Added Pin To Net: NetName=T16 Pin=Temperature-4
+Added Pin To Net: NetName=T15 Pin=Temperature-6
+Added Pin To Net: NetName=T14 Pin=Temperature-8
+Added Pin To Net: NetName=T13 Pin=Temperature-10
+Added Pin To Net: NetName=T12 Pin=Temperature-12
+Added Pin To Net: NetName=T11 Pin=Temperature-14
+Added Pin To Net: NetName=T11 Pin=Temperature-16
+Added Pin To Net: NetName=T10 Pin=Temperature-18
+Added Pin To Net: NetName=T9 Pin=Temperature-20
+Added Pin To Net: NetName=T8 Pin=Temperature-22
+Added Pin To Net: NetName=T7 Pin=Temperature-24
+Added Pin To Net: NetName=T6 Pin=Temperature-26
+Added Pin To Net: NetName=T5 Pin=Temperature-28
+Added Pin To Net: NetName=T4 Pin=Temperature-30
+Added Pin To Net: NetName=T3 Pin=Temperature-32
+Added Pin To Net: NetName=T2 Pin=Temperature-34
+Added Pin To Net: NetName=T1 Pin=Temperature-36
+Added Pin To Net: NetName=V16 Pin=Voltage-2
+Added Pin To Net: NetName=V16 Pin=Voltage-4
+Added Pin To Net: NetName=V15 Pin=Voltage-6
+Added Pin To Net: NetName=V14 Pin=Voltage-8
+Added Pin To Net: NetName=V13 Pin=Voltage-10
+Added Pin To Net: NetName=V12 Pin=Voltage-12
+Added Pin To Net: NetName=V11 Pin=Voltage-14
+Added Pin To Net: NetName=V11 Pin=Voltage-16
+Added Pin To Net: NetName=V10 Pin=Voltage-18
+Added Pin To Net: NetName=V9 Pin=Voltage-20
+Added Pin To Net: NetName=V8 Pin=Voltage-22
+Added Pin To Net: NetName=V7 Pin=Voltage-24
+Added Pin To Net: NetName=V6 Pin=Voltage-26
+Added Pin To Net: NetName=V5 Pin=Voltage-28
+Added Pin To Net: NetName=V4 Pin=Voltage-30
+Added Pin To Net: NetName=V3 Pin=Voltage-32
+Added Pin To Net: NetName=V2 Pin=Voltage-34
+Added Pin To Net: NetName=V1 Pin=Voltage-36
+Change Net Name : Old Net Name=T0 New Net Name=T_C0
+Change Net Name : Old Net Name=V0 New Net Name=V_C0
+Added Pin To Net: NetName=NetLED_T_ON_K Pin=LED_T_ON-K
+Added Pin To Net: NetName=NetLED_T_ON_K Pin=R_T_ON-2
+Added Net: Name=NetLED_T_ON_K
+Added Pin To Net: NetName=NetLED_V_ON_K Pin=LED_V_ON-K
+Added Pin To Net: NetName=NetLED_V_ON_K Pin=R_V_ON-2
+Added Net: Name=NetLED_V_ON_K
+Added Pin To Net: NetName=NetQ_Power_C Pin=Q_Power-C
+Added Pin To Net: NetName=NetQ_Power_C Pin=Q_Power-C
+Added Pin To Net: NetName=NetQ_Power_C Pin=R_Power-1
+Added Net: Name=NetQ_Power_C
+Added Member To Class: ClassName=Even Member=Component J_T_DTEN 
+Added Member To Class: ClassName=Even Member=Component J_T_ISOMD 
+Added Member To Class: ClassName=Even Member=Component J_V_DTEN 
+Added Member To Class: ClassName=Even Member=Component J_V_ISOMD 
+Added Member To Class: ClassName=Even Member=Component LED_T_ON T_ON
+Added Member To Class: ClassName=Even Member=Component LED_V_ON ON
+Added Member To Class: ClassName=Even Member=Component Q_Power 
+Added Member To Class: ClassName=Even Member=Component R_Power RES 300
+Added Member To Class: ClassName=Even Member=Component R_T_ON RES 500
+Added Member To Class: ClassName=Even Member=Component R_V_ON RES 500

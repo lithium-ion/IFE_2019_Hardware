@@ -1,0 +1,22 @@
+Output: Gerber Files
+Type  : Gerber
+From  : Variant [[No Variations]] of Project [ife18_TS_BMS_LTC6813_v2.PrjPcb]
+   Generated File[ife18_TS_BMS_LTC6813_v2.GTO]
+   Generated File[ife18_TS_BMS_LTC6813_v2.GTS]
+   Generated File[ife18_TS_BMS_LTC6813_v2.GTL]
+   Generated File[ife18_TS_BMS_LTC6813_v2.G1]
+   Generated File[ife18_TS_BMS_LTC6813_v2.G2]
+   Generated File[ife18_TS_BMS_LTC6813_v2.GBL]
+   Generated File[ife18_TS_BMS_LTC6813_v2.GBS]
+   Generated File[ife18_TS_BMS_LTC6813_v2.GBO]
+   Generated File[ife18_TS_BMS_LTC6813_v2.GM1]
+   Generated File[ife18_TS_BMS_LTC6813_v2.GKO]
+   Generated File[ife18_TS_BMS_LTC6813_v2.RUL]
+   Generated File[ife18_TS_BMS_LTC6813_v2.EXTREP]
+   Generated File[ife18_TS_BMS_LTC6813_v2.REP]
+
+
+Files Generated   : 13
+Documents Printed : 0
+
+Finished Output Generation At 3:02:08 PM On 12/24/2018

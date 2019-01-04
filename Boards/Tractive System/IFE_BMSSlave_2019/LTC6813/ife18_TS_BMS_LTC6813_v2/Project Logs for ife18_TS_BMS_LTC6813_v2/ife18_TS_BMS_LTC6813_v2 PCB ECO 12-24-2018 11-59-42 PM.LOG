@@ -1,0 +1,11 @@
+Change Component Designator: OldDesignator=* NewDesignator=C
+Added Component: Designator=F(2410SMD)
+Add component. Clean all parameters for all variants
+Added Pin To Net: NetName=NetC_+ Pin=C-+
+Added Pin To Net: NetName=NetC_+ Pin=C-T+
+Added Pin To Net: NetName=NetC_+ Pin=F-1
+Added Net: Name=NetC_+
+Added Pin To Net: NetName=NetC_- Pin=C--
+Added Pin To Net: NetName=NetC_- Pin=F-2
+Added Net: Name=NetC_-
+Added Member To Class: ClassName=Cell Member=Component F 0679L

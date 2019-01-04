@@ -1,0 +1,5 @@
+Change Physical Footprint: Designator=R_D_CELL16 Old Footprint=TO252-TKH-45 New Footprint=TO252-TKH-45
+Change Physical Footprint: Designator=TP_CSB Old Footprint=Testpoint New Footprint=Testpoint
+Change Physical Footprint: Designator=TP_SCK Old Footprint=Testpoint New Footprint=Testpoint
+Change Physical Footprint: Designator=TP_SDI Old Footprint=Testpoint New Footprint=Testpoint
+Change Physical Footprint: Designator=TP_SDO Old Footprint=Testpoint New Footprint=Testpoint

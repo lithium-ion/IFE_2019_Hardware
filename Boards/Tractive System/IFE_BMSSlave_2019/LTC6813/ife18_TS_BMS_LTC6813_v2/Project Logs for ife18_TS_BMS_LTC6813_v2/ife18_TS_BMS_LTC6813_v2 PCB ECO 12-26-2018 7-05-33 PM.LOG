@@ -1,0 +1,81 @@
+Added Component: Designator=C_V(CAP-0603)
+Add component. Clean all parameters for all variants
+Added Component: Designator=Cell(Li1x7pVTC6T)
+Add component. Clean all parameters for all variants
+Added Component: Designator=F_T(2410SMD)
+Add component. Clean all parameters for all variants
+Added Component: Designator=F_V(2410SMD)
+Add component. Clean all parameters for all variants
+Added Component: Designator=LED_V_D(LED-0603)
+Add component. Clean all parameters for all variants
+Added Component: Designator=NTC_Gate(NTC-0603)
+Add component. Clean all parameters for all variants
+Added Component: Designator=Q_V_Mosfet(TO252)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "DeviceName"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "DeviceSetName"; Value = "DMP10H400SK3-13"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "GateName_1"; Value = "G$1"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LibraryName"; Value = "IFE_Transistors"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "TO252"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SymbolName_1"; Value = "LABELED-PMOS"; VariantName = "[No Variations]"
+Added Component: Designator=R_D(TO252-TKH-45)
+Add component. Clean all parameters for all variants
+Added Component: Designator=R_Gate(RES-0603)
+Add component. Clean all parameters for all variants
+Added Component: Designator=R_Input(RES-0603)
+Add component. Clean all parameters for all variants
+Added Component: Designator=R_T(RES-0603)
+Add component. Clean all parameters for all variants
+Added Component: Designator=R_V_D_LED(RES-0603)
+Add component. Clean all parameters for all variants
+Added Pin To Net: NetName=F Pin=C_V-1
+Added Pin To Net: NetName=F Pin=F_V-1
+Added Pin To Net: NetName=F Pin=NTC_Gate-2
+Added Pin To Net: NetName=F Pin=Q_V_Mosfet-3
+Added Pin To Net: NetName=F Pin=R_D-3
+Added Pin To Net: NetName=F Pin=R_Input-1
+Added Net: Name=F
+Added Pin To Net: NetName=GND Pin=C_V-2
+Added Net: Name=GND
+Added Pin To Net: NetName=NEG Pin=Cell--
+Added Pin To Net: NetName=NEG Pin=LED_V_D-K
+Added Pin To Net: NetName=NEG Pin=R_D-1
+Added Net: Name=NEG
+Added Pin To Net: NetName=NetCell_+ Pin=Cell-+
+Added Pin To Net: NetName=NetCell_+ Pin=F_T-1
+Added Pin To Net: NetName=NetCell_+ Pin=F_V-2
+Added Net: Name=NetCell_+
+Added Pin To Net: NetName=NetCell_T+ Pin=Cell-T+
+Added Pin To Net: NetName=NetCell_T+ Pin=R_T-1
+Added Net: Name=NetCell_T+
+Added Pin To Net: NetName=NetF_T_2 Pin=F_T-2
+Added Pin To Net: NetName=NetF_T_2 Pin=R_T-2
+Added Net: Name=NetF_T_2
+Added Pin To Net: NetName=NetLED_V_D_A Pin=LED_V_D-A
+Added Pin To Net: NetName=NetLED_V_D_A Pin=R_V_D_LED-2
+Added Net: Name=NetLED_V_D_A
+Added Pin To Net: NetName=NetNTC_Gate_1 Pin=NTC_Gate-1
+Added Pin To Net: NetName=NetNTC_Gate_1 Pin=Q_V_Mosfet-1
+Added Pin To Net: NetName=NetNTC_Gate_1 Pin=R_Gate-1
+Added Net: Name=NetNTC_Gate_1
+Added Pin To Net: NetName=NetQ_V_Mosfet_2 Pin=Q_V_Mosfet-2
+Added Pin To Net: NetName=NetQ_V_Mosfet_2 Pin=R_D-2
+Added Pin To Net: NetName=NetQ_V_Mosfet_2 Pin=R_V_D_LED-1
+Added Net: Name=NetQ_V_Mosfet_2
+Added Pin To Net: NetName=NetR_Gate_2 Pin=R_Gate-2
+Added Net: Name=NetR_Gate_2
+Added Pin To Net: NetName=NetR_Input_2 Pin=R_Input-2
+Added Net: Name=NetR_Input_2
+Added Member To Class: ClassName=Cell Member=Component C_V CAP 10n
+Added Member To Class: ClassName=Cell Member=Component Cell 
+Added Member To Class: ClassName=Cell Member=Component F_T 0.1A Fuse
+Added Member To Class: ClassName=Cell Member=Component F_V 1A Fuse
+Added Member To Class: ClassName=Cell Member=Component LED_V_D LED 
+Added Member To Class: ClassName=Cell Member=Component NTC_Gate 100K
+Added Member To Class: ClassName=Cell Member=Component Q_V_Mosfet 
+Added Member To Class: ClassName=Cell Member=Component R_D RES 5
+Added Member To Class: ClassName=Cell Member=Component R_Gate RES 3.3K
+Added Member To Class: ClassName=Cell Member=Component R_Input RES 100
+Added Member To Class: ClassName=Cell Member=Component R_T RES 2K
+Added Member To Class: ClassName=Cell Member=Component R_V_D_LED RES 300
+Added Room: Name=Cell

@@ -1,0 +1,22 @@
+Removed Pin From Net: NetName=V_SCK Pin=H_SPI_1-1
+Removed Pin From Net: NetName=V_CSB Pin=H_SPI_1-2
+Removed Pin From Net: NetName=V_SDI Pin=H_SPI_2-1
+Removed Pin From Net: NetName=V_SDO Pin=H_SPI_2-2
+Removed Member From Class: ClassName=Even Member=H_SPI_1
+Removed Member From Class: ClassName=Even Member=H_SPI_2
+Added Component: Designator=TP_CSB(Testpoint)
+Add component. Clean all parameters for all variants
+Added Component: Designator=TP_SCK(Testpoint)
+Add component. Clean all parameters for all variants
+Added Component: Designator=TP_SDI(Testpoint)
+Add component. Clean all parameters for all variants
+Added Component: Designator=TP_SDO(Testpoint)
+Add component. Clean all parameters for all variants
+Added Pin To Net: NetName=V_CSB Pin=TP_CSB-1
+Added Pin To Net: NetName=V_SCK Pin=TP_SCK-1
+Added Pin To Net: NetName=V_SDI Pin=TP_SDI-1
+Added Pin To Net: NetName=V_SDO Pin=TP_SDO-1
+Added Member To Class: ClassName=Even Member=Component TP_CSB 
+Added Member To Class: ClassName=Even Member=Component TP_SCK C
+Added Member To Class: ClassName=Even Member=Component TP_SDI I
+Added Member To Class: ClassName=Even Member=Component TP_SDO O

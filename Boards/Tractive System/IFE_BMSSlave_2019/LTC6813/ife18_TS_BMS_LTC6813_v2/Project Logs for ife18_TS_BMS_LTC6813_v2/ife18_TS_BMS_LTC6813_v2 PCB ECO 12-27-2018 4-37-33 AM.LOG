@@ -1,0 +1,8 @@
+Removed Pin From Net: NetName=V_DRIVE Pin=Q_Power-B1
+Removed Pin From Net: NetName=T_DRIVE Pin=Q_Power-B2
+Removed Pin From Net: NetName=V_VREG Pin=Q_Power-E1
+Removed Pin From Net: NetName=T_VREG Pin=Q_Power-E2
+Added Pin To Net: NetName=T_DRIVE Pin=Q_Power-B1
+Added Pin To Net: NetName=V_DRIVE Pin=Q_Power-B2
+Added Pin To Net: NetName=T_VREG Pin=Q_Power-E1
+Added Pin To Net: NetName=V_VREG Pin=Q_Power-E2

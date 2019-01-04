@@ -1,0 +1,158 @@
+*************************************************************
+FileName = ife18_TS_BMS_LTC6813_v2.GBR
+AutoAperture = True
+*************************************************************
+Generating : Bottom Overlay
+      File : ife18_TS_BMS_LTC6813_v2.GBO
+
+    Adding Layer      : Bottom Overlay
+
+    Adding Layer      : Mechanical 1
+
+
+Used DCodes :
+    D10
+*************************************************************
+
+*************************************************************
+Generating : Top Overlay
+      File : ife18_TS_BMS_LTC6813_v2.GTO
+
+    Adding Layer      : Top Overlay
+
+    Adding Layer      : Mechanical 1
+
+
+Used DCodes :
+    D10
+    D11
+*************************************************************
+
+*************************************************************
+Generating : Signal Layer 1
+      File : ife18_TS_BMS_LTC6813_v2.G1
+
+    Adding Layer      : Signal Layer 1
+
+    Adding Layer      : Mechanical 1
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D10
+*************************************************************
+
+*************************************************************
+Generating : Mechanical 1
+      File : ife18_TS_BMS_LTC6813_v2.GM1
+
+    Adding Layer      : Mechanical 1
+
+    Adding Layer      : Mechanical 1
+
+
+Used DCodes :
+    D10
+*************************************************************
+
+*************************************************************
+Generating : Bottom Copper
+      File : ife18_TS_BMS_LTC6813_v2.GBL
+
+    Adding Layer      : Bottom Copper
+
+    Adding Layer      : Mechanical 1
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D10
+    D14
+    D15
+*************************************************************
+
+*************************************************************
+Generating : Bottom Mask
+      File : ife18_TS_BMS_LTC6813_v2.GBS
+
+    Adding Layer      : Bottom Mask
+
+    Adding Layer      : Mechanical 1
+
+    Adding Layer      : Bottom Copper
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D10
+    D12
+    D13
+*************************************************************
+
+*************************************************************
+Generating : Signal Layer 2
+      File : ife18_TS_BMS_LTC6813_v2.G2
+
+    Adding Layer      : Signal Layer 2
+
+    Adding Layer      : Mechanical 1
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D10
+*************************************************************
+
+*************************************************************
+Generating : Keep-Out Layer
+      File : ife18_TS_BMS_LTC6813_v2.GKO
+
+    Adding Layer      : Keep-Out Layer
+
+    Adding Layer      : Mechanical 1
+
+
+Used DCodes :
+    D10
+*************************************************************
+
+*************************************************************
+Generating : Top Mask
+      File : ife18_TS_BMS_LTC6813_v2.GTS
+
+    Adding Layer      : Top Mask
+
+    Adding Layer      : Mechanical 1
+
+    Adding Layer      : Top Copper
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D10
+    D12
+    D13
+*************************************************************
+
+*************************************************************
+Generating : Top Copper
+      File : ife18_TS_BMS_LTC6813_v2.GTL
+
+    Adding Layer      : Top Copper
+
+    Adding Layer      : Mechanical 1
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D10
+    D14
+    D15
+*************************************************************
+

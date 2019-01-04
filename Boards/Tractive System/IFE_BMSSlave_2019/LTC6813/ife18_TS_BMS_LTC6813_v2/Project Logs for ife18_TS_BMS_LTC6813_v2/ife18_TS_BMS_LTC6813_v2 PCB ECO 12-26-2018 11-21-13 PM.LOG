@@ -1,0 +1,180 @@
+Removed Pin From Net: NetName=F_CELL1 Pin=C_V_CELL1-1
+Removed Pin From Net: NetName=F_CELL2 Pin=C_V_CELL2-1
+Removed Pin From Net: NetName=F_CELL3 Pin=C_V_CELL3-1
+Removed Pin From Net: NetName=F_CELL4 Pin=C_V_CELL4-1
+Removed Pin From Net: NetName=F_CELL5 Pin=C_V_CELL5-1
+Removed Pin From Net: NetName=F_CELL6 Pin=C_V_CELL6-1
+Removed Pin From Net: NetName=F_CELL7 Pin=C_V_CELL7-1
+Removed Pin From Net: NetName=F_CELL8 Pin=C_V_CELL8-1
+Removed Pin From Net: NetName=F_CELL9 Pin=C_V_CELL9-1
+Removed Pin From Net: NetName=F_CELL10 Pin=C_V_CELL10-1
+Removed Pin From Net: NetName=F_CELL11 Pin=C_V_CELL11-1
+Removed Pin From Net: NetName=F_CELL12 Pin=C_V_CELL12-1
+Removed Pin From Net: NetName=F_CELL13 Pin=C_V_CELL13-1
+Removed Pin From Net: NetName=F_CELL14 Pin=C_V_CELL14-1
+Removed Pin From Net: NetName=F_CELL15 Pin=C_V_CELL15-1
+Removed Pin From Net: NetName=F_CELL16 Pin=C_V_CELL16-1
+Change Component Comment : Designator=LED_V_D_CELL1 Old Comment=LED  New Comment=LED
+Change Component Comment : Designator=LED_V_D_CELL2 Old Comment=LED  New Comment=LED
+Change Component Comment : Designator=LED_V_D_CELL3 Old Comment=LED  New Comment=LED
+Change Component Comment : Designator=LED_V_D_CELL4 Old Comment=LED  New Comment=LED
+Change Component Comment : Designator=LED_V_D_CELL5 Old Comment=LED  New Comment=LED
+Change Component Comment : Designator=LED_V_D_CELL6 Old Comment=LED  New Comment=LED
+Change Component Comment : Designator=LED_V_D_CELL7 Old Comment=LED  New Comment=LED
+Change Component Comment : Designator=LED_V_D_CELL8 Old Comment=LED  New Comment=LED
+Change Component Comment : Designator=LED_V_D_CELL9 Old Comment=LED  New Comment=LED
+Change Component Comment : Designator=LED_V_D_CELL10 Old Comment=LED  New Comment=LED
+Change Component Comment : Designator=LED_V_D_CELL11 Old Comment=LED  New Comment=LED
+Change Component Comment : Designator=LED_V_D_CELL12 Old Comment=LED  New Comment=LED
+Change Component Comment : Designator=LED_V_D_CELL13 Old Comment=LED  New Comment=LED
+Change Component Comment : Designator=LED_V_D_CELL14 Old Comment=LED  New Comment=LED
+Change Component Comment : Designator=LED_V_D_CELL15 Old Comment=LED  New Comment=LED
+Change Component Comment : Designator=LED_V_D_CELL16 Old Comment=LED  New Comment=LED
+Added Component: Designator=C_T0(CAP-0603)
+Add component. Clean all parameters for all variants
+Added Component: Designator=C_T_VREF1(CAP-0603)
+Add component. Clean all parameters for all variants
+Added Component: Designator=C_T_VREF2(CAP-0603)
+Add component. Clean all parameters for all variants
+Added Component: Designator=C_T_VREG(CAP-0603)
+Add component. Clean all parameters for all variants
+Added Component: Designator=C_V0(CAP-0603)
+Add component. Clean all parameters for all variants
+Added Component: Designator=C_V_VREF1(CAP-0603)
+Add component. Clean all parameters for all variants
+Added Component: Designator=C_V_VREF2(CAP-0603)
+Add component. Clean all parameters for all variants
+Added Component: Designator=C_V_VREG(CAP-0603)
+Add component. Clean all parameters for all variants
+Added Component: Designator=R_T0(RES-0603)
+Add component. Clean all parameters for all variants
+Added Component: Designator=R_V0(RES-0603)
+Add component. Clean all parameters for all variants
+Added Component: Designator=Temperature(LQFP64_LWE_A)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "DeviceName"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "DeviceSetName"; Value = "LTC6813HLWE-1"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "GateName_1"; Value = "A"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LibraryName"; Value = "LTC6813_Official"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "LQFP64_LWE_A"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SymbolName_1"; Value = "LTC6813XLWE-1"; VariantName = "[No Variations]"
+Added Component: Designator=Voltage(LQFP64_LWE_A)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "DeviceName"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "DeviceSetName"; Value = "LTC6813HLWE-1"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "GateName_1"; Value = "A"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LibraryName"; Value = "LTC6813_Official"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "LQFP64_LWE_A"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SymbolName_1"; Value = "LTC6813XLWE-1"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=NEG1 Pin=C_T0-1
+Added Pin To Net: NetName=NEG1 Pin=C_T_VREF1-1
+Added Pin To Net: NetName=NEG1 Pin=C_T_VREF2-1
+Added Pin To Net: NetName=NEG1 Pin=C_T_VREG-1
+Added Pin To Net: NetName=NEG1 Pin=C_V0-1
+Added Pin To Net: NetName=NEG1 Pin=C_V_CELL1-1
+Added Pin To Net: NetName=F_CELL1 Pin=C_V_CELL1-2
+Added Pin To Net: NetName=NEG1 Pin=C_V_CELL2-1
+Added Pin To Net: NetName=F_CELL2 Pin=C_V_CELL2-2
+Added Pin To Net: NetName=NEG1 Pin=C_V_CELL3-1
+Added Pin To Net: NetName=F_CELL3 Pin=C_V_CELL3-2
+Added Pin To Net: NetName=NEG1 Pin=C_V_CELL4-1
+Added Pin To Net: NetName=F_CELL4 Pin=C_V_CELL4-2
+Added Pin To Net: NetName=NEG1 Pin=C_V_CELL5-1
+Added Pin To Net: NetName=F_CELL5 Pin=C_V_CELL5-2
+Added Pin To Net: NetName=NEG1 Pin=C_V_CELL6-1
+Added Pin To Net: NetName=F_CELL6 Pin=C_V_CELL6-2
+Added Pin To Net: NetName=NEG1 Pin=C_V_CELL7-1
+Added Pin To Net: NetName=F_CELL7 Pin=C_V_CELL7-2
+Added Pin To Net: NetName=NEG1 Pin=C_V_CELL8-1
+Added Pin To Net: NetName=F_CELL8 Pin=C_V_CELL8-2
+Added Pin To Net: NetName=NEG1 Pin=C_V_CELL9-1
+Added Pin To Net: NetName=F_CELL9 Pin=C_V_CELL9-2
+Added Pin To Net: NetName=NEG1 Pin=C_V_CELL10-1
+Added Pin To Net: NetName=F_CELL10 Pin=C_V_CELL10-2
+Added Pin To Net: NetName=NEG1 Pin=C_V_CELL11-1
+Added Pin To Net: NetName=F_CELL11 Pin=C_V_CELL11-2
+Added Pin To Net: NetName=NEG1 Pin=C_V_CELL12-1
+Added Pin To Net: NetName=F_CELL12 Pin=C_V_CELL12-2
+Added Pin To Net: NetName=NEG1 Pin=C_V_CELL13-1
+Added Pin To Net: NetName=F_CELL13 Pin=C_V_CELL13-2
+Added Pin To Net: NetName=NEG1 Pin=C_V_CELL14-1
+Added Pin To Net: NetName=F_CELL14 Pin=C_V_CELL14-2
+Added Pin To Net: NetName=NEG1 Pin=C_V_CELL15-1
+Added Pin To Net: NetName=F_CELL15 Pin=C_V_CELL15-2
+Added Pin To Net: NetName=NEG1 Pin=C_V_CELL16-1
+Added Pin To Net: NetName=F_CELL16 Pin=C_V_CELL16-2
+Added Pin To Net: NetName=NEG1 Pin=C_V_VREF1-1
+Added Pin To Net: NetName=NEG1 Pin=C_V_VREF2-1
+Added Pin To Net: NetName=NEG1 Pin=C_V_VREG-1
+Added Pin To Net: NetName=NEG1 Pin=R_T0-1
+Added Pin To Net: NetName=NEG1 Pin=R_V0-1
+Added Pin To Net: NetName=POS16 Pin=Temperature-1
+Added Pin To Net: NetName=NEG1 Pin=Temperature-59
+Added Pin To Net: NetName=NEG1 Pin=Temperature-60
+Added Pin To Net: NetName=NEG1 Pin=Temperature-65
+Added Pin To Net: NetName=POS16 Pin=Voltage-1
+Added Pin To Net: NetName=S16 Pin=Voltage-5
+Added Pin To Net: NetName=S15 Pin=Voltage-7
+Added Pin To Net: NetName=S14 Pin=Voltage-9
+Added Pin To Net: NetName=S13 Pin=Voltage-11
+Added Pin To Net: NetName=S12 Pin=Voltage-13
+Added Pin To Net: NetName=S11 Pin=Voltage-17
+Added Pin To Net: NetName=S10 Pin=Voltage-19
+Added Pin To Net: NetName=S9 Pin=Voltage-21
+Added Pin To Net: NetName=S8 Pin=Voltage-23
+Added Pin To Net: NetName=S7 Pin=Voltage-25
+Added Pin To Net: NetName=S6 Pin=Voltage-27
+Added Pin To Net: NetName=S5 Pin=Voltage-29
+Added Pin To Net: NetName=S4 Pin=Voltage-31
+Added Pin To Net: NetName=S3 Pin=Voltage-33
+Added Pin To Net: NetName=S2 Pin=Voltage-35
+Added Pin To Net: NetName=S1 Pin=Voltage-37
+Added Pin To Net: NetName=NEG1 Pin=Voltage-59
+Added Pin To Net: NetName=NEG1 Pin=Voltage-60
+Added Pin To Net: NetName=NEG1 Pin=Voltage-65
+Added Pin To Net: NetName=T0 Pin=C_T0-2
+Added Pin To Net: NetName=T0 Pin=R_T0-2
+Added Pin To Net: NetName=T0 Pin=Temperature-38
+Added Net: Name=T0
+Added Pin To Net: NetName=T_DRIVE Pin=Temperature-49
+Added Net: Name=T_DRIVE
+Added Pin To Net: NetName=T_DTEN Pin=Temperature-52
+Added Net: Name=T_DTEN
+Added Pin To Net: NetName=T_ISOMD Pin=Temperature-55
+Added Net: Name=T_ISOMD
+Added Pin To Net: NetName=T_VREF1 Pin=C_T_VREF1-2
+Added Pin To Net: NetName=T_VREF1 Pin=Temperature-51
+Added Net: Name=T_VREF1
+Added Pin To Net: NetName=T_VREF2 Pin=C_T_VREF2-2
+Added Pin To Net: NetName=T_VREF2 Pin=Temperature-50
+Added Net: Name=T_VREF2
+Added Pin To Net: NetName=T_VREG Pin=C_T_VREG-2
+Added Pin To Net: NetName=T_VREG Pin=Temperature-48
+Added Net: Name=T_VREG
+Added Pin To Net: NetName=T_WDT Pin=Temperature-56
+Added Net: Name=T_WDT
+Added Pin To Net: NetName=V0 Pin=C_V0-2
+Added Pin To Net: NetName=V0 Pin=R_V0-2
+Added Pin To Net: NetName=V0 Pin=Voltage-38
+Added Net: Name=V0
+Added Pin To Net: NetName=V_DRIVE Pin=Voltage-49
+Added Net: Name=V_DRIVE
+Added Pin To Net: NetName=V_DTEN Pin=Voltage-52
+Added Net: Name=V_DTEN
+Added Pin To Net: NetName=V_ISOMD Pin=Voltage-55
+Added Net: Name=V_ISOMD
+Added Pin To Net: NetName=V_VREF1 Pin=C_V_VREF1-2
+Added Pin To Net: NetName=V_VREF1 Pin=Voltage-51
+Added Net: Name=V_VREF1
+Added Pin To Net: NetName=V_VREF2 Pin=C_V_VREF2-2
+Added Pin To Net: NetName=V_VREF2 Pin=Voltage-50
+Added Net: Name=V_VREF2
+Added Pin To Net: NetName=V_VREG Pin=C_V_VREG-2
+Added Pin To Net: NetName=V_VREG Pin=Voltage-48
+Added Net: Name=V_VREG
+Added Pin To Net: NetName=V_WDT Pin=Voltage-56
+Added Net: Name=V_WDT
+Added Class: Name=Even
+Added Member To Class: ClassName=T[1..16] Member=Element[0]: T
+Added Member To Class: ClassName=V[1..16] Member=Element[0]: V
+Added Room: Name=Even

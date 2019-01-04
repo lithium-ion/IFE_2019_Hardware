@@ -1,0 +1,183 @@
+Added Component: Designator=C_T_A(CAP-0603)
+Add component. Clean all parameters for all variants
+Added Component: Designator=C_T_B(CAP-0603)
+Add component. Clean all parameters for all variants
+Added Component: Designator=C_V_A(CAP-0603)
+Add component. Clean all parameters for all variants
+Added Component: Designator=C_V_B(CAP-0603)
+Add component. Clean all parameters for all variants
+Added Component: Designator=J_V_IMA(SJ)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "DeviceName"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "DeviceSetName"; Value = "JUMPER"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "GateName_1"; Value = "G$1"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LibraryName"; Value = "IFE_Jumpers"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "SJ"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SymbolName_1"; Value = "SJ"; VariantName = "[No Variations]"
+Added Component: Designator=J_V_IPA(SJ)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "DeviceName"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "DeviceSetName"; Value = "JUMPER"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "GateName_1"; Value = "G$1"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LibraryName"; Value = "IFE_Jumpers"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "SJ"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SymbolName_1"; Value = "SJ"; VariantName = "[No Variations]"
+Added Component: Designator=R_T_BIAS(RES-0603)
+Add component. Clean all parameters for all variants
+Added Component: Designator=R_T_COMP(RES-0603)
+Add component. Clean all parameters for all variants
+Added Component: Designator=R_T_IMA(RES-0603)
+Add component. Clean all parameters for all variants
+Added Component: Designator=R_T_IMB(RES-0603)
+Add component. Clean all parameters for all variants
+Added Component: Designator=R_T_IPA(RES-0603)
+Add component. Clean all parameters for all variants
+Added Component: Designator=R_T_IPB(RES-0603)
+Add component. Clean all parameters for all variants
+Added Component: Designator=R_V_BIAS(RES-0603)
+Add component. Clean all parameters for all variants
+Added Component: Designator=R_V_COMP(RES-0603)
+Add component. Clean all parameters for all variants
+Added Component: Designator=R_V_IMA(RES-0603)
+Add component. Clean all parameters for all variants
+Added Component: Designator=R_V_IMB(RES-0603)
+Add component. Clean all parameters for all variants
+Added Component: Designator=R_V_IPA(RES-0603)
+Add component. Clean all parameters for all variants
+Added Component: Designator=R_V_IPB(RES-0603)
+Add component. Clean all parameters for all variants
+Added Component: Designator=T_T_B(HM2101)
+Add component. Clean all parameters for all variants
+Added Component: Designator=T_V_A(HM2101)
+Add component. Clean all parameters for all variants
+Added Component: Designator=T_V_T(HM2101)
+Add component. Clean all parameters for all variants
+Added Component: Designator=X_T_B(43650-0224)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "DeviceName"; Value = "43650-0224"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "DeviceSetName"; Value = "HEADER_POS2_?"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "GateName_1"; Value = "G$1"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LibraryName"; Value = "MOLEX Micro-Fit"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "43650-0224"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SymbolName_1"; Value = "HEADER_POS2"; VariantName = "[No Variations]"
+Added Component: Designator=X_V_A(43650-0224)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "DeviceName"; Value = "43650-0224"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "DeviceSetName"; Value = "HEADER_POS2_?"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "GateName_1"; Value = "G$1"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LibraryName"; Value = "MOLEX Micro-Fit"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "43650-0224"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SymbolName_1"; Value = "HEADER_POS2"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=NEG1 Pin=C_T_A-1
+Added Pin To Net: NetName=NEG1 Pin=C_T_B-1
+Added Pin To Net: NetName=NEG1 Pin=C_V_A-1
+Added Pin To Net: NetName=NEG1 Pin=C_V_B-1
+Added Pin To Net: NetName=NEG1 Pin=R_T_COMP-1
+Added Pin To Net: NetName=NEG1 Pin=R_V_COMP-1
+Added Pin To Net: NetName=NetC_T_A_2 Pin=C_T_A-2
+Added Pin To Net: NetName=NetC_T_A_2 Pin=R_T_IMA-1
+Added Pin To Net: NetName=NetC_T_A_2 Pin=R_T_IPA-1
+Added Net: Name=NetC_T_A_2
+Added Pin To Net: NetName=NetC_T_B_2 Pin=C_T_B-2
+Added Pin To Net: NetName=NetC_T_B_2 Pin=R_T_IMB-1
+Added Pin To Net: NetName=NetC_T_B_2 Pin=R_T_IPB-1
+Added Net: Name=NetC_T_B_2
+Added Pin To Net: NetName=NetC_V_A_2 Pin=C_V_A-2
+Added Pin To Net: NetName=NetC_V_A_2 Pin=R_V_IMA-1
+Added Pin To Net: NetName=NetC_V_A_2 Pin=R_V_IPA-1
+Added Net: Name=NetC_V_A_2
+Added Pin To Net: NetName=NetC_V_B_2 Pin=C_V_B-2
+Added Pin To Net: NetName=NetC_V_B_2 Pin=R_V_IMB-1
+Added Pin To Net: NetName=NetC_V_B_2 Pin=R_V_IPB-1
+Added Net: Name=NetC_V_B_2
+Added Pin To Net: NetName=NetT_T_B_1 Pin=T_T_B-1
+Added Pin To Net: NetName=NetT_T_B_1 Pin=X_T_B-P$1
+Added Net: Name=NetT_T_B_1
+Added Pin To Net: NetName=NetT_T_B_3 Pin=T_T_B-3
+Added Pin To Net: NetName=NetT_T_B_3 Pin=X_T_B-P$2
+Added Net: Name=NetT_T_B_3
+Added Pin To Net: NetName=NetT_V_A_1 Pin=T_V_A-1
+Added Pin To Net: NetName=NetT_V_A_1 Pin=X_V_A-P$1
+Added Net: Name=NetT_V_A_1
+Added Pin To Net: NetName=NetT_V_A_3 Pin=T_V_A-3
+Added Pin To Net: NetName=NetT_V_A_3 Pin=X_V_A-P$2
+Added Net: Name=NetT_V_A_3
+Added Pin To Net: NetName=T_IBIAS Pin=R_T_BIAS-2
+Added Pin To Net: NetName=T_IBIAS Pin=Temperature-57
+Added Net: Name=T_IBIAS
+Added Pin To Net: NetName=T_ICMP Pin=R_T_BIAS-1
+Added Pin To Net: NetName=T_ICMP Pin=R_T_COMP-2
+Added Pin To Net: NetName=T_ICMP Pin=Temperature-58
+Added Net: Name=T_ICMP
+Added Pin To Net: NetName=T_IMA Pin=R_T_IMA-2
+Added Pin To Net: NetName=T_IMA Pin=T_V_T-4
+Added Pin To Net: NetName=T_IMA Pin=Temperature-61
+Added Net: Name=T_IMA
+Added Pin To Net: NetName=T_IMB Pin=R_T_IMB-2
+Added Pin To Net: NetName=T_IMB Pin=T_T_B-4
+Added Pin To Net: NetName=T_IMB Pin=Temperature-63
+Added Net: Name=T_IMB
+Added Pin To Net: NetName=T_IPA Pin=R_T_IPA-2
+Added Pin To Net: NetName=T_IPA Pin=T_V_T-6
+Added Pin To Net: NetName=T_IPA Pin=Temperature-62
+Added Net: Name=T_IPA
+Added Pin To Net: NetName=T_IPB Pin=R_T_IPB-2
+Added Pin To Net: NetName=T_IPB Pin=T_T_B-6
+Added Pin To Net: NetName=T_IPB Pin=Temperature-64
+Added Net: Name=T_IPB
+Added Pin To Net: NetName=V_CSB Pin=J_V_IMA-2
+Added Pin To Net: NetName=V_CSB Pin=Voltage-61
+Added Net: Name=V_CSB
+Added Pin To Net: NetName=V_IBIAS Pin=R_V_BIAS-2
+Added Pin To Net: NetName=V_IBIAS Pin=Voltage-57
+Added Net: Name=V_IBIAS
+Added Pin To Net: NetName=V_ICMP Pin=R_V_BIAS-1
+Added Pin To Net: NetName=V_ICMP Pin=R_V_COMP-2
+Added Pin To Net: NetName=V_ICMP Pin=Voltage-58
+Added Net: Name=V_ICMP
+Added Pin To Net: NetName=V_IMA Pin=J_V_IMA-1
+Added Pin To Net: NetName=V_IMA Pin=R_V_IMA-2
+Added Pin To Net: NetName=V_IMA Pin=T_V_A-4
+Added Net: Name=V_IMA
+Added Pin To Net: NetName=V_IMB Pin=R_V_IMB-2
+Added Pin To Net: NetName=V_IMB Pin=T_V_T-3
+Added Pin To Net: NetName=V_IMB Pin=Voltage-63
+Added Net: Name=V_IMB
+Added Pin To Net: NetName=V_IPA Pin=J_V_IPA-1
+Added Pin To Net: NetName=V_IPA Pin=R_V_IPA-2
+Added Pin To Net: NetName=V_IPA Pin=T_V_A-6
+Added Net: Name=V_IPA
+Added Pin To Net: NetName=V_IPB Pin=R_V_IPB-2
+Added Pin To Net: NetName=V_IPB Pin=T_V_T-1
+Added Pin To Net: NetName=V_IPB Pin=Voltage-64
+Added Net: Name=V_IPB
+Added Pin To Net: NetName=V_SCK Pin=J_V_IPA-2
+Added Pin To Net: NetName=V_SCK Pin=Voltage-62
+Added Net: Name=V_SCK
+Added Pin To Net: NetName=V_SDI Pin=Voltage-53
+Added Net: Name=V_SDI
+Added Pin To Net: NetName=V_SDO Pin=Voltage-54
+Added Net: Name=V_SDO
+Added Member To Class: ClassName=Even Member=Component C_T_A CAP 10n
+Added Member To Class: ClassName=Even Member=Component C_T_B CAP 10n
+Added Member To Class: ClassName=Even Member=Component C_V_A CAP 10n
+Added Member To Class: ClassName=Even Member=Component C_V_B CAP 10n
+Added Member To Class: ClassName=Even Member=Component J_V_IMA JUMPER
+Added Member To Class: ClassName=Even Member=Component J_V_IPA JUMPER
+Added Member To Class: ClassName=Even Member=Component R_T_BIAS RES 1K
+Added Member To Class: ClassName=Even Member=Component R_T_COMP RES 1K
+Added Member To Class: ClassName=Even Member=Component R_T_IMA RES 50
+Added Member To Class: ClassName=Even Member=Component R_T_IMB RES 50
+Added Member To Class: ClassName=Even Member=Component R_T_IPA RES 50
+Added Member To Class: ClassName=Even Member=Component R_T_IPB RES 50
+Added Member To Class: ClassName=Even Member=Component R_V_BIAS RES 1K
+Added Member To Class: ClassName=Even Member=Component R_V_COMP RES 1K
+Added Member To Class: ClassName=Even Member=Component R_V_IMA RES 50
+Added Member To Class: ClassName=Even Member=Component R_V_IMB RES 50
+Added Member To Class: ClassName=Even Member=Component R_V_IPA RES 50
+Added Member To Class: ClassName=Even Member=Component R_V_IPB RES 50
+Added Member To Class: ClassName=Even Member=Component T_T_B HM2101NL
+Added Member To Class: ClassName=Even Member=Component T_V_A HM2101NL
+Added Member To Class: ClassName=Even Member=Component T_V_T HM2101NL
+Added Member To Class: ClassName=Even Member=Component X_T_B Molex - Micro-Fit 3.0 Series connector,  3.00mm (0.118") pitch header, 2 positions.
+Added Member To Class: ClassName=Even Member=Component X_V_A Molex - Micro-Fit 3.0 Series connector,  3.00mm (0.118") pitch header, 2 positions.

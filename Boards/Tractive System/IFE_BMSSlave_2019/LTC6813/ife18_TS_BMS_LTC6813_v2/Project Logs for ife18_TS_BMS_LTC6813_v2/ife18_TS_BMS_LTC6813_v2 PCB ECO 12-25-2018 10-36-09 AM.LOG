@@ -1,0 +1,13 @@
+Added Component: Designator=C(Li1x7pVTC6T)
+Add component. Clean all parameters for all variants
+Added Component: Designator=F(2410SMD)
+Add component. Clean all parameters for all variants
+Added Pin To Net: NetName=NetC_+ Pin=C-+
+Added Pin To Net: NetName=NetC_+ Pin=C-T+
+Added Pin To Net: NetName=NetC_+ Pin=F-1
+Added Net: Name=NetC_+
+Added Pin To Net: NetName=NetC_- Pin=C--
+Added Pin To Net: NetName=NetC_- Pin=F-2
+Added Net: Name=NetC_-
+Added Class: Name=Cell
+Added Room: Name=Cell

@@ -1,0 +1,22 @@
+Added Component: Designator=X_T_B(43650-0224)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "DeviceName"; Value = "43650-0224"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "DeviceSetName"; Value = "HEADER_POS2_?"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "GateName_1"; Value = "G$1"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LibraryName"; Value = "MOLEX Micro-Fit"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "43650-0224"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SymbolName_1"; Value = "HEADER_POS2"; VariantName = "[No Variations]"
+Added Component: Designator=X_V_A(43650-0224)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "DeviceName"; Value = "43650-0224"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "DeviceSetName"; Value = "HEADER_POS2_?"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "GateName_1"; Value = "G$1"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LibraryName"; Value = "MOLEX Micro-Fit"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "43650-0224"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SymbolName_1"; Value = "HEADER_POS2"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=NetT_T_B_1 Pin=X_T_B-P$1
+Added Pin To Net: NetName=NetT_T_B_3 Pin=X_T_B-P$2
+Added Pin To Net: NetName=NetT_V_A_1 Pin=X_V_A-P$1
+Added Pin To Net: NetName=NetT_V_A_3 Pin=X_V_A-P$2
+Added Member To Class: ClassName=Even Member=Component X_T_B Molex - Micro-Fit 3.0 Series connector,  3.00mm (0.118") pitch header, 2 positions.
+Added Member To Class: ClassName=Even Member=Component X_V_A Molex - Micro-Fit 3.0 Series connector,  3.00mm (0.118") pitch header, 2 positions.
