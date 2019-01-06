@@ -1,0 +1,18 @@
+Removed Member From Class: ClassName=Low Voltage Member=NetLow Voltage Connector_1
+Removed Member From Class: ClassName=Low Voltage Member=NetLow Voltage Connector_3
+Removed Member From Class: ClassName=Low Voltage Member=NetLow Voltage Connector_4
+Added Pin To Net: NetName=5V Pin=Low Voltage Connector-1
+Added Net: Name=5V
+Added Pin To Net: NetName=Discharge Signal Pin=Low Voltage Connector-4
+Added Net: Name=Discharge Signal
+Added Pin To Net: NetName=NetR5_2 Pin=R5-2
+Added Net: Name=NetR5_2
+Added Pin To Net: NetName=NetU1_4 Pin=U1-4
+Added Net: Name=NetU1_4
+Added Pin To Net: NetName=NetU1_6 Pin=U1-6
+Added Net: Name=NetU1_6
+Added Pin To Net: NetName=TSAL_OUT Pin=Low Voltage Connector-3
+Added Net: Name=TSAL_OUT
+Added Member To Class: ClassName=Low Voltage Member=Wire 5V
+Added Member To Class: ClassName=Low Voltage Member=Wire Discharge Signal
+Added Member To Class: ClassName=Low Voltage Member=Wire TSAL_OUT

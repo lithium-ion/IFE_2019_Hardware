@@ -1,0 +1,3 @@
+Removed Pin From Net: NetName=NetHigh Voltage Connnector_P$5 Pin=R3-1
+Added Pin To Net: NetName=NetHigh Voltage Connnector_P$6 Pin=R3-1
+Added Member To Class: ClassName=ife19_TS_TSAL-Discharge-TSMP Member=Component R4 Ohmite 40 Series

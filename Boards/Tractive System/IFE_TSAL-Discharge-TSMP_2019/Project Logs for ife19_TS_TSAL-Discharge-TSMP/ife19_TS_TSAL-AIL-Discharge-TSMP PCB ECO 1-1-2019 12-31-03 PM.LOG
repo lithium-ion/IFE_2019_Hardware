@@ -1,0 +1,8 @@
+Change Component Designator: OldDesignator=* NewDesignator=R3
+Change Component Designator: OldDesignator=* NewDesignator=R4
+Added Pin To Net: NetName=NetD2_1 Pin=R3-2
+Added Pin To Net: NetName=NetHigh Voltage Connnector_P$1 Pin=R4-2
+Change Net Name : Old Net Name=Net*_1 New Net Name=NetHigh Voltage Connnector_P$5
+Added Pin To Net: NetName=NetHigh Voltage Connnector_P$6 Pin=High Voltage Connnector-P$6
+Added Net: Name=NetHigh Voltage Connnector_P$6
+Added Member To Class: ClassName=ife19_TS_TSAL-Discharge-TSMP Member=Component R3 Ohmite 40 Series
