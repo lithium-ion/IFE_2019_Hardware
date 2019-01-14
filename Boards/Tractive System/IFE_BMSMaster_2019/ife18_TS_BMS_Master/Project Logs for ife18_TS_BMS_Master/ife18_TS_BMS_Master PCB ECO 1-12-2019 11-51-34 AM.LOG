@@ -1,0 +1,4 @@
+Change Component Footprint: Designator=PRECHARGE_LED_DRV Old Footprint=TO252 New Footprint=SOT23
+Change Component Comment : Designator=X_RELAY Old Comment=Precharge New Comment=
+Change component parameters: Designator = "PRECHARGE_LED_DRV"; Footprint = "SOT23"; UniqueID = "\DANHRERI\IQQIEKRY"
+Change component parameters. Clean all parameters for all variants

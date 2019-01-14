@@ -1,0 +1,8 @@
+Removed Pin From Net: NetName=IMD+ Pin=F_HV+-1
+Removed Pin From Net: NetName=HV+ Pin=F_HV+-2
+Removed Pin From Net: NetName=HV- Pin=X_IMD-P$1
+Removed Pin From Net: NetName=IMD+ Pin=X_IMD-P$3
+Added Pin To Net: NetName=HV+ Pin=F_HV+-1
+Added Pin To Net: NetName=IMD+ Pin=F_HV+-2
+Added Pin To Net: NetName=IMD+ Pin=X_IMD-P$1
+Added Pin To Net: NetName=HV- Pin=X_IMD-P$3

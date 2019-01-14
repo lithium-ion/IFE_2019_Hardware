@@ -1,0 +1,138 @@
+Added Component: Designator=?(RELAY-DPDT_EC2)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "DeviceName"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "DeviceSetName"; Value = "EC2"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "GateName_1"; Value = "G$1"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LibraryName"; Value = "KEMET"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "DPDT_2.54"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SymbolName_1"; Value = "MONOSTABLERELAY"; VariantName = "[No Variations]"
+Added Component: Designator=AIR_LED(LEDRED-0603)
+Add component. Clean all parameters for all variants
+Added Component: Designator=C_TIMING(CAP-0603)
+Add component. Clean all parameters for all variants
+Added Component: Designator=C_VDD(CAP-0603)
+Add component. Clean all parameters for all variants
+Added Component: Designator=D1(DO41-10)
+Add component. Clean all parameters for all variants
+Added Component: Designator=D2(DO41-10)
+Add component. Clean all parameters for all variants
+Added Component: Designator=PRECHARGE_DRV(TO252)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "DeviceName"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "DeviceSetName"; Value = "DMP10H400SK3-13"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "GateName_1"; Value = "G$1"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LibraryName"; Value = "IFE_Transistors"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "TO252"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SymbolName_1"; Value = "LABELED-PMOS"; VariantName = "[No Variations]"
+Added Component: Designator=PRECHARGE_LED_DRV(TO252)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "DeviceName"; Value = ""; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "DeviceSetName"; Value = "DMP10H400SK3-13"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "GateName_1"; Value = "G$1"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LibraryName"; Value = "IFE_Transistors"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "TO252"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SymbolName_1"; Value = "LABELED-PMOS"; VariantName = "[No Variations]"
+Added Component: Designator=PRECHARGE_LED(LEDGREEN-0603)
+Add component. Clean all parameters for all variants
+Added Component: Designator=R_AIR_LED(RES-0603)
+Add component. Clean all parameters for all variants
+Added Component: Designator=R_DIST(AXIAL0.5)
+Add component. Clean all parameters for all variants
+Added Component: Designator=R_PRECHARGE_LED(RES-0603)
+Add component. Clean all parameters for all variants
+Added Component: Designator=R_PU(RES-0603)
+Add component. Clean all parameters for all variants
+Added Component: Designator=R_SET(AXIAL0.5)
+Add component. Clean all parameters for all variants
+Added Component: Designator=R_TRIG_B(RES-0603)
+Add component. Clean all parameters for all variants
+Added Component: Designator=R_TRIG_T(RES-0603)
+Add component. Clean all parameters for all variants
+Added Component: Designator=U4(SOIC8)
+Add component. Clean all parameters for all variants
+Added Component: Designator=X2(43650-1012)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "DeviceName"; Value = "43650-1012"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "DeviceSetName"; Value = "HEADER_POS10_?"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "GateName_1"; Value = "G$1"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LibraryName"; Value = "MOLEX Micro-Fit"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "43650-1012"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SymbolName_1"; Value = "HEADER_POS10"; VariantName = "[No Variations]"
+Added Component: Designator=X_RELAY(43650-0224)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "DeviceName"; Value = "43650-0224"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "DeviceSetName"; Value = "HEADER_POS2_?"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "GateName_1"; Value = "G$1"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LibraryName"; Value = "MOLEX Micro-Fit"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "43650-0224"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SymbolName_1"; Value = "HEADER_POS2"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=GND Pin=?-12
+Added Pin To Net: NetName=GND Pin=AIR_LED-K
+Added Pin To Net: NetName=GND Pin=C_TIMING-1
+Added Pin To Net: NetName=GND Pin=C_VDD-1
+Added Pin To Net: NetName=GND Pin=D1-A
+Added Pin To Net: NetName=GND Pin=PRECHARGE_DRV-2
+Added Pin To Net: NetName=GND Pin=PRECHARGE_LED_DRV-2
+Added Pin To Net: NetName=GND Pin=R_DIST-2
+Added Pin To Net: NetName=GND Pin=R_TRIG_B-1
+Added Pin To Net: NetName=GND Pin=U4-4
+Added Pin To Net: NetName=PWR_IN Pin=X2-P$1
+Added Pin To Net: NetName=GND Pin=X2-P$2
+Added Pin To Net: NetName=CANH Pin=X2-P$3
+Added Pin To Net: NetName=CANL Pin=X2-P$4
+Added Pin To Net: NetName=GND Pin=X2-P$10
+Added Pin To Net: NetName=AIR Pin=?-1
+Added Pin To Net: NetName=AIR Pin=C_VDD-2
+Added Pin To Net: NetName=AIR Pin=D1-K
+Added Pin To Net: NetName=AIR Pin=D2-K
+Added Pin To Net: NetName=AIR Pin=R_AIR_LED-1
+Added Pin To Net: NetName=AIR Pin=R_PRECHARGE_LED-2
+Added Pin To Net: NetName=AIR Pin=R_PU-2
+Added Pin To Net: NetName=AIR Pin=R_SET-2
+Added Pin To Net: NetName=AIR Pin=R_TRIG_T-2
+Added Pin To Net: NetName=AIR Pin=U4-8
+Added Pin To Net: NetName=AIR Pin=X2-P$6
+Added Pin To Net: NetName=AIR Pin=X_RELAY-P$1
+Added Net: Name=AIR
+Added Pin To Net: NetName=BMS_FLT Pin=X2-P$5
+Added Net: Name=BMS_FLT
+Added Pin To Net: NetName=CURRENT Pin=X2-P$9
+Added Net: Name=CURRENT
+Added Pin To Net: NetName=IMD_FLT Pin=X2-P$7
+Added Net: Name=IMD_FLT
+Added Pin To Net: NetName=Net?_3 Pin=?-3
+Added Pin To Net: NetName=Net?_3 Pin=R_DIST-1
+Added Net: Name=Net?_3
+Added Pin To Net: NetName=Net?_5 Pin=?-5
+Added Pin To Net: NetName=Net?_5 Pin=R_SET-1
+Added Net: Name=Net?_5
+Added Pin To Net: NetName=NetAIR_LED_A Pin=AIR_LED-A
+Added Pin To Net: NetName=NetAIR_LED_A Pin=R_AIR_LED-2
+Added Net: Name=NetAIR_LED_A
+Added Pin To Net: NetName=NetPRECHARGE_LED_A Pin=PRECHARGE_LED-A
+Added Pin To Net: NetName=NetPRECHARGE_LED_A Pin=R_PRECHARGE_LED-1
+Added Net: Name=NetPRECHARGE_LED_A
+Added Pin To Net: NetName=PRECHARGE_COMPLETE Pin=PRECHARGE_LED-K
+Added Pin To Net: NetName=PRECHARGE_COMPLETE Pin=PRECHARGE_LED_DRV-3
+Added Pin To Net: NetName=PRECHARGE_COMPLETE Pin=X2-P$8
+Added Net: Name=PRECHARGE_COMPLETE
+Added Pin To Net: NetName=PRECHARGE Pin=PRECHARGE_DRV-1
+Added Pin To Net: NetName=PRECHARGE Pin=PRECHARGE_LED_DRV-1
+Added Pin To Net: NetName=PRECHARGE Pin=R_PU-1
+Added Pin To Net: NetName=PRECHARGE Pin=U4-1
+Added Net: Name=PRECHARGE
+Added Pin To Net: NetName=RELAY- Pin=D2-A
+Added Pin To Net: NetName=RELAY- Pin=PRECHARGE_DRV-3
+Added Pin To Net: NetName=RELAY- Pin=X_RELAY-P$2
+Added Net: Name=RELAY-
+Added Pin To Net: NetName=TIMING Pin=?-4
+Added Pin To Net: NetName=TIMING Pin=C_TIMING-2
+Added Pin To Net: NetName=TIMING Pin=U4-3
+Added Net: Name=TIMING
+Added Pin To Net: NetName=V_TRIG Pin=R_TRIG_B-2
+Added Pin To Net: NetName=V_TRIG Pin=R_TRIG_T-1
+Added Pin To Net: NetName=V_TRIG Pin=U4-2
+Added Net: Name=V_TRIG
+Added Class: Name=U_Precharge
+Added Member To Class: ClassName=ife18_TS_BMS_Master Member=Component X2 
+Added Room: Name=U_Precharge

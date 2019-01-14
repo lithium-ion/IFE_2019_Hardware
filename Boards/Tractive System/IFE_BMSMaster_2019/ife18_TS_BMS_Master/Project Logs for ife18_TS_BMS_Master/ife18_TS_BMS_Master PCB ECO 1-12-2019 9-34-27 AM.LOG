@@ -1,0 +1,237 @@
+Added Component: Designator=C_FILT1(CAP-0603)
+Add component. Clean all parameters for all variants
+Added Component: Designator=C_FILT2(CAP-0603)
+Add component. Clean all parameters for all variants
+Added Component: Designator=C_IPIM(CAP-0603)
+Add component. Clean all parameters for all variants
+Added Component: Designator=C_VDDS(CAP-0603)
+Add component. Clean all parameters for all variants
+Added Component: Designator=C_VDD(CAP-0603)
+Add component. Clean all parameters for all variants
+Added Component: Designator=CONN_ISO(43650-0224)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "DeviceName"; Value = "43650-0224"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "DeviceSetName"; Value = "HEADER_POS2_?"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "GateName_1"; Value = "G$1"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LibraryName"; Value = "MOLEX Micro-Fit"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "43650-0224"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SymbolName_1"; Value = "HEADER_POS2"; VariantName = "[No Variations]"
+Added Component: Designator=GLED_3V3(LEDGREEN-0603)
+Add component. Clean all parameters for all variants
+Added Component: Designator=GLED_5V(LEDGREEN-0603)
+Add component. Clean all parameters for all variants
+Added Component: Designator=IC1(TM4C123LAUNCHPAD)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "Availability"; Value = "Unavailable"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MF"; Value = "Texas Instruments"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "MP"; Value = "EK-TM4C123GXL"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Price"; Value = "None"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SnapEDA_Link"; Value = "https://www.snapeda.com/parts/EK-TM4C123GXL/Texas%20Instruments/view-part/?ref=snap"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Value"; Value = ""; VariantName = "[No Variations]"
+Added Component: Designator=LDO_3V3(SOT223)
+Add component. Clean all parameters for all variants
+Added Component: Designator=LDO_VDD(SOT223)
+Add component. Clean all parameters for all variants
+Added Component: Designator=R_3V3(RES-0603)
+Add component. Clean all parameters for all variants
+Added Component: Designator=R_5V(RES-0603)
+Add component. Clean all parameters for all variants
+Added Component: Designator=R_IBIAS(RES-0603)
+Add component. Clean all parameters for all variants
+Added Component: Designator=R_ICMP(RES-0603)
+Add component. Clean all parameters for all variants
+Added Component: Designator=R_IM(RES-0603)
+Add component. Clean all parameters for all variants
+Added Component: Designator=R_IP(RES-0603)
+Add component. Clean all parameters for all variants
+Added Component: Designator=R_MISO_PU(RES-0603)
+Add component. Clean all parameters for all variants
+Added Component: Designator=U1(STM-LQFP48_M)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "A/D Converter"; Value = "2x12-bit (10 Channel)"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "Manufacturer URL"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "http://www.st.com/web/en/home.html"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink2Description"; Value = "Datasheet"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink2URL"; Value = "http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/CD00161566.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink3Description"; Value = "Package Specification"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink3URL"; Value = "http://www.st.com/st-web-ui/static/active/en/resource/technical/document/datasheet/DM00058181.pdf"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Core"; Value = "ARM Cortex-M3"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "DatasheetVersion"; Value = "Rev. 16"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "FLASH Size (Prog) (kB)"; Value = "64"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "I/Os (High Current)"; Value = "37"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Internal RAM Size (kB)"; Value = "20"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mounting Technology"; Value = "Surface Mount"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Operating Frequency(F) (Processor speed) (MHz)"; Value = "72"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageDescription"; Value = "48-Pin Low Profile Quad Flat Package, 7 x 7 mm Body, 0.5 mm Pitch"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageReference"; Value = "LQFP48"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PackageVersion"; Value = "Rev. 6, 06/2013"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Packing"; Value = "Tray"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "PartNumber"; Value = "STM32F103C8T6"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier 1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier 2"; Value = "Farnell"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier 3"; Value = "Newark"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier 4"; Value = "Newark"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier 5"; Value = "Mouser"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 1"; Value = "497-6063-ND"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 2"; Value = "1447637"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 3"; Value = "59M2182"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 4"; Value = "57P1222"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 5"; Value = "511-STM32F103C8T6"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supply Voltage(Vcc) min (V)"; Value = "2"; VariantName = "[No Variations]"
+Added Component: Designator=U_CAN(SOIC8)
+Add component. Clean all parameters for all variants
+Added Component: Designator=UCOMM(MSOP16)
+Add component. Clean all parameters for all variants
+Added Component: Designator=X1(43045-1418)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "DeviceName"; Value = "43045-1418"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "DeviceSetName"; Value = "HEADER_POS14_?"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "GateName_1"; Value = "G$1"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LibraryName"; Value = "MOLEX Micro-Fit"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "43045-1418"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SymbolName_1"; Value = "HEADER_POS14"; VariantName = "[No Variations]"
+Added Component: Designator=X_ISO(HM2101)
+Add component. Clean all parameters for all variants
+Added Pin To Net: NetName=3V3 Pin=C_FILT1-2
+Added Pin To Net: NetName=3V3 Pin=C_FILT2-2
+Added Pin To Net: NetName=3V3 Pin=GLED_3V3-A
+Added Pin To Net: NetName=3V3 Pin=IC1-1
+Added Pin To Net: NetName=3V3 Pin=LDO_3V3-2
+Added Pin To Net: NetName=3V3 Pin=LDO_3V3-4
+Added Pin To Net: NetName=3V3 Pin=U1-1
+Added Pin To Net: NetName=3V3 Pin=U1-9
+Added Pin To Net: NetName=3V3 Pin=U1-24
+Added Pin To Net: NetName=3V3 Pin=U1-36
+Added Pin To Net: NetName=3V3 Pin=U1-48
+Added Pin To Net: NetName=3V3 Pin=U_CAN-5
+Added Pin To Net: NetName=3V3 Pin=X1-P$1
+Added Net: Name=3V3
+Added Pin To Net: NetName=5V Pin=C_VDD-2
+Added Pin To Net: NetName=5V Pin=C_VDDS-2
+Added Pin To Net: NetName=5V Pin=GLED_5V-A
+Added Pin To Net: NetName=5V Pin=IC1-21
+Added Pin To Net: NetName=5V Pin=LDO_VDD-2
+Added Pin To Net: NetName=5V Pin=LDO_VDD-4
+Added Pin To Net: NetName=5V Pin=R_MISO_PU-2
+Added Pin To Net: NetName=5V Pin=U_CAN-3
+Added Pin To Net: NetName=5V Pin=UCOMM-1
+Added Pin To Net: NetName=5V Pin=UCOMM-6
+Added Pin To Net: NetName=5V Pin=UCOMM-7
+Added Pin To Net: NetName=5V Pin=UCOMM-8
+Added Pin To Net: NetName=5V Pin=UCOMM-9
+Added Pin To Net: NetName=5V Pin=UCOMM-12
+Added Pin To Net: NetName=5V Pin=X1-P$2
+Added Net: Name=5V
+Added Pin To Net: NetName=BMS_CS Pin=IC1-2
+Added Pin To Net: NetName=BMS_CS Pin=UCOMM-5
+Added Net: Name=BMS_CS
+Added Pin To Net: NetName=BMS_MISO Pin=IC1-14
+Added Pin To Net: NetName=BMS_MISO Pin=R_MISO_PU-1
+Added Pin To Net: NetName=BMS_MISO Pin=UCOMM-3
+Added Net: Name=BMS_MISO
+Added Pin To Net: NetName=BMS_MOSI Pin=IC1-15
+Added Pin To Net: NetName=BMS_MOSI Pin=UCOMM-2
+Added Pin To Net: NetName=BMS_MOSI Pin=X1-P$10
+Added Net: Name=BMS_MOSI
+Added Pin To Net: NetName=BMS_SCK Pin=IC1-7
+Added Pin To Net: NetName=BMS_SCK Pin=UCOMM-4
+Added Pin To Net: NetName=BMS_SCK Pin=X1-P$8
+Added Net: Name=BMS_SCK
+Added Pin To Net: NetName=CAN0Rx Pin=IC1-5
+Added Pin To Net: NetName=CAN0Rx Pin=U_CAN-4
+Added Net: Name=CAN0Rx
+Added Pin To Net: NetName=CAN0Tx Pin=IC1-6
+Added Pin To Net: NetName=CAN0Tx Pin=U_CAN-1
+Added Net: Name=CAN0Tx
+Added Pin To Net: NetName=CANH Pin=U_CAN-7
+Added Net: Name=CANH
+Added Pin To Net: NetName=CANL Pin=U_CAN-6
+Added Net: Name=CANL
+Added Pin To Net: NetName=CANSTBY Pin=IC1-29
+Added Pin To Net: NetName=CANSTBY Pin=U_CAN-8
+Added Net: Name=CANSTBY
+Added Pin To Net: NetName=GND Pin=C_FILT1-1
+Added Pin To Net: NetName=GND Pin=C_FILT2-1
+Added Pin To Net: NetName=GND Pin=C_IPIM-2
+Added Pin To Net: NetName=GND Pin=C_VDD-1
+Added Pin To Net: NetName=GND Pin=C_VDDS-1
+Added Pin To Net: NetName=GND Pin=IC1-20
+Added Pin To Net: NetName=GND Pin=IC1-22
+Added Pin To Net: NetName=GND Pin=LDO_3V3-1
+Added Pin To Net: NetName=GND Pin=LDO_VDD-1
+Added Pin To Net: NetName=GND Pin=R_3V3-2
+Added Pin To Net: NetName=GND Pin=R_5V-2
+Added Pin To Net: NetName=GND Pin=R_ICMP-1
+Added Pin To Net: NetName=GND Pin=U1-8
+Added Pin To Net: NetName=GND Pin=U1-23
+Added Pin To Net: NetName=GND Pin=U1-35
+Added Pin To Net: NetName=GND Pin=U1-47
+Added Pin To Net: NetName=GND Pin=U_CAN-2
+Added Pin To Net: NetName=GND Pin=UCOMM-13
+Added Pin To Net: NetName=GND Pin=UCOMM-14
+Added Pin To Net: NetName=GND Pin=X1-P$3
+Added Pin To Net: NetName=GND Pin=X1-P$14
+Added Net: Name=GND
+Added Pin To Net: NetName=IBIAS Pin=R_IBIAS-2
+Added Pin To Net: NetName=IBIAS Pin=UCOMM-16
+Added Net: Name=IBIAS
+Added Pin To Net: NetName=ICMP Pin=R_IBIAS-1
+Added Pin To Net: NetName=ICMP Pin=R_ICMP-2
+Added Pin To Net: NetName=ICMP Pin=UCOMM-15
+Added Net: Name=ICMP
+Added Pin To Net: NetName=IM Pin=R_IM-1
+Added Pin To Net: NetName=IM Pin=UCOMM-10
+Added Pin To Net: NetName=IM Pin=X_ISO-6
+Added Net: Name=IM
+Added Pin To Net: NetName=IP Pin=R_IP-1
+Added Pin To Net: NetName=IP Pin=UCOMM-11
+Added Pin To Net: NetName=IP Pin=X_ISO-4
+Added Net: Name=IP
+Added Pin To Net: NetName=LCD_RST Pin=IC1-32
+Added Pin To Net: NetName=LCD_RST Pin=X1-P$12
+Added Net: Name=LCD_RST
+Added Pin To Net: NetName=LCD_SCS Pin=IC1-13
+Added Pin To Net: NetName=LCD_SCS Pin=X1-P$11
+Added Net: Name=LCD_SCS
+Added Pin To Net: NetName=LCD_SDC Pin=IC1-8
+Added Pin To Net: NetName=LCD_SDC Pin=X1-P$9
+Added Net: Name=LCD_SDC
+Added Pin To Net: NetName=LED_PWM Pin=IC1-40
+Added Pin To Net: NetName=LED_PWM Pin=X1-P$13
+Added Net: Name=LED_PWM
+Added Pin To Net: NetName=NetC_IPIM_1 Pin=C_IPIM-1
+Added Pin To Net: NetName=NetC_IPIM_1 Pin=R_IM-2
+Added Pin To Net: NetName=NetC_IPIM_1 Pin=R_IP-2
+Added Net: Name=NetC_IPIM_1
+Added Pin To Net: NetName=NetCONN_ISO_P$1 Pin=CONN_ISO-P$1
+Added Pin To Net: NetName=NetCONN_ISO_P$1 Pin=X_ISO-3
+Added Net: Name=NetCONN_ISO_P$1
+Added Pin To Net: NetName=NetCONN_ISO_P$2 Pin=CONN_ISO-P$2
+Added Pin To Net: NetName=NetCONN_ISO_P$2 Pin=X_ISO-1
+Added Net: Name=NetCONN_ISO_P$2
+Added Pin To Net: NetName=NetGLED_3V3_K Pin=GLED_3V3-K
+Added Pin To Net: NetName=NetGLED_3V3_K Pin=R_3V3-1
+Added Net: Name=NetGLED_3V3_K
+Added Pin To Net: NetName=NetGLED_5V_K Pin=GLED_5V-K
+Added Pin To Net: NetName=NetGLED_5V_K Pin=R_5V-1
+Added Net: Name=NetGLED_5V_K
+Added Pin To Net: NetName=PWR_IN Pin=LDO_3V3-3
+Added Pin To Net: NetName=PWR_IN Pin=LDO_VDD-3
+Added Net: Name=PWR_IN
+Added Pin To Net: NetName=TOUCH_XN Pin=IC1-31
+Added Pin To Net: NetName=TOUCH_XN Pin=X1-P$7
+Added Net: Name=TOUCH_XN
+Added Pin To Net: NetName=TOUCH_XP Pin=IC1-24
+Added Pin To Net: NetName=TOUCH_XP Pin=X1-P$5
+Added Net: Name=TOUCH_XP
+Added Pin To Net: NetName=TOUCH_YN Pin=IC1-11
+Added Pin To Net: NetName=TOUCH_YN Pin=X1-P$6
+Added Net: Name=TOUCH_YN
+Added Pin To Net: NetName=TOUCH_YP Pin=IC1-23
+Added Pin To Net: NetName=TOUCH_YP Pin=X1-P$4
+Added Net: Name=TOUCH_YP
+Added Class: Name=ife18_TS_BMS_Master
+Added Class: Name=U_Comms
+Added Room: Name=ife18_TS_BMS_Master
+Added Room: Name=U_Comms

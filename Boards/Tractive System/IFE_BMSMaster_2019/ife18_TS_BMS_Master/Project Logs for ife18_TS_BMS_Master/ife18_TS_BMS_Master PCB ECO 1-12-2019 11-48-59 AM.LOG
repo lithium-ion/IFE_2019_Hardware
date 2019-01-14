@@ -1,0 +1,9 @@
+Change Component Footprint: Designator=X2 Old Footprint=43650-1012 New Footprint=43045-1018
+Change component parameters: Designator = "X2"; Footprint = "43045-1018"; UniqueID = "\KANDSRCY"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "DeviceName"; Value = "43045-1018"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "DeviceSetName"; Value = "HEADER_POS10_?"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "GateName_1"; Value = "G$1"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "LibraryName"; Value = "MOLEX Micro-Fit"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Package"; Value = "43045-1018"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "SymbolName_1"; Value = "HEADER_POS10"; VariantName = "[No Variations]"

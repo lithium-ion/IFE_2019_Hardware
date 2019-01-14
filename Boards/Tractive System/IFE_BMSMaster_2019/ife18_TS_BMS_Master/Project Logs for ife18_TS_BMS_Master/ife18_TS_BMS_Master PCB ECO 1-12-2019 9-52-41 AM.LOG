@@ -1,0 +1,27 @@
+Added Component: Designator=F_HV+(FUSE3AG_354101)
+Add component. Clean all parameters for all variants
+Added Component: Designator=F_HV-(FUSE3AG_354101)
+Add component. Clean all parameters for all variants
+Added Component: Designator=X_IMD(43650-0412)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "DeviceName"; Value = "43650-0412"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "DeviceSetName"; Value = "HEADER_POS4_?"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "GateName_1"; Value = "G$1"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LibraryName"; Value = "MOLEX Micro-Fit"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "43650-0412"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SymbolName_1"; Value = "HEADER_POS4"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=HV+ Pin=F_HV+-2
+Added Pin To Net: NetName=HV+ Pin=X_IMD-P$2
+Added Net: Name=HV+
+Added Pin To Net: NetName=HV- Pin=F_HV--2
+Added Pin To Net: NetName=HV- Pin=X_IMD-P$1
+Added Net: Name=HV-
+Added Pin To Net: NetName=IMD+ Pin=F_HV+-1
+Added Pin To Net: NetName=IMD+ Pin=X_IMD-P$3
+Added Net: Name=IMD+
+Added Pin To Net: NetName=IMD- Pin=F_HV--1
+Added Pin To Net: NetName=IMD- Pin=X_IMD-P$4
+Added Net: Name=IMD-
+Added Member To Class: ClassName=ife18_TS_BMS_Master Member=Component F_HV+ 
+Added Member To Class: ClassName=ife18_TS_BMS_Master Member=Component F_HV- 
+Added Member To Class: ClassName=ife18_TS_BMS_Master Member=Component X_IMD 

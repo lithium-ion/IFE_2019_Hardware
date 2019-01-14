@@ -1,0 +1,42 @@
+Added Component: Designator=X1(43045-1418)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "DeviceName"; Value = "43045-1418"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "DeviceSetName"; Value = "HEADER_POS14_?"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "GateName_1"; Value = "G$1"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LibraryName"; Value = "MOLEX Micro-Fit"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "43045-1418"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SymbolName_1"; Value = "HEADER_POS14"; VariantName = "[No Variations]"
+Added Component: Designator=X2(43045-1018)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "DeviceName"; Value = "43045-1018"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "DeviceSetName"; Value = "HEADER_POS10_?"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "GateName_1"; Value = "G$1"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LibraryName"; Value = "MOLEX Micro-Fit"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "43045-1018"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SymbolName_1"; Value = "HEADER_POS10"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=3V3 Pin=X1-P$1
+Added Pin To Net: NetName=5V Pin=X1-P$2
+Added Pin To Net: NetName=GND Pin=X1-P$3
+Added Pin To Net: NetName=TOUCH_YP Pin=X1-P$4
+Added Pin To Net: NetName=TOUCH_XP Pin=X1-P$5
+Added Pin To Net: NetName=TOUCH_YN Pin=X1-P$6
+Added Pin To Net: NetName=TOUCH_XN Pin=X1-P$7
+Added Pin To Net: NetName=BMS_SCK Pin=X1-P$8
+Added Pin To Net: NetName=LCD_SDC Pin=X1-P$9
+Added Pin To Net: NetName=BMS_MOSI Pin=X1-P$10
+Added Pin To Net: NetName=LCD_SCS Pin=X1-P$11
+Added Pin To Net: NetName=LCD_RST Pin=X1-P$12
+Added Pin To Net: NetName=LED_PWM Pin=X1-P$13
+Added Pin To Net: NetName=GND Pin=X1-P$14
+Added Pin To Net: NetName=PWR_IN Pin=X2-P$1
+Added Pin To Net: NetName=GND Pin=X2-P$2
+Added Pin To Net: NetName=CANH Pin=X2-P$3
+Added Pin To Net: NetName=CANL Pin=X2-P$4
+Added Pin To Net: NetName=BMS_FLT Pin=X2-P$5
+Added Pin To Net: NetName=AIR Pin=X2-P$6
+Added Pin To Net: NetName=IMD_FLT Pin=X2-P$7
+Added Pin To Net: NetName=PRECHARGE_COMPLETE Pin=X2-P$8
+Added Pin To Net: NetName=CURRENT Pin=X2-P$9
+Added Pin To Net: NetName=GND Pin=X2-P$10
+Added Member To Class: ClassName=ife18_TS_BMS_Master Member=Component X1 Molex - Micro-Fit 3.0 Series connector,  3.00mm (0.118") pitch header, 14 positions.
+Added Member To Class: ClassName=ife18_TS_BMS_Master Member=Component X2 Molex - Micro-Fit 3.0 Series connector,  3.00mm (0.118") pitch header, 10 positions.

@@ -1,0 +1,5 @@
+Added Component: Designator=R_CURAMP(RES-0603)
+Add component. Clean all parameters for all variants
+Added Pin To Net: NetName=GND Pin=R_CURAMP-1
+Added Pin To Net: NetName=CURAMP Pin=R_CURAMP-2
+Added Member To Class: ClassName=ife18_TS_BMS_Master Member=Component R_CURAMP 100K

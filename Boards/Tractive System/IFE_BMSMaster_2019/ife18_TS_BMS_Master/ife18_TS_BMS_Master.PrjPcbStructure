@@ -1,0 +1,3 @@
+Record=TopLevelDocument|FileName=ife18_TS_BMS_Master.SchDoc
+Record=SheetSymbol|SourceDocument=ife18_TS_BMS_Master.SchDoc|Designator=U_Comms|SchDesignator=U_Comms|FileName=Comms.SchDoc|SymbolType=Device Sheet|RawFileName=Comms|DesignItemId= |SourceLibraryName= |ObjectKind=Sheet Symbol|RevisionGUID= |ItemGUID= |VaultGUID= 
+Record=SheetSymbol|SourceDocument=ife18_TS_BMS_Master.SchDoc|Designator=U_Precharge|SchDesignator=U_Precharge|FileName=Precharge.SchDoc|SymbolType=Device Sheet|RawFileName=Precharge|DesignItemId= |SourceLibraryName= |ObjectKind=Sheet Symbol|RevisionGUID= |ItemGUID= |VaultGUID= 

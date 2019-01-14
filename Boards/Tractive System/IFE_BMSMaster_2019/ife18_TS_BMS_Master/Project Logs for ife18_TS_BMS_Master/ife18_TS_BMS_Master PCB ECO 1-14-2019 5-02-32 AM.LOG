@@ -1,0 +1,40 @@
+Removed Pin From Net: NetName=GND Pin=X2-P$10
+Added Component: Designator=C_FILT3(CAP-0603)
+Add component. Clean all parameters for all variants
+Added Component: Designator=C_FILT4(CAP-0603)
+Add component. Clean all parameters for all variants
+Added Component: Designator=IC2(SOIC8)
+Add component. Clean all parameters for all variants
+Added Component: Designator=X3(43650-0424)
+Add component. Clean all parameters for all variants
+Add component (AddParameter): Name = "DeviceName"; Value = "43650-0424"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "DeviceSetName"; Value = "HEADER_POS4_?"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "GateName_1"; Value = "G$1"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "LibraryName"; Value = "MOLEX Micro-Fit"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Package"; Value = "43650-0424"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "SymbolName_1"; Value = "HEADER_POS4"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=GND Pin=C_FILT3-1
+Added Pin To Net: NetName=5V Pin=C_FILT3-2
+Added Pin To Net: NetName=GND Pin=C_FILT4-1
+Added Pin To Net: NetName=5V Pin=C_FILT4-2
+Added Pin To Net: NetName=GND Pin=IC2-4
+Added Pin To Net: NetName=5V Pin=IC2-7
+Added Pin To Net: NetName=5V Pin=X3-P$1
+Added Pin To Net: NetName=GND Pin=X3-P$2
+Added Pin To Net: NetName=CURAMP Pin=IC2-5
+Added Pin To Net: NetName=CURAMP Pin=IC2-6
+Added Pin To Net: NetName=CURAMP Pin=X2-P$10
+Added Net: Name=CURAMP
+Added Pin To Net: NetName=CURREF Pin=IC2-1
+Added Pin To Net: NetName=CURREF Pin=IC2-3
+Added Pin To Net: NetName=CURREF Pin=X3-P$3
+Added Net: Name=CURREF
+Added Pin To Net: NetName=CUR Pin=IC2-2
+Added Pin To Net: NetName=CUR Pin=X3-P$4
+Added Net: Name=CUR
+Added Member To Class: ClassName=ife18_TS_BMS_Master Member=Component C_FILT3 1u
+Added Member To Class: ClassName=ife18_TS_BMS_Master Member=Component C_FILT4 1u
+Added Member To Class: ClassName=ife18_TS_BMS_Master Member=Component IC2 IC-SOIC8_INA143
+Added Member To Class: ClassName=ife18_TS_BMS_Master Member=Component X3 Molex - Micro-Fit 3.0 Series connector,  3.00mm (0.118") pitch header, 4 positions.
+Added Member To Class: ClassName=Tractive Member=Wire HV+
+Added Member To Class: ClassName=Tractive Member=Wire HV-

@@ -1,0 +1,15 @@
+Change Component DesignItemId : Designator=X_IMD Old DesignItemId=HEADER_POS4_?43650-0412 New DesignItemId=POS4_MF43650-0424
+Change Component DesignItemId : Designator=X2 Old DesignItemId=HEADER_POS10_?43045-1018 New DesignItemId=POS10_MF43045-1018
+Change Component DesignItemId : Designator=X1 Old DesignItemId=HEADER_POS14_?43045-1418 New DesignItemId=POS14_MF43045-1418
+Change Component Footprint: Designator=X_IMD Old Footprint=43650-0412 New Footprint=43650-0424
+Change Component Library : Designator=X1 Old Library=MOLEX Micro-Fit.IntLib New Library=ife19_Elec_Conn_Library.SchLib
+Change Component Library : Designator=X2 Old Library=MOLEX Micro-Fit.IntLib New Library=ife19_Elec_Conn_Library.SchLib
+Change Component Library : Designator=X_IMD Old Library=MOLEX Micro-Fit.IntLib New Library=ife19_Elec_Conn_Library.SchLib
+Change component parameters: Designator = "X_IMD"; Footprint = "43650-0424"; UniqueID = "\JDMNCIII"
+Change component parameters. Clean all parameters for all variants
+Change component parameters (AddParameter): Name = "DeviceName"; Value = "43650-0424"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "DeviceSetName"; Value = "HEADER_POS4_?"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "GateName_1"; Value = "G$1"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "LibraryName"; Value = "MOLEX Micro-Fit"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Package"; Value = "43650-0424"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "SymbolName_1"; Value = "HEADER_POS4"; VariantName = "[No Variations]"
