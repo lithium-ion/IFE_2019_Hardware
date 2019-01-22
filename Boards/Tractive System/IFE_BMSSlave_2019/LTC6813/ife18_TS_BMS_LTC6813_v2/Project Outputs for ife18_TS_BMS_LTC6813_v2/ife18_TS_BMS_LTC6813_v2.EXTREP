@@ -1,5 +1,5 @@
 ------------------------------------------------------------------------------------------
-Gerber File Extension Report For: ife18_TS_BMS_LTC6813_v2.GBR   12/24/2018  3:02:08 PM
+Gerber File Extension Report For: ife18_TS_BMS_LTC6813_v2.GBR   1/15/2019  11:43:21 AM
 ------------------------------------------------------------------------------------------
 
 
@@ -14,6 +14,5 @@ Layer Extension     Layer Description
 .GBL                Bottom Copper                           
 .GBS                Bottom Mask                             
 .GBO                Bottom Overlay                          
-.GM1                Mechanical 1                            
 .GKO                Keep-Out Layer                          
 ------------------------------------------------------------------------------------------
