@@ -1,0 +1,103 @@
+Protel Design System Design Rule Check
+PCB File : C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSMaster_2019\ife18_TS_BMS_Master_STM32\ife18_TS_BMS_Master_STM32.PcbDoc
+Date     : 1/23/2019
+Time     : 1:46:05 AM
+
+WARNING: Unplated multi-layer pad(s) detected
+   Pad X5-P$1(33.54mm,29mm) on Multi-Layer on Net 3V3
+   Pad X5-P$2(31mm,29mm) on Multi-Layer on Net RESET
+   Pad X5-P$3(28.46mm,29mm) on Multi-Layer on Net SWDIO
+   Pad X5-P$4(25.92mm,29mm) on Multi-Layer on Net SWCLK
+   Pad X5-P$5(23.38mm,29mm) on Multi-Layer on Net GND
+   Pad D1-A(56.853mm,50.25mm) on Multi-Layer on Net GND
+   Pad D1-K(56.853mm,40.25mm) on Multi-Layer on Net AIR
+   Pad R_SET-1(41mm,40.63mm) on Multi-Layer on Net NetR_SET_1
+   Pad R_SET-2(41mm,27.97mm) on Multi-Layer on Net AIR
+   Pad R_DIST-1(45.3mm,40.63mm) on Multi-Layer on Net NetR_DIST_1
+   Pad R_DIST-2(45.3mm,27.97mm) on Multi-Layer on Net GND
+   Pad F_HV+-1(79mm,75.6mm) on Multi-Layer on Net IMD+
+   Pad F_HV+-2(79mm,39.2mm) on Multi-Layer on Net HV+
+   Pad F_HV--1(93mm,39.2mm) on Multi-Layer on Net HV-
+   Pad F_HV--2(93mm,75.6mm) on Multi-Layer on Net IMD-
+
+Processing Rule : Clearance Constraint (Gap=0.152mm) (NOT InNetClass('Tractive')),(All)
+Rule Violations :0
+
+Processing Rule : Clearance Constraint (Gap=0.8mm) (InNetClass('Tractive')),(All)
+Rule Violations :0
+
+Processing Rule : Clearance Constraint (Gap=0.2mm) (OnLayer('Keep-Out Layer')),(All)
+Rule Violations :0
+
+Processing Rule : Short-Circuit Constraint (Allowed=No) (All),(All)
+Rule Violations :0
+
+Processing Rule : Un-Routed Net Constraint ( (All) )
+   Violation between Un-Routed Net Constraint:  
+   Violation between Un-Routed Net Constraint:  
+   Violation between Un-Routed Net Constraint:  
+   Violation between Un-Routed Net Constraint: Net AIR Between Pad RELAY_PRECHARGE_TIMING-1(53.084mm,42.96mm) on Multi-Layer And Track (56.853mm,38.647mm)(56.853mm,40.25mm) on Bottom Layer 
+   Violation between Un-Routed Net Constraint: Track (23.02mm,26.1mm)(25.92mm,29mm) on Top Layer 
+   Violation between Un-Routed Net Constraint: Track (24.379mm,24.854mm)(28.46mm,28.935mm) on Top Layer 
+   Violation between Un-Routed Net Constraint: Track (28.55mm,26.425mm)(31mm,28.875mm) on Bottom Layer 
+   Violation between Un-Routed Net Constraint: Track (41mm,40.63mm)(42.801mm,42.431mm) on Top Layer 
+   Violation between Un-Routed Net Constraint: Track (42.577mm,26.348mm)(42.825mm,26.1mm) on Top Layer 
+   Violation between Un-Routed Net Constraint: Track (45.3mm,40.63mm)(45.481mm,40.811mm) on Top Layer 
+   Violation between Un-Routed Net Constraint: Track (79mm,39.2mm)(84.6mm,33.6mm) on Top Layer 
+   Violation between Un-Routed Net Constraint: Track (79mm,75.6mm)(87.6mm,67mm) on Top Layer 
+   Violation between Un-Routed Net Constraint: Track (90.6mm,73.2mm)(93mm,75.6mm) on Top Layer 
+   Violation between Un-Routed Net Constraint: Track (93.6mm,29.254mm)(93.6mm,29.47mm) on Top Layer 
+   Violation between Un-Routed Net Constraint: Via (31.7mm,21.095mm) from Top Layer to Bottom Layer 
+Rule Violations :15
+
+Processing Rule : Modified Polygon (Allow modified: No), (Allow shelved: No)
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=0.152mm) (Max=2.54mm) (Preferred=0.254mm) (All)
+Rule Violations :0
+
+Processing Rule : Power Plane Connect Rule(Relief Connect )(Expansion=0.508mm) (Conductor Width=0.254mm) (Air Gap=0.254mm) (Entries=4) (All)
+Rule Violations :0
+
+Processing Rule : Minimum Annular Ring (Minimum=0.076mm) (All)
+Rule Violations :0
+
+Processing Rule : Hole Size Constraint (Min=0.3mm) (Max=6.3mm) (All)
+Rule Violations :0
+
+Processing Rule : Hole To Hole Clearance (Gap=0.254mm) (All),(All)
+Rule Violations :0
+
+Processing Rule : Minimum Solder Mask Sliver (Gap=0mm) (All),(All)
+Rule Violations :0
+
+Processing Rule : Silk To Solder Mask (Clearance=0mm) (IsPad),(All)
+Rule Violations :0
+
+Processing Rule : Silk to Silk (Clearance=0mm) (All),(All)
+Rule Violations :0
+
+Processing Rule : Net Antennae (Tolerance=0mm) (All)
+Rule Violations :0
+
+Processing Rule : Board Clearance Constraint (Gap=0mm) (All)
+   Violation between Board Outline Clearance(Outline Edge): (Collision < 0.2mm) Between Board Edge And Track (59.2mm,78mm)(59.2mm,10.075mm) on Top Overlay 
+   Violation between Board Outline Clearance(Outline Edge): (Collision < 0.2mm) Between Board Edge And Track (72mm,10mm)(72mm,77.925mm) on Top Overlay 
+Rule Violations :2
+
+Processing Rule : Room U_Precharge (Bounding Region = (39mm, 10mm, 72mm, 78mm) (InComponentClass('U_Precharge'))
+Rule Violations :0
+
+Processing Rule : Room ife18_TS_BMS_Master (Bounding Region = (10mm, 9.75mm, 100mm, 77.75mm) (InComponentClass('ife18_TS_BMS_Master'))
+Rule Violations :0
+
+Processing Rule : Room U_Comms (Bounding Region = (39mm, 10mm, 100mm, 78mm) (InComponentClass('U_Comms'))
+Rule Violations :0
+
+Processing Rule : Height Constraint (Min=0mm) (Max=25.4mm) (Prefered=12.7mm) (All)
+Rule Violations :0
+
+
+Violations Detected : 17
+Waived Violations : 0
+Time Elapsed        : 00:00:00
