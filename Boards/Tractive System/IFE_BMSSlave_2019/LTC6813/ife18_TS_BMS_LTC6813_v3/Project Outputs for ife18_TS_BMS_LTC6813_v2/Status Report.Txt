@@ -1,0 +1,12 @@
+Output: NC Drill Files
+Type  : NC Drill
+From  : Project [ife18_TS_BMS_LTC6813_v2.PrjPcb]
+   Generated File[ife18_TS_BMS_LTC6813_v2.TXT]
+   Generated File[ife18_TS_BMS_LTC6813_v2.LDP]
+   Generated File[ife18_TS_BMS_LTC6813_v2.DRR]
+
+
+Files Generated   : 3
+Documents Printed : 0
+
+Finished Output Generation At 11:43:37 AM On 1/15/2019

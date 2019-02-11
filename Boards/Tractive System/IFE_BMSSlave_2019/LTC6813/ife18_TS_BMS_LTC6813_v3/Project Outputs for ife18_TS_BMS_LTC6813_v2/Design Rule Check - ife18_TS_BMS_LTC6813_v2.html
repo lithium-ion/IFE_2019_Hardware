@@ -1,0 +1,715 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<style type="text/css">
+		h1, h2, h3, h4, h5, h6 {
+			font-family : segoe ui;
+			color : black;
+			background-color : #EDE7D9;
+			padding: 0.3em;
+		}
+
+		h1 {
+			font-size: 1.2em;
+		}		
+
+		h2 {
+			font-size: 1.2em;
+		}
+
+		body {
+			font-family : segoe ui;
+		}
+
+		td, th {
+			padding: 0.5em;
+			text-align : left;
+			width: 10em;
+		}
+		th {
+			background-color : #EEEEEE;
+
+		}
+		th.column1, td.column1 {
+			text-align: left;
+			width : auto;
+		}
+		table {
+			width : 100%;
+			font-size: 0.9em;
+		}
+
+		.DRC_summary_header {
+			padding-bottom : 0.1em;
+			border : 0px solid black;
+			width: 100%;
+			align: left;
+		}
+
+		.DRC_summary_header_col1,
+		.DRC_summary_header_col2, 
+		.DRC_summary_header_col3 {
+			color : black;
+			font-size:100%;
+			padding : 0em;
+			padding-top : 0.2em;
+			padding-bottom 0.2em;
+			border : 0px solid black;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.DRC_summary_header_col1 {
+			font-weight: bold;
+			width: 8em;
+		}
+
+		.DRC_summary_header_col2 {
+			width: 0.1em;
+		
+		}
+
+		.DRC_summary_header_col3 {
+			width : auto;
+		}
+
+		.header_holder {
+		    Width = 100%;
+		    border = 0px solid green;
+		    padding = 0;
+		}
+
+
+		.front_matter, .front_matter_column1, .front_matter_column2, .front_matter_column3
+		{
+			left : 0;
+			top : 0;
+			padding: 0em;
+			padding-top : 0.1em;
+			border : 0px solid black;
+			width : 100%;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.front_matter_column1 {
+			width : 8em;
+			font-weight: bold;
+		}
+
+		.front_matter_column2 {
+			width: 0.1em;
+		}
+
+		.front_matter_column3 {
+			width : auto;
+		}
+
+		.total_column1, .total_column {
+			font-weight : bold;
+		}
+		.total_column1 {
+			text-align : left;
+		}
+		.warning, .error {
+			color : red;
+			font-weight : bold;
+		}
+		tr.onmouseout_odd {
+			background-color : #white;
+		}
+		tr.onmouseout_even { 
+			background-color : #FAFAFA;
+		}
+		tr.onmouseover_odd, tr.onmouseover_even { 
+			background-color : #EEEEEE;
+		} 
+		a:link, a:visited, .q a:link,.q a:active,.q {
+			color: #21489e; 
+		}
+		a:link.callback, a:visited.callback { 
+			color: #21489e;
+		}
+		a:link.customize, a:visited.customize {
+			color: #C0C0C0;
+			position: absolute; 
+			right: 10px;
+		}	
+		p.contents_level1 {
+			font-weight : bold;
+			font-size : 110%;
+			margin : 0.5em;
+		}
+		p.contents_level2 {
+			position : relative;
+			left : 20px;
+			margin : 0.5em;
+		}
+	</style><script type="text/javascript">
+		function coordToMils(coord) {
+			var number = coord / 10000;
+			
+			if (number != number.toFixed(3))
+				number = number.toFixed(3);
+
+			return number + 'mil'
+		}
+
+		function coordToMM(coord) {
+			var number = 0.0254 * coord / 10000;
+			
+			if (number != number.toFixed(4))
+				number = number.toFixed(4);
+			
+			return number + 'mm'
+		}
+	
+		function convertCoord(coordNode, units) {
+			for (var i = 0; i < coordNode.childNodes.length; i++) {
+				coordNode.removeChild(coordNode.childNodes[i]);
+			}
+
+			var coord = coordNode.getAttribute('value');
+			if (coord != null) {
+				if (units == 'mm') {
+					textNode = document.createTextNode(coordToMM(coord));
+					coordNode.appendChild(textNode);
+				} else if (units == 'mil') {
+					textNode = document.createTextNode(coordToMils(coord));		
+					coordNode.appendChild(textNode);	
+				}
+			}
+		}
+	
+		function convertUnits(unitNode, units) {
+			for (var i = 0; i < unitNode.childNodes.length; i++) {
+				unitNode.removeChild(unitNode.childNodes[i]);		
+			}
+		
+			textNode = document.createTextNode(units); 
+			unitNode.appendChild(textNode);
+		}
+	
+		function changeUnits(radio_input, units) {
+			if (radio_input.checked) {
+			
+				var elements = document.getElementsByName('coordinate');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertCoord(elements[i], units);
+					}
+				}
+	
+				var elements = document.getElementsByName('units');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertUnits(elements[i], units);
+					}
+				}
+			}
+		}
+	</script><title>Design Rule Verification Report</title>
+</head>
+<body onload=""><img ALT="Altium" src="
+			file://C:\Users\Public\Documents\Altium\AD19\Templates\AD_logo.png
+		"><h1>Design Rule Verification Report</h1>
+<table class="header_holder">
+<td class="column1">
+<table class="front_matter">
+<tr class="front_matter">
+<td class="front_matter_column1">Date:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">1/15/2019</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">8:56:19 AM</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Elapsed Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">00:00:03</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Filename:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3"><a href="file:///C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc" class="file"><acronym title="C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc">C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc</acronym></a></td>
+</tr>
+</table>
+</td>
+<td class="column2">
+<table class="DRC_summary_header">
+<tr>
+<td class="DRC_summary_header_col1">Warnings:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3">0</td></tr>
+<tr>
+<td class="DRC_summary_header_col1">Rule Violations:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3" style="color : red">93</td></tr>
+</table>
+</td>
+</table><a name="IDIPBXJGAXS01ZJVBYYPW3CQSHVJZR3CKZAL33DVKMS3TLWFXRRD5J"><h2>Summary</h2></a><table>
+<tr>
+<th class="column1">Warnings</th>
+<th class="column2">Count</th>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">0</td>
+</tr>
+</table><br><table>
+<tr>
+<th class="column1">Rule Violations</th>
+<th class="column2">Count</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDHIIQT4YT1GFRJTNTNSFTH0G1XHXADS2AJTGBUKHFQDDLAZDSBXCE">Clearance Constraint (Gap=0.15mm) ((OnLayer('Bottom Copper') OR OnLayer('Top Copper'))),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDN3FR0WUZAYW3MOVHUSYIPN5ZVN1KBRHVZCE2JZGNEWL0HJUHLO3M">Clearance Constraint (Gap=0.8mm) (InNetClass('HV_ISO')),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDL5NP44TW0DK2JBSAEGS4I4HLWDPAIXIDEIP31ED2K4NPZWVFDITI">Clearance Constraint (Gap=0.102mm) ((OnLayer('Signal Layer 1') OR OnLayer('Signal Layer 2'))),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDRSPJ3IFCJFERLB3X34O0EAS1TONQMHDIFYMUGIP1VDIB5K0MZ4KB">Clearance Constraint (Gap=2mm) (OnLayer('Mechanical 1')),(OnLayer('Top Copper'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDJO1ZQIFXG40IOXVDMW32O0TUYOJ40XVFXCVDYALIU0OTXTPVC0FI">Short-Circuit Constraint (Allowed=No) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDNH0EEG2S5GJGKJSSRYPSD0YKXIETHPSFU4PRZYGFNLRU3XGNS1MJ">Un-Routed Net Constraint ( (All) )</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDXXVUG1TYEO2DC05YV13AWLW24MJHYQV00ACWC4CS2OBC2NS3FBKD">Modified Polygon (Allow modified: No), (Allow shelved: No)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDP1MAT4OY3OCAHN5RTSHBCCSWPDXAU3QGKRTUXUEVIU5PJLYDWXG">Width Constraint (Min=0.102mm) (Max=1.016mm) (Preferred=0.102mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#ID5ZA3OFWB5S1ZFZFMBECGRVNOXGFCSTDGOJQDKNGYEW4E0HQYKQ2N">Routing Layers(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDLSFXQ1BYN4OVB4D4VCVIKEW2WL5XHVUDBQFBH5LK1OXRMPOC2VHB">Routing Via (MinHoleWidth=0.2mm) (MaxHoleWidth=6.3mm) (PreferredHoleWidth=0.2mm) (MinWidth=0.45mm) (MaxWidth=10mm) (PreferedWidth=0.45mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDJ0L0OGZDIKK5IKKTVWDOAIQNOU5UR2FZB1KIGJ4WDVN2LYQLHKL">Differential Pairs Uncoupled Length using the Gap Constraints (Min=0.254mm) (Max=0.254mm) (Prefered=0.254mm)  and Width Constraints (Min=0.381mm) (Max=0.381mm) (Prefered=0.381mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#ID2VVJGMLKHGNLP3CAFR25NAUK4MRLPHGTV4NRXSCIDKPWYQ5Y21HD">Power Plane Connect Rule(Relief Connect )(Expansion=0.508mm) (Conductor Width=0.254mm) (Air Gap=0.254mm) (Entries=4) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDCYZSBW5KYMVSMVJTH0B4YGXVTOKSD4I4FGEIROPPMCT4FEDLHPJH">Hole Size Constraint (Min=0.2mm) (Max=6.3mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#ID50ZH3W324YVOCI10QTWIZ04RYEXIAJKTVRKCSIF3EXFEMXRFEXNH">Pads and Vias to follow the Drill pairs settings</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDE5GGTMHUO1IVPK3LDYITGQ1QGT4LJJ0YJE3VNBBXG2DPQZAOMNK">Hole To Hole Clearance (Gap=0.254mm) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDRYPK2DXDZCWPDQDPOBAIOLRW5PBJIC5V0ZOPAFFQXI50GYAHZMKB">Minimum Solder Mask Sliver (Gap=0.089mm) (All),(All)</a></td>
+<td class="column2">15</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDQHMT01XWPPWZWCKFJ3V2RRYEMHZH4PWO23OEJEOWGZKSC125TYD">Silk To Solder Mask (Clearance=0mm) (IsPad),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDXVOX345NZQ3CH5U1RBIK41RBXLSHCVPOKKEA0HNWCUOJHB0FFWXO">Silk to Silk (Clearance=0mm) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDACXCIHJI3J0DBLV23S5UYKUUZFUUXJZ1AP2G3HMCJ0VUXIQET0H">Net Antennae (Tolerance=0mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDLVK30I1PWZXNGEVW53VUJTTUJBECTD31CPPPCYCKZO2PU0WGFNGG">Board Clearance Constraint (Gap=0mm) (All)</a></td>
+<td class="column2">78</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDN3LOEJYL5J1OBLZHOOQ543TVCK0ROMVJFO5LPOCHZ4QZWTOEMTYC">Room CELL11 (Bounding Region = (256.85mm, 9.5mm, 279.85mm, 80mm) (InComponentClass('CELL11'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDGHTXXZKBEA3ZIINHVKR41CX0UM1K5VSW1BICZMJMCINIW0YMTH3B">Room CELL12 (Bounding Region = (279.85mm, 9.5mm, 302.85mm, 80mm) (InComponentClass('CELL12'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDGSJ02QHTLZU3HZ4BPHLV1BNRBJUHBBASEBM5SSCKAWVEVDQPR3YN">Room CELL9 (Bounding Region = (210.85mm, 9.5mm, 233.85mm, 80mm) (InComponentClass('CELL9'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDNGVXJCUOSAC2JQPRCR01YFF21BLDQA1R1GNDULG2OQGINOLUIOXM">Room CELL10 (Bounding Region = (233.85mm, 9.5mm, 256.85mm, 80mm) (InComponentClass('CELL10'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDLFDZ0F0W5EU4P12XLINJWBIWNGIODAZTREU4F3LNVCTI55CJM0PI">Room CELL13 (Bounding Region = (302.85mm, 9.5mm, 325.85mm, 80mm) (InComponentClass('CELL13'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDX0GTWCBPR1ZYHUVDXZRUT0TU2EHRE4KUKV5WB0EHMYGI1HOIR0ZI">Room CELL16 (Bounding Region = (371.85mm, 9.5mm, 394.85mm, 80mm) (InComponentClass('CELL16'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDUM25PEHTB2E3FWGBDQC0FP0QTH5ZZLWATUOEIPLGSP3Z0PHSI5BI">Room Even (Bounding Region = (9.5mm, 9.5mm, 394.85mm, 80mm) (InComponentClass('Even'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDFOSSEKRUMF0JHGQSZUA4S2OGOFFR3YXILBDI5UHGPCERMO3GMUSM">Room CELL14 (Bounding Region = (325.85mm, 9.5mm, 348.85mm, 80mm) (InComponentClass('CELL14'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#ID0IUW3ZW1URU4CDTEGM4MDBGM2B3EYUNSN40BUHN04OCZM0TENU4K">Room CELL15 (Bounding Region = (348.85mm, 9.5mm, 371.85mm, 80mm) (InComponentClass('CELL15'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDNEWKD5POMAZ2CGHHF3N4YMBKMHWPCUB4MFJDJ5ERHPT4Q02LCLPD">Room CELL8 (Bounding Region = (187.85mm, 9.5mm, 210.85mm, 80mm) (InComponentClass('CELL8'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#ID4CWS2WYRBKM0CQMXJSN1L3EGQDOM1IM4G4GAUEG12T3CMJZCCTSB">Room CELL3 (Bounding Region = (72.85mm, 9.5mm, 95.85mm, 80mm) (InComponentClass('CELL3'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDWYHS5DKJPVLSJVJF2QLGXFN1GB3QPDORESUU20HCNTX0OIPO4RJL">Room CELL2 (Bounding Region = (49.85mm, 9.5mm, 72.85mm, 80mm) (InComponentClass('CELL2'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDFKEOU1DTUPD4NHWMOZEU214MQFJJSKRSOUBQ1MMENIC2DBP5IGBN">Room CELL1 (Bounding Region = (26.85mm, 9.5mm, 49.85mm, 80mm) (InComponentClass('CELL1'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDUYFEHE2CLMQNK3ISLGJZHJLVOG41ZAY1BE4XRRC5UE5OARKK0O2F">Room CELL4 (Bounding Region = (95.85mm, 9.5mm, 118.85mm, 80mm) (InComponentClass('CELL4'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDIOPCEP03TRSVMA340K4OII5EOM2FPXQS1KS3PJM50NXZXP31TVNH">Room CELL7 (Bounding Region = (164.85mm, 9.5mm, 187.85mm, 80mm) (InComponentClass('CELL7'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDENGBN3QI5VKPPJ0MNXDVCCILVM2CB1WWRXZG3NKOKQTOZLKDOTEM">Room CELL6 (Bounding Region = (141.85mm, 9.5mm, 164.85mm, 80mm) (InComponentClass('CELL6'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDRDTX0ISKIUP1K1XDC1P0ILIHLO0IG5H3ADVFXFKIA0RRMGH1NMAE">Room CELL5 (Bounding Region = (118.85mm, 9.5mm, 141.85mm, 80mm) (InComponentClass('CELL5'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDYIOLNA3DQK0JKGUKDVD4KKBSIWWYPONDTUXUGJG3KF1OIZ320C">Component Clearance Constraint ( Horizontal Gap = 0.254mm, Vertical Gap = 0mm ) (All),(All) </a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDHA4ONEY43NGMCODXCY5UGZYSKPKJMQH0O4RV14L0WAX2K4PI2UPJ">Height Constraint (Min=0mm) (Max=25.4mm) (Prefered=12.7mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">93</td>
+</tr>
+</table><br><a name="IDRYPK2DXDZCWPDQDPOBAIOLRW5PBJIC5V0ZOPAFFQXI50GYAHZMKB"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Minimum Solder Mask Sliver (Gap=0.089mm) (All),(All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=682.684mil|Location2.X=687.434mil|Location1.Y=2596.613mil|Location2.Y=2601.363mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=682.684mil|Location2.X=687.434mil|Location1.Y=2596.613mil|Location2.Y=2601.363mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.076mm &lt; 0.089mm) Between Pad J_V_IMA-1(16.575mm,66.662mm) on Top Copper And Region (0 hole(s)) Top Mask [Top Mask] Mask Sliver [0.076mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=682.82mil|Location2.X=687.57mil|Location1.Y=2587.748mil|Location2.Y=2592.498mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=682.82mil|Location2.X=687.57mil|Location1.Y=2587.748mil|Location2.Y=2592.498mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.083mm &lt; 0.089mm) Between Pad J_V_IMA-2(16.575mm,65.138mm) on Top Copper And Region (0 hole(s)) Top Mask [Top Mask] Mask Sliver [0.083mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=579.338mil|Location2.X=584.088mil|Location1.Y=2596.613mil|Location2.Y=2601.363mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=579.338mil|Location2.X=584.088mil|Location1.Y=2596.613mil|Location2.Y=2601.363mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.076mm &lt; 0.089mm) Between Pad J_V_IPA-1(13.95mm,66.662mm) on Top Copper And Region (0 hole(s)) Top Mask [Top Mask] Mask Sliver [0.076mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=579.474mil|Location2.X=584.224mil|Location1.Y=2587.748mil|Location2.Y=2592.498mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=579.474mil|Location2.X=584.224mil|Location1.Y=2587.748mil|Location2.Y=2592.498mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.083mm &lt; 0.089mm) Between Pad J_V_IPA-2(13.95mm,65.138mm) on Top Copper And Region (0 hole(s)) Top Mask [Top Mask] Mask Sliver [0.083mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=955.685mil|Location2.X=960.435mil|Location1.Y=2133.452mil|Location2.Y=2138.202mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=955.685mil|Location2.X=960.435mil|Location1.Y=2133.452mil|Location2.Y=2138.202mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.069mm &lt; 0.089mm) Between Pad Voltage-17(25.125mm,54.25mm) on Top Copper And Via (24.05mm,54.25mm) from Top Copper to Bottom Copper [Top Mask] Mask Sliver [0.069mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=955.685mil|Location2.X=960.435mil|Location1.Y=2172.825mil|Location2.Y=2177.575mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=955.685mil|Location2.X=960.435mil|Location1.Y=2172.825mil|Location2.Y=2177.575mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.069mm &lt; 0.089mm) Between Pad Voltage-19(25.125mm,55.25mm) on Top Copper And Via (24.05mm,55.25mm) from Top Copper to Bottom Copper [Top Mask] Mask Sliver [0.069mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=955.685mil|Location2.X=960.435mil|Location1.Y=2212.192mil|Location2.Y=2216.942mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=955.685mil|Location2.X=960.435mil|Location1.Y=2212.192mil|Location2.Y=2216.942mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.069mm &lt; 0.089mm) Between Pad Voltage-21(25.125mm,56.25mm) on Top Copper And Via (24.05mm,56.25mm) from Top Copper to Bottom Copper [Top Mask] Mask Sliver [0.069mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=955.684mil|Location2.X=960.434mil|Location1.Y=2251.565mil|Location2.Y=2256.315mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=955.684mil|Location2.X=960.434mil|Location1.Y=2251.565mil|Location2.Y=2256.315mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.069mm &lt; 0.089mm) Between Pad Voltage-23(25.125mm,57.25mm) on Top Copper And Via (24.05mm,57.25mm) from Top Copper to Bottom Copper [Top Mask] Mask Sliver [0.069mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=955.685mil|Location2.X=960.435mil|Location1.Y=2290.932mil|Location2.Y=2295.682mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=955.685mil|Location2.X=960.435mil|Location1.Y=2290.932mil|Location2.Y=2295.682mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.069mm &lt; 0.089mm) Between Pad Voltage-25(25.125mm,58.25mm) on Top Copper And Via (24.05mm,58.25mm) from Top Copper to Bottom Copper [Top Mask] Mask Sliver [0.069mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=955.685mil|Location2.X=960.435mil|Location1.Y=2330.302mil|Location2.Y=2335.052mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=955.685mil|Location2.X=960.435mil|Location1.Y=2330.302mil|Location2.Y=2335.052mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.069mm &lt; 0.089mm) Between Pad Voltage-27(25.125mm,59.25mm) on Top Copper And Via (24.05mm,59.25mm) from Top Copper to Bottom Copper [Top Mask] Mask Sliver [0.069mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=956.177mil|Location2.X=960.927mil|Location1.Y=2369.672mil|Location2.Y=2374.422mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=956.177mil|Location2.X=960.927mil|Location1.Y=2369.672mil|Location2.Y=2374.422mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.044mm &lt; 0.089mm) Between Pad Voltage-29(25.125mm,60.25mm) on Top Copper And Via (24.075mm,60.25mm) from Top Copper to Bottom Copper [Top Mask] Mask Sliver [0.044mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=956.177mil|Location2.X=960.927mil|Location1.Y=2409.042mil|Location2.Y=2413.792mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=956.177mil|Location2.X=960.927mil|Location1.Y=2409.042mil|Location2.Y=2413.792mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.044mm &lt; 0.089mm) Between Pad Voltage-31(25.125mm,61.25mm) on Top Copper And Via (24.075mm,61.25mm) from Top Copper to Bottom Copper [Top Mask] Mask Sliver [0.044mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=912.979mil|Location2.X=917.729mil|Location1.Y=2471.925mil|Location2.Y=2476.675mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=912.979mil|Location2.X=917.729mil|Location1.Y=2471.925mil|Location2.Y=2476.675mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.044mm &lt; 0.089mm) Between Pad Voltage-33(23.25mm,63.625mm) on Top Copper And Via (23.25mm,62.575mm) from Top Copper to Bottom Copper [Top Mask] Mask Sliver [0.044mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=873.609mil|Location2.X=878.359mil|Location1.Y=2471.925mil|Location2.Y=2476.675mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=873.609mil|Location2.X=878.359mil|Location1.Y=2471.925mil|Location2.Y=2476.675mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.044mm &lt; 0.089mm) Between Pad Voltage-35(22.25mm,63.625mm) on Top Copper And Via (22.25mm,62.575mm) from Top Copper to Bottom Copper [Top Mask] Mask Sliver [0.044mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=834.241mil|Location2.X=838.991mil|Location1.Y=2471.925mil|Location2.Y=2476.675mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=834.241mil|Location2.X=838.991mil|Location1.Y=2471.925mil|Location2.Y=2476.675mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.044mm &lt; 0.089mm) Between Pad Voltage-37(21.25mm,63.625mm) on Top Copper And Via (21.25mm,62.575mm) from Top Copper to Bottom Copper [Top Mask] Mask Sliver [0.044mm]</acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDLVK30I1PWZXNGEVW53VUJTTUJBECTD31CPPPCYCKZO2PU0WGFNGG"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Board Clearance Constraint (Gap=0mm) (All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=391.402mil|Location2.X=400.526mil|Location1.Y=590.32mil|Location2.Y=599.444mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=391.402mil|Location2.X=400.526mil|Location1.Y=590.32mil|Location2.Y=599.444mil|Absolute=True">Board Outline Clearance(Outline Edge): (0.115mm &lt; 0.2mm) Between Board Edge And Track (10.19mm,15.11mm)(10.19mm,21.84mm) on Bottom Overlay </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=391.402mil|Location2.X=400.526mil|Location1.Y=590.32mil|Location2.Y=599.444mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=391.402mil|Location2.X=400.526mil|Location1.Y=590.32mil|Location2.Y=599.444mil|Absolute=True">Board Outline Clearance(Outline Edge): (0.115mm &lt; 0.2mm) Between Board Edge And Track (10.19mm,15.11mm)(17.81mm,15.11mm) on Bottom Overlay </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=391.402mil|Location2.X=400.526mil|Location1.Y=855.28mil|Location2.Y=864.404mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=391.402mil|Location2.X=400.526mil|Location1.Y=855.28mil|Location2.Y=864.404mil|Absolute=True">Board Outline Clearance(Outline Edge): (0.115mm &lt; 0.2mm) Between Board Edge And Track (10.19mm,21.84mm)(17.81mm,21.84mm) on Bottom Overlay </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=391.402mil|Location2.X=400.526mil|Location1.Y=1624.769mil|Location2.Y=1633.893mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=391.402mil|Location2.X=400.526mil|Location1.Y=1624.769mil|Location2.Y=1633.893mil|Absolute=True">Board Outline Clearance(Outline Edge): (0.115mm &lt; 0.2mm) Between Board Edge And Track (10.19mm,41.385mm)(10.19mm,48.115mm) on Bottom Overlay </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=391.402mil|Location2.X=400.526mil|Location1.Y=1624.769mil|Location2.Y=1633.893mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=391.402mil|Location2.X=400.526mil|Location1.Y=1624.769mil|Location2.Y=1633.893mil|Absolute=True">Board Outline Clearance(Outline Edge): (0.115mm &lt; 0.2mm) Between Board Edge And Track (10.19mm,41.385mm)(17.81mm,41.385mm) on Bottom Overlay </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=391.402mil|Location2.X=400.526mil|Location1.Y=1889.729mil|Location2.Y=1898.853mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=391.402mil|Location2.X=400.526mil|Location1.Y=1889.729mil|Location2.Y=1898.853mil|Absolute=True">Board Outline Clearance(Outline Edge): (0.115mm &lt; 0.2mm) Between Board Edge And Track (10.19mm,48.115mm)(17.81mm,48.115mm) on Bottom Overlay </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=391.402mil|Location2.X=400.526mil|Location1.Y=2659.218mil|Location2.Y=2668.342mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=391.402mil|Location2.X=400.526mil|Location1.Y=2659.218mil|Location2.Y=2668.342mil|Absolute=True">Board Outline Clearance(Outline Edge): (0.115mm &lt; 0.2mm) Between Board Edge And Track (10.19mm,67.66mm)(10.19mm,74.39mm) on Bottom Overlay </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=391.402mil|Location2.X=400.526mil|Location1.Y=2659.218mil|Location2.Y=2668.342mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=391.402mil|Location2.X=400.526mil|Location1.Y=2659.218mil|Location2.Y=2668.342mil|Absolute=True">Board Outline Clearance(Outline Edge): (0.115mm &lt; 0.2mm) Between Board Edge And Track (10.19mm,67.66mm)(17.81mm,67.66mm) on Bottom Overlay </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=391.402mil|Location2.X=400.526mil|Location1.Y=2924.178mil|Location2.Y=2933.302mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=391.402mil|Location2.X=400.526mil|Location1.Y=2924.178mil|Location2.Y=2933.302mil|Absolute=True">Board Outline Clearance(Outline Edge): (0.115mm &lt; 0.2mm) Between Board Edge And Track (10.19mm,74.39mm)(17.81mm,74.39mm) on Bottom Overlay </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=391.599mil|Location2.X=400.723mil|Location1.Y=1757.249mil|Location2.Y=1766.373mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=391.599mil|Location2.X=400.723mil|Location1.Y=1757.249mil|Location2.Y=1766.373mil|Absolute=True">Board Outline Clearance(Outline Edge): (0.125mm &lt; 0.2mm) Between Board Edge And Track (10.2mm,44.75mm)(28.175mm,44.75mm) on Top Overlay </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=388.978mil|Location2.X=395.227mil|Location1.Y=850.222mil|Location2.Y=856.471mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=388.978mil|Location2.X=395.227mil|Location1.Y=850.222mil|Location2.Y=856.471mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 0.2mm) Between Board Edge And Track (10mm,21.675mm)(26mm,21.675mm) on Top Overlay </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=388.978mil|Location2.X=395.227mil|Location1.Y=2792.151mil|Location2.Y=2798.4mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=388.978mil|Location2.X=395.227mil|Location1.Y=2792.151mil|Location2.Y=2798.4mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 0.2mm) Between Board Edge And Track (10mm,71mm)(26mm,71mm) on Top Overlay </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4623.844mil|Location2.X=4630.093mil|Location1.Y=1758.686mil|Location2.Y=1764.936mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4623.844mil|Location2.X=4630.093mil|Location1.Y=1758.686mil|Location2.Y=1764.936mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 0.2mm) Between Board Edge And Track (117.525mm,10mm)(117.525mm,79.5mm) on Top Overlay </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4728.175mil|Location2.X=4734.424mil|Location1.Y=1758.686mil|Location2.Y=1764.936mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4728.175mil|Location2.X=4734.424mil|Location1.Y=1758.686mil|Location2.Y=1764.936mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 0.2mm) Between Board Edge And Track (120.175mm,10mm)(120.175mm,79.5mm) on Top Overlay </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5127.781mil|Location2.X=5134.03mil|Location1.Y=390.576mil|Location2.Y=396.825mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5127.781mil|Location2.X=5134.03mil|Location1.Y=390.576mil|Location2.Y=396.825mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 0.2mm) Between Board Edge And Track (120.175mm,10mm)(140.475mm,10mm) on Top Overlay </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5127.781mil|Location2.X=5134.03mil|Location1.Y=3126.797mil|Location2.Y=3133.046mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5127.781mil|Location2.X=5134.03mil|Location1.Y=3126.797mil|Location2.Y=3133.046mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 0.2mm) Between Board Edge And Track (120.175mm,79.5mm)(140.475mm,79.5mm) on Top Overlay </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5527.387mil|Location2.X=5533.636mil|Location1.Y=1758.686mil|Location2.Y=1764.936mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5527.387mil|Location2.X=5533.636mil|Location1.Y=1758.686mil|Location2.Y=1764.936mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 0.2mm) Between Board Edge And Track (140.475mm,10mm)(140.475mm,79.5mm) on Top Overlay </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5635.655mil|Location2.X=5641.904mil|Location1.Y=1758.686mil|Location2.Y=1764.936mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5635.655mil|Location2.X=5641.904mil|Location1.Y=1758.686mil|Location2.Y=1764.936mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 0.2mm) Between Board Edge And Track (143.225mm,10mm)(143.225mm,79.5mm) on Top Overlay </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6035.261mil|Location2.X=6041.51mil|Location1.Y=390.576mil|Location2.Y=396.825mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6035.261mil|Location2.X=6041.51mil|Location1.Y=390.576mil|Location2.Y=396.825mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 0.2mm) Between Board Edge And Track (143.225mm,10mm)(163.525mm,10mm) on Top Overlay </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6035.261mil|Location2.X=6041.51mil|Location1.Y=3126.797mil|Location2.Y=3133.046mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6035.261mil|Location2.X=6041.51mil|Location1.Y=3126.797mil|Location2.Y=3133.046mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 0.2mm) Between Board Edge And Track (143.225mm,79.5mm)(163.525mm,79.5mm) on Top Overlay </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6434.868mil|Location2.X=6441.117mil|Location1.Y=1758.686mil|Location2.Y=1764.936mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6434.868mil|Location2.X=6441.117mil|Location1.Y=1758.686mil|Location2.Y=1764.936mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 0.2mm) Between Board Edge And Track (163.525mm,10mm)(163.525mm,79.5mm) on Top Overlay </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6539.198mil|Location2.X=6545.448mil|Location1.Y=1758.686mil|Location2.Y=1764.936mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6539.198mil|Location2.X=6545.448mil|Location1.Y=1758.686mil|Location2.Y=1764.936mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 0.2mm) Between Board Edge And Track (166.175mm,10mm)(166.175mm,79.5mm) on Top Overlay </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6938.805mil|Location2.X=6945.054mil|Location1.Y=390.576mil|Location2.Y=396.825mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6938.805mil|Location2.X=6945.054mil|Location1.Y=390.576mil|Location2.Y=396.825mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 0.2mm) Between Board Edge And Track (166.175mm,10mm)(186.475mm,10mm) on Top Overlay </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6938.805mil|Location2.X=6945.054mil|Location1.Y=3126.797mil|Location2.Y=3133.046mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6938.805mil|Location2.X=6945.054mil|Location1.Y=3126.797mil|Location2.Y=3133.046mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 0.2mm) Between Board Edge And Track (166.175mm,79.5mm)(186.475mm,79.5mm) on Top Overlay </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7338.411mil|Location2.X=7344.66mil|Location1.Y=1758.686mil|Location2.Y=1764.936mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7338.411mil|Location2.X=7344.66mil|Location1.Y=1758.686mil|Location2.Y=1764.936mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 0.2mm) Between Board Edge And Track (186.475mm,10mm)(186.475mm,79.5mm) on Top Overlay </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7446.678mil|Location2.X=7452.928mil|Location1.Y=1758.686mil|Location2.Y=1764.936mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7446.678mil|Location2.X=7452.928mil|Location1.Y=1758.686mil|Location2.Y=1764.936mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 0.2mm) Between Board Edge And Track (189.225mm,10mm)(189.225mm,79.5mm) on Top Overlay </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7846.285mil|Location2.X=7852.534mil|Location1.Y=390.576mil|Location2.Y=396.825mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7846.285mil|Location2.X=7852.534mil|Location1.Y=390.576mil|Location2.Y=396.825mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 0.2mm) Between Board Edge And Track (189.225mm,10mm)(209.525mm,10mm) on Top Overlay </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7846.285mil|Location2.X=7852.534mil|Location1.Y=3126.797mil|Location2.Y=3133.046mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=7846.285mil|Location2.X=7852.534mil|Location1.Y=3126.797mil|Location2.Y=3133.046mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 0.2mm) Between Board Edge And Track (189.225mm,79.5mm)(209.525mm,79.5mm) on Top Overlay </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8245.891mil|Location2.X=8252.14mil|Location1.Y=1758.686mil|Location2.Y=1764.936mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8245.891mil|Location2.X=8252.14mil|Location1.Y=1758.686mil|Location2.Y=1764.936mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 0.2mm) Between Board Edge And Track (209.525mm,10mm)(209.525mm,79.5mm) on Top Overlay </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8350.222mil|Location2.X=8356.471mil|Location1.Y=1758.686mil|Location2.Y=1764.936mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8350.222mil|Location2.X=8356.471mil|Location1.Y=1758.686mil|Location2.Y=1764.936mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 0.2mm) Between Board Edge And Track (212.175mm,10mm)(212.175mm,79.5mm) on Top Overlay </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8749.828mil|Location2.X=8756.077mil|Location1.Y=390.576mil|Location2.Y=396.825mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8749.828mil|Location2.X=8756.077mil|Location1.Y=390.576mil|Location2.Y=396.825mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 0.2mm) Between Board Edge And Track (212.175mm,10mm)(232.475mm,10mm) on Top Overlay </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8749.828mil|Location2.X=8756.077mil|Location1.Y=3126.797mil|Location2.Y=3133.046mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=8749.828mil|Location2.X=8756.077mil|Location1.Y=3126.797mil|Location2.Y=3133.046mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 0.2mm) Between Board Edge And Track (212.175mm,79.5mm)(232.475mm,79.5mm) on Top Overlay </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9149.434mil|Location2.X=9155.684mil|Location1.Y=1758.686mil|Location2.Y=1764.936mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9149.434mil|Location2.X=9155.684mil|Location1.Y=1758.686mil|Location2.Y=1764.936mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 0.2mm) Between Board Edge And Track (232.475mm,10mm)(232.475mm,79.5mm) on Top Overlay </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9257.702mil|Location2.X=9263.951mil|Location1.Y=1758.686mil|Location2.Y=1764.936mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9257.702mil|Location2.X=9263.951mil|Location1.Y=1758.686mil|Location2.Y=1764.936mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 0.2mm) Between Board Edge And Track (235.225mm,10mm)(235.225mm,79.5mm) on Top Overlay </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9657.308mil|Location2.X=9663.558mil|Location1.Y=390.576mil|Location2.Y=396.825mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9657.308mil|Location2.X=9663.558mil|Location1.Y=390.576mil|Location2.Y=396.825mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 0.2mm) Between Board Edge And Track (235.225mm,10mm)(255.525mm,10mm) on Top Overlay </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9657.308mil|Location2.X=9663.558mil|Location1.Y=3126.797mil|Location2.Y=3133.046mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=9657.308mil|Location2.X=9663.558mil|Location1.Y=3126.797mil|Location2.Y=3133.046mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 0.2mm) Between Board Edge And Track (235.225mm,79.5mm)(255.525mm,79.5mm) on Top Overlay </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10056.915mil|Location2.X=10063.164mil|Location1.Y=1758.686mil|Location2.Y=1764.936mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10056.915mil|Location2.X=10063.164mil|Location1.Y=1758.686mil|Location2.Y=1764.936mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 0.2mm) Between Board Edge And Track (255.525mm,10mm)(255.525mm,79.5mm) on Top Overlay </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10161.246mil|Location2.X=10167.495mil|Location1.Y=1758.686mil|Location2.Y=1764.936mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10161.246mil|Location2.X=10167.495mil|Location1.Y=1758.686mil|Location2.Y=1764.936mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 0.2mm) Between Board Edge And Track (258.175mm,10mm)(258.175mm,79.5mm) on Top Overlay </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10560.852mil|Location2.X=10567.101mil|Location1.Y=390.576mil|Location2.Y=396.825mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10560.852mil|Location2.X=10567.101mil|Location1.Y=390.576mil|Location2.Y=396.825mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 0.2mm) Between Board Edge And Track (258.175mm,10mm)(278.475mm,10mm) on Top Overlay </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10560.852mil|Location2.X=10567.101mil|Location1.Y=3126.797mil|Location2.Y=3133.046mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10560.852mil|Location2.X=10567.101mil|Location1.Y=3126.797mil|Location2.Y=3133.046mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 0.2mm) Between Board Edge And Track (258.175mm,79.5mm)(278.475mm,79.5mm) on Top Overlay </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1020.497mil|Location2.X=1026.747mil|Location1.Y=513.978mil|Location2.Y=520.227mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1020.497mil|Location2.X=1026.747mil|Location1.Y=513.978mil|Location2.Y=520.227mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 0.2mm) Between Board Edge And Track (26mm,13.175mm)(26mm,21.675mm) on Top Overlay </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1020.497mil|Location2.X=1026.747mil|Location1.Y=3003.395mil|Location2.Y=3009.644mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1020.497mil|Location2.X=1026.747mil|Location1.Y=3003.395mil|Location2.Y=3009.644mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 0.2mm) Between Board Edge And Track (26mm,71mm)(26mm,76.325mm) on Top Overlay </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10960.458mil|Location2.X=10966.707mil|Location1.Y=1758.686mil|Location2.Y=1764.936mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=10960.458mil|Location2.X=10966.707mil|Location1.Y=1758.686mil|Location2.Y=1764.936mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 0.2mm) Between Board Edge And Track (278.475mm,10mm)(278.475mm,79.5mm) on Top Overlay </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1106.127mil|Location2.X=1112.377mil|Location1.Y=1758.686mil|Location2.Y=1764.936mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1106.127mil|Location2.X=1112.377mil|Location1.Y=1758.686mil|Location2.Y=1764.936mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 0.2mm) Between Board Edge And Track (28.175mm,10mm)(28.175mm,79.5mm) on Top Overlay </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1505.734mil|Location2.X=1511.983mil|Location1.Y=390.576mil|Location2.Y=396.825mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1505.734mil|Location2.X=1511.983mil|Location1.Y=390.576mil|Location2.Y=396.825mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 0.2mm) Between Board Edge And Track (28.175mm,10mm)(48.475mm,10mm) on Top Overlay </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1505.734mil|Location2.X=1511.983mil|Location1.Y=3126.797mil|Location2.Y=3133.046mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1505.734mil|Location2.X=1511.983mil|Location1.Y=3126.797mil|Location2.Y=3133.046mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 0.2mm) Between Board Edge And Track (28.175mm,79.5mm)(48.475mm,79.5mm) on Top Overlay </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11068.726mil|Location2.X=11074.975mil|Location1.Y=1758.686mil|Location2.Y=1764.936mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11068.726mil|Location2.X=11074.975mil|Location1.Y=1758.686mil|Location2.Y=1764.936mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 0.2mm) Between Board Edge And Track (281.225mm,10mm)(281.225mm,79.5mm) on Top Overlay </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11468.332mil|Location2.X=11474.581mil|Location1.Y=390.576mil|Location2.Y=396.825mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11468.332mil|Location2.X=11474.581mil|Location1.Y=390.576mil|Location2.Y=396.825mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 0.2mm) Between Board Edge And Track (281.225mm,10mm)(301.525mm,10mm) on Top Overlay </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11468.332mil|Location2.X=11474.581mil|Location1.Y=3126.797mil|Location2.Y=3133.046mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11468.332mil|Location2.X=11474.581mil|Location1.Y=3126.797mil|Location2.Y=3133.046mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 0.2mm) Between Board Edge And Track (281.225mm,79.5mm)(301.525mm,79.5mm) on Top Overlay </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11867.938mil|Location2.X=11874.188mil|Location1.Y=1758.686mil|Location2.Y=1764.936mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11867.938mil|Location2.X=11874.188mil|Location1.Y=1758.686mil|Location2.Y=1764.936mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 0.2mm) Between Board Edge And Track (301.525mm,10mm)(301.525mm,79.5mm) on Top Overlay </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11972.269mil|Location2.X=11978.518mil|Location1.Y=1758.686mil|Location2.Y=1764.936mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=11972.269mil|Location2.X=11978.518mil|Location1.Y=1758.686mil|Location2.Y=1764.936mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 0.2mm) Between Board Edge And Track (304.175mm,10mm)(304.175mm,79.5mm) on Top Overlay </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12371.875mil|Location2.X=12378.125mil|Location1.Y=390.576mil|Location2.Y=396.825mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12371.875mil|Location2.X=12378.125mil|Location1.Y=390.576mil|Location2.Y=396.825mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 0.2mm) Between Board Edge And Track (304.175mm,10mm)(324.475mm,10mm) on Top Overlay </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12371.875mil|Location2.X=12378.125mil|Location1.Y=3126.797mil|Location2.Y=3133.046mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12371.875mil|Location2.X=12378.125mil|Location1.Y=3126.797mil|Location2.Y=3133.046mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 0.2mm) Between Board Edge And Track (304.175mm,79.5mm)(324.475mm,79.5mm) on Top Overlay </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12771.482mil|Location2.X=12777.731mil|Location1.Y=1758.686mil|Location2.Y=1764.936mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12771.482mil|Location2.X=12777.731mil|Location1.Y=1758.686mil|Location2.Y=1764.936mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 0.2mm) Between Board Edge And Track (324.475mm,10mm)(324.475mm,79.5mm) on Top Overlay </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12879.749mil|Location2.X=12885.999mil|Location1.Y=1758.686mil|Location2.Y=1764.936mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=12879.749mil|Location2.X=12885.999mil|Location1.Y=1758.686mil|Location2.Y=1764.936mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 0.2mm) Between Board Edge And Track (327.225mm,10mm)(327.225mm,79.5mm) on Top Overlay </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=13279.356mil|Location2.X=13285.605mil|Location1.Y=390.576mil|Location2.Y=396.825mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=13279.356mil|Location2.X=13285.605mil|Location1.Y=390.576mil|Location2.Y=396.825mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 0.2mm) Between Board Edge And Track (327.225mm,10mm)(347.525mm,10mm) on Top Overlay </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=13279.356mil|Location2.X=13285.605mil|Location1.Y=3126.797mil|Location2.Y=3133.046mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=13279.356mil|Location2.X=13285.605mil|Location1.Y=3126.797mil|Location2.Y=3133.046mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 0.2mm) Between Board Edge And Track (327.225mm,79.5mm)(347.525mm,79.5mm) on Top Overlay </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=13678.962mil|Location2.X=13685.211mil|Location1.Y=1758.686mil|Location2.Y=1764.936mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=13678.962mil|Location2.X=13685.211mil|Location1.Y=1758.686mil|Location2.Y=1764.936mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 0.2mm) Between Board Edge And Track (347.525mm,10mm)(347.525mm,79.5mm) on Top Overlay </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=13783.293mil|Location2.X=13789.542mil|Location1.Y=1758.686mil|Location2.Y=1764.936mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=13783.293mil|Location2.X=13789.542mil|Location1.Y=1758.686mil|Location2.Y=1764.936mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 0.2mm) Between Board Edge And Track (350.175mm,10mm)(350.175mm,79.5mm) on Top Overlay </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=14182.899mil|Location2.X=14189.148mil|Location1.Y=390.576mil|Location2.Y=396.825mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=14182.899mil|Location2.X=14189.148mil|Location1.Y=390.576mil|Location2.Y=396.825mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 0.2mm) Between Board Edge And Track (350.175mm,10mm)(370.475mm,10mm) on Top Overlay </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=14182.899mil|Location2.X=14189.148mil|Location1.Y=3126.797mil|Location2.Y=3133.046mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=14182.899mil|Location2.X=14189.148mil|Location1.Y=3126.797mil|Location2.Y=3133.046mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 0.2mm) Between Board Edge And Track (350.175mm,79.5mm)(370.475mm,79.5mm) on Top Overlay </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=14582.505mil|Location2.X=14588.755mil|Location1.Y=1758.686mil|Location2.Y=1764.936mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=14582.505mil|Location2.X=14588.755mil|Location1.Y=1758.686mil|Location2.Y=1764.936mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 0.2mm) Between Board Edge And Track (370.475mm,10mm)(370.475mm,79.5mm) on Top Overlay </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=14690.773mil|Location2.X=14697.022mil|Location1.Y=1758.686mil|Location2.Y=1764.936mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=14690.773mil|Location2.X=14697.022mil|Location1.Y=1758.686mil|Location2.Y=1764.936mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 0.2mm) Between Board Edge And Track (373.225mm,10mm)(373.225mm,79.5mm) on Top Overlay </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=15090.379mil|Location2.X=15096.629mil|Location1.Y=390.576mil|Location2.Y=396.825mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=15090.379mil|Location2.X=15096.629mil|Location1.Y=390.576mil|Location2.Y=396.825mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 0.2mm) Between Board Edge And Track (373.225mm,10mm)(393.525mm,10mm) on Top Overlay </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=15090.379mil|Location2.X=15096.629mil|Location1.Y=3126.797mil|Location2.Y=3133.046mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=15090.379mil|Location2.X=15096.629mil|Location1.Y=3126.797mil|Location2.Y=3133.046mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 0.2mm) Between Board Edge And Track (373.225mm,79.5mm)(393.525mm,79.5mm) on Top Overlay </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=15489.986mil|Location2.X=15496.235mil|Location1.Y=1758.686mil|Location2.Y=1764.936mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=15489.986mil|Location2.X=15496.235mil|Location1.Y=1758.686mil|Location2.Y=1764.936mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 0.2mm) Between Board Edge And Track (393.525mm,10mm)(393.525mm,79.5mm) on Top Overlay </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1905.34mil|Location2.X=1911.589mil|Location1.Y=1758.686mil|Location2.Y=1764.936mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1905.34mil|Location2.X=1911.589mil|Location1.Y=1758.686mil|Location2.Y=1764.936mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 0.2mm) Between Board Edge And Track (48.475mm,10mm)(48.475mm,79.5mm) on Top Overlay </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2013.608mil|Location2.X=2019.857mil|Location1.Y=1758.686mil|Location2.Y=1764.936mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2013.608mil|Location2.X=2019.857mil|Location1.Y=1758.686mil|Location2.Y=1764.936mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 0.2mm) Between Board Edge And Track (51.225mm,10mm)(51.225mm,79.5mm) on Top Overlay </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2413.214mil|Location2.X=2419.463mil|Location1.Y=390.576mil|Location2.Y=396.825mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2413.214mil|Location2.X=2419.463mil|Location1.Y=390.576mil|Location2.Y=396.825mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 0.2mm) Between Board Edge And Track (51.225mm,10mm)(71.525mm,10mm) on Top Overlay </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2413.214mil|Location2.X=2419.463mil|Location1.Y=3126.797mil|Location2.Y=3133.046mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2413.214mil|Location2.X=2419.463mil|Location1.Y=3126.797mil|Location2.Y=3133.046mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 0.2mm) Between Board Edge And Track (51.225mm,79.5mm)(71.525mm,79.5mm) on Top Overlay </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2812.82mil|Location2.X=2819.069mil|Location1.Y=1758.686mil|Location2.Y=1764.936mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2812.82mil|Location2.X=2819.069mil|Location1.Y=1758.686mil|Location2.Y=1764.936mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 0.2mm) Between Board Edge And Track (71.525mm,10mm)(71.525mm,79.5mm) on Top Overlay </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2917.151mil|Location2.X=2923.4mil|Location1.Y=1758.686mil|Location2.Y=1764.936mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2917.151mil|Location2.X=2923.4mil|Location1.Y=1758.686mil|Location2.Y=1764.936mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 0.2mm) Between Board Edge And Track (74.175mm,10mm)(74.175mm,79.5mm) on Top Overlay </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3316.757mil|Location2.X=3323.006mil|Location1.Y=390.576mil|Location2.Y=396.825mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3316.757mil|Location2.X=3323.006mil|Location1.Y=390.576mil|Location2.Y=396.825mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 0.2mm) Between Board Edge And Track (74.175mm,10mm)(94.475mm,10mm) on Top Overlay </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3316.757mil|Location2.X=3323.006mil|Location1.Y=3126.797mil|Location2.Y=3133.046mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3316.757mil|Location2.X=3323.006mil|Location1.Y=3126.797mil|Location2.Y=3133.046mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 0.2mm) Between Board Edge And Track (74.175mm,79.5mm)(94.475mm,79.5mm) on Top Overlay </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3716.364mil|Location2.X=3722.613mil|Location1.Y=1758.686mil|Location2.Y=1764.936mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3716.364mil|Location2.X=3722.613mil|Location1.Y=1758.686mil|Location2.Y=1764.936mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 0.2mm) Between Board Edge And Track (94.475mm,10mm)(94.475mm,79.5mm) on Top Overlay </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4224.238mil|Location2.X=4230.487mil|Location1.Y=390.576mil|Location2.Y=396.825mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4224.238mil|Location2.X=4230.487mil|Location1.Y=390.576mil|Location2.Y=396.825mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 0.2mm) Between Board Edge And Track (97.225mm,10mm)(117.525mm,10mm) on Top Overlay </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3824.631mil|Location2.X=3830.88mil|Location1.Y=1758.686mil|Location2.Y=1764.936mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3824.631mil|Location2.X=3830.88mil|Location1.Y=1758.686mil|Location2.Y=1764.936mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 0.2mm) Between Board Edge And Track (97.225mm,10mm)(97.225mm,79.5mm) on Top Overlay </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4224.238mil|Location2.X=4230.487mil|Location1.Y=3126.797mil|Location2.Y=3133.046mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4224.238mil|Location2.X=4230.487mil|Location1.Y=3126.797mil|Location2.Y=3133.046mil|Absolute=True">Board Outline Clearance(Outline Edge): (Collision &lt; 0.2mm) Between Board Edge And Track (97.225mm,79.5mm)(117.525mm,79.5mm) on Top Overlay </acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br></body>
+</html>

@@ -1,0 +1,8 @@
+DRC Rules Export File for PCB: C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSSlave_2019\LTC6813\ife18_TS_BMS_LTC6813_v2\ife18_TS_BMS_LTC6813_v2.PcbDoc
+RuleKind=Clearance|RuleName=Board Edge|Scope=Board|Minimum=9.84
+RuleKind=Clearance|RuleName=External Layers|Scope=Board|Minimum=5.91
+RuleKind=Clearance|RuleName=ISO Clearance|Scope=Board|Minimum=31.50
+RuleKind=SolderMaskExpansion|RuleName=SolderMaskExpansion|Scope=Board|Minimum=1.00
+RuleKind=Width|RuleName=Width|Scope=Board|Minimum=4.00
+RuleKind=Clearance|RuleName=Internal Layers|Scope=Board|Minimum=4.00
+RuleKind=ShortCircuit|RuleName=ShortCircuit|Scope=Board|Allowed=0
