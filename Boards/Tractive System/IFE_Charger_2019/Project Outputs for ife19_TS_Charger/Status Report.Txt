@@ -1,0 +1,12 @@
+Output: NC Drill Files
+Type  : NC Drill
+From  : Project [ife19_TS_Charger.PrjPCB]
+   Generated File[ife19_TS_Charger.TXT]
+   Generated File[ife19_TS_Charger.LDP]
+   Generated File[ife19_TS_Charger.DRR]
+
+
+Files Generated   : 3
+Documents Printed : 0
+
+Finished Output Generation At 7:40:23 AM On 2/11/2019

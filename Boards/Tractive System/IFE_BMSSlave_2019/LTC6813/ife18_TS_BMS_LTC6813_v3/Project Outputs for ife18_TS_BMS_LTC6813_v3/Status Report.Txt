@@ -1,0 +1,13 @@
+Output: NC Drill Files
+Type  : NC Drill
+From  : Project [ife18_TS_BMS_LTC6813_v3.PrjPcb]
+   Generated File[Even-RoundHoles.TXT]
+   Generated File[Even-SlotHoles.TXT]
+   Generated File[Even.LDP]
+   Generated File[Even.DRR]
+
+
+Files Generated   : 4
+Documents Printed : 0
+
+Finished Output Generation At 3:21:51 AM On 2/11/2019

@@ -1,0 +1,21 @@
+----------------------------------------------------------------------------------------------------------------------------------
+NCDrill File Report For: Even.PcbDoc   2/11/2019  3:21:50 AM
+----------------------------------------------------------------------------------------------------------------------------------
+
+Layer Pair : Top Copper to Bottom Copper
+ASCII RoundHoles File : Even-RoundHoles.TXT
+ASCII SlotHoles File : Even-SlotHoles.TXT
+
+Tool       Hole Size               Hole Tolerance               Hole Type       Hole Count   Plated         Tool Travel
+----------------------------------------------------------------------------------------------------------------------------------
+T1      8mil (0.2mm)                                              Round             268       PTH        0.00inch (0.00mm)
+T2      12mil (0.3mm)                                             Round             8         PTH        0.00inch (0.00mm)
+T3      14mil (0.35mm)                                            Slot              96        PTH        0.00inch (0.00mm)
+T4      20mil (0.5mm)                                             Round             32        PTH        0.00inch (0.00mm)
+T5      24mil (0.6mm)                                             Round             4         PTH        0.00inch (0.00mm)
+T6      59mil (1.5mm)                                             Round             2         PTH        0.00inch (0.00mm)
+T7      197mil (5mm)                                              Round             32        PTH        0.00inch (0.00mm)
+----------------------------------------------------------------------------------------------------------------------------------
+Totals                                                                              442
+
+Total Processing Time (hh:mm:ss) : 00:00:01
