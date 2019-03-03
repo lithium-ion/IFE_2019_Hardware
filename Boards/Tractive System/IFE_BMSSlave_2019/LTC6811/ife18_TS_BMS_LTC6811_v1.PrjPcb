@@ -28,7 +28,7 @@ DItemRevisionGUID=
 ReportSuppressedErrorsInMessages=0
 FSMCodingStyle=eFMSDropDownList_OneProcess
 FSMEncodingStyle=eFMSDropDownList_OneHot
-OutputPath=
+OutputPath=Project Outputs for ife18_TS_BMS_LTC6811_v1
 LogFolderPath=
 ManagedProjectGUID=
 IncludeDesignInRelease=0
@@ -84,7 +84,7 @@ AnnotationIndexControlEnabled=0
 AnnotateSuffix=
 AnnotateScope=All
 AnnotateOrder=1
-DoLibraryUpdate=1
+DoLibraryUpdate=0
 DoDatabaseUpdate=1
 ClassGenCCAutoEnabled=1
 ClassGenCCAutoRoomEnabled=1
@@ -101,7 +101,7 @@ AnnotationIndexControlEnabled=0
 AnnotateSuffix=
 AnnotateScope=All
 AnnotateOrder=2
-DoLibraryUpdate=1
+DoLibraryUpdate=0
 DoDatabaseUpdate=1
 ClassGenCCAutoEnabled=1
 ClassGenCCAutoRoomEnabled=1
@@ -142,7 +142,7 @@ ClassGenCCAutoRoomEnabled=1
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
-DocumentUniqueId=
+DocumentUniqueId=GRIYDALE
 
 [Document7]
 DocumentPath=..\LTC6813\ife18_TS_BMS_LTC6813_v3\ife18_TS_BMS_LTC6813_v2_Library.SchLib
@@ -161,75 +161,198 @@ DItemRevisionGUID=
 GenerateClassCluster=0
 DocumentUniqueId=RIGRZCVV
 
+[Document8]
+DocumentPath=LTC6811.SchLib
+AnnotationEnabled=1
+AnnotateStartValue=1
+AnnotationIndexControlEnabled=0
+AnnotateSuffix=
+AnnotateScope=All
+AnnotateOrder=-1
+DoLibraryUpdate=1
+DoDatabaseUpdate=1
+ClassGenCCAutoEnabled=1
+ClassGenCCAutoRoomEnabled=1
+ClassGenNCAutoScope=None
+DItemRevisionGUID=
+GenerateClassCluster=0
+DocumentUniqueId=XMNHXPQL
+
+[Document9]
+DocumentPath=LTC6811.PcbLib
+AnnotationEnabled=1
+AnnotateStartValue=1
+AnnotationIndexControlEnabled=0
+AnnotateSuffix=
+AnnotateScope=All
+AnnotateOrder=-1
+DoLibraryUpdate=1
+DoDatabaseUpdate=1
+ClassGenCCAutoEnabled=1
+ClassGenCCAutoRoomEnabled=1
+ClassGenNCAutoScope=None
+DItemRevisionGUID=
+GenerateClassCluster=0
+DocumentUniqueId=CWHENACI
+
+[Document10]
+DocumentPath=Half_Slave.SchDoc
+AnnotationEnabled=1
+AnnotateStartValue=1
+AnnotationIndexControlEnabled=0
+AnnotateSuffix=
+AnnotateScope=All
+AnnotateOrder=3
+DoLibraryUpdate=0
+DoDatabaseUpdate=1
+ClassGenCCAutoEnabled=1
+ClassGenCCAutoRoomEnabled=1
+ClassGenNCAutoScope=None
+DItemRevisionGUID=
+GenerateClassCluster=0
+DocumentUniqueId=TJVTVMEU
+
+[Document11]
+DocumentPath=..\..\..\..\..\..\..\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Conn_Library.PcbLib
+AnnotationEnabled=1
+AnnotateStartValue=1
+AnnotationIndexControlEnabled=0
+AnnotateSuffix=
+AnnotateScope=All
+AnnotateOrder=-1
+DoLibraryUpdate=1
+DoDatabaseUpdate=1
+ClassGenCCAutoEnabled=1
+ClassGenCCAutoRoomEnabled=1
+ClassGenNCAutoScope=None
+DItemRevisionGUID=
+GenerateClassCluster=0
+DocumentUniqueId=
+
+[Document12]
+DocumentPath=..\..\..\..\..\..\..\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Conn_Library.SchLib
+AnnotationEnabled=1
+AnnotateStartValue=1
+AnnotationIndexControlEnabled=0
+AnnotateSuffix=
+AnnotateScope=All
+AnnotateOrder=-1
+DoLibraryUpdate=1
+DoDatabaseUpdate=1
+ClassGenCCAutoEnabled=1
+ClassGenCCAutoRoomEnabled=1
+ClassGenNCAutoScope=None
+DItemRevisionGUID=
+GenerateClassCluster=0
+DocumentUniqueId=DQHKJZQR
+
+[Document13]
+DocumentPath=..\..\..\..\..\..\..\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib
+AnnotationEnabled=1
+AnnotateStartValue=1
+AnnotationIndexControlEnabled=0
+AnnotateSuffix=
+AnnotateScope=All
+AnnotateOrder=-1
+DoLibraryUpdate=1
+DoDatabaseUpdate=1
+ClassGenCCAutoEnabled=1
+ClassGenCCAutoRoomEnabled=1
+ClassGenNCAutoScope=None
+DItemRevisionGUID=
+GenerateClassCluster=0
+DocumentUniqueId=VHUBEPKW
+
+[Document14]
+DocumentPath=..\..\..\..\..\..\..\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.SchLib
+AnnotationEnabled=1
+AnnotateStartValue=1
+AnnotationIndexControlEnabled=0
+AnnotateSuffix=
+AnnotateScope=All
+AnnotateOrder=-1
+DoLibraryUpdate=1
+DoDatabaseUpdate=1
+ClassGenCCAutoEnabled=1
+ClassGenCCAutoRoomEnabled=1
+ClassGenNCAutoScope=None
+DItemRevisionGUID=
+GenerateClassCluster=0
+DocumentUniqueId=LQSNODNZ
+
 [GeneratedDocument1]
 DocumentPath=..\LTC6813\ife18_TS_BMS_LTC6813_v3\Project Outputs for ife18_TS_BMS_LTC6813_v3\Design Rule Check - Even.html
 DItemRevisionGUID=
 
 [GeneratedDocument2]
-DocumentPath=..\LTC6813\ife18_TS_BMS_LTC6813_v3\Project Outputs for ife18_TS_BMS_LTC6813_v3\Even-RoundHoles.TXT
+DocumentPath=Project Outputs for ife18_TS_BMS_LTC6811_v1\Design Rule Check - Slave.html
 DItemRevisionGUID=
 
 [GeneratedDocument3]
-DocumentPath=..\LTC6813\ife18_TS_BMS_LTC6813_v3\Project Outputs for ife18_TS_BMS_LTC6813_v3\Even-SlotHoles.TXT
+DocumentPath=..\LTC6813\ife18_TS_BMS_LTC6813_v3\Project Outputs for ife18_TS_BMS_LTC6813_v3\Even-RoundHoles.TXT
 DItemRevisionGUID=
 
 [GeneratedDocument4]
-DocumentPath=..\LTC6813\ife18_TS_BMS_LTC6813_v3\Project Outputs for ife18_TS_BMS_LTC6813_v3\Even.DRR
+DocumentPath=..\LTC6813\ife18_TS_BMS_LTC6813_v3\Project Outputs for ife18_TS_BMS_LTC6813_v3\Even-SlotHoles.TXT
 DItemRevisionGUID=
 
 [GeneratedDocument5]
-DocumentPath=..\LTC6813\ife18_TS_BMS_LTC6813_v3\Project Outputs for ife18_TS_BMS_LTC6813_v3\Even.EXTREP
+DocumentPath=..\LTC6813\ife18_TS_BMS_LTC6813_v3\Project Outputs for ife18_TS_BMS_LTC6813_v3\Even.DRR
 DItemRevisionGUID=
 
 [GeneratedDocument6]
-DocumentPath=..\LTC6813\ife18_TS_BMS_LTC6813_v3\Project Outputs for ife18_TS_BMS_LTC6813_v3\Even.G1
+DocumentPath=..\LTC6813\ife18_TS_BMS_LTC6813_v3\Project Outputs for ife18_TS_BMS_LTC6813_v3\Even.EXTREP
 DItemRevisionGUID=
 
 [GeneratedDocument7]
-DocumentPath=..\LTC6813\ife18_TS_BMS_LTC6813_v3\Project Outputs for ife18_TS_BMS_LTC6813_v3\Even.G2
+DocumentPath=..\LTC6813\ife18_TS_BMS_LTC6813_v3\Project Outputs for ife18_TS_BMS_LTC6813_v3\Even.G1
 DItemRevisionGUID=
 
 [GeneratedDocument8]
-DocumentPath=..\LTC6813\ife18_TS_BMS_LTC6813_v3\Project Outputs for ife18_TS_BMS_LTC6813_v3\Even.GBL
+DocumentPath=..\LTC6813\ife18_TS_BMS_LTC6813_v3\Project Outputs for ife18_TS_BMS_LTC6813_v3\Even.G2
 DItemRevisionGUID=
 
 [GeneratedDocument9]
-DocumentPath=..\LTC6813\ife18_TS_BMS_LTC6813_v3\Project Outputs for ife18_TS_BMS_LTC6813_v3\Even.GBO
+DocumentPath=..\LTC6813\ife18_TS_BMS_LTC6813_v3\Project Outputs for ife18_TS_BMS_LTC6813_v3\Even.GBL
 DItemRevisionGUID=
 
 [GeneratedDocument10]
-DocumentPath=..\LTC6813\ife18_TS_BMS_LTC6813_v3\Project Outputs for ife18_TS_BMS_LTC6813_v3\Even.GBS
+DocumentPath=..\LTC6813\ife18_TS_BMS_LTC6813_v3\Project Outputs for ife18_TS_BMS_LTC6813_v3\Even.GBO
 DItemRevisionGUID=
 
 [GeneratedDocument11]
-DocumentPath=..\LTC6813\ife18_TS_BMS_LTC6813_v3\Project Outputs for ife18_TS_BMS_LTC6813_v3\Even.GKO
+DocumentPath=..\LTC6813\ife18_TS_BMS_LTC6813_v3\Project Outputs for ife18_TS_BMS_LTC6813_v3\Even.GBS
 DItemRevisionGUID=
 
 [GeneratedDocument12]
-DocumentPath=..\LTC6813\ife18_TS_BMS_LTC6813_v3\Project Outputs for ife18_TS_BMS_LTC6813_v3\Even.GTL
+DocumentPath=..\LTC6813\ife18_TS_BMS_LTC6813_v3\Project Outputs for ife18_TS_BMS_LTC6813_v3\Even.GKO
 DItemRevisionGUID=
 
 [GeneratedDocument13]
-DocumentPath=..\LTC6813\ife18_TS_BMS_LTC6813_v3\Project Outputs for ife18_TS_BMS_LTC6813_v3\Even.GTO
+DocumentPath=..\LTC6813\ife18_TS_BMS_LTC6813_v3\Project Outputs for ife18_TS_BMS_LTC6813_v3\Even.GTL
 DItemRevisionGUID=
 
 [GeneratedDocument14]
-DocumentPath=..\LTC6813\ife18_TS_BMS_LTC6813_v3\Project Outputs for ife18_TS_BMS_LTC6813_v3\Even.GTS
+DocumentPath=..\LTC6813\ife18_TS_BMS_LTC6813_v3\Project Outputs for ife18_TS_BMS_LTC6813_v3\Even.GTO
 DItemRevisionGUID=
 
 [GeneratedDocument15]
-DocumentPath=..\LTC6813\ife18_TS_BMS_LTC6813_v3\Project Outputs for ife18_TS_BMS_LTC6813_v3\Even.LDP
+DocumentPath=..\LTC6813\ife18_TS_BMS_LTC6813_v3\Project Outputs for ife18_TS_BMS_LTC6813_v3\Even.GTS
 DItemRevisionGUID=
 
 [GeneratedDocument16]
-DocumentPath=..\LTC6813\ife18_TS_BMS_LTC6813_v3\Project Outputs for ife18_TS_BMS_LTC6813_v3\Even.REP
+DocumentPath=..\LTC6813\ife18_TS_BMS_LTC6813_v3\Project Outputs for ife18_TS_BMS_LTC6813_v3\Even.LDP
 DItemRevisionGUID=
 
 [GeneratedDocument17]
-DocumentPath=..\LTC6813\ife18_TS_BMS_LTC6813_v3\Project Outputs for ife18_TS_BMS_LTC6813_v3\Even.RUL
+DocumentPath=..\LTC6813\ife18_TS_BMS_LTC6813_v3\Project Outputs for ife18_TS_BMS_LTC6813_v3\Even.REP
 DItemRevisionGUID=
 
 [GeneratedDocument18]
+DocumentPath=..\LTC6813\ife18_TS_BMS_LTC6813_v3\Project Outputs for ife18_TS_BMS_LTC6813_v3\Even.RUL
+DItemRevisionGUID=
+
+[GeneratedDocument19]
 DocumentPath=..\LTC6813\ife18_TS_BMS_LTC6813_v3\ife18_TS_BMS_LTC6813_v2_Library.doc
 DItemRevisionGUID=
 
@@ -273,7 +396,7 @@ AutoOpenOutJob=-1
 
 [Generic_SmartPDFSettings]
 ProjectMode=-1
-ZoomPrecision=50
+ZoomPrecision=100
 AddNetsInformation=-1
 AddNetPins=-1
 AddNetNetLabels=-1
@@ -293,18 +416,18 @@ SCH_ShowBlankets=-1
 SCH_NoERCSymbolsToShow="Thin Cross","Thick Cross","Small Cross",Checkbox,Triangle
 SCH_ShowNote=-1
 SCH_ShowNoteCollapsed=-1
-SCH_ExpandLogicalToPhysical=-1
+SCH_ExpandLogicalToPhysical=0
 SCH_VariantName=[No Variations]
 SCH_ExpandComponentDesignators=-1
-SCH_ExpandNetlabels=0
-SCH_ExpandPorts=0
+SCH_ExpandNetlabels=-1
+SCH_ExpandPorts=-1
 SCH_ExpandSheetNumber=0
 SCH_ExpandDocumentNumber=0
 SCH_HasExpandLogicalToPhysicalSheets=-1
-SaveSettingsToOutJob=-1
+SaveSettingsToOutJob=0
 
 [Generic_EDE]
-OutputDir=
+OutputDir=Project Outputs for ife18_TS_BMS_LTC6811_v1
 
 [OutputGroup1]
 Name=Netlist Outputs
@@ -1630,7 +1753,7 @@ NetClassManualEnabled=1
 NetClassSeparateForBusSections=0
 
 [LibraryUpdateOptions]
-SelectedOnly=0
+SelectedOnly=1
 UpdateVariants=1
 PartTypes=0
 ComponentLibIdentifierKind0=Any
@@ -1647,100 +1770,106 @@ ComponentUpdate1=0
 ComponentIsDeviceSheet1=0
 ComponentLibIdentifierKind2=Any
 ComponentLibraryIdentifier2=
-ComponentDesignItemID2=DMP10H400SK3-13
-ComponentSymbolReference2=DMP10H400SK3-13
-ComponentUpdate2=0
+ComponentDesignItemID2=HM2101NL
+ComponentSymbolReference2=HM2101NL
+ComponentUpdate2=1
 ComponentIsDeviceSheet2=0
 ComponentLibIdentifierKind3=Any
 ComponentLibraryIdentifier3=
-ComponentDesignItemID3=HEADER_POS2_?43650-0224
-ComponentSymbolReference3=HEADER_POS2_?43650-0224
-ComponentUpdate3=1
+ComponentDesignItemID3=LED-0603
+ComponentSymbolReference3=LED-0603
+ComponentUpdate3=0
 ComponentIsDeviceSheet3=0
 ComponentLibIdentifierKind4=Any
 ComponentLibraryIdentifier4=
-ComponentDesignItemID4=HM2101NL
-ComponentSymbolReference4=HM2101NL
-ComponentUpdate4=1
+ComponentDesignItemID4=RES-0603
+ComponentSymbolReference4=RES-0603
+ComponentUpdate4=0
 ComponentIsDeviceSheet4=0
-ComponentLibIdentifierKind5=Any
-ComponentLibraryIdentifier5=
-ComponentDesignItemID5=JUMPER
-ComponentSymbolReference5=JUMPER
+ComponentLibIdentifierKind5=Library Name And Type
+ComponentLibraryIdentifier5=IFE.SVNDbLib/RCL
+ComponentDesignItemID5=RES_0603
+ComponentSymbolReference5=RES
 ComponentUpdate5=1
 ComponentIsDeviceSheet5=0
-ComponentLibIdentifierKind6=Any
-ComponentLibraryIdentifier6=
-ComponentDesignItemID6=LED-0603
-ComponentSymbolReference6=LED-0603
-ComponentUpdate6=0
+ComponentLibIdentifierKind6=Library Name And Type
+ComponentLibraryIdentifier6=ife18_TS_BMS_LTC6813_v2_Library.SchLib
+ComponentDesignItemID6=CAP-0603
+ComponentSymbolReference6=CAP-0603
+ComponentUpdate6=1
 ComponentIsDeviceSheet6=0
-ComponentLibIdentifierKind7=Any
-ComponentLibraryIdentifier7=
-ComponentDesignItemID7=Li1x7pVTC6T
-ComponentSymbolReference7=Li1x7pVTC6T
+ComponentLibIdentifierKind7=Library Name And Type
+ComponentLibraryIdentifier7=ife18_TS_BMS_LTC6813_v2_Library.SchLib
+ComponentDesignItemID7=RES-0603
+ComponentSymbolReference7=RES-0603
 ComponentUpdate7=1
 ComponentIsDeviceSheet7=0
-ComponentLibIdentifierKind8=Any
-ComponentLibraryIdentifier8=
-ComponentDesignItemID8=LTC6813HLWE-1
-ComponentSymbolReference8=LTC6813HLWE-1
+ComponentLibIdentifierKind8=Library Name And Type
+ComponentLibraryIdentifier8=ife19_Elec_Conn_Library.SchLib
+ComponentDesignItemID8=POS2_MF43650-0224
+ComponentSymbolReference8=POS2_MF43650-0224
 ComponentUpdate8=1
 ComponentIsDeviceSheet8=0
-ComponentLibIdentifierKind9=Any
-ComponentLibraryIdentifier9=
-ComponentDesignItemID9=NTC-0603
-ComponentSymbolReference9=NTC-0603
-ComponentUpdate9=0
+ComponentLibIdentifierKind9=Library Name And Type
+ComponentLibraryIdentifier9=ife19_Elec_Library.SchLib
+ComponentDesignItemID9=DIODE-SMB
+ComponentSymbolReference9=DIODE-SMB
+ComponentUpdate9=1
 ComponentIsDeviceSheet9=0
-ComponentLibIdentifierKind10=Any
-ComponentLibraryIdentifier10=
-ComponentDesignItemID10=PHPT610030NK
-ComponentSymbolReference10=PHPT610030NK
-ComponentUpdate10=1
+ComponentLibIdentifierKind10=Library Name And Type
+ComponentLibraryIdentifier10=ife19_Elec_Library.SchLib
+ComponentDesignItemID10=NMOS-SOT23
+ComponentSymbolReference10=NMOS-SOT23
+ComponentUpdate10=0
 ComponentIsDeviceSheet10=0
-ComponentLibIdentifierKind11=Any
-ComponentLibraryIdentifier11=
-ComponentDesignItemID11=RES-0603
-ComponentSymbolReference11=RES-0603
+ComponentLibIdentifierKind11=Library Name And Type
+ComponentLibraryIdentifier11=ife19_Elec_Library.SchLib
+ComponentDesignItemID11=NMOS-TO252
+ComponentSymbolReference11=NMOS-TO252
 ComponentUpdate11=0
 ComponentIsDeviceSheet11=0
-ComponentLibIdentifierKind12=Any
-ComponentLibraryIdentifier12=
-ComponentDesignItemID12=RES-2512
-ComponentSymbolReference12=RES-2512
-ComponentUpdate12=1
+ComponentLibIdentifierKind12=Library Name And Type
+ComponentLibraryIdentifier12=ife19_Elec_Library.SchLib
+ComponentDesignItemID12=NTC-0603
+ComponentSymbolReference12=NTC-0603
+ComponentUpdate12=0
 ComponentIsDeviceSheet12=0
-ComponentLibIdentifierKind13=Any
-ComponentLibraryIdentifier13=
-ComponentDesignItemID13=Testpoint
-ComponentSymbolReference13=Testpoint
-ComponentUpdate13=1
+ComponentLibIdentifierKind13=Library Name And Type
+ComponentLibraryIdentifier13=ife19_Elec_Library.SchLib
+ComponentDesignItemID13=RES-0603
+ComponentSymbolReference13=RES-0603
+ComponentUpdate13=0
 ComponentIsDeviceSheet13=0
-ComponentLibIdentifierKind14=Any
-ComponentLibraryIdentifier14=
-ComponentDesignItemID14=TKH45
-ComponentSymbolReference14=TKH45
-ComponentUpdate14=0
+ComponentLibIdentifierKind14=Library Name And Type
+ComponentLibraryIdentifier14=LTC6811.SchLib
+ComponentDesignItemID14=CAP-1206
+ComponentSymbolReference14=CAP-1206
+ComponentUpdate14=1
 ComponentIsDeviceSheet14=0
 ComponentLibIdentifierKind15=Library Name And Type
-ComponentLibraryIdentifier15=IFE_Jumpers.IntLib
-ComponentDesignItemID15=JUMPER_2W
-ComponentSymbolReference15=JUMPER_2W
+ComponentLibraryIdentifier15=LTC6811.SchLib
+ComponentDesignItemID15=DPDT Solder
+ComponentSymbolReference15=DPDT Solder
 ComponentUpdate15=1
 ComponentIsDeviceSheet15=0
 ComponentLibIdentifierKind16=Library Name And Type
-ComponentLibraryIdentifier16=ife18_TS_BMS_LTC6813_v2_Library.SchLib
-ComponentDesignItemID16=CAP-0603
-ComponentSymbolReference16=CAP-0603
+ComponentLibraryIdentifier16=LTC6811.SchLib
+ComponentDesignItemID16=Li1x7pVTC6T_Clip
+ComponentSymbolReference16=Li1x7pVTC6T_Clip
 ComponentUpdate16=1
 ComponentIsDeviceSheet16=0
 ComponentLibIdentifierKind17=Library Name And Type
-ComponentLibraryIdentifier17=ife18_TS_BMS_LTC6813_v2_Library.SchLib
-ComponentDesignItemID17=RES-0603
-ComponentSymbolReference17=RES-0603
+ComponentLibraryIdentifier17=LTC6811.SchLib
+ComponentDesignItemID17=LT-LTC6811-2-G-48
+ComponentSymbolReference17=LT-LTC6811-2-G-48
 ComponentUpdate17=1
 ComponentIsDeviceSheet17=0
+ComponentLibIdentifierKind18=Library Name And Type
+ComponentLibraryIdentifier18=LTC6811.SchLib
+ComponentDesignItemID18=TI-LP2951-50D8
+ComponentSymbolReference18=TI-LP2951-50D8
+ComponentUpdate18=1
+ComponentIsDeviceSheet18=0
 FullReplace=1
 UpdateDesignatorLock=1
 UpdatePartIDLock=1
@@ -1756,24 +1885,30 @@ RemoveModels=1
 UpdateCurrentModels=1
 ParameterName0=Comment
 ParameterUpdate0=1
-ParameterName1=Component Kind
+ParameterName1=Company
 ParameterUpdate1=1
-ParameterName2=Description
+ParameterName2=Component Kind
 ParameterUpdate2=1
-ParameterName3=DeviceName
+ParameterName3=Description
 ParameterUpdate3=1
-ParameterName4=DeviceSetName
+ParameterName4=DeviceName
 ParameterUpdate4=1
-ParameterName5=GateName_1
+ParameterName5=DeviceSetName
 ParameterUpdate5=1
-ParameterName6=Library Reference
+ParameterName6=GateName_1
 ParameterUpdate6=1
-ParameterName7=LibraryName
+ParameterName7=Library Reference
 ParameterUpdate7=1
-ParameterName8=Package
+ParameterName8=LibraryName
 ParameterUpdate8=1
-ParameterName9=SymbolName_1
+ParameterName9=Package
 ParameterUpdate9=1
+ParameterName10=Part
+ParameterUpdate10=1
+ParameterName11=SymbolName_1
+ParameterUpdate11=1
+ParameterName12=Value
+ParameterUpdate12=1
 ModelTypeGroup0=PCBLIB
 ModelTypeUpdate0=1
 ModelType0=PCBLIB
@@ -1786,19 +1921,19 @@ ModelType2=PCBLIB
 ModelName2=CAP-0603
 ModelUpdate2=1
 ModelType3=PCBLIB
-ModelName3=HM2101
+ModelName3=CAPCP3216X16N
 ModelUpdate3=1
 ModelType4=PCBLIB
-ModelName4=LED-0603
+ModelName4=DPDT Solder
 ModelUpdate4=1
 ModelType5=PCBLIB
-ModelName5=LFPAK56D
+ModelName5=HM2101
 ModelUpdate5=1
 ModelType6=PCBLIB
-ModelName6=Li1x7pVTC6T
+ModelName6=LED-0603
 ModelUpdate6=1
 ModelType7=PCBLIB
-ModelName7=LQFP64_LWE_A
+ModelName7=Li1x7pVTC6T_Clips
 ModelUpdate7=1
 ModelType8=PCBLIB
 ModelName8=NTC-0603
@@ -1807,23 +1942,20 @@ ModelType9=PCBLIB
 ModelName9=RES-0603
 ModelUpdate9=1
 ModelType10=PCBLIB
-ModelName10=RES-2512
+ModelName10=SMB
 ModelUpdate10=1
 ModelType11=PCBLIB
-ModelName11=SJ
+ModelName11=SOIC127P600X175-8N
 ModelUpdate11=1
 ModelType12=PCBLIB
-ModelName12=SJ_2
+ModelName12=SOT23
 ModelUpdate12=1
 ModelType13=PCBLIB
-ModelName13=Testpoint
+ModelName13=SSOP-48N
 ModelUpdate13=1
 ModelType14=PCBLIB
 ModelName14=TO252
 ModelUpdate14=1
-ModelType15=PCBLIB
-ModelName15=TO252-TKH-45
-ModelUpdate15=1
 
 [DatabaseUpdateOptions]
 SelectedOnly=0
