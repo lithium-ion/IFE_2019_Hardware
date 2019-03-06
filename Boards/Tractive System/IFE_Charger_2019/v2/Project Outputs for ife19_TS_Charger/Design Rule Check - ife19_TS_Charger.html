@@ -1,0 +1,533 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<style type="text/css">
+		h1, h2, h3, h4, h5, h6 {
+			font-family : segoe ui;
+			color : black;
+			background-color : #EDE7D9;
+			padding: 0.3em;
+		}
+
+		h1 {
+			font-size: 1.2em;
+		}		
+
+		h2 {
+			font-size: 1.2em;
+		}
+
+		body {
+			font-family : segoe ui;
+		}
+
+		td, th {
+			padding: 0.5em;
+			text-align : left;
+			width: 10em;
+		}
+		th {
+			background-color : #EEEEEE;
+
+		}
+		th.column1, td.column1 {
+			text-align: left;
+			width : auto;
+		}
+		table {
+			width : 100%;
+			font-size: 0.9em;
+		}
+
+		.DRC_summary_header {
+			padding-bottom : 0.1em;
+			border : 0px solid black;
+			width: 100%;
+			align: left;
+		}
+
+		.DRC_summary_header_col1,
+		.DRC_summary_header_col2, 
+		.DRC_summary_header_col3 {
+			color : black;
+			font-size:100%;
+			padding : 0em;
+			padding-top : 0.2em;
+			padding-bottom 0.2em;
+			border : 0px solid black;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.DRC_summary_header_col1 {
+			font-weight: bold;
+			width: 8em;
+		}
+
+		.DRC_summary_header_col2 {
+			width: 0.1em;
+		
+		}
+
+		.DRC_summary_header_col3 {
+			width : auto;
+		}
+
+		.header_holder {
+		    Width = 100%;
+		    border = 0px solid green;
+		    padding = 0;
+		}
+
+
+		.front_matter, .front_matter_column1, .front_matter_column2, .front_matter_column3
+		{
+			left : 0;
+			top : 0;
+			padding: 0em;
+			padding-top : 0.1em;
+			border : 0px solid black;
+			width : 100%;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.front_matter_column1 {
+			width : 8em;
+			font-weight: bold;
+		}
+
+		.front_matter_column2 {
+			width: 0.1em;
+		}
+
+		.front_matter_column3 {
+			width : auto;
+		}
+
+		.total_column1, .total_column {
+			font-weight : bold;
+		}
+		.total_column1 {
+			text-align : left;
+		}
+		.warning, .error {
+			color : red;
+			font-weight : bold;
+		}
+		tr.onmouseout_odd {
+			background-color : #white;
+		}
+		tr.onmouseout_even { 
+			background-color : #FAFAFA;
+		}
+		tr.onmouseover_odd, tr.onmouseover_even { 
+			background-color : #EEEEEE;
+		} 
+		a:link, a:visited, .q a:link,.q a:active,.q {
+			color: #21489e; 
+		}
+		a:link.callback, a:visited.callback { 
+			color: #21489e;
+		}
+		a:link.customize, a:visited.customize {
+			color: #C0C0C0;
+			position: absolute; 
+			right: 10px;
+		}	
+		p.contents_level1 {
+			font-weight : bold;
+			font-size : 110%;
+			margin : 0.5em;
+		}
+		p.contents_level2 {
+			position : relative;
+			left : 20px;
+			margin : 0.5em;
+		}
+	</style><script type="text/javascript">
+		function coordToMils(coord) {
+			var number = coord / 10000;
+			
+			if (number != number.toFixed(3))
+				number = number.toFixed(3);
+
+			return number + 'mil'
+		}
+
+		function coordToMM(coord) {
+			var number = 0.0254 * coord / 10000;
+			
+			if (number != number.toFixed(4))
+				number = number.toFixed(4);
+			
+			return number + 'mm'
+		}
+	
+		function convertCoord(coordNode, units) {
+			for (var i = 0; i < coordNode.childNodes.length; i++) {
+				coordNode.removeChild(coordNode.childNodes[i]);
+			}
+
+			var coord = coordNode.getAttribute('value');
+			if (coord != null) {
+				if (units == 'mm') {
+					textNode = document.createTextNode(coordToMM(coord));
+					coordNode.appendChild(textNode);
+				} else if (units == 'mil') {
+					textNode = document.createTextNode(coordToMils(coord));		
+					coordNode.appendChild(textNode);	
+				}
+			}
+		}
+	
+		function convertUnits(unitNode, units) {
+			for (var i = 0; i < unitNode.childNodes.length; i++) {
+				unitNode.removeChild(unitNode.childNodes[i]);		
+			}
+		
+			textNode = document.createTextNode(units); 
+			unitNode.appendChild(textNode);
+		}
+	
+		function changeUnits(radio_input, units) {
+			if (radio_input.checked) {
+			
+				var elements = document.getElementsByName('coordinate');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertCoord(elements[i], units);
+					}
+				}
+	
+				var elements = document.getElementsByName('units');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertUnits(elements[i], units);
+					}
+				}
+			}
+		}
+	</script><title>Design Rule Verification Report</title>
+</head>
+<body onload=""><img ALT="Altium" src="
+			file://C:\Users\Public\Documents\Altium\AD19\Templates\AD_logo.png
+		"><h1>Design Rule Verification Report</h1>
+<table class="header_holder">
+<td class="column1">
+<table class="front_matter">
+<tr class="front_matter">
+<td class="front_matter_column1">Date:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">3/5/2019</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">10:30:30 PM</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Elapsed Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">00:00:00</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Filename:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3"><a href="file:///C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_Charger_2019\v2\ife19_TS_Charger.PcbDoc" class="file"><acronym title="C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_Charger_2019\v2\ife19_TS_Charger.PcbDoc">C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_Charger_2019\v2\ife19_TS_Charger.PcbDoc</acronym></a></td>
+</tr>
+</table>
+</td>
+<td class="column2">
+<table class="DRC_summary_header">
+<tr>
+<td class="DRC_summary_header_col1">Warnings:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3">0</td></tr>
+<tr>
+<td class="DRC_summary_header_col1">Rule Violations:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3" style="color : red">59</td></tr>
+</table>
+</td>
+</table><a name="IDEKF4EMYQL5K4CAN2IBIVFCVF1F2D2P1GPBW4KPGC0GQXGS4JS0DM"><h2>Summary</h2></a><table>
+<tr>
+<th class="column1">Warnings</th>
+<th class="column2">Count</th>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">0</td>
+</tr>
+</table><br><table>
+<tr>
+<th class="column1">Rule Violations</th>
+<th class="column2">Count</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDUPJAJWMRQBMGH0EDRO2Y0V2KKHZXNFNG3BGTOWF2VTXT1OFOV0EK">Clearance Constraint (Gap=0.152mm) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDCNH2O5UPTZZ1DBID2N20IQMJNOIRCVQBPANAYTCSYRYEVMMZDT1">Short-Circuit Constraint (Allowed=No) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDYOE2TPRJMSSXFSAMQHAMH3MBRP5AY1EHBP3XXZKWNCBFT0ALSAFO">Un-Routed Net Constraint ( (All) )</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#ID4SQZTW245M0RP0BKL1GSPMBHPJWGAECZHZJ01TLRUTOFLKLXG0JH">Modified Polygon (Allow modified: No), (Allow shelved: No)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDQDLUNO0QOMHBH5XU2WOS3JLMFLDZUWN2VHRALTCMGTGQIUZINGBF">Width Constraint (Min=0.254mm) (Max=0.254mm) (Preferred=0.254mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDUBUJLWYHC3W3NIOPUNFQRPA1ECJQISQM5IFKTAD431GHPILPRZT">Power Plane Connect Rule(Relief Connect )(Expansion=0.508mm) (Conductor Width=0.254mm) (Air Gap=0.254mm) (Entries=4) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDCZ3QAJZFACC3NSNOGOAWW20SJHV4RNZOH4SOCFEFYYU4ERS510XP">Minimum Annular Ring (Minimum=0.076mm) (All)</a></td>
+<td class="column2">3</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDBURX1TK00JVQP5OU1S5YG0LUEIY421GHNASZZ3HAG45OZV5N04CE">Hole Size Constraint (Min=0.3mm) (Max=5mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDDGK1NII4VSQOJD2PFCCGX5FGTLM3AWZN1OHIKMF2MI3M2GPJQV0C">Hole To Hole Clearance (Gap=0.254mm) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDSEUMSB2ENOP0IT54KRM5EWDHTOXWJOEAX2EBKHICT405FFCJHDBF">Minimum Solder Mask Sliver (Gap=0.254mm) (All),(All)</a></td>
+<td class="column2">18</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDYUJFKXUJVUVUNYTHN2BC5JM4IGXCK0JOHSZ1PPKOTKHK4G1Q1TD">Silk To Solder Mask (Clearance=0.254mm) (IsPad),(All)</a></td>
+<td class="column2">28</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDHHIIAINNEHCOOQBN2PKHL2WH2F55JAH4F3M4DJJLJM1HL5W3T5KH">Silk to Silk (Clearance=0.254mm) (All),(All)</a></td>
+<td class="column2">4</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDL4ZJI5RIQBDKMGMLZ5KNFUTDRITINBXVDUB5WECZQA5MPQINB5PE">Net Antennae (Tolerance=0mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#ID5QXSS0JTZ4JWO4K51PJCWCTN0OB4CROZHU23I5GX4XJQJ4IJBNGN">Board Clearance Constraint (Gap=0mm) (All)</a></td>
+<td class="column2">6</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDNBJ1ICZOHVVWJSKL0UNC41V2EFAXBG3WEX1MEKFDMHQ4CWWLITML">Room ife19_TS_Charger (Bounding Region = (86.876mm, 57.928mm, 136.152mm, 84.074mm) (InComponentClass('ife19_TS_Charger'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDBTPS4OT5P2WIFVCI4T2FEO1SEH2VZNPVKO12XWIYSZW0ZMMTKRU">Height Constraint (Min=0mm) (Max=25.4mm) (Prefered=12.7mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">59</td>
+</tr>
+</table><br><a name="IDCZ3QAJZFACC3NSNOGOAWW20SJHV4RNZOH4SOCFEFYYU4ERS510XP"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Minimum Annular Ring (Minimum=0.076mm) (All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_Charger_2019\v2\ife19_TS_Charger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4372.516mil|Location2.X=4375.516mil|Location1.Y=2337.083mil|Location2.Y=2340.083mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_Charger_2019\v2\ife19_TS_Charger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4372.516mil|Location2.X=4375.516mil|Location1.Y=2337.083mil|Location2.Y=2340.083mil|Absolute=True">Minimum Annular Ring: (Collision &lt; 0.076mm) Via (111.1mm,57.9mm) from Top Layer to Bottom Layer (Annular Ring=0mm) On (Top Layer)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_Charger_2019\v2\ife19_TS_Charger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5037.87mil|Location2.X=5040.87mil|Location1.Y=3372.516mil|Location2.Y=3375.516mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_Charger_2019\v2\ife19_TS_Charger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5037.87mil|Location2.X=5040.87mil|Location1.Y=3372.516mil|Location2.Y=3375.516mil|Absolute=True">Minimum Annular Ring: (Collision &lt; 0.076mm) Via (128mm,84.2mm) from Top Layer to Bottom Layer (Annular Ring=0mm) On (Top Layer)</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_Charger_2019\v2\ife19_TS_Charger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3738.657mil|Location2.X=3741.657mil|Location1.Y=3372.516mil|Location2.Y=3375.516mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_Charger_2019\v2\ife19_TS_Charger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3738.657mil|Location2.X=3741.657mil|Location1.Y=3372.516mil|Location2.Y=3375.516mil|Absolute=True">Minimum Annular Ring: (Collision &lt; 0.076mm) Via (95mm,84.2mm) from Top Layer to Bottom Layer (Annular Ring=0mm) On (Top Layer)</acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDSEUMSB2ENOP0IT54KRM5EWDHTOXWJOEAX2EBKHICT405FFCJHDBF"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Minimum Solder Mask Sliver (Gap=0.254mm) (All),(All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_Charger_2019\v2\ife19_TS_Charger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4132.717mil|Location2.X=4143.967mil|Location1.Y=2807.23mil|Location2.Y=2818.48mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_Charger_2019\v2\ife19_TS_Charger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4132.717mil|Location2.X=4143.967mil|Location1.Y=2807.23mil|Location2.Y=2818.48mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.097mm &lt; 0.254mm) Between Pad C1-1(104.389mm,72.223mm) on Top Layer And Pad C1-2(105.839mm,72.223mm) on Top Layer [Top Solder] Mask Sliver [0.097mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_Charger_2019\v2\ife19_TS_Charger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4807.205mil|Location2.X=4818.455mil|Location1.Y=2807.23mil|Location2.Y=2818.48mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_Charger_2019\v2\ife19_TS_Charger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4807.205mil|Location2.X=4818.455mil|Location1.Y=2807.23mil|Location2.Y=2818.48mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.097mm &lt; 0.254mm) Between Pad C2-1(121.521mm,72.223mm) on Top Layer And Pad C2-2(122.971mm,72.223mm) on Top Layer [Top Solder] Mask Sliver [0.097mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_Charger_2019\v2\ife19_TS_Charger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3904.74mil|Location2.X=3915.99mil|Location1.Y=2762.805mil|Location2.Y=2774.055mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_Charger_2019\v2\ife19_TS_Charger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3904.74mil|Location2.X=3915.99mil|Location1.Y=2762.805mil|Location2.Y=2774.055mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.247mm &lt; 0.254mm) Between Pad D1-1(100.275mm,68.693mm) on Top Layer And Pad D1-2(100.275mm,71.943mm) on Top Layer [Top Solder] Mask Sliver [0.247mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_Charger_2019\v2\ife19_TS_Charger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4599.583mil|Location2.X=4610.833mil|Location1.Y=2757.805mil|Location2.Y=2769.055mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_Charger_2019\v2\ife19_TS_Charger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4599.583mil|Location2.X=4610.833mil|Location1.Y=2757.805mil|Location2.Y=2769.055mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.247mm &lt; 0.254mm) Between Pad D2-1(117.924mm,68.566mm) on Top Layer And Pad D2-2(117.924mm,71.816mm) on Top Layer [Top Solder] Mask Sliver [0.247mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_Charger_2019\v2\ife19_TS_Charger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4594.662mil|Location2.X=4605.912mil|Location1.Y=2442.805mil|Location2.Y=2454.055mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_Charger_2019\v2\ife19_TS_Charger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4594.662mil|Location2.X=4605.912mil|Location1.Y=2442.805mil|Location2.Y=2454.055mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.247mm &lt; 0.254mm) Between Pad D3-1(117.799mm,60.565mm) on Top Layer And Pad D3-2(117.799mm,63.815mm) on Top Layer [Top Solder] Mask Sliver [0.247mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_Charger_2019\v2\ife19_TS_Charger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3924.74mil|Location2.X=3935.99mil|Location1.Y=2447.805mil|Location2.Y=2459.055mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_Charger_2019\v2\ife19_TS_Charger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3924.74mil|Location2.X=3935.99mil|Location1.Y=2447.805mil|Location2.Y=2459.055mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.247mm &lt; 0.254mm) Between Pad D4-1(100.783mm,60.692mm) on Top Layer And Pad D4-2(100.783mm,63.942mm) on Top Layer [Top Solder] Mask Sliver [0.247mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_Charger_2019\v2\ife19_TS_Charger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4254.178mil|Location2.X=4265.428mil|Location1.Y=2587.726mil|Location2.Y=2598.976mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_Charger_2019\v2\ife19_TS_Charger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4254.178mil|Location2.X=4265.428mil|Location1.Y=2587.726mil|Location2.Y=2598.976mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.193mm &lt; 0.254mm) Between Pad U1-1(108.772mm,66.196mm) on Top Layer And Pad U1-2(108.772mm,65.546mm) on Top Layer [Top Solder] Mask Sliver [0.193mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_Charger_2019\v2\ife19_TS_Charger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4486.462mil|Location2.X=4497.712mil|Location1.Y=2510.954mil|Location2.Y=2522.204mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_Charger_2019\v2\ife19_TS_Charger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4486.462mil|Location2.X=4497.712mil|Location1.Y=2510.954mil|Location2.Y=2522.204mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.193mm &lt; 0.254mm) Between Pad U1-10(114.672mm,63.596mm) on Top Layer And Pad U1-11(114.672mm,64.246mm) on Top Layer [Top Solder] Mask Sliver [0.193mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_Charger_2019\v2\ife19_TS_Charger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4490.32mil|Location2.X=4501.57mil|Location1.Y=2487.293mil|Location2.Y=2498.543mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_Charger_2019\v2\ife19_TS_Charger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4490.32mil|Location2.X=4501.57mil|Location1.Y=2487.293mil|Location2.Y=2498.543mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.095mm &lt; 0.254mm) Between Pad U1-10(114.672mm,63.596mm) on Top Layer And Pad U1-9(114.672mm,62.946mm) on Top Layer [Top Solder] Mask Sliver [0.095mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_Charger_2019\v2\ife19_TS_Charger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4486.462mil|Location2.X=4497.712mil|Location1.Y=2536.545mil|Location2.Y=2547.795mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_Charger_2019\v2\ife19_TS_Charger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4486.462mil|Location2.X=4497.712mil|Location1.Y=2536.545mil|Location2.Y=2547.795mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.193mm &lt; 0.254mm) Between Pad U1-11(114.672mm,64.246mm) on Top Layer And Pad U1-12(114.672mm,64.896mm) on Top Layer [Top Solder] Mask Sliver [0.193mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_Charger_2019\v2\ife19_TS_Charger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4486.462mil|Location2.X=4497.712mil|Location1.Y=2562.135mil|Location2.Y=2573.385mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_Charger_2019\v2\ife19_TS_Charger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4486.462mil|Location2.X=4497.712mil|Location1.Y=2562.135mil|Location2.Y=2573.385mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.193mm &lt; 0.254mm) Between Pad U1-12(114.672mm,64.896mm) on Top Layer And Pad U1-13(114.672mm,65.546mm) on Top Layer [Top Solder] Mask Sliver [0.193mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_Charger_2019\v2\ife19_TS_Charger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4486.462mil|Location2.X=4497.712mil|Location1.Y=2587.726mil|Location2.Y=2598.976mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_Charger_2019\v2\ife19_TS_Charger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4486.462mil|Location2.X=4497.712mil|Location1.Y=2587.726mil|Location2.Y=2598.976mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.193mm &lt; 0.254mm) Between Pad U1-13(114.672mm,65.546mm) on Top Layer And Pad U1-14(114.672mm,66.196mm) on Top Layer [Top Solder] Mask Sliver [0.193mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_Charger_2019\v2\ife19_TS_Charger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4254.178mil|Location2.X=4265.428mil|Location1.Y=2562.135mil|Location2.Y=2573.385mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_Charger_2019\v2\ife19_TS_Charger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4254.178mil|Location2.X=4265.428mil|Location1.Y=2562.135mil|Location2.Y=2573.385mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.193mm &lt; 0.254mm) Between Pad U1-2(108.772mm,65.546mm) on Top Layer And Pad U1-3(108.772mm,64.896mm) on Top Layer [Top Solder] Mask Sliver [0.193mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_Charger_2019\v2\ife19_TS_Charger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4254.178mil|Location2.X=4265.428mil|Location1.Y=2536.545mil|Location2.Y=2547.795mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_Charger_2019\v2\ife19_TS_Charger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4254.178mil|Location2.X=4265.428mil|Location1.Y=2536.545mil|Location2.Y=2547.795mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.193mm &lt; 0.254mm) Between Pad U1-3(108.772mm,64.896mm) on Top Layer And Pad U1-4(108.772mm,64.246mm) on Top Layer [Top Solder] Mask Sliver [0.193mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_Charger_2019\v2\ife19_TS_Charger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4254.178mil|Location2.X=4265.428mil|Location1.Y=2510.954mil|Location2.Y=2522.204mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_Charger_2019\v2\ife19_TS_Charger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4254.178mil|Location2.X=4265.428mil|Location1.Y=2510.954mil|Location2.Y=2522.204mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.193mm &lt; 0.254mm) Between Pad U1-4(108.772mm,64.246mm) on Top Layer And Pad U1-5(108.772mm,63.596mm) on Top Layer [Top Solder] Mask Sliver [0.193mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_Charger_2019\v2\ife19_TS_Charger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4254.178mil|Location2.X=4265.428mil|Location1.Y=2485.364mil|Location2.Y=2496.614mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_Charger_2019\v2\ife19_TS_Charger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4254.178mil|Location2.X=4265.428mil|Location1.Y=2485.364mil|Location2.Y=2496.614mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.193mm &lt; 0.254mm) Between Pad U1-5(108.772mm,63.596mm) on Top Layer And Pad U1-6(108.772mm,62.946mm) on Top Layer [Top Solder] Mask Sliver [0.193mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_Charger_2019\v2\ife19_TS_Charger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4258.037mil|Location2.X=4269.287mil|Location1.Y=2461.702mil|Location2.Y=2472.952mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_Charger_2019\v2\ife19_TS_Charger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4258.037mil|Location2.X=4269.287mil|Location1.Y=2461.702mil|Location2.Y=2472.952mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.095mm &lt; 0.254mm) Between Pad U1-6(108.772mm,62.946mm) on Top Layer And Pad U1-7(108.772mm,62.296mm) on Top Layer [Top Solder] Mask Sliver [0.095mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_Charger_2019\v2\ife19_TS_Charger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4350.265mil|Location2.X=4361.515mil|Location1.Y=2531.962mil|Location2.Y=2543.768mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_Charger_2019\v2\ife19_TS_Charger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4350.265mil|Location2.X=4361.515mil|Location1.Y=2531.962mil|Location2.Y=2543.768mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.171mm &lt; 0.254mm) Between Via (110.253mm,64.75mm) from Top Layer to Bottom Layer And Via (111.026mm,64.159mm) from Top Layer to Bottom Layer [Top Solder] Mask Sliver [0.171mm] / [Bottom Solder] Mask Sliver [0.171mm]</acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDYUJFKXUJVUVUNYTHN2BC5JM4IGXCK0JOHSZ1PPKOTKHK4G1Q1TD"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Silk To Solder Mask (Clearance=0.254mm) (IsPad),(All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_Charger_2019\v2\ife19_TS_Charger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4766.15mil|Location2.X=4773.817mil|Location1.Y=2861.16mil|Location2.Y=2868.827mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_Charger_2019\v2\ife19_TS_Charger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4766.15mil|Location2.X=4773.817mil|Location1.Y=2861.16mil|Location2.Y=2868.827mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (Collision &lt; 0.254mm) Between Pad C2-1(121.521mm,72.223mm) on Top Layer And Text "C2" (119.888mm,72.263mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_Charger_2019\v2\ife19_TS_Charger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3924.375mil|Location2.X=3935.625mil|Location1.Y=2886.887mil|Location2.Y=2898.137mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_Charger_2019\v2\ife19_TS_Charger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3924.375mil|Location2.X=3935.625mil|Location1.Y=2886.887mil|Location2.Y=2898.137mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.253mm &lt; 0.254mm) Between Pad D1-2(100.275mm,71.943mm) on Top Layer And Text "D1" (99.822mm,73.66mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.253mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_Charger_2019\v2\ife19_TS_Charger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4667.521mil|Location2.X=4678.771mil|Location1.Y=2563.83mil|Location2.Y=2575.08mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_Charger_2019\v2\ife19_TS_Charger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4667.521mil|Location2.X=4678.771mil|Location1.Y=2563.83mil|Location2.Y=2575.08mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.139mm &lt; 0.254mm) Between Pad D3-2(117.799mm,63.815mm) on Top Layer And Text "Q4" (118.745mm,65.278mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.139mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_Charger_2019\v2\ife19_TS_Charger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5010.834mil|Location2.X=5022.084mil|Location1.Y=3069.369mil|Location2.Y=3080.619mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_Charger_2019\v2\ife19_TS_Charger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5010.834mil|Location2.X=5022.084mil|Location1.Y=3069.369mil|Location2.Y=3080.619mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.164mm &lt; 0.254mm) Between Pad Positive-2(129mm,78.329mm) on Top Layer And Text "Negative" (119.761mm,77.597mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.164mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_Charger_2019\v2\ife19_TS_Charger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3933.425mil|Location2.X=3944.675mil|Location1.Y=3217.963mil|Location2.Y=3229.213mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_Charger_2019\v2\ife19_TS_Charger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3933.425mil|Location2.X=3944.675mil|Location1.Y=3217.963mil|Location2.Y=3229.213mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.2mm &lt; 0.254mm) Between Pad R1-1(100.402mm,81.429mm) on Top Layer And Track (100.052mm,82.079mm)(100.052mm,82.179mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.2mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_Charger_2019\v2\ife19_TS_Charger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3960.985mil|Location2.X=3972.235mil|Location1.Y=3217.963mil|Location2.Y=3229.213mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_Charger_2019\v2\ife19_TS_Charger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3960.985mil|Location2.X=3972.235mil|Location1.Y=3217.963mil|Location2.Y=3229.213mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.2mm &lt; 0.254mm) Between Pad R1-1(100.402mm,81.429mm) on Top Layer And Track (100.752mm,82.079mm)(100.752mm,82.179mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.2mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_Charger_2019\v2\ife19_TS_Charger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3933.425mil|Location2.X=3944.675mil|Location1.Y=3237.648mil|Location2.Y=3248.898mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_Charger_2019\v2\ife19_TS_Charger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3933.425mil|Location2.X=3944.675mil|Location1.Y=3237.648mil|Location2.Y=3248.898mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.2mm &lt; 0.254mm) Between Pad R1-2(100.402mm,82.829mm) on Top Layer And Track (100.052mm,82.079mm)(100.052mm,82.179mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.2mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_Charger_2019\v2\ife19_TS_Charger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3963.575mil|Location2.X=3977.13mil|Location1.Y=3237.546mil|Location2.Y=3248.796mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_Charger_2019\v2\ife19_TS_Charger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3963.575mil|Location2.X=3977.13mil|Location1.Y=3237.546mil|Location2.Y=3248.796mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.216mm &lt; 0.254mm) Between Pad R1-2(100.402mm,82.829mm) on Top Layer And Track (100.752mm,82.079mm)(100.752mm,82.179mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.216mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_Charger_2019\v2\ife19_TS_Charger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4146.536mil|Location2.X=4157.786mil|Location1.Y=2684.025mil|Location2.Y=2695.275mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_Charger_2019\v2\ife19_TS_Charger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4146.536mil|Location2.X=4157.786mil|Location1.Y=2684.025mil|Location2.Y=2695.275mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.2mm &lt; 0.254mm) Between Pad R2-1(105.915mm,68.667mm) on Top Layer And Track (105.165mm,68.317mm)(105.265mm,68.317mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.2mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_Charger_2019\v2\ife19_TS_Charger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4146.435mil|Location2.X=4157.685mil|Location1.Y=2711.903mil|Location2.Y=2725.425mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_Charger_2019\v2\ife19_TS_Charger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4146.435mil|Location2.X=4157.685mil|Location1.Y=2711.903mil|Location2.Y=2725.425mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.216mm &lt; 0.254mm) Between Pad R2-1(105.915mm,68.667mm) on Top Layer And Track (105.165mm,69.017mm)(105.265mm,69.017mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.216mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_Charger_2019\v2\ife19_TS_Charger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4126.851mil|Location2.X=4138.101mil|Location1.Y=2684.025mil|Location2.Y=2695.275mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_Charger_2019\v2\ife19_TS_Charger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4126.851mil|Location2.X=4138.101mil|Location1.Y=2684.025mil|Location2.Y=2695.275mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.2mm &lt; 0.254mm) Between Pad R2-2(104.515mm,68.667mm) on Top Layer And Track (105.165mm,68.317mm)(105.265mm,68.317mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.2mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_Charger_2019\v2\ife19_TS_Charger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4126.851mil|Location2.X=4138.101mil|Location1.Y=2711.585mil|Location2.Y=2722.835mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_Charger_2019\v2\ife19_TS_Charger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4126.851mil|Location2.X=4138.101mil|Location1.Y=2711.585mil|Location2.Y=2722.835mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.2mm &lt; 0.254mm) Between Pad R2-2(104.515mm,68.667mm) on Top Layer And Track (105.165mm,69.017mm)(105.265mm,69.017mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.2mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_Charger_2019\v2\ife19_TS_Charger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4817.047mil|Location2.X=4828.297mil|Location1.Y=2719.025mil|Location2.Y=2730.275mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_Charger_2019\v2\ife19_TS_Charger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4817.047mil|Location2.X=4828.297mil|Location1.Y=2719.025mil|Location2.Y=2730.275mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.2mm &lt; 0.254mm) Between Pad R3-1(122.946mm,69.556mm) on Top Layer And Track (122.196mm,69.206mm)(122.296mm,69.206mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.2mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_Charger_2019\v2\ife19_TS_Charger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4816.947mil|Location2.X=4828.197mil|Location1.Y=2746.903mil|Location2.Y=2760.425mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_Charger_2019\v2\ife19_TS_Charger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4816.947mil|Location2.X=4828.197mil|Location1.Y=2746.903mil|Location2.Y=2760.425mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.216mm &lt; 0.254mm) Between Pad R3-1(122.946mm,69.556mm) on Top Layer And Track (122.196mm,69.906mm)(122.296mm,69.906mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.216mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_Charger_2019\v2\ife19_TS_Charger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4763.863mil|Location2.X=4775.113mil|Location1.Y=2729.372mil|Location2.Y=2740.622mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_Charger_2019\v2\ife19_TS_Charger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4763.863mil|Location2.X=4775.113mil|Location1.Y=2729.372mil|Location2.Y=2740.622mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.102mm &lt; 0.254mm) Between Pad R3-2(121.546mm,69.556mm) on Top Layer And Text "R3" (119.761mm,69.215mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.102mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_Charger_2019\v2\ife19_TS_Charger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4797.362mil|Location2.X=4808.612mil|Location1.Y=2719.025mil|Location2.Y=2730.275mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_Charger_2019\v2\ife19_TS_Charger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4797.362mil|Location2.X=4808.612mil|Location1.Y=2719.025mil|Location2.Y=2730.275mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.2mm &lt; 0.254mm) Between Pad R3-2(121.546mm,69.556mm) on Top Layer And Track (122.196mm,69.206mm)(122.296mm,69.206mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.2mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_Charger_2019\v2\ife19_TS_Charger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4797.362mil|Location2.X=4808.612mil|Location1.Y=2746.585mil|Location2.Y=2757.835mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_Charger_2019\v2\ife19_TS_Charger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4797.362mil|Location2.X=4808.612mil|Location1.Y=2746.585mil|Location2.Y=2757.835mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.2mm &lt; 0.254mm) Between Pad R3-2(121.546mm,69.556mm) on Top Layer And Track (122.196mm,69.906mm)(122.296mm,69.906mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.2mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_Charger_2019\v2\ife19_TS_Charger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3837.048mil|Location2.X=3848.298mil|Location1.Y=2954.025mil|Location2.Y=2965.275mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_Charger_2019\v2\ife19_TS_Charger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3837.048mil|Location2.X=3848.298mil|Location1.Y=2954.025mil|Location2.Y=2965.275mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.2mm &lt; 0.254mm) Between Pad R5-1(98.054mm,75.525mm) on Top Layer And Track (97.304mm,75.175mm)(97.404mm,75.175mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.2mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_Charger_2019\v2\ife19_TS_Charger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3836.947mil|Location2.X=3848.197mil|Location1.Y=2981.903mil|Location2.Y=2995.425mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_Charger_2019\v2\ife19_TS_Charger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3836.947mil|Location2.X=3848.197mil|Location1.Y=2981.903mil|Location2.Y=2995.425mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.216mm &lt; 0.254mm) Between Pad R5-1(98.054mm,75.525mm) on Top Layer And Track (97.304mm,75.875mm)(97.404mm,75.875mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.216mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_Charger_2019\v2\ife19_TS_Charger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3817.362mil|Location2.X=3828.612mil|Location1.Y=2954.025mil|Location2.Y=2965.275mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_Charger_2019\v2\ife19_TS_Charger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3817.362mil|Location2.X=3828.612mil|Location1.Y=2954.025mil|Location2.Y=2965.275mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.2mm &lt; 0.254mm) Between Pad R5-2(96.654mm,75.525mm) on Top Layer And Track (97.304mm,75.175mm)(97.404mm,75.175mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.2mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_Charger_2019\v2\ife19_TS_Charger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3817.362mil|Location2.X=3828.612mil|Location1.Y=2981.585mil|Location2.Y=2992.835mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_Charger_2019\v2\ife19_TS_Charger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3817.362mil|Location2.X=3828.612mil|Location1.Y=2981.585mil|Location2.Y=2992.835mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.2mm &lt; 0.254mm) Between Pad R5-2(96.654mm,75.525mm) on Top Layer And Track (97.304mm,75.875mm)(97.404mm,75.875mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.2mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_Charger_2019\v2\ife19_TS_Charger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4833.425mil|Location2.X=4844.675mil|Location1.Y=3212.963mil|Location2.Y=3224.213mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_Charger_2019\v2\ife19_TS_Charger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4833.425mil|Location2.X=4844.675mil|Location1.Y=3212.963mil|Location2.Y=3224.213mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.2mm &lt; 0.254mm) Between Pad R7-1(123.262mm,81.302mm) on Top Layer And Track (122.912mm,81.952mm)(122.912mm,82.052mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.2mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_Charger_2019\v2\ife19_TS_Charger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4860.985mil|Location2.X=4872.235mil|Location1.Y=3212.963mil|Location2.Y=3224.213mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_Charger_2019\v2\ife19_TS_Charger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4860.985mil|Location2.X=4872.235mil|Location1.Y=3212.963mil|Location2.Y=3224.213mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.2mm &lt; 0.254mm) Between Pad R7-1(123.262mm,81.302mm) on Top Layer And Track (123.612mm,81.952mm)(123.612mm,82.052mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.2mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_Charger_2019\v2\ife19_TS_Charger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4833.425mil|Location2.X=4844.675mil|Location1.Y=3232.648mil|Location2.Y=3243.898mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_Charger_2019\v2\ife19_TS_Charger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4833.425mil|Location2.X=4844.675mil|Location1.Y=3232.648mil|Location2.Y=3243.898mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.2mm &lt; 0.254mm) Between Pad R7-2(123.262mm,82.702mm) on Top Layer And Track (122.912mm,81.952mm)(122.912mm,82.052mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.2mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_Charger_2019\v2\ife19_TS_Charger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4863.575mil|Location2.X=4877.13mil|Location1.Y=3232.546mil|Location2.Y=3243.796mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_Charger_2019\v2\ife19_TS_Charger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4863.575mil|Location2.X=4877.13mil|Location1.Y=3232.546mil|Location2.Y=3243.796mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.216mm &lt; 0.254mm) Between Pad R7-2(123.262mm,82.702mm) on Top Layer And Track (123.612mm,81.952mm)(123.612mm,82.052mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.216mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_Charger_2019\v2\ife19_TS_Charger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4534.08mil|Location2.X=4545.33mil|Location1.Y=2555.038mil|Location2.Y=2566.436mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_Charger_2019\v2\ife19_TS_Charger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4534.08mil|Location2.X=4545.33mil|Location1.Y=2555.038mil|Location2.Y=2566.436mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.08mm &lt; 0.254mm) Between Pad U1-12(114.672mm,64.896mm) on Top Layer And Text "D3" (115.007mm,65.111mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.08mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_Charger_2019\v2\ife19_TS_Charger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4523.997mil|Location2.X=4531.663mil|Location1.Y=2571.718mil|Location2.Y=2579.384mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_Charger_2019\v2\ife19_TS_Charger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4523.997mil|Location2.X=4531.663mil|Location1.Y=2571.718mil|Location2.Y=2579.384mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (Collision &lt; 0.254mm) Between Pad U1-13(114.672mm,65.546mm) on Top Layer And Text "D3" (115.007mm,65.111mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_Charger_2019\v2\ife19_TS_Charger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4522.205mil|Location2.X=4533.455mil|Location1.Y=2592.906mil|Location2.Y=2604.156mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_Charger_2019\v2\ife19_TS_Charger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4522.205mil|Location2.X=4533.455mil|Location1.Y=2592.906mil|Location2.Y=2604.156mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (0.133mm &lt; 0.254mm) Between Pad U1-14(114.672mm,66.196mm) on Top Layer And Text "D3" (115.007mm,65.111mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.133mm]</acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDHHIIAINNEHCOOQBN2PKHL2WH2F55JAH4F3M4DJJLJM1HL5W3T5KH"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Silk to Silk (Clearance=0.254mm) (All),(All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_Charger_2019\v2\ife19_TS_Charger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4091.728mil|Location2.X=4099.395mil|Location1.Y=2460.709mil|Location2.Y=2468.375mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_Charger_2019\v2\ife19_TS_Charger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4091.728mil|Location2.X=4099.395mil|Location1.Y=2460.709mil|Location2.Y=2468.375mil|Absolute=True">Silk To Silk Clearance Constraint: (Collision &lt; 0.254mm) Between Arc (104.128mm,62.793mm) on Top Overlay And Text "Q2" (102.743mm,62.571mm) on Top Overlay Silk Text to Silk Clearance [0mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_Charger_2019\v2\ife19_TS_Charger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4774.37mil|Location2.X=4785.62mil|Location1.Y=2452.736mil|Location2.Y=2463.986mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_Charger_2019\v2\ife19_TS_Charger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4774.37mil|Location2.X=4785.62mil|Location1.Y=2452.736mil|Location2.Y=2463.986mil|Absolute=True">Silk To Silk Clearance Constraint: (0.131mm &lt; 0.254mm) Between Text "Q1" (120.523mm,62.571mm) on Top Overlay And Track (121.412mm,61.627mm)(121.412mm,62.277mm) on Top Overlay Silk Text to Silk Clearance [0.131mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_Charger_2019\v2\ife19_TS_Charger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4774.37mil|Location2.X=4785.62mil|Location1.Y=2452.736mil|Location2.Y=2463.986mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_Charger_2019\v2\ife19_TS_Charger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4774.37mil|Location2.X=4785.62mil|Location1.Y=2452.736mil|Location2.Y=2463.986mil|Absolute=True">Silk To Silk Clearance Constraint: (0.131mm &lt; 0.254mm) Between Text "Q1" (120.523mm,62.571mm) on Top Overlay And Track (121.412mm,62.277mm)(122.175mm,62.277mm) on Top Overlay Silk Text to Silk Clearance [0.131mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_Charger_2019\v2\ife19_TS_Charger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4124.373mil|Location2.X=4135.623mil|Location1.Y=2629.82mil|Location2.Y=2641.07mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_Charger_2019\v2\ife19_TS_Charger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4124.373mil|Location2.X=4135.623mil|Location1.Y=2629.82mil|Location2.Y=2641.07mil|Absolute=True">Silk To Silk Clearance Constraint: (0.104mm &lt; 0.254mm) Between Text "Q3" (104.775mm,67.056mm) on Top Overlay And Track (104.351mm,66.788mm)(105.114mm,66.788mm) on Top Overlay Silk Text to Silk Clearance [0.104mm]</acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="ID5QXSS0JTZ4JWO4K51PJCWCTN0OB4CROZHU23I5GX4XJQJ4IJBNGN"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Board Clearance Constraint (Gap=0mm) (All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_Charger_2019\v2\ife19_TS_Charger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4967.599mil|Location2.X=4976.723mil|Location1.Y=2277.313mil|Location2.Y=2286.437mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_Charger_2019\v2\ife19_TS_Charger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4967.599mil|Location2.X=4976.723mil|Location1.Y=2277.313mil|Location2.Y=2286.437mil|Absolute=True">Board Outline Clearance(Outline Edge): (0.119mm &lt; 0.2mm) Between Board Edge And Track (126.293mm,58.119mm)(126.293mm,58.369mm) on Top Overlay </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_Charger_2019\v2\ife19_TS_Charger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4967.599mil|Location2.X=4976.723mil|Location1.Y=2277.31mil|Location2.Y=2286.434mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_Charger_2019\v2\ife19_TS_Charger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4967.599mil|Location2.X=4976.723mil|Location1.Y=2277.31mil|Location2.Y=2286.434mil|Absolute=True">Board Outline Clearance(Outline Edge): (0.119mm &lt; 0.2mm) Between Board Edge And Track (126.293mm,58.119mm)(133.693mm,58.119mm) on Top Overlay </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_Charger_2019\v2\ife19_TS_Charger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5258.937mil|Location2.X=5268.061mil|Location1.Y=2277.313mil|Location2.Y=2286.437mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_Charger_2019\v2\ife19_TS_Charger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5258.937mil|Location2.X=5268.061mil|Location1.Y=2277.313mil|Location2.Y=2286.437mil|Absolute=True">Board Outline Clearance(Outline Edge): (0.119mm &lt; 0.2mm) Between Board Edge And Track (133.693mm,58.119mm)(133.693mm,58.369mm) on Top Overlay </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_Charger_2019\v2\ife19_TS_Charger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3487.599mil|Location2.X=3496.723mil|Location1.Y=2277.313mil|Location2.Y=2286.437mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_Charger_2019\v2\ife19_TS_Charger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3487.599mil|Location2.X=3496.723mil|Location1.Y=2277.313mil|Location2.Y=2286.437mil|Absolute=True">Board Outline Clearance(Outline Edge): (0.119mm &lt; 0.2mm) Between Board Edge And Track (88.701mm,58.119mm)(88.701mm,58.369mm) on Top Overlay </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_Charger_2019\v2\ife19_TS_Charger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3487.599mil|Location2.X=3496.723mil|Location1.Y=2277.31mil|Location2.Y=2286.434mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_Charger_2019\v2\ife19_TS_Charger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3487.599mil|Location2.X=3496.723mil|Location1.Y=2277.31mil|Location2.Y=2286.434mil|Absolute=True">Board Outline Clearance(Outline Edge): (0.119mm &lt; 0.2mm) Between Board Edge And Track (88.701mm,58.119mm)(96.101mm,58.119mm) on Top Overlay </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_Charger_2019\v2\ife19_TS_Charger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3778.937mil|Location2.X=3788.061mil|Location1.Y=2277.313mil|Location2.Y=2286.437mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_Charger_2019\v2\ife19_TS_Charger.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3778.937mil|Location2.X=3788.061mil|Location1.Y=2277.313mil|Location2.Y=2286.437mil|Absolute=True">Board Outline Clearance(Outline Edge): (0.119mm &lt; 0.2mm) Between Board Edge And Track (96.101mm,58.119mm)(96.101mm,58.369mm) on Top Overlay </acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br></body>
+</html>
