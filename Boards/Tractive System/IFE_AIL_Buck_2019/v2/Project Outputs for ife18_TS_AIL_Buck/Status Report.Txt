@@ -1,0 +1,12 @@
+Output: NC Drill Files
+Type  : NC Drill
+From  : Project [ife18_TS_AIL_Buck.PrjPcb]
+   Generated File[ife18_TS_AIL_Buck.TXT]
+   Generated File[ife18_TS_AIL_Buck.LDP]
+   Generated File[ife18_TS_AIL_Buck.DRR]
+
+
+Files Generated   : 3
+Documents Printed : 0
+
+Finished Output Generation At 9:27:44 AM On 3/6/2019
