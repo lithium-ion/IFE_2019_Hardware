@@ -1,0 +1,387 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<style type="text/css">
+		h1, h2, h3, h4, h5, h6 {
+			font-family : segoe ui;
+			color : black;
+			background-color : #EDE7D9;
+			padding: 0.3em;
+		}
+
+		h1 {
+			font-size: 1.2em;
+		}		
+
+		h2 {
+			font-size: 1.2em;
+		}
+
+		body {
+			font-family : segoe ui;
+		}
+
+		td, th {
+			padding: 0.5em;
+			text-align : left;
+			width: 10em;
+		}
+		th {
+			background-color : #EEEEEE;
+
+		}
+		th.column1, td.column1 {
+			text-align: left;
+			width : auto;
+		}
+		table {
+			width : 100%;
+			font-size: 0.9em;
+		}
+
+		.DRC_summary_header {
+			padding-bottom : 0.1em;
+			border : 0px solid black;
+			width: 100%;
+			align: left;
+		}
+
+		.DRC_summary_header_col1,
+		.DRC_summary_header_col2, 
+		.DRC_summary_header_col3 {
+			color : black;
+			font-size:100%;
+			padding : 0em;
+			padding-top : 0.2em;
+			padding-bottom 0.2em;
+			border : 0px solid black;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.DRC_summary_header_col1 {
+			font-weight: bold;
+			width: 8em;
+		}
+
+		.DRC_summary_header_col2 {
+			width: 0.1em;
+		
+		}
+
+		.DRC_summary_header_col3 {
+			width : auto;
+		}
+
+		.header_holder {
+		    Width = 100%;
+		    border = 0px solid green;
+		    padding = 0;
+		}
+
+
+		.front_matter, .front_matter_column1, .front_matter_column2, .front_matter_column3
+		{
+			left : 0;
+			top : 0;
+			padding: 0em;
+			padding-top : 0.1em;
+			border : 0px solid black;
+			width : 100%;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.front_matter_column1 {
+			width : 8em;
+			font-weight: bold;
+		}
+
+		.front_matter_column2 {
+			width: 0.1em;
+		}
+
+		.front_matter_column3 {
+			width : auto;
+		}
+
+		.total_column1, .total_column {
+			font-weight : bold;
+		}
+		.total_column1 {
+			text-align : left;
+		}
+		.warning, .error {
+			color : red;
+			font-weight : bold;
+		}
+		tr.onmouseout_odd {
+			background-color : #white;
+		}
+		tr.onmouseout_even { 
+			background-color : #FAFAFA;
+		}
+		tr.onmouseover_odd, tr.onmouseover_even { 
+			background-color : #EEEEEE;
+		} 
+		a:link, a:visited, .q a:link,.q a:active,.q {
+			color: #21489e; 
+		}
+		a:link.callback, a:visited.callback { 
+			color: #21489e;
+		}
+		a:link.customize, a:visited.customize {
+			color: #C0C0C0;
+			position: absolute; 
+			right: 10px;
+		}	
+		p.contents_level1 {
+			font-weight : bold;
+			font-size : 110%;
+			margin : 0.5em;
+		}
+		p.contents_level2 {
+			position : relative;
+			left : 20px;
+			margin : 0.5em;
+		}
+	</style><script type="text/javascript">
+		function coordToMils(coord) {
+			var number = coord / 10000;
+			
+			if (number != number.toFixed(3))
+				number = number.toFixed(3);
+
+			return number + 'mil'
+		}
+
+		function coordToMM(coord) {
+			var number = 0.0254 * coord / 10000;
+			
+			if (number != number.toFixed(4))
+				number = number.toFixed(4);
+			
+			return number + 'mm'
+		}
+	
+		function convertCoord(coordNode, units) {
+			for (var i = 0; i < coordNode.childNodes.length; i++) {
+				coordNode.removeChild(coordNode.childNodes[i]);
+			}
+
+			var coord = coordNode.getAttribute('value');
+			if (coord != null) {
+				if (units == 'mm') {
+					textNode = document.createTextNode(coordToMM(coord));
+					coordNode.appendChild(textNode);
+				} else if (units == 'mil') {
+					textNode = document.createTextNode(coordToMils(coord));		
+					coordNode.appendChild(textNode);	
+				}
+			}
+		}
+	
+		function convertUnits(unitNode, units) {
+			for (var i = 0; i < unitNode.childNodes.length; i++) {
+				unitNode.removeChild(unitNode.childNodes[i]);		
+			}
+		
+			textNode = document.createTextNode(units); 
+			unitNode.appendChild(textNode);
+		}
+	
+		function changeUnits(radio_input, units) {
+			if (radio_input.checked) {
+			
+				var elements = document.getElementsByName('coordinate');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertCoord(elements[i], units);
+					}
+				}
+	
+				var elements = document.getElementsByName('units');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertUnits(elements[i], units);
+					}
+				}
+			}
+		}
+	</script><title>Design Rule Verification Report</title>
+</head>
+<body onload=""><img ALT="Altium" src="
+			file://C:\Users\Public\Documents\Altium\AD19\Templates\AD_logo.png
+		"><h1>Design Rule Verification Report</h1>
+<table class="header_holder">
+<td class="column1">
+<table class="front_matter">
+<tr class="front_matter">
+<td class="front_matter_column1">Date:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">2/11/2019</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">7:31:55 AM</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Elapsed Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">00:00:00</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Filename:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3"><a href="file:///C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_AIL_Buck_2019\ife18_TS_AIL_Buck\ife18_TS_AIL_Buck.PcbDoc" class="file"><acronym title="C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_AIL_Buck_2019\ife18_TS_AIL_Buck\ife18_TS_AIL_Buck.PcbDoc">C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_AIL_Buck_2019\ife18_TS_AIL_Buck\ife18_TS_AIL_Buck.PcbDoc</acronym></a></td>
+</tr>
+</table>
+</td>
+<td class="column2">
+<table class="DRC_summary_header">
+<tr>
+<td class="DRC_summary_header_col1">Warnings:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3">0</td></tr>
+<tr>
+<td class="DRC_summary_header_col1">Rule Violations:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3" style="color : red">13</td></tr>
+</table>
+</td>
+</table><a name="IDWX5TKSLHJRRPME3CEFFHU4RRN0ZN4F0XAFTP4B5KQQH3MV4U2GM"><h2>Summary</h2></a><table>
+<tr>
+<th class="column1">Warnings</th>
+<th class="column2">Count</th>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">0</td>
+</tr>
+</table><br><table>
+<tr>
+<th class="column1">Rule Violations</th>
+<th class="column2">Count</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDOELE14C4GKD3MUGDN4JNTUVIUDAPLGQAWCGK3JHCN33DUKC335AF">Clearance Constraint (Gap=0.2mm) ((IsPad OR OnLayer('Keep-Out Layer'))),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDGCFNESLLXUXEMCUFPFHTNYYXJPQBD4GCVEDZJJLRUHQUMPV0IOYF">Clearance Constraint (Gap=0.8mm) (All),(All)</a></td>
+<td class="column2">4</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDCZ3ROCPXF2RBNK4N125U2NNYNNKBOYAT2WBRXBHFDLSRBYIQ3ZLJ">Short-Circuit Constraint (Allowed=No) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDQ0XIT1SAJSC1EFGB2N2R5U5WLLF4PEWZ52DAKC4U44MSM31PIIF">Un-Routed Net Constraint ( (All) )</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDRUHVV5ADJBENDAN0AET2TNW01M3BQSBR1R3CE4MCISSYDZLU354M">Modified Polygon (Allow modified: No), (Allow shelved: No)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDP4LJOOSAAAQBG50014W14JHRFGXBIRL2UV1Q0WMKY0ANXBLFYO5D">Width Constraint (Min=0.152mm) (Max=0.5mm) (Preferred=0.25mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDDZBKZWMSUPSQCMCLSLBYJASTFOHITS2LTJ40CBHWQJXWDIS0OK">Power Plane Connect Rule(Relief Connect )(Expansion=0.508mm) (Conductor Width=0.254mm) (Air Gap=0.254mm) (Entries=4) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#ID0O5WIAGH4EZZMGQTZX4WF3FONORNJAD4UD1MPFCYCSDQ1T1YBUJB">Hole Size Constraint (Min=0.025mm) (Max=2.54mm) (All)</a></td>
+<td class="column2">2</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#ID01PUSMAIT30GEEP00XB4FWFEEK0GOKIQWBJNGFKJONT3LV2BGRYK">Hole To Hole Clearance (Gap=0.254mm) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDUCKSOF5FU4Q4J2KVGS0OVY03UBH1RXWG3SHK1KN4SB3EH3ZGNB0C">Minimum Solder Mask Sliver (Gap=0.254mm) (All),(All)</a></td>
+<td class="column2">7</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDHJIZUC5NM2NYF1VZV24WYQOAHHVOCSNHWRHGXIMI0Z2YUDNCNF3I">Silk To Solder Mask (Clearance=0.254mm) (IsPad),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDY3TXGM1YWVZVF5EDUSBD5XRTXMSYTLS5NAOHU0HMXTU0RMYHYHWF">Silk to Silk (Clearance=0.254mm) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDM1OYU32PJY22FLRPMLM4SQE0DN2DMJWP2NUXRWJ4T1M3AI5AA5BG">Net Antennae (Tolerance=0mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDSOR44KDMIQVZFCYZDPHVFOAXJJG3UWCZDPXXNPE2YRFPJNITQ4OO">Board Clearance Constraint (Gap=0mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#ID3MMHJ4U5MNAYNPWQISGAP5HGCDTNCWEVXIU2RSCFU2VCVFM4TDEN">Room ife18_TS_AIL_Buck (Bounding Region = (0mm, 0mm, 50.8mm, 40.5mm) (InComponentClass('ife18_TS_AIL_Buck'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#ID4ILOKI5DA1IOM1YJ44OOGXAK2EBC2S5YYF1H4LHO3KSB3HZSF">Height Constraint (Min=0mm) (Max=25.4mm) (Prefered=12.7mm) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">13</td>
+</tr>
+</table><br><a name="IDGCFNESLLXUXEMCUFPFHTNYYXJPQBD4GCVEDZJJLRUHQUMPV0IOYF"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Clearance Constraint (Gap=0.8mm) (All),(All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_AIL_Buck_2019\ife18_TS_AIL_Buck\ife18_TS_AIL_Buck.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1047.328mil|Location2.X=1092.856mil|Location1.Y=782.328mil|Location2.Y=815.074mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_AIL_Buck_2019\ife18_TS_AIL_Buck\ife18_TS_AIL_Buck.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1047.328mil|Location2.X=1092.856mil|Location1.Y=782.328mil|Location2.Y=815.074mil|Absolute=True">Clearance Constraint: (0.798mm &lt; 0.8mm) Between Track (23.7mm,19.812mm)(27.018mm,19.812mm) on Bottom Layer And Track (27.018mm,20.762mm)(27.018mm,21.971mm) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_AIL_Buck_2019\ife18_TS_AIL_Buck\ife18_TS_AIL_Buck.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1047.328mil|Location2.X=1092.856mil|Location1.Y=867.328mil|Location2.Y=900.074mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_AIL_Buck_2019\ife18_TS_AIL_Buck\ife18_TS_AIL_Buck.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1047.328mil|Location2.X=1092.856mil|Location1.Y=867.328mil|Location2.Y=900.074mil|Absolute=True">Clearance Constraint: (0.798mm &lt; 0.8mm) Between Track (27.018mm,20.762mm)(27.018mm,21.971mm) on Bottom Layer And Track (27.018mm,22.921mm)(29.431mm,22.921mm) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_AIL_Buck_2019\ife18_TS_AIL_Buck\ife18_TS_AIL_Buck.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1142.328mil|Location2.X=1187.856mil|Location1.Y=867.328mil|Location2.Y=900.074mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_AIL_Buck_2019\ife18_TS_AIL_Buck\ife18_TS_AIL_Buck.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1142.328mil|Location2.X=1187.856mil|Location1.Y=867.328mil|Location2.Y=900.074mil|Absolute=True">Clearance Constraint: (0.798mm &lt; 0.8mm) Between Track (27.018mm,22.921mm)(29.431mm,22.921mm) on Bottom Layer And Track (29.431mm,20.762mm)(29.431mm,21.971mm) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_AIL_Buck_2019\ife18_TS_AIL_Buck\ife18_TS_AIL_Buck.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1142.328mil|Location2.X=1187.856mil|Location1.Y=782.328mil|Location2.Y=815.074mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_AIL_Buck_2019\ife18_TS_AIL_Buck\ife18_TS_AIL_Buck.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1142.328mil|Location2.X=1187.856mil|Location1.Y=782.328mil|Location2.Y=815.074mil|Absolute=True">Clearance Constraint: (0.798mm &lt; 0.8mm) Between Track (29.431mm,19.812mm)(31.293mm,19.812mm) on Bottom Layer And Track (29.431mm,20.762mm)(29.431mm,21.971mm) on Bottom Layer </acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="ID0O5WIAGH4EZZMGQTZX4WF3FONORNJAD4UD1MPFCYCSDQ1T1YBUJB"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Hole Size Constraint (Min=0.025mm) (Max=2.54mm) (All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_AIL_Buck_2019\ife18_TS_AIL_Buck\ife18_TS_AIL_Buck.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=433.501mil|Location2.X=550.751mil|Location1.Y=1004.367mil|Location2.Y=1121.617mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_AIL_Buck_2019\ife18_TS_AIL_Buck\ife18_TS_AIL_Buck.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=433.501mil|Location2.X=550.751mil|Location1.Y=1004.367mil|Location2.Y=1121.617mil|Absolute=True">Hole Size Constraint: (2.946mm &gt; 2.54mm) Pad Free-H1(12.5mm,27mm) on Multi-Layer Actual Hole Size = 2.946mm</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_AIL_Buck_2019\ife18_TS_AIL_Buck\ife18_TS_AIL_Buck.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1220.903mil|Location2.X=1338.153mil|Location1.Y=433.501mil|Location2.Y=550.751mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_AIL_Buck_2019\ife18_TS_AIL_Buck\ife18_TS_AIL_Buck.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1220.903mil|Location2.X=1338.153mil|Location1.Y=433.501mil|Location2.Y=550.751mil|Absolute=True">Hole Size Constraint: (2.946mm &gt; 2.54mm) Pad Free-H2(32.5mm,12.5mm) on Multi-Layer Actual Hole Size = 2.946mm</acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDUCKSOF5FU4Q4J2KVGS0OVY03UBH1RXWG3SHK1KN4SB3EH3ZGNB0C"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Minimum Solder Mask Sliver (Gap=0.254mm) (All),(All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_AIL_Buck_2019\ife18_TS_AIL_Buck\ife18_TS_AIL_Buck.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1209.469mil|Location2.X=1220.719mil|Location1.Y=486.501mil|Location2.Y=497.751mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_AIL_Buck_2019\ife18_TS_AIL_Buck\ife18_TS_AIL_Buck.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1209.469mil|Location2.X=1220.719mil|Location1.Y=486.501mil|Location2.Y=497.751mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.124mm &lt; 0.254mm) Between Pad Free-H2(32.5mm,12.5mm) on Multi-Layer And Pad Q1-10(29.975mm,12.125mm) on Top Layer [Top Solder] Mask Sliver [0.124mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_AIL_Buck_2019\ife18_TS_AIL_Buck\ife18_TS_AIL_Buck.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1210.54mil|Location2.X=1221.79mil|Location1.Y=503.602mil|Location2.Y=517.322mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_AIL_Buck_2019\ife18_TS_AIL_Buck\ife18_TS_AIL_Buck.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1210.54mil|Location2.X=1221.79mil|Location1.Y=503.602mil|Location2.Y=517.322mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.184mm &lt; 0.254mm) Between Pad Free-H2(32.5mm,12.5mm) on Multi-Layer And Pad Q1-11(29.975mm,13.395mm) on Top Layer [Top Solder] Mask Sliver [0.184mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_AIL_Buck_2019\ife18_TS_AIL_Buck\ife18_TS_AIL_Buck.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1022.58mil|Location2.X=1033.83mil|Location1.Y=793.076mil|Location2.Y=804.326mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_AIL_Buck_2019\ife18_TS_AIL_Buck\ife18_TS_AIL_Buck.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1022.58mil|Location2.X=1033.83mil|Location1.Y=793.076mil|Location2.Y=804.326mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.097mm &lt; 0.254mm) Between Pad LED1-A(27.018mm,19.812mm) on Bottom Layer And Pad LED1-K(27.018mm,20.762mm) on Bottom Layer [Bottom Solder] Mask Sliver [0.097mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_AIL_Buck_2019\ife18_TS_AIL_Buck\ife18_TS_AIL_Buck.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1022.58mil|Location2.X=1033.83mil|Location1.Y=878.076mil|Location2.Y=889.326mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_AIL_Buck_2019\ife18_TS_AIL_Buck\ife18_TS_AIL_Buck.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1022.58mil|Location2.X=1033.83mil|Location1.Y=878.076mil|Location2.Y=889.326mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.097mm &lt; 0.254mm) Between Pad LED2-A(27.018mm,21.971mm) on Bottom Layer And Pad LED2-K(27.018mm,22.921mm) on Bottom Layer [Bottom Solder] Mask Sliver [0.097mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_AIL_Buck_2019\ife18_TS_AIL_Buck\ife18_TS_AIL_Buck.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1117.58mil|Location2.X=1128.83mil|Location1.Y=878.076mil|Location2.Y=889.326mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_AIL_Buck_2019\ife18_TS_AIL_Buck\ife18_TS_AIL_Buck.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1117.58mil|Location2.X=1128.83mil|Location1.Y=878.076mil|Location2.Y=889.326mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.097mm &lt; 0.254mm) Between Pad LED3-A(29.431mm,22.921mm) on Bottom Layer And Pad LED3-K(29.431mm,21.971mm) on Bottom Layer [Bottom Solder] Mask Sliver [0.097mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_AIL_Buck_2019\ife18_TS_AIL_Buck\ife18_TS_AIL_Buck.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1117.58mil|Location2.X=1128.83mil|Location1.Y=793.076mil|Location2.Y=804.326mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_AIL_Buck_2019\ife18_TS_AIL_Buck\ife18_TS_AIL_Buck.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=1117.58mil|Location2.X=1128.83mil|Location1.Y=793.076mil|Location2.Y=804.326mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.097mm &lt; 0.254mm) Between Pad LED4-A(29.431mm,20.762mm) on Bottom Layer And Pad LED4-K(29.431mm,19.812mm) on Bottom Layer [Bottom Solder] Mask Sliver [0.097mm]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_AIL_Buck_2019\ife18_TS_AIL_Buck\ife18_TS_AIL_Buck.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=946.911mil|Location2.X=959.674mil|Location1.Y=539.218mil|Location2.Y=550.468mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_AIL_Buck_2019\ife18_TS_AIL_Buck\ife18_TS_AIL_Buck.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=946.911mil|Location2.X=959.674mil|Location1.Y=539.218mil|Location2.Y=550.468mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.017mm &lt; 0.254mm) Between Pad Q1-6(25.025mm,13.395mm) on Top Layer And Via (24mm,14.2mm) from Top Layer to Bottom Layer [Top Solder] Mask Sliver [0.017mm]</acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br></body>
+</html>

@@ -1,0 +1,4 @@
+Circuit: * C:\Users\chait\Documents\WSL\IFE_2019_Hardware\SPICE Sims\PMOS+NTC Discharge\PMOS+NTC Discharge.asc
+
+Fatal Error: Port(pin) count mismatch between the definition of subcircuit "spd04p10pl" and instance: "xm1"
+The instance has fewer connection terminals than the definition.

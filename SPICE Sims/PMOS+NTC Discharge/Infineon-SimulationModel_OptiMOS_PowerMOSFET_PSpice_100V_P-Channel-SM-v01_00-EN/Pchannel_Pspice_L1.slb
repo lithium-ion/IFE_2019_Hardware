@@ -1,0 +1,278 @@
+*version 9.1 761319598
+@index
+symloc DMOS_S2_L1_n 0 1267 b
+symloc DMOS_L1P 1267 1260 b
+symloc BSP316P_L1:DMOS_L1P 2527 485
+symloc SPP15P10P_L1:DMOS_L1P 3012 491
+symloc BSP321P_L1:DMOS_L1P 3503 485
+symloc BSP322P_L1:DMOS_L1P 3988 485
+symloc BSR316P_L1:DMOS_L1P 4473 485
+symloc SPP15P10PL_L1:DMOS_L1P 4958 494
+symloc SPD15P10PL_L1:DMOS_L1P 5452 494
+symloc SPD15P10P_L1:DMOS_L1P 5946 491
+symloc SPD04P10P_L1:DMOS_L1P 6437 491
+symloc SPD04P10PL_L1:DMOS_L1P 6928 494
+*symbol DMOS_S2_L1_n b
+d Infineon n-channel DMOS
+@type p 9.2
+@attributes
+a 1 sp 0 0 0 0 hcn 100 TEMPLATE=X^@refdes %drain %gate %source @MODEL PARAMS: ?dVth|dVth=@dVth| ?dRdson|dRdson=@dRdson| ?dgfs|dgfs=@dgfs| ?dC|dC=@dC|
+a 0 s 9 0 61 12 hcn 100 REFDES=X?
+a 0 sp 11 0 87 34 hcn 100 PART=DMOS_S2_L1_n
+a 0 sp 0:13 0 4 40 hcn 100 MODEL=DMOS_S2_L1
+a 0 u 0:13 0 0 10 hcn 100 dVth=
+a 0 u 0:13 0 0 20 hcn 100 dRdson=
+a 0 u 0:13 0 0 30 hcn 100 dgfs=
+a 0 u 0:13 0 0 40 hcn 100 dC=
+@pins
+p 0 25 40 hcn 100 source n 30 40 v
+a 0 s 0:1 0 31 38 hln 100 PIN=3
+a 0 s 0 0 0 0 hln 100 ERC=x
+p 0 10 20 hcn 100 gate n 0 20 h
+a 0 s 0:1 0 1 18 hln 100 PIN=2
+a 0 s 0 0 0 0 hln 100 ERC=x
+p 0 25 10 hcn 100 drain n 30 0 d
+a 0 s 0:1 0 31 -2 hln 100 PIN=1
+a 0 s 0 0 0 0 hln 100 ERC=x
+@graphics 46 40 0 20 10
+c 0 25 20 20 d_info:,0/0/0,,,,,,,,,,,,, 
+v 0 38 10
+38 30
+28 30
+;
+v 0 38 18 d_info:,,,,4/1/6/6,ON,0/0/255,,,,,,,, 
+35 22
+41 22
+38 18
+;
+v 0 25 16
+20 20
+;
+v 0 20 20
+25 24
+;
+r 0 35 17 41 18 d_info:,,,,,ON,0/0/255,,,,,,,, 
+c 0 30 30 1 d_info:,,,,,ON,0/0/255,,,,,,,, 
+c 0 30 10 1 d_info:,,,,,ON,0/0/255,,,,,,,, 
+v 0 30 20
+30 30
+;
+v 0 30 20
+20 20
+;
+v 0 38 10
+30 10
+;
+v 0 15 10
+15 30
+;
+v 0 10 20
+15 20
+;
+v 0 20 10
+30 10
+;
+v 0 20 30
+30 30
+;
+v 0 20 23
+20 17
+;
+v 0 20 33
+20 27
+;
+v 0 20 13
+20 7
+;
+*symbol DMOS_L1P b
+d Infineon p-channel DMOS 
+@type p 9.2
+@attributes
+a 0 sp 11 0 39 62 hln 100 PART=DMOS_L1P
+a 0 sp 0 0 0 0 hln 100 TEMPLATE=X^@refdes %drain %gate %source @MODEL PARAMS: ?dVth|dVth=@dVth| ?dRdson|dRdson=@dRdson| ?dgfs|dgfs=@dgfs| ?dC|dC=@dC| 
+a 0 s 9 0 -3 0 hcn 100 REFDES=X?
+a 0 sp 0:13 0 5 50 hcn 100 MODEL=DMOS_L1
+a 0 u 0:13 0 0 10 hlb 100 dVth=0
+a 0 u 0:13 0 0 10 hlb 100 dRdson=0
+a 0 u 0:13 0 0 20 hlb 100 dgfs=0
+a 0 u 0:13 0 0 30 hlb 100 dC=0
+@pins
+p 0 25 40 hcn 100 drain n 30 40 v
+a 0 s 0:1 0 31 38 hln 100 PIN=1
+a 0 s 0 0 0 0 hln 100 ERC=x
+p 0 10 20 hcn 100 gate n 0 20 h
+a 0 s 0:1 0 1 18 hln 100 PIN=2
+a 0 s 0 0 0 0 hln 100 ERC=x
+p 0 25 10 hcn 100 source n 30 0 d
+a 0 s 0:1 0 31 -2 hln 100 PIN=3
+a 0 s 0 0 0 0 hln 100 ERC=x
+@graphics 60 40 0 0 10
+c 0 25 20 20 d_info:,0/0/0,,,,,,,,,,,,, 
+v 0 38 10
+38 30
+31 30
+;
+v 0 36 21 d_info:,,,,4/1/6/6,ON,0/0/255,,,,,,,, 
+35 22
+41 22
+38 18
+;
+v 0 23 17
+26 20
+;
+v 0 23 23
+26 20
+;
+r 0 35 17 41 18 d_info:,,,,,ON,0/0/255,,,,,,,, 
+c 0 30 30 1 d_info:,,,,,ON,0/0/255,,,,,,,, 
+c 0 30 10 1 d_info:,,,,,ON,0/0/255,,,,,,,, 
+v 0 30 10
+30 20
+;
+v 0 30 20
+20 20
+;
+v 0 38 10
+30 10
+;
+v 0 15 10
+15 30
+;
+v 0 10 20
+15 20
+;
+v 0 20 10
+30 10
+;
+v 0 20 30
+30 30
+;
+v 0 20 23
+20 17
+;
+v 0 20 33
+20 27
+;
+v 0 20 13
+20 7
+;
+*symbol BSP316P_L1 ako DMOS_L1P
+d Infineon p-channel DMOS 
+@type p 9.2
+@attributes
+a 0 sp 11 0 39 62 hln 100 PART=BSP316P_L1
+a 0 sp 0 0 0 0 hln 100 TEMPLATE=X^@refdes %drain %gate %source @MODEL PARAMS: ?dVth|dVth=@dVth| ?dRdson|dRdson=@dRdson| ?dgfs|dgfs=@dgfs| ?dC|dC=@dC| 
+a 0 s 9 0 -3 0 hcn 100 REFDES=X?
+a 0 sp 0:13 0 5 50 hcn 100 MODEL=BSP316P_L1
+a 0 u 0:13 0 0 10 hlb 100 dVth=0
+a 0 u 0:13 0 0 10 hlb 100 dRdson=0
+a 0 u 0:13 0 0 20 hlb 100 dgfs=0
+a 0 u 0:13 0 0 30 hlb 100 dC=0
+*symbol SPP15P10P_L1 ako DMOS_L1P
+d Infineon p-channel DMOS 
+@type p 9.2
+@attributes
+a 0 sp 11 0 39 62 hln 100 PART=SPP15P10P_L1
+a 0 sp 0 0 0 0 hln 100 TEMPLATE=X^@refdes %drain %gate %source @MODEL PARAMS: ?dVth|dVth=@dVth| ?dRdson|dRdson=@dRdson| ?dgfs|dgfs=@dgfs| ?dC|dC=@dC| 
+a 0 s 9 0 -3 0 hcn 100 REFDES=X?
+a 0 sp 0:13 0 5 50 hcn 100 MODEL=SPP15P10P_L1
+a 0 u 0:13 0 0 10 hlb 100 dVth=0
+a 0 u 0:13 0 0 10 hlb 100 dRdson=0
+a 0 u 0:13 0 0 20 hlb 100 dgfs=0
+a 0 u 0:13 0 0 30 hlb 100 dC=0
+*symbol BSP321P_L1 ako DMOS_L1P
+d Infineon p-channel DMOS 
+@type p 9.1
+@attributes
+a 0 sp 11 0 39 62 hln 100 PART=BSP321P_L1
+a 0 sp 0 0 0 0 hln 100 TEMPLATE=X^@refdes %drain %gate %source @MODEL PARAMS: ?dVth|dVth=@dVth| ?dRdson|dRdson=@dRdson| ?dgfs|dgfs=@dgfs| ?dC|dC=@dC| 
+a 0 s 9 0 -3 0 hcn 100 REFDES=X?
+a 0 sp 0:13 0 5 50 hcn 100 MODEL=BSP321P_L1
+a 0 u 0:13 0 0 10 hlb 100 dVth=0
+a 0 u 0:13 0 0 10 hlb 100 dRdson=0
+a 0 u 0:13 0 0 20 hlb 100 dgfs=0
+a 0 u 0:13 0 0 30 hlb 100 dC=0
+*symbol BSP322P_L1 ako DMOS_L1P
+d Infineon p-channel DMOS 
+@type p 9.1
+@attributes
+a 0 sp 11 0 39 62 hln 100 PART=BSP322P_L1
+a 0 sp 0 0 0 0 hln 100 TEMPLATE=X^@refdes %drain %gate %source @MODEL PARAMS: ?dVth|dVth=@dVth| ?dRdson|dRdson=@dRdson| ?dgfs|dgfs=@dgfs| ?dC|dC=@dC| 
+a 0 s 9 0 -3 0 hcn 100 REFDES=X?
+a 0 sp 0:13 0 5 50 hcn 100 MODEL=BSP322P_L1
+a 0 u 0:13 0 0 10 hlb 100 dVth=0
+a 0 u 0:13 0 0 10 hlb 100 dRdson=0
+a 0 u 0:13 0 0 20 hlb 100 dgfs=0
+a 0 u 0:13 0 0 30 hlb 100 dC=0
+*symbol BSR316P_L1 ako DMOS_L1P
+d Infineon p-channel DMOS 
+@type p 9.1
+@attributes
+a 0 sp 11 0 39 62 hln 100 PART=BSR316P_L1
+a 0 sp 0 0 0 0 hln 100 TEMPLATE=X^@refdes %drain %gate %source @MODEL PARAMS: ?dVth|dVth=@dVth| ?dRdson|dRdson=@dRdson| ?dgfs|dgfs=@dgfs| ?dC|dC=@dC| 
+a 0 s 9 0 -3 0 hcn 100 REFDES=X?
+a 0 sp 0:13 0 5 50 hcn 100 MODEL=BSR316P_L1
+a 0 u 0:13 0 0 10 hlb 100 dVth=0
+a 0 u 0:13 0 0 10 hlb 100 dRdson=0
+a 0 u 0:13 0 0 20 hlb 100 dgfs=0
+a 0 u 0:13 0 0 30 hlb 100 dC=0
+*symbol SPP15P10PL_L1 ako DMOS_L1P
+d Infineon p-channel DMOS 
+@type p 9.1
+@attributes
+a 0 sp 11 0 39 62 hln 100 PART=SPP15P10PL_L1
+a 0 sp 0 0 0 0 hln 100 TEMPLATE=X^@refdes %drain %gate %source @MODEL PARAMS: ?dVth|dVth=@dVth| ?dRdson|dRdson=@dRdson| ?dgfs|dgfs=@dgfs| ?dC|dC=@dC| 
+a 0 s 9 0 -3 0 hcn 100 REFDES=X?
+a 0 sp 0:13 0 5 50 hcn 100 MODEL=SPP15P10PL_L1
+a 0 u 0:13 0 0 10 hlb 100 dVth=0
+a 0 u 0:13 0 0 10 hlb 100 dRdson=0
+a 0 u 0:13 0 0 20 hlb 100 dgfs=0
+a 0 u 0:13 0 0 30 hlb 100 dC=0
+*symbol SPD15P10PL_L1 ako DMOS_L1P
+d Infineon p-channel DMOS 
+@type p 9.1
+@attributes
+a 0 sp 11 0 39 62 hln 100 PART=SPD15P10PL_L1
+a 0 sp 0 0 0 0 hln 100 TEMPLATE=X^@refdes %drain %gate %source @MODEL PARAMS: ?dVth|dVth=@dVth| ?dRdson|dRdson=@dRdson| ?dgfs|dgfs=@dgfs| ?dC|dC=@dC| 
+a 0 s 9 0 -3 0 hcn 100 REFDES=X?
+a 0 sp 0:13 0 5 50 hcn 100 MODEL=SPD15P10PL_L1
+a 0 u 0:13 0 0 10 hlb 100 dVth=0
+a 0 u 0:13 0 0 10 hlb 100 dRdson=0
+a 0 u 0:13 0 0 20 hlb 100 dgfs=0
+a 0 u 0:13 0 0 30 hlb 100 dC=0
+*symbol SPD15P10P_L1 ako DMOS_L1P
+d Infineon p-channel DMOS 
+@type p 9.1
+@attributes
+a 0 sp 11 0 39 62 hln 100 PART=SPD15P10P_L1
+a 0 sp 0 0 0 0 hln 100 TEMPLATE=X^@refdes %drain %gate %source @MODEL PARAMS: ?dVth|dVth=@dVth| ?dRdson|dRdson=@dRdson| ?dgfs|dgfs=@dgfs| ?dC|dC=@dC| 
+a 0 s 9 0 -3 0 hcn 100 REFDES=X?
+a 0 sp 0:13 0 5 50 hcn 100 MODEL=SPD15P10P_L1
+a 0 u 0:13 0 0 10 hlb 100 dVth=0
+a 0 u 0:13 0 0 10 hlb 100 dRdson=0
+a 0 u 0:13 0 0 20 hlb 100 dgfs=0
+a 0 u 0:13 0 0 30 hlb 100 dC=0
+*symbol SPD04P10P_L1 ako DMOS_L1P
+d Infineon p-channel DMOS 
+@type p 9.1
+@attributes
+a 0 sp 11 0 39 62 hln 100 PART=SPD04P10P_L1
+a 0 sp 0 0 0 0 hln 100 TEMPLATE=X^@refdes %drain %gate %source @MODEL PARAMS: ?dVth|dVth=@dVth| ?dRdson|dRdson=@dRdson| ?dgfs|dgfs=@dgfs| ?dC|dC=@dC| 
+a 0 s 9 0 -3 0 hcn 100 REFDES=X?
+a 0 sp 0:13 0 5 50 hcn 100 MODEL=SPD04P10P_L1
+a 0 u 0:13 0 0 10 hlb 100 dVth=0
+a 0 u 0:13 0 0 10 hlb 100 dRdson=0
+a 0 u 0:13 0 0 20 hlb 100 dgfs=0
+a 0 u 0:13 0 0 30 hlb 100 dC=0
+*symbol SPD04P10PL_L1 ako DMOS_L1P
+d Infineon p-channel DMOS 
+@type p 9.1
+@attributes
+a 0 sp 11 0 39 62 hln 100 PART=SPD04P10PL_L1
+a 0 sp 0 0 0 0 hln 100 TEMPLATE=X^@refdes %drain %gate %source @MODEL PARAMS: ?dVth|dVth=@dVth| ?dRdson|dRdson=@dRdson| ?dgfs|dgfs=@dgfs| ?dC|dC=@dC| 
+a 0 s 9 0 -3 0 hcn 100 REFDES=X?
+a 0 sp 0:13 0 5 50 hcn 100 MODEL=SPD04P10PL_L1
+a 0 u 0:13 0 0 10 hlb 100 dVth=0
+a 0 u 0:13 0 0 10 hlb 100 dRdson=0
+a 0 u 0:13 0 0 20 hlb 100 dgfs=0
+a 0 u 0:13 0 0 30 hlb 100 dC=0
