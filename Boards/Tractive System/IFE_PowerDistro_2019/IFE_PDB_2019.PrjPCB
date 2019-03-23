@@ -55,7 +55,7 @@ GenerateClassCluster=0
 DocumentUniqueId=DFOPQQXK
 
 [Document2]
-DocumentPath=PCB1.PcbDoc
+DocumentPath=IFE_PDB_2019.PcbDoc
 AnnotationEnabled=1
 AnnotateStartValue=1
 AnnotationIndexControlEnabled=0
@@ -72,7 +72,7 @@ GenerateClassCluster=0
 DocumentUniqueId=IUHFVPMU
 
 [Document3]
-DocumentPath=PcbLib1.PcbLib
+DocumentPath=..\..\..\..\..\..\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Conn_Library.PcbLib
 AnnotationEnabled=1
 AnnotateStartValue=1
 AnnotationIndexControlEnabled=0
@@ -86,129 +86,10 @@ ClassGenCCAutoRoomEnabled=1
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
-DocumentUniqueId=JVOIWRXK
+DocumentUniqueId=YDLALLSO
 
 [Document4]
-DocumentPath=AD18\Library\IFE_Fuses.IntLib
-AnnotationEnabled=1
-AnnotateStartValue=1
-AnnotationIndexControlEnabled=0
-AnnotateSuffix=
-AnnotateScope=All
-AnnotateOrder=-1
-DoLibraryUpdate=1
-DoDatabaseUpdate=1
-ClassGenCCAutoEnabled=1
-ClassGenCCAutoRoomEnabled=1
-ClassGenNCAutoScope=None
-DItemRevisionGUID=
-GenerateClassCluster=0
-DocumentUniqueId=
-
-[Document5]
-DocumentPath=AD18\Library\MOLEX Micro-Lock.SCHLIB
-AnnotationEnabled=1
-AnnotateStartValue=1
-AnnotationIndexControlEnabled=0
-AnnotateSuffix=
-AnnotateScope=All
-AnnotateOrder=-1
-DoLibraryUpdate=1
-DoDatabaseUpdate=1
-ClassGenCCAutoEnabled=1
-ClassGenCCAutoRoomEnabled=1
-ClassGenNCAutoScope=None
-DItemRevisionGUID=
-GenerateClassCluster=0
-DocumentUniqueId=AMWHJTPQ
-
-[Document6]
-DocumentPath=AD18\Library\MOLEX Micro-Lock.PCBLIB
-AnnotationEnabled=1
-AnnotateStartValue=1
-AnnotationIndexControlEnabled=0
-AnnotateSuffix=
-AnnotateScope=All
-AnnotateOrder=-1
-DoLibraryUpdate=1
-DoDatabaseUpdate=1
-ClassGenCCAutoEnabled=1
-ClassGenCCAutoRoomEnabled=1
-ClassGenNCAutoScope=None
-DItemRevisionGUID=
-GenerateClassCluster=0
-DocumentUniqueId=
-
-[Document7]
-DocumentPath=AD18\Library\3557-2.lia
-AnnotationEnabled=1
-AnnotateStartValue=1
-AnnotationIndexControlEnabled=0
-AnnotateSuffix=
-AnnotateScope=All
-AnnotateOrder=-1
-DoLibraryUpdate=1
-DoDatabaseUpdate=1
-ClassGenCCAutoEnabled=1
-ClassGenCCAutoRoomEnabled=1
-ClassGenNCAutoScope=None
-DItemRevisionGUID=
-GenerateClassCluster=0
-DocumentUniqueId=
-
-[Document8]
-DocumentPath=AD18\Library\ife19_Elec_Library.PcbLib
-AnnotationEnabled=1
-AnnotateStartValue=1
-AnnotationIndexControlEnabled=0
-AnnotateSuffix=
-AnnotateScope=All
-AnnotateOrder=-1
-DoLibraryUpdate=1
-DoDatabaseUpdate=1
-ClassGenCCAutoEnabled=1
-ClassGenCCAutoRoomEnabled=1
-ClassGenNCAutoScope=None
-DItemRevisionGUID=
-GenerateClassCluster=0
-DocumentUniqueId=
-
-[Document9]
-DocumentPath=AD18\Library\ife19_Elec_Library.SchLib
-AnnotationEnabled=1
-AnnotateStartValue=1
-AnnotationIndexControlEnabled=0
-AnnotateSuffix=
-AnnotateScope=All
-AnnotateOrder=-1
-DoLibraryUpdate=1
-DoDatabaseUpdate=1
-ClassGenCCAutoEnabled=1
-ClassGenCCAutoRoomEnabled=1
-ClassGenNCAutoScope=None
-DItemRevisionGUID=
-GenerateClassCluster=0
-DocumentUniqueId=LQSNODNZ
-
-[Document10]
-DocumentPath=AD18\Library\ife19_Elec_Conn_Library.PcbLib
-AnnotationEnabled=1
-AnnotateStartValue=1
-AnnotationIndexControlEnabled=0
-AnnotateSuffix=
-AnnotateScope=All
-AnnotateOrder=-1
-DoLibraryUpdate=1
-DoDatabaseUpdate=1
-ClassGenCCAutoEnabled=1
-ClassGenCCAutoRoomEnabled=1
-ClassGenNCAutoScope=None
-DItemRevisionGUID=
-GenerateClassCluster=0
-DocumentUniqueId=
-
-[Document11]
-DocumentPath=AD18\Library\ife19_Elec_Conn_Library.SchLib
+DocumentPath=..\..\..\..\..\..\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Conn_Library.SchLib
 AnnotationEnabled=1
 AnnotateStartValue=1
 AnnotationIndexControlEnabled=0
@@ -347,7 +228,7 @@ OutputDefault20=0
 [OutputGroup2]
 Name=Simulator Outputs
 Description=
-TargetPrinter=Microsoft Print to PDF
+TargetPrinter=\\http://printers.hendrickhouse.com\FoxyLadyIIPS
 PrinterOptions=Record=PrinterOptions|Copies=1|Duplex=1|TrueTypeOptions=3|Collate=1|PrintJobKind=1|PrintWhat=1
 
 [OutputGroup3]
@@ -765,6 +646,11 @@ OutputName6=Footprint Comparison Report
 OutputDocumentPath6=
 OutputVariantName6=
 OutputDefault6=0
+OutputType7=BOM_Violations
+OutputName7=BOM Checks Report
+OutputDocumentPath7=
+OutputVariantName7=
+OutputDefault7=0
 
 [OutputGroup9]
 Name=Export Outputs
@@ -945,6 +831,7 @@ Type113=1
 Type114=1
 Type115=1
 Type116=1
+Type117=1
 
 [Difference Levels]
 Type1=1
@@ -1012,6 +899,7 @@ Type62=1
 Type63=1
 Type64=1
 Type65=1
+Type66=1
 
 [Electrical Rules Check]
 Type1=1
