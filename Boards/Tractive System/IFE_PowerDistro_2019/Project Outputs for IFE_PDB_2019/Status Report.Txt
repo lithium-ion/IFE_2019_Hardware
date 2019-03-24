@@ -1,0 +1,12 @@
+Output: NC Drill Files
+Type  : NC Drill
+From  : Project [IFE_PDB_2019.PrjPCB]
+   Generated File[IFE_PDB_2019.TXT]
+   Generated File[IFE_PDB_2019.LDP]
+   Generated File[IFE_PDB_2019.DRR]
+
+
+Files Generated   : 3
+Documents Printed : 0
+
+Finished Output Generation At 5:01:38 AM On 3/24/2019
