@@ -1,7 +1,7 @@
 Protel Design System Design Rule Check
-PCB File : C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_Shutdown_2019\Safety_2019_v_3.0\SAFETY_2019_v_3_0.PcbDoc
+PCB File : C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_Shutdown_2019\Safety_2019_v_3.0\SAFETY_2019_v_3_0.PcbDoc
 Date     : 3/25/2019
-Time     : 12:55:47 AM
+Time     : 1:16:51 PM
 
 Processing Rule : Clearance Constraint (Gap=0.152mm) (All),(All)
 Rule Violations :0
@@ -201,4 +201,4 @@ Rule Violations :0
 
 Violations Detected : 150
 Waived Violations : 0
-Time Elapsed        : 00:00:01
+Time Elapsed        : 00:00:02
