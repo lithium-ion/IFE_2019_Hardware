@@ -1,7 +1,7 @@
 Protel Design System Design Rule Check
-PCB File : C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_Shutdown_2019\Safety_2019_v_3.0\SAFETY_2019_v_3_0.PcbDoc
-Date     : 3/24/2019
-Time     : 11:33:58 PM
+PCB File : C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_Shutdown_2019\Safety_2019_v_3.0\SAFETY_2019_v_3_0.PcbDoc
+Date     : 3/25/2019
+Time     : 12:55:47 AM
 
 Processing Rule : Clearance Constraint (Gap=0.152mm) (All),(All)
 Rule Violations :0
@@ -58,7 +58,7 @@ Processing Rule : Minimum Solder Mask Sliver (Gap=0.2mm) (All),(All)
    Violation between Minimum Solder Mask Sliver Constraint: (0.148mm < 0.2mm) Between Pad TC0-2(23.404mm,47.804mm) on Top Layer And Pad TC0-3(24.054mm,47.804mm) on Top Layer [Top Solder] Mask Sliver [0.148mm]
    Violation between Minimum Solder Mask Sliver Constraint: (0.148mm < 0.2mm) Between Pad TC0-4(24.054mm,49.704mm) on Top Layer And Pad TC0-5(23.404mm,49.704mm) on Top Layer [Top Solder] Mask Sliver [0.148mm]
    Violation between Minimum Solder Mask Sliver Constraint: (0.148mm < 0.2mm) Between Pad TC0-5(23.404mm,49.704mm) on Top Layer And Pad TC0-6(22.754mm,49.704mm) on Top Layer [Top Solder] Mask Sliver [0.148mm]
-   Violation between Minimum Solder Mask Sliver Constraint: (0.13mm < 0.2mm) Between Pad TP1-1(62.012mm,32.117mm) on Top Layer And Via (63.028mm,32.294mm) from Top Layer to Bottom Layer [Top Solder] Mask Sliver [0.13mm]
+   Violation between Minimum Solder Mask Sliver Constraint: (0.03mm < 0.2mm) Between Pad TP1-1(62.012mm,32.117mm) on Multi-Layer And Via (63.028mm,32.294mm) from Top Layer to Bottom Layer [Top Solder] Mask Sliver [0.03mm] / [Bottom Solder] Mask Sliver [0.03mm]
    Violation between Minimum Solder Mask Sliver Constraint: (0.098mm < 0.2mm) Between Pad U0-1(86.053mm,51.845mm) on Top Layer And Pad U0-2(85.553mm,51.845mm) on Top Layer [Top Solder] Mask Sliver [0.098mm]
    Violation between Minimum Solder Mask Sliver Constraint: (0.098mm < 0.2mm) Between Pad U0-10(81.553mm,51.845mm) on Top Layer And Pad U0-11(81.053mm,51.845mm) on Top Layer [Top Solder] Mask Sliver [0.098mm]
    Violation between Minimum Solder Mask Sliver Constraint: (0.098mm < 0.2mm) Between Pad U0-10(81.553mm,51.845mm) on Top Layer And Pad U0-9(82.053mm,51.845mm) on Top Layer [Top Solder] Mask Sliver [0.098mm]
@@ -166,12 +166,11 @@ Processing Rule : Minimum Solder Mask Sliver (Gap=0.2mm) (All),(All)
    Violation between Minimum Solder Mask Sliver Constraint: (0.011mm < 0.2mm) Between Pad U2-64(42.437mm,34.59mm) on Top Layer And Via (43mm,34.027mm) from Top Layer to Bottom Layer [Top Solder] Mask Sliver [0.011mm]
    Violation between Minimum Solder Mask Sliver Constraint: (0.098mm < 0.2mm) Between Pad U2-7(47.487mm,32.54mm) on Top Layer And Pad U2-8(47.987mm,32.54mm) on Top Layer [Top Solder] Mask Sliver [0.098mm]
    Violation between Minimum Solder Mask Sliver Constraint: (0.098mm < 0.2mm) Between Pad U2-8(47.987mm,32.54mm) on Top Layer And Pad U2-9(48.487mm,32.54mm) on Top Layer [Top Solder] Mask Sliver [0.098mm]
-   Violation between Minimum Solder Mask Sliver Constraint: (0.167mm < 0.2mm) Between Pad X3-TAB1(64.735mm,14.21mm) on Top Layer And Pad XANALOG1-TAB2(68.433mm,14.21mm) on Top Layer [Top Solder] Mask Sliver [0.167mm]
    Violation between Minimum Solder Mask Sliver Constraint: (0.133mm < 0.2mm) Between Via (76.454mm,98.425mm) from Top Layer to Bottom Layer And Via (77.252mm,98.179mm) from Top Layer to Bottom Layer [Top Solder] Mask Sliver [0.133mm] / [Bottom Solder] Mask Sliver [0.133mm]
    Violation between Minimum Solder Mask Sliver Constraint: (0.153mm < 0.2mm) Between Via (80.75mm,49.275mm) from Top Layer to Bottom Layer And Via (81.57mm,49.516mm) from Top Layer to Bottom Layer [Top Solder] Mask Sliver [0.153mm] / [Bottom Solder] Mask Sliver [0.153mm]
    Violation between Minimum Solder Mask Sliver Constraint: (0.165mm < 0.2mm) Between Via (81.788mm,45.791mm) from Top Layer to Bottom Layer And Via (82.586mm,45.452mm) from Top Layer to Bottom Layer [Top Solder] Mask Sliver [0.165mm] / [Bottom Solder] Mask Sliver [0.165mm]
    Violation between Minimum Solder Mask Sliver Constraint: (0.129mm < 0.2mm) Between Via (84.355mm,54.95mm) from Top Layer to Bottom Layer And Via (84.613mm,55.739mm) from Top Layer to Bottom Layer [Top Solder] Mask Sliver [0.129mm] / [Bottom Solder] Mask Sliver [0.129mm]
-Rule Violations :140
+Rule Violations :139
 
 Processing Rule : Silk To Solder Mask (Clearance=0mm) (IsPad),(All)
 Rule Violations :0
@@ -183,6 +182,7 @@ Processing Rule : Net Antennae (Tolerance=0mm) (All)
 Rule Violations :0
 
 Processing Rule : Board Clearance Constraint (Gap=0mm) (All)
+   Violation between Board Outline Clearance(Outline Edge): (0.135mm < 0.2mm) Between Board Edge And Text "XANALOG2" (10.335mm,59.644mm) on Top Overlay 
    Violation between Board Outline Clearance(Outline Edge): (Collision < 0.2mm) Between Board Edge And Track (10mm,62.089mm)(18.832mm,62.089mm) on Top Overlay 
    Violation between Board Outline Clearance(Outline Edge): (Collision < 0.2mm) Between Board Edge And Track (17.054mm,110mm)(17.054mm,76.948mm) on Top Overlay 
    Violation between Board Outline Clearance(Outline Edge): (Collision < 0.2mm) Between Board Edge And Track (63.663mm,76.821mm)(63.663mm,110mm) on Top Overlay 
@@ -193,7 +193,7 @@ Processing Rule : Board Clearance Constraint (Gap=0mm) (All)
    Violation between Board Outline Clearance(Outline Edge): (Collision < 0.2mm) Between Board Edge And Track (81.123mm,105.145mm)(81.123mm,109.975mm) on Top Overlay 
    Violation between Board Outline Clearance(Outline Edge): (Collision < 0.2mm) Between Board Edge And Track (81.123mm,109.975mm)(90.653mm,109.975mm) on Top Overlay 
    Violation between Board Outline Clearance(Outline Edge): (Collision < 0.2mm) Between Board Edge And Track (90.653mm,105.145mm)(90.653mm,109.975mm) on Top Overlay 
-Rule Violations :10
+Rule Violations :11
 
 Processing Rule : Height Constraint (Min=0mm) (Max=25.4mm) (Prefered=12.7mm) (All)
 Rule Violations :0
@@ -201,4 +201,4 @@ Rule Violations :0
 
 Violations Detected : 150
 Waived Violations : 0
-Time Elapsed        : 00:00:02
+Time Elapsed        : 00:00:01
