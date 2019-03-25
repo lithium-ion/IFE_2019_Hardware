@@ -1,0 +1,633 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<style type="text/css">
+		h1, h2, h3, h4, h5, h6 {
+			font-family : segoe ui;
+			color : black;
+			background-color : #EDE7D9;
+			padding: 0.3em;
+		}
+
+		h1 {
+			font-size: 1.2em;
+		}		
+
+		h2 {
+			font-size: 1.2em;
+		}
+
+		body {
+			font-family : segoe ui;
+		}
+
+		td, th {
+			padding: 0.5em;
+			text-align : left;
+			width: 10em;
+		}
+		th {
+			background-color : #EEEEEE;
+
+		}
+		th.column1, td.column1 {
+			text-align: left;
+			width : auto;
+		}
+		table {
+			width : 100%;
+			font-size: 0.9em;
+		}
+
+		.DRC_summary_header {
+			padding-bottom : 0.1em;
+			border : 0px solid black;
+			width: 100%;
+			align: left;
+		}
+
+		.DRC_summary_header_col1,
+		.DRC_summary_header_col2, 
+		.DRC_summary_header_col3 {
+			color : black;
+			font-size:100%;
+			padding : 0em;
+			padding-top : 0.2em;
+			padding-bottom 0.2em;
+			border : 0px solid black;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.DRC_summary_header_col1 {
+			font-weight: bold;
+			width: 8em;
+		}
+
+		.DRC_summary_header_col2 {
+			width: 0.1em;
+		
+		}
+
+		.DRC_summary_header_col3 {
+			width : auto;
+		}
+
+		.header_holder {
+		    Width = 100%;
+		    border = 0px solid green;
+		    padding = 0;
+		}
+
+
+		.front_matter, .front_matter_column1, .front_matter_column2, .front_matter_column3
+		{
+			left : 0;
+			top : 0;
+			padding: 0em;
+			padding-top : 0.1em;
+			border : 0px solid black;
+			width : 100%;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.front_matter_column1 {
+			width : 8em;
+			font-weight: bold;
+		}
+
+		.front_matter_column2 {
+			width: 0.1em;
+		}
+
+		.front_matter_column3 {
+			width : auto;
+		}
+
+		.total_column1, .total_column {
+			font-weight : bold;
+		}
+		.total_column1 {
+			text-align : left;
+		}
+		.warning, .error {
+			color : red;
+			font-weight : bold;
+		}
+		tr.onmouseout_odd {
+			background-color : #white;
+		}
+		tr.onmouseout_even { 
+			background-color : #FAFAFA;
+		}
+		tr.onmouseover_odd, tr.onmouseover_even { 
+			background-color : #EEEEEE;
+		} 
+		a:link, a:visited, .q a:link,.q a:active,.q {
+			color: #21489e; 
+		}
+		a:link.callback, a:visited.callback { 
+			color: #21489e;
+		}
+		a:link.customize, a:visited.customize {
+			color: #C0C0C0;
+			position: absolute; 
+			right: 10px;
+		}	
+		p.contents_level1 {
+			font-weight : bold;
+			font-size : 110%;
+			margin : 0.5em;
+		}
+		p.contents_level2 {
+			position : relative;
+			left : 20px;
+			margin : 0.5em;
+		}
+	</style><script type="text/javascript">
+		function coordToMils(coord) {
+			var number = coord / 10000;
+			
+			if (number != number.toFixed(3))
+				number = number.toFixed(3);
+
+			return number + 'mil'
+		}
+
+		function coordToMM(coord) {
+			var number = 0.0254 * coord / 10000;
+			
+			if (number != number.toFixed(4))
+				number = number.toFixed(4);
+			
+			return number + 'mm'
+		}
+	
+		function convertCoord(coordNode, units) {
+			for (var i = 0; i < coordNode.childNodes.length; i++) {
+				coordNode.removeChild(coordNode.childNodes[i]);
+			}
+
+			var coord = coordNode.getAttribute('value');
+			if (coord != null) {
+				if (units == 'mm') {
+					textNode = document.createTextNode(coordToMM(coord));
+					coordNode.appendChild(textNode);
+				} else if (units == 'mil') {
+					textNode = document.createTextNode(coordToMils(coord));		
+					coordNode.appendChild(textNode);	
+				}
+			}
+		}
+	
+		function convertUnits(unitNode, units) {
+			for (var i = 0; i < unitNode.childNodes.length; i++) {
+				unitNode.removeChild(unitNode.childNodes[i]);		
+			}
+		
+			textNode = document.createTextNode(units); 
+			unitNode.appendChild(textNode);
+		}
+	
+		function changeUnits(radio_input, units) {
+			if (radio_input.checked) {
+			
+				var elements = document.getElementsByName('coordinate');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertCoord(elements[i], units);
+					}
+				}
+	
+				var elements = document.getElementsByName('units');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertUnits(elements[i], units);
+					}
+				}
+			}
+		}
+	</script><title>Design Rule Verification Report</title>
+</head>
+<body onload=""><img ALT="Altium" src="
+			file://C:\Users\Public\Documents\Altium\AD18\Templates\AD_logo.png
+		"><h1>Design Rule Verification Report</h1>
+<table class="header_holder">
+<td class="column1">
+<table class="front_matter">
+<tr class="front_matter">
+<td class="front_matter_column1">Date:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">3/24/2019</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">10:25:49 PM</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Elapsed Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">00:00:01</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Filename:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3"><a href="file:///C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc" class="file"><acronym title="C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc">C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc</acronym></a></td>
+</tr>
+</table>
+</td>
+<td class="column2">
+<table class="DRC_summary_header">
+<tr>
+<td class="DRC_summary_header_col1">Warnings:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3" style="color : red">5</td></tr>
+<tr>
+<td class="DRC_summary_header_col1">Rule Violations:</td>
+<td class="DRC_summary_header_col2"></td>
+<td class="DRC_summary_header_col3" style="color : red">90</td></tr>
+</table>
+</td>
+</table><a name="IDOLCIEN2DPQFMICTBFZ4DALWCDIJYJ5OIA2SBRXHTGFBV24KQEJKN"><h2>Summary</h2></a><table>
+<tr>
+<th class="column1">Warnings</th>
+<th class="column2">Count</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#ID2NQXFEV5BQQZGIV3PT45IY4B0JTPZIHEG4HFFEB2ELZAYFCRWHQE">Unplated multi-layer pad(s) detected</a></td>
+<td class="column2">5</td>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">5</td>
+</tr>
+</table><br><table>
+<tr>
+<th class="column1">Rule Violations</th>
+<th class="column2">Count</th>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDAONJISJGOYRCG3EGU4HPG5FCCEJFZBBFGHRT12M0TTSFZFV2GFFF">Clearance Constraint (Gap=5.984mil) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDL523KMOKCIADPULVFSUC4JZK3MAOKSUFTIHVM3BHOLXPXJGLYKAN">Short-Circuit Constraint (Allowed=No) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDMIMAATISO45VFYTB0MG4M12QSOWSIOKZ3FQRVQBVXDECBRO1FX2O">Un-Routed Net Constraint ( (All) )</a></td>
+<td class="column2">44</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDM1CM5U4ZFJUULA4GPHYQFIC1LNJUHWLBD5U0IMCIMZMFMQEXT2F">Modified Polygon (Allow modified: No), (Allow shelved: No)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#ID35O0A0121TPGJ5KMAROIEIBRKN3ZUJV0TESDUGITFBCCGWFJJIPK">Width Constraint (Min=10mil) (Max=10mil) (Preferred=10mil) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#ID1QTQF4ZZTKL4GIUAXKCOFEU3KM4XH5V33QDTKUL3YMPDYYX5AF0C">Power Plane Connect Rule(Relief Connect )(Expansion=20mil) (Conductor Width=10mil) (Air Gap=10mil) (Entries=4) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDPAPD3W3CYXQ4OVB12ZPHLB01PHUC02HUGHH4TMKWXL3OPMAVZLFG">Hole Size Constraint (Min=1mil) (Max=100mil) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDAECHGXK14ENCI1GZ3FTMCGS4WPXGMOV444XBL4NZDRF0AYMLZ0C">Hole To Hole Clearance (Gap=10mil) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDMHI4XNDAQ5ALHF2LNVGL43IEFL1AAKO10IYZ52KE4YLJCAIR24UN">Minimum Solder Mask Sliver (Gap=10mil) (All),(All)</a></td>
+<td class="column2">14</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDYSMYA1RLRHLVPIAR1SVRIRWOXKBZATY0LREH5KNYCFXO4TNQYJ0I">Silk To Solder Mask (Clearance=10mil) (IsPad),(All)</a></td>
+<td class="column2">27</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#ID3QODSARMYMDLOI3X4CZGLCOHWDZRQF0OQOLNK4EQH4ZGCVS3HP2J">Silk to Silk (Clearance=10mil) (All),(All)</a></td>
+<td class="column2">5</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDWTS4XRN4FHTSA5KW5VLKV0YS2D5EL3402HJCKWJNOFDCFHEA2H">Net Antennae (Tolerance=0mil) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDEZKVO0O1UE3TITMPIMDCI4VCJHCH3V02O1JG2NJ3JWCBPXTKVK2H">Height Constraint (Min=0mil) (Max=1000mil) (Prefered=500mil) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">90</td>
+</tr>
+</table><br><a name="IDCY0IGDWVDD0DLYGUAZCYTDRPPGQDYF3CMJ4MOWNDV4KN331HJXMP"><h2>Warnings</h2></a><a name="ID2NQXFEV5BQQZGIV3PT45IY4B0JTPZIHEG4HFFEB2ELZAYFCRWHQE"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="warning">Unplated multi-layer pad(s) detected</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5886.472mil|Location2.X=5953.528mil|Location1.Y=3261.472mil|Location2.Y=3328.528mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5886.472mil|Location2.X=5953.528mil|Location1.Y=3261.472mil|Location2.Y=3328.528mil|Absolute=True">Pad X?-P$5(1890mil,180mil) on Multi-Layer</acronym></a> on <a href="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5093.244mil|Location2.X=5958.764mil|Location1.Y=3049.937mil|Location2.Y=3400.22mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5093.244mil|Location2.X=5958.764mil|Location1.Y=3049.937mil|Location2.Y=3400.22mil|Absolute=True">Net RESET</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5886.472mil|Location2.X=5953.528mil|Location1.Y=3161.472mil|Location2.Y=3228.528mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5886.472mil|Location2.X=5953.528mil|Location1.Y=3161.472mil|Location2.Y=3228.528mil|Absolute=True">Pad X?-P$4(1890mil,80mil) on Multi-Layer</acronym></a> on <a href="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2780mil|Location2.X=6063.685mil|Location1.Y=1855.252mil|Location2.Y=3495.811mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2780mil|Location2.X=6063.685mil|Location1.Y=1855.252mil|Location2.Y=3495.811mil|Absolute=True">Net +3.3V</acronym></a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5886.472mil|Location2.X=5953.528mil|Location1.Y=3061.472mil|Location2.Y=3128.528mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5886.472mil|Location2.X=5953.528mil|Location1.Y=3061.472mil|Location2.Y=3128.528mil|Absolute=True">Pad X?-P$3(1890mil,-20mil) on Multi-Layer</acronym></a> on <a href="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5416.079mil|Location2.X=5953.528mil|Location1.Y=2990.882mil|Location2.Y=3128.528mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5416.079mil|Location2.X=5953.528mil|Location1.Y=2990.882mil|Location2.Y=3128.528mil|Absolute=True">Net SWDIO</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5886.472mil|Location2.X=5953.528mil|Location1.Y=2961.472mil|Location2.Y=3028.528mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5886.472mil|Location2.X=5953.528mil|Location1.Y=2961.472mil|Location2.Y=3028.528mil|Absolute=True">Pad X?-P$2(1890mil,-120mil) on Multi-Layer</acronym></a> on <a href="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2470.96mil|Location2.X=6063.685mil|Location1.Y=2106.236mil|Location2.Y=4132.976mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2470.96mil|Location2.X=6063.685mil|Location1.Y=2106.236mil|Location2.Y=4132.976mil|Absolute=True">Net GND</acronym></a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5886.472mil|Location2.X=5953.528mil|Location1.Y=2861.472mil|Location2.Y=2928.528mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5886.472mil|Location2.X=5953.528mil|Location1.Y=2861.472mil|Location2.Y=2928.528mil|Absolute=True">Pad X?-P$1(1890mil,-220mil) on Multi-Layer</acronym></a> on <a href="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5416.079mil|Location2.X=5953.528mil|Location1.Y=2861.472mil|Location2.Y=2991.008mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5416.079mil|Location2.X=5953.528mil|Location1.Y=2861.472mil|Location2.Y=2991.008mil|Absolute=True">Net SWCLK</acronym></a></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDMIMAATISO45VFYTB0MG4M12QSOWSIOKZ3FQRVQBVXDECBRO1FX2O"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Un-Routed Net Constraint ( (All) )</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5438.283mil|Location2.X=5548.685mil|Location1.Y=3268.284mil|Location2.Y=3427.78mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5438.283mil|Location2.X=5548.685mil|Location1.Y=3268.284mil|Location2.Y=3427.78mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad N2-2(1430mil,295mil) on Bottom Layer And Pad C0-1(1495mil,175mil) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5378.677mil|Location2.X=5548.685mil|Location1.Y=3166.079mil|Location2.Y=3311.716mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5378.677mil|Location2.X=5548.685mil|Location1.Y=3166.079mil|Location2.Y=3311.716mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad U1-23(1358.583mil,96.417mil) on Bottom Layer And Pad C0-1(1495mil,175mil) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5501.315mil|Location2.X=5665.811mil|Location1.Y=3214.189mil|Location2.Y=3311.716mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5501.315mil|Location2.X=5665.811mil|Location1.Y=3214.189mil|Location2.Y=3311.716mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad C0-1(1495mil,175mil) on Bottom Layer And Pad U2-2(1620mil,133.701mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5539.858mil|Location2.X=5807.74mil|Location1.Y=2821.315mil|Location2.Y=2925.255mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5539.858mil|Location2.X=5807.74mil|Location1.Y=2821.315mil|Location2.Y=2925.255mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad C1-1(1531.575mil,-270mil) on Bottom Layer And Pad D7-4(1750.12mil,-211.46mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5416.079mil|Location2.X=5583.291mil|Location1.Y=2821.315mil|Location2.Y=2971.323mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5416.079mil|Location2.X=5583.291mil|Location1.Y=2821.315mil|Location2.Y=2971.323mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad U1-35(1431.417mil,-153.583mil) on Bottom Layer And Pad C1-1(1531.575mil,-270mil) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5886.472mil|Location2.X=6063.685mil|Location1.Y=2961.472mil|Location2.Y=3135.142mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5886.472mil|Location2.X=6063.685mil|Location1.Y=2961.472mil|Location2.Y=3135.142mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad X?-P$2(1890mil,-120mil) on Multi-Layer [Unplated] And Pad C3-1(2010mil,-1.575mil) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5657.221mil|Location2.X=5828.764mil|Location1.Y=3505.724mil|Location2.Y=3651.087mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5657.221mil|Location2.X=5828.764mil|Location1.Y=3505.724mil|Location2.Y=3651.087mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad D10-3(1645mil,514.37mil) on Top Layer And Pad C8-1(1780mil,410.472mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5468.283mil|Location2.X=5553.764mil|Location1.Y=3470.724mil|Location2.Y=3622.78mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5468.283mil|Location2.X=5553.764mil|Location1.Y=3470.724mil|Location2.Y=3622.78mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad N0-2(1460mil,490mil) on Bottom Layer And Pad C9-1(1505mil,375.472mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5438.283mil|Location2.X=5553.764mil|Location1.Y=3392.22mil|Location2.Y=3510.22mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5438.283mil|Location2.X=5553.764mil|Location1.Y=3392.22mil|Location2.Y=3510.22mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad N2-2(1430mil,295mil) on Bottom Layer And Pad C9-1(1505mil,375.472mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5516.236mil|Location2.X=5615.811mil|Location1.Y=3426.787mil|Location2.Y=3510.22mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5516.236mil|Location2.X=5615.811mil|Location1.Y=3426.787mil|Location2.Y=3510.22mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad C9-1(1505mil,375.472mil) on Top Layer And Pad U2-8(1570mil,346.299mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5468.283mil|Location2.X=5692.779mil|Location1.Y=3587.22mil|Location2.Y=3651.087mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5468.283mil|Location2.X=5692.779mil|Location1.Y=3587.22mil|Location2.Y=3651.087mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad N0-2(1460mil,490mil) on Bottom Layer And Pad D10-3(1645mil,514.37mil) on Top Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5752.5mil|Location2.X=5953.528mil|Location1.Y=2881.825mil|Location2.Y=3028.528mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5752.5mil|Location2.X=5953.528mil|Location1.Y=2881.825mil|Location2.Y=3028.528mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad D7-4(1750.12mil,-211.46mil) on Top Layer And Pad X?-P$2(1890mil,-120mil) on Multi-Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3957.654mil|Location2.X=4659.35mil|Location1.Y=2899.819mil|Location2.Y=3158.17mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3957.654mil|Location2.X=4659.35mil|Location1.Y=2899.819mil|Location2.Y=3158.17mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad N4-2(-50.63mil,-197.402mil) on Bottom Layer And Pad IC0-2(475.35mil,-85.83mil) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4351.35mil|Location2.X=5183.921mil|Location1.Y=2900.17mil|Location2.Y=3158.17mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4351.35mil|Location2.X=5183.921mil|Location1.Y=2900.17mil|Location2.Y=3158.17mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad IC0-2(475.35mil,-85.83mil) on Bottom Layer And Pad U1-8(1108.583mil,-35.472mil) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5463.283mil|Location2.X=5511.717mil|Location1.Y=3587.22mil|Location2.Y=3817.78mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5463.283mil|Location2.X=5511.717mil|Location1.Y=3587.22mil|Location2.Y=3817.78mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad N1-2(1455mil,685mil) on Bottom Layer And Pad N0-2(1460mil,490mil) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5183.283mil|Location2.X=5506.717mil|Location1.Y=3782.22mil|Location2.Y=4132.976mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5183.283mil|Location2.X=5506.717mil|Location1.Y=3782.22mil|Location2.Y=4132.976mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad N8-2(1175mil,1000.197mil) on Bottom Layer And Pad N1-2(1455mil,685mil) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4930.252mil|Location2.X=5481.717mil|Location1.Y=3392.22mil|Location2.Y=3453.764mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4930.252mil|Location2.X=5481.717mil|Location1.Y=3392.22mil|Location2.Y=3453.764mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad R39-1(920mil,320mil) on Bottom Layer And Pad N2-2(1430mil,295mil) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3749.78mil|Location2.X=3981.087mil|Location1.Y=3396.236mil|Location2.Y=4090.378mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3749.78mil|Location2.X=3981.087mil|Location1.Y=3396.236mil|Location2.Y=4090.378mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad R28-1(-260.472mil,300mil) on Bottom Layer And Pad N3-2(-70.63mil,957.598mil) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3704.78mil|Location2.X=4001.087mil|Location1.Y=2106.236mil|Location2.Y=2935.378mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3704.78mil|Location2.X=4001.087mil|Location1.Y=2106.236mil|Location2.Y=2935.378mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad R16-1(-305.472mil,-990mil) on Bottom Layer And Pad N4-2(-50.63mil,-197.402mil) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3749.78mil|Location2.X=4001.087mil|Location1.Y=2899.819mil|Location2.Y=3433.764mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3749.78mil|Location2.X=4001.087mil|Location1.Y=2899.819mil|Location2.Y=3433.764mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad R28-1(-260.472mil,300mil) on Bottom Layer And Pad N4-2(-50.63mil,-197.402mil) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2470.96mil|Location2.X=4001.087mil|Location1.Y=2798.83mil|Location2.Y=2935.378mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2470.96mil|Location2.X=4001.087mil|Location1.Y=2798.83mil|Location2.Y=2935.378mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad X?-P$4(-1505.04mil,-287.17mil) on Top Layer And Pad N4-2(-50.63mil,-197.402mil) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4995.252mil|Location2.X=5121.717mil|Location1.Y=2166.236mil|Location2.Y=2747.976mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4995.252mil|Location2.X=5121.717mil|Location1.Y=2166.236mil|Location2.Y=2747.976mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad R50-1(985mil,-930mil) on Bottom Layer And Pad N9-2(1070mil,-384.803mil) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5078.283mil|Location2.X=5221.323mil|Location1.Y=2712.417mil|Location2.Y=2933.921mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5078.283mil|Location2.X=5221.323mil|Location1.Y=2712.417mil|Location2.Y=2933.921mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad N9-2(1070mil,-384.803mil) on Bottom Layer And Pad U1-47(1181.417mil,-226.417mil) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5378.677mil|Location2.X=5506.756mil|Location1.Y=2951.512mil|Location2.Y=3256.756mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5378.677mil|Location2.X=5506.756mil|Location1.Y=2951.512mil|Location2.Y=3256.756mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad U1-23(1358.583mil,96.417mil) on Bottom Layer And Pad U1-35(1431.417mil,-153.583mil) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5260.567mil|Location2.X=5506.756mil|Location1.Y=2843.244mil|Location2.Y=2971.323mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5260.567mil|Location2.X=5506.756mil|Location1.Y=2843.244mil|Location2.Y=2971.323mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad U1-44(1240.473mil,-226.417mil) on Bottom Layer And Pad U1-35(1431.417mil,-153.583mil) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5201.512mil|Location2.X=5280.378mil|Location1.Y=2843.244mil|Location2.Y=2933.921mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5201.512mil|Location2.X=5280.378mil|Location1.Y=2843.244mil|Location2.Y=2933.921mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad U1-47(1181.417mil,-226.417mil) on Bottom Layer And Pad U1-44(1240.473mil,-226.417mil) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5093.244mil|Location2.X=5221.323mil|Location1.Y=2843.244mil|Location2.Y=3089.433mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5093.244mil|Location2.X=5221.323mil|Location1.Y=2843.244mil|Location2.Y=3089.433mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad U1-8(1108.583mil,-35.472mil) on Bottom Layer And Pad U1-47(1181.417mil,-226.417mil) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5886.472mil|Location2.X=5953.528mil|Location1.Y=2861.472mil|Location2.Y=2928.528mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5886.472mil|Location2.X=5953.528mil|Location1.Y=2861.472mil|Location2.Y=2928.528mil|Absolute=True">Un-Routed Net Constraint: Net SWCLK Between Pad X?-P$1(1890mil,-220mil) on Multi-Layer [Unplated] And Pad X?-P$1(1890mil,-220mil) on Multi-Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5886.472mil|Location2.X=5953.528mil|Location1.Y=2861.472mil|Location2.Y=2928.528mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5886.472mil|Location2.X=5953.528mil|Location1.Y=2861.472mil|Location2.Y=2928.528mil|Absolute=True">Un-Routed Net Constraint: Net SWCLK Between Pad X?-P$1(1890mil,-220mil) on Multi-Layer [Unplated] And Pad X?-P$1(1890mil,-220mil) on Multi-Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5886.472mil|Location2.X=5953.528mil|Location1.Y=2861.472mil|Location2.Y=2928.528mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5886.472mil|Location2.X=5953.528mil|Location1.Y=2861.472mil|Location2.Y=2928.528mil|Absolute=True">Un-Routed Net Constraint: Net SWCLK Between Pad X?-P$1(1890mil,-220mil) on Multi-Layer [Unplated] And Pad X?-P$1(1890mil,-220mil) on Multi-Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5886.472mil|Location2.X=5953.528mil|Location1.Y=2861.472mil|Location2.Y=2928.528mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5886.472mil|Location2.X=5953.528mil|Location1.Y=2861.472mil|Location2.Y=2928.528mil|Absolute=True">Un-Routed Net Constraint: Net SWCLK Between Pad X?-P$1(1890mil,-220mil) on Multi-Layer [Unplated] And Pad X?-P$1(1890mil,-220mil) on Multi-Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5886.472mil|Location2.X=5953.528mil|Location1.Y=2961.472mil|Location2.Y=3028.528mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5886.472mil|Location2.X=5953.528mil|Location1.Y=2961.472mil|Location2.Y=3028.528mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad X?-P$2(1890mil,-120mil) on Multi-Layer [Unplated] And Pad X?-P$2(1890mil,-120mil) on Multi-Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5886.472mil|Location2.X=5953.528mil|Location1.Y=2961.472mil|Location2.Y=3028.528mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5886.472mil|Location2.X=5953.528mil|Location1.Y=2961.472mil|Location2.Y=3028.528mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad X?-P$2(1890mil,-120mil) on Multi-Layer [Unplated] And Pad X?-P$2(1890mil,-120mil) on Multi-Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5886.472mil|Location2.X=5953.528mil|Location1.Y=2961.472mil|Location2.Y=3028.528mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5886.472mil|Location2.X=5953.528mil|Location1.Y=2961.472mil|Location2.Y=3028.528mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad X?-P$2(1890mil,-120mil) on Multi-Layer [Unplated] And Pad X?-P$2(1890mil,-120mil) on Multi-Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5886.472mil|Location2.X=5953.528mil|Location1.Y=2961.472mil|Location2.Y=3028.528mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5886.472mil|Location2.X=5953.528mil|Location1.Y=2961.472mil|Location2.Y=3028.528mil|Absolute=True">Un-Routed Net Constraint: Net GND Between Pad X?-P$2(1890mil,-120mil) on Multi-Layer [Unplated] And Pad X?-P$2(1890mil,-120mil) on Multi-Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5886.472mil|Location2.X=5953.528mil|Location1.Y=3061.472mil|Location2.Y=3128.528mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5886.472mil|Location2.X=5953.528mil|Location1.Y=3061.472mil|Location2.Y=3128.528mil|Absolute=True">Un-Routed Net Constraint: Net SWDIO Between Pad X?-P$3(1890mil,-20mil) on Multi-Layer [Unplated] And Pad X?-P$3(1890mil,-20mil) on Multi-Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5886.472mil|Location2.X=5953.528mil|Location1.Y=3061.472mil|Location2.Y=3128.528mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5886.472mil|Location2.X=5953.528mil|Location1.Y=3061.472mil|Location2.Y=3128.528mil|Absolute=True">Un-Routed Net Constraint: Net SWDIO Between Pad X?-P$3(1890mil,-20mil) on Multi-Layer [Unplated] And Pad X?-P$3(1890mil,-20mil) on Multi-Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5886.472mil|Location2.X=5953.528mil|Location1.Y=3061.472mil|Location2.Y=3128.528mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5886.472mil|Location2.X=5953.528mil|Location1.Y=3061.472mil|Location2.Y=3128.528mil|Absolute=True">Un-Routed Net Constraint: Net SWDIO Between Pad X?-P$3(1890mil,-20mil) on Multi-Layer [Unplated] And Pad X?-P$3(1890mil,-20mil) on Multi-Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5886.472mil|Location2.X=5953.528mil|Location1.Y=3061.472mil|Location2.Y=3128.528mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5886.472mil|Location2.X=5953.528mil|Location1.Y=3061.472mil|Location2.Y=3128.528mil|Absolute=True">Un-Routed Net Constraint: Net SWDIO Between Pad X?-P$3(1890mil,-20mil) on Multi-Layer [Unplated] And Pad X?-P$3(1890mil,-20mil) on Multi-Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5820mil|Location2.X=6140mil|Location1.Y=3095mil|Location2.Y=3485mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5820mil|Location2.X=6140mil|Location1.Y=3095mil|Location2.Y=3485mil|Absolute=True">Un-Routed Net Constraint: Net +3.3V Between Pad X?-P$4(1890mil,80mil) on Multi-Layer [Unplated] And Track (2010mil,51.575mil)(2010mil,270mil) on Bottom Layer </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5886.472mil|Location2.X=5953.528mil|Location1.Y=3261.472mil|Location2.Y=3328.528mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5886.472mil|Location2.X=5953.528mil|Location1.Y=3261.472mil|Location2.Y=3328.528mil|Absolute=True">Un-Routed Net Constraint: Net RESET Between Pad X?-P$5(1890mil,180mil) on Multi-Layer [Unplated] And Pad X?-P$5(1890mil,180mil) on Multi-Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5886.472mil|Location2.X=5953.528mil|Location1.Y=3261.472mil|Location2.Y=3328.528mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5886.472mil|Location2.X=5953.528mil|Location1.Y=3261.472mil|Location2.Y=3328.528mil|Absolute=True">Un-Routed Net Constraint: Net RESET Between Pad X?-P$5(1890mil,180mil) on Multi-Layer [Unplated] And Pad X?-P$5(1890mil,180mil) on Multi-Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5886.472mil|Location2.X=5953.528mil|Location1.Y=3261.472mil|Location2.Y=3328.528mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5886.472mil|Location2.X=5953.528mil|Location1.Y=3261.472mil|Location2.Y=3328.528mil|Absolute=True">Un-Routed Net Constraint: Net RESET Between Pad X?-P$5(1890mil,180mil) on Multi-Layer [Unplated] And Pad X?-P$5(1890mil,180mil) on Multi-Layer [Unplated] </acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5886.472mil|Location2.X=5953.528mil|Location1.Y=3261.472mil|Location2.Y=3328.528mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5886.472mil|Location2.X=5953.528mil|Location1.Y=3261.472mil|Location2.Y=3328.528mil|Absolute=True">Un-Routed Net Constraint: Net RESET Between Pad X?-P$5(1890mil,180mil) on Multi-Layer [Unplated] And Pad X?-P$5(1890mil,180mil) on Multi-Layer [Unplated] </acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDMHI4XNDAQ5ALHF2LNVGL43IEFL1AAKO10IYZ52KE4YLJCAIR24UN"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Minimum Solder Mask Sliver (Gap=10mil) (All),(All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5495.69mil|Location2.X=5506.94mil|Location1.Y=3257.8mil|Location2.Y=3269.05mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5495.69mil|Location2.X=5506.94mil|Location1.Y=3257.8mil|Location2.Y=3269.05mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (9.717mil &lt; 10mil) Between Pad C0-1(1495mil,175mil) on Bottom Layer And Pad C0-2(1495mil,121.85mil) on Bottom Layer [Bottom Solder] Mask Sliver [9.717mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5529.375mil|Location2.X=5540.625mil|Location1.Y=2815.69mil|Location2.Y=2826.94mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5529.375mil|Location2.X=5540.625mil|Location1.Y=2815.69mil|Location2.Y=2826.94mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (9.717mil &lt; 10mil) Between Pad C1-1(1531.575mil,-270mil) on Bottom Layer And Pad C1-2(1478.425mil,-270mil) on Bottom Layer [Bottom Solder] Mask Sliver [9.717mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6010.69mil|Location2.X=6021.94mil|Location1.Y=3134.375mil|Location2.Y=3145.625mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=6010.69mil|Location2.X=6021.94mil|Location1.Y=3134.375mil|Location2.Y=3145.625mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (9.717mil &lt; 10mil) Between Pad C3-1(2010mil,-1.575mil) on Bottom Layer And Pad C3-2(2010mil,51.575mil) on Bottom Layer [Bottom Solder] Mask Sliver [9.717mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5300.221mil|Location2.X=5311.471mil|Location1.Y=3624.375mil|Location2.Y=3635.625mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5300.221mil|Location2.X=5311.471mil|Location1.Y=3624.375mil|Location2.Y=3635.625mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (6.685mil &lt; 10mil) Between Pad D0-A(1238.976mil,525mil) on Top Layer And Via (1295mil,515mil) from Top Layer to Bottom Layer [Top Solder] Mask Sliver [6.685mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5213.767mil|Location2.X=5225.017mil|Location1.Y=3388.627mil|Location2.Y=3399.877mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5213.767mil|Location2.X=5225.017mil|Location1.Y=3388.627mil|Location2.Y=3399.877mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (6.883mil &lt; 10mil) Between Pad D2-A(1222.953mil,330mil) on Top Layer And Via (1189.205mil,260mil) from Top Layer to Bottom Layer [Top Solder] Mask Sliver [6.883mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5296.777mil|Location2.X=5308.027mil|Location1.Y=2409.513mil|Location2.Y=2420.763mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5296.777mil|Location2.X=5308.027mil|Location1.Y=2409.513mil|Location2.Y=2420.763mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (8.102mil &lt; 10mil) Between Pad P2-2(1272.402mil,-725.63mil) on Bottom Layer And Via (1272.402mil,-680mil) from Top Layer to Bottom Layer [Bottom Solder] Mask Sliver [8.102mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5306.777mil|Location2.X=5318.027mil|Location1.Y=3413.115mil|Location2.Y=3424.365mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5306.777mil|Location2.X=5318.027mil|Location1.Y=3413.115mil|Location2.Y=3424.365mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (9.953mil &lt; 10mil) Between Pad R2-1(1280mil,280mil) on Bottom Layer And Via (1282.402mil,324.528mil) from Top Layer to Bottom Layer [Bottom Solder] Mask Sliver [9.953mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5177.249mil|Location2.X=5188.499mil|Location1.Y=2927.249mil|Location2.Y=2938.499mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5177.249mil|Location2.X=5188.499mil|Location1.Y=2927.249mil|Location2.Y=2938.499mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (5.244mil &lt; 10mil) Between Pad U1-1(1108.583mil,-173.268mil) on Bottom Layer And Pad U1-48(1161.732mil,-226.417mil) on Bottom Layer [Bottom Solder] Mask Sliver [5.244mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5177.249mil|Location2.X=5188.499mil|Location1.Y=3161.501mil|Location2.Y=3172.751mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5177.249mil|Location2.X=5188.499mil|Location1.Y=3161.501mil|Location2.Y=3172.751mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (5.244mil &lt; 10mil) Between Pad U1-12(1108.583mil,43.268mil) on Bottom Layer And Pad U1-13(1161.732mil,96.417mil) on Bottom Layer [Bottom Solder] Mask Sliver [5.244mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5411.501mil|Location2.X=5422.751mil|Location1.Y=3161.501mil|Location2.Y=3172.751mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5411.501mil|Location2.X=5422.751mil|Location1.Y=3161.501mil|Location2.Y=3172.751mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (5.244mil &lt; 10mil) Between Pad U1-24(1378.268mil,96.417mil) on Bottom Layer And Pad U1-25(1431.417mil,43.268mil) on Bottom Layer [Bottom Solder] Mask Sliver [5.244mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5411.501mil|Location2.X=5422.751mil|Location1.Y=2927.249mil|Location2.Y=2938.499mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5411.501mil|Location2.X=5422.751mil|Location1.Y=2927.249mil|Location2.Y=2938.499mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (5.244mil &lt; 10mil) Between Pad U1-36(1431.417mil,-173.268mil) on Bottom Layer And Pad U1-37(1378.268mil,-226.417mil) on Bottom Layer [Bottom Solder] Mask Sliver [5.244mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5698.154mil|Location2.X=5709.404mil|Location1.Y=3278.076mil|Location2.Y=3289.326mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5698.154mil|Location2.X=5709.404mil|Location1.Y=3278.076mil|Location2.Y=3289.326mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (0.976mil &lt; 10mil) Between Pad U2-3(1670mil,133.701mil) on Top Layer And Via (1673.78mil,185mil) from Top Layer to Bottom Layer [Top Solder] Mask Sliver [0.976mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5219.375mil|Location2.X=5230.625mil|Location1.Y=3114.916mil|Location2.Y=3126.166mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5219.375mil|Location2.X=5230.625mil|Location1.Y=3114.916mil|Location2.Y=3126.166mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (4.461mil &lt; 10mil) Between Via (1195mil,-12.5mil) from Top Layer to Bottom Layer And Via (1195mil,23.583mil) from Top Layer to Bottom Layer [Top Solder] Mask Sliver [4.461mil] / [Bottom Solder] Mask Sliver [4.461mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5276.777mil|Location2.X=5288.027mil|Location1.Y=2431.639mil|Location2.Y=2442.889mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5276.777mil|Location2.X=5288.027mil|Location1.Y=2431.639mil|Location2.Y=2442.889mil|Absolute=True">Minimum Solder Mask Sliver Constraint: (8.633mil &lt; 10mil) Between Via (1232.402mil,-675.472mil) from Top Layer to Bottom Layer And Via (1272.402mil,-680mil) from Top Layer to Bottom Layer [Top Solder] Mask Sliver [8.633mil] / [Bottom Solder] Mask Sliver [8.633mil]</acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDYSMYA1RLRHLVPIAR1SVRIRWOXKBZATY0LREH5KNYCFXO4TNQYJ0I"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Silk To Solder Mask (Clearance=10mil) (IsPad),(All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4570.167mil|Location2.X=4577.833mil|Location1.Y=2910.16mil|Location2.Y=2917.827mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4570.167mil|Location2.X=4577.833mil|Location1.Y=2910.16mil|Location2.Y=2917.827mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (Collision &lt; 10mil) Between Pad IC0-2(475.35mil,-85.83mil) on Bottom Layer And Text "R46" (544mil,-221mil) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3973.375mil|Location2.X=3984.625mil|Location1.Y=2893.281mil|Location2.Y=2904.531mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3973.375mil|Location2.X=3984.625mil|Location1.Y=2893.281mil|Location2.Y=2904.531mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (9.825mil &lt; 10mil) Between Pad N4-2(-50.63mil,-197.402mil) on Bottom Layer And Text "R4" (-51mil,-246mil) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [9.825mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5113.883mil|Location2.X=5121.55mil|Location1.Y=2715.166mil|Location2.Y=2722.832mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5113.883mil|Location2.X=5121.55mil|Location1.Y=2715.166mil|Location2.Y=2722.832mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (Collision &lt; 10mil) Between Pad N9-2(1070mil,-384.803mil) on Bottom Layer And Text "RB" (1109mil,-396.001mil) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5622.167mil|Location2.X=5629.833mil|Location1.Y=3695.93mil|Location2.Y=3703.597mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5622.167mil|Location2.X=5629.833mil|Location1.Y=3695.93mil|Location2.Y=3703.597mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (Collision &lt; 10mil) Between Pad R54-1(1610.945mil,570mil) on Top Layer And Text "D10" (1591mil,566mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [0mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5674.493mil|Location2.X=5685.743mil|Location1.Y=3678.707mil|Location2.Y=3689.957mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5674.493mil|Location2.X=5685.743mil|Location1.Y=3678.707mil|Location2.Y=3689.957mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (8.268mil &lt; 10mil) Between Pad R54-2(1670mil,570mil) on Top Layer And Text "D10" (1591mil,566mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [8.268mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5810.496mil|Location2.X=5818.162mil|Location1.Y=3646.828mil|Location2.Y=3654.495mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5810.496mil|Location2.X=5818.162mil|Location1.Y=3646.828mil|Location2.Y=3654.495mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (Collision &lt; 10mil) Between Pad R55-1(1780mil,525.472mil) on Top Layer And Text "C8" (1771mil,519mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [0mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5559.137mil|Location2.X=5566.803mil|Location1.Y=3601.919mil|Location2.Y=3609.585mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5559.137mil|Location2.X=5566.803mil|Location1.Y=3601.919mil|Location2.Y=3609.585mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (Collision &lt; 10mil) Between Pad R56-1(1535mil,485.472mil) on Top Layer And Text "C9" (1496mil,484mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [0mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3084.178mil|Location2.X=3095.428mil|Location1.Y=2003.99mil|Location2.Y=2015.24mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3084.178mil|Location2.X=3095.428mil|Location1.Y=2003.99mil|Location2.Y=2015.24mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (1.243mil &lt; 10mil) Between Pad R7-1(-955.945mil,-1090mil) on Bottom Layer And Text "R17" (-891mil,-1131mil) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [1.243mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5140.931mil|Location2.X=5148.597mil|Location1.Y=2622.32mil|Location2.Y=2629.987mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5140.931mil|Location2.X=5148.597mil|Location1.Y=2622.32mil|Location2.Y=2629.987mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (Collision &lt; 10mil) Between Pad RB-1(1100mil,-504.528mil) on Bottom Layer And Text "RR" (1149mil,-505.508mil) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4403.013mil|Location2.X=4410.68mil|Location1.Y=1993.053mil|Location2.Y=2000.72mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4403.013mil|Location2.X=4410.68mil|Location1.Y=1993.053mil|Location2.Y=2000.72mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (Collision &lt; 10mil) Between Pad SW0-1(403.102mil,-1088.678mil) on Multi-Layer And Text "R40" (400.202mil,-1131.472mil) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4124.719mil|Location2.X=4132.385mil|Location1.Y=2268.843mil|Location2.Y=2276.51mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4124.719mil|Location2.X=4132.385mil|Location1.Y=2268.843mil|Location2.Y=2276.51mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (Collision &lt; 10mil) Between Pad SW0-3(124.709mil,-810.287mil) on Multi-Layer And Text "R42" (109mil,-865mil) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4402.767mil|Location2.X=4410.434mil|Location1.Y=2760.16mil|Location2.Y=2767.827mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4402.767mil|Location2.X=4410.434mil|Location1.Y=2760.16mil|Location2.Y=2767.827mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (Collision &lt; 10mil) Between Pad SW0-6(403.103mil,-328.099mil) on Multi-Layer And Text "R45" (384.39mil,-371mil) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4948.555mil|Location2.X=4959.805mil|Location1.Y=2485.003mil|Location2.Y=2496.253mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4948.555mil|Location2.X=4959.805mil|Location1.Y=2485.003mil|Location2.Y=2496.253mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (3.062mil &lt; 10mil) Between Pad SW0-9(885.291mil,-606.493mil) on Multi-Layer And Text "R49" (974mil,-645mil) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [3.062mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4898.485mil|Location2.X=4909.735mil|Location1.Y=3504.547mil|Location2.Y=3515.797mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4898.485mil|Location2.X=4909.735mil|Location1.Y=3504.547mil|Location2.Y=3515.797mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (6.383mil &lt; 10mil) Between Pad SW1-10(880.288mil,438.102mil) on Multi-Layer And Text "R39" (929.472mil,369mil) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [6.383mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4279.062mil|Location2.X=4290.312mil|Location1.Y=3340.257mil|Location2.Y=3351.507mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4279.062mil|Location2.X=4290.312mil|Location1.Y=3340.257mil|Location2.Y=3351.507mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (9.036mil &lt; 10mil) Between Pad SW1-2(221.609mil,261.607mil) on Multi-Layer And Text "R30" (314mil,209mil) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [9.036mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4119.604mil|Location2.X=4127.271mil|Location1.Y=3521.772mil|Location2.Y=3529.438mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4119.604mil|Location2.X=4127.271mil|Location1.Y=3521.772mil|Location2.Y=3529.438mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (Collision &lt; 10mil) Between Pad SW1-3(119.709mil,438.103mil) on Multi-Layer And Text "R31" (109mil,394mil) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4943.078mil|Location2.X=4954.328mil|Location1.Y=3733.456mil|Location2.Y=3744.706mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=4943.078mil|Location2.X=4954.328mil|Location1.Y=3733.456mil|Location2.Y=3744.706mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (2.1mil &lt; 10mil) Between Pad SW1-9(880.291mil,641.897mil) on Multi-Layer And Text "R38" (958.055mil,606.929mil) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [2.1mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3165.38mil|Location2.X=3176.63mil|Location1.Y=3215.558mil|Location2.Y=3226.808mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3165.38mil|Location2.X=3176.63mil|Location1.Y=3215.558mil|Location2.Y=3226.808mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (6.455mil &lt; 10mil) Between Pad SW2-1(-851.898mil,149.712mil) on Multi-Layer And Text "R18" (-846mil,78.528mil) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [6.455mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2869.719mil|Location2.X=2877.385mil|Location1.Y=3507.233mil|Location2.Y=3514.899mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2869.719mil|Location2.X=2877.385mil|Location1.Y=3507.233mil|Location2.Y=3514.899mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (Collision &lt; 10mil) Between Pad SW2-3(-1130.291mil,428.103mil) on Multi-Layer And Text "R20" (-1146mil,374mil) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3693.513mil|Location2.X=3701.18mil|Location1.Y=3756.127mil|Location2.Y=3763.793mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3693.513mil|Location2.X=3701.18mil|Location1.Y=3756.127mil|Location2.Y=3763.793mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (Collision &lt; 10mil) Between Pad SW2-9(-369.709mil,631.897mil) on Multi-Layer And Text "R27" (-276mil,625mil) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [0mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3138.901mil|Location2.X=3150.151mil|Location1.Y=1997.876mil|Location2.Y=2009.126mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3138.901mil|Location2.X=3150.151mil|Location1.Y=1997.876mil|Location2.Y=2009.126mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (1.053mil &lt; 10mil) Between Pad SW3-1(-846.898mil,-1095.288mil) on Multi-Layer And Text "R17" (-891mil,-1131mil) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [1.053mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3039.162mil|Location2.X=3050.412mil|Location1.Y=2094mil|Location2.Y=2105.25mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3039.162mil|Location2.X=3050.412mil|Location1.Y=2094mil|Location2.Y=2105.25mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (5.629mil &lt; 10mil) Between Pad SW3-2(-1023.391mil,-993.393mil) on Multi-Layer And Text "R7" (-946.472mil,-1041mil) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [5.629mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2859.828mil|Location2.X=2871.078mil|Location1.Y=2272.541mil|Location2.Y=2283.791mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2859.828mil|Location2.X=2871.078mil|Location1.Y=2272.541mil|Location2.Y=2283.791mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (5.37mil &lt; 10mil) Between Pad SW3-3(-1125.291mil,-816.897mil) on Multi-Layer And Text "R8" (-1171mil,-861mil) on Bottom Overlay [Bottom Overlay] to [Bottom Solder] clearance [5.37mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5579.217mil|Location2.X=5590.467mil|Location1.Y=3273.588mil|Location2.Y=3284.838mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5579.217mil|Location2.X=5590.467mil|Location1.Y=3273.588mil|Location2.Y=3284.838mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (6.693mil &lt; 10mil) Between Pad U2-1(1570mil,133.701mil) on Top Layer And Track (1548.543mil,163.228mil)(1548.543mil,316.772mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [6.693mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5759.533mil|Location2.X=5770.783mil|Location1.Y=3272.603mil|Location2.Y=3283.853mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5759.533mil|Location2.X=5770.783mil|Location1.Y=3272.603mil|Location2.Y=3283.853mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (6.693mil &lt; 10mil) Between Pad U2-4(1720mil,133.701mil) on Top Layer And Track (1741.457mil,163.228mil)(1741.457mil,316.772mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [6.693mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5759.533mil|Location2.X=5770.783mil|Location1.Y=3425.162mil|Location2.Y=3436.412mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5759.533mil|Location2.X=5770.783mil|Location1.Y=3425.162mil|Location2.Y=3436.412mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (6.693mil &lt; 10mil) Between Pad U2-5(1720mil,346.299mil) on Top Layer And Track (1741.457mil,163.228mil)(1741.457mil,316.772mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [6.693mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5579.217mil|Location2.X=5590.467mil|Location1.Y=3425.162mil|Location2.Y=3436.412mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5579.217mil|Location2.X=5590.467mil|Location1.Y=3425.162mil|Location2.Y=3436.412mil|Absolute=True">Silk To Solder Mask Clearance Constraint: (6.693mil &lt; 10mil) Between Pad U2-8(1570mil,346.299mil) on Top Layer And Track (1548.543mil,163.228mil)(1548.543mil,316.772mil) on Top Overlay [Top Overlay] to [Top Solder] clearance [6.693mil]</acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="ID3QODSARMYMDLOI3X4CZGLCOHWDZRQF0OQOLNK4EQH4ZGCVS3HP2J"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Silk to Silk (Clearance=10mil) (All),(All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5609.533mil|Location2.X=5620.783mil|Location1.Y=3701.038mil|Location2.Y=3712.288mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5609.533mil|Location2.X=5620.783mil|Location1.Y=3701.038mil|Location2.Y=3712.288mil|Absolute=True">Silk To Silk Clearance Constraint: (6.282mil &lt; 10mil) Between Text "D10" (1591mil,566mil) on Top Overlay And Text "R56" (1526mil,594mil) on Top Overlay Silk Text to Silk Clearance [6.281mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5285.65mil|Location2.X=5296.9mil|Location1.Y=2645.975mil|Location2.Y=2657.225mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5285.65mil|Location2.X=5296.9mil|Location1.Y=2645.975mil|Location2.Y=2657.225mil|Absolute=True">Silk To Silk Clearance Constraint: (8.947mil &lt; 10mil) Between Text "P0" (1299.055mil,-489mil) on Bottom Overlay And Track (1234.37mil,-458.149mil)(1256.024mil,-458.149mil) on Bottom Overlay Silk Text to Silk Clearance [8.946mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5285.65mil|Location2.X=5296.9mil|Location1.Y=2645.975mil|Location2.Y=2657.225mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5285.65mil|Location2.X=5296.9mil|Location1.Y=2645.975mil|Location2.Y=2657.225mil|Absolute=True">Silk To Silk Clearance Constraint: (8.947mil &lt; 10mil) Between Text "P0" (1299.055mil,-489mil) on Bottom Overlay And Track (1256.024mil,-458.149mil)(1256.024mil,-429.999mil) on Bottom Overlay Silk Text to Silk Clearance [8.946mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3937.984mil|Location2.X=3949.234mil|Location1.Y=2886.355mil|Location2.Y=2897.605mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=3937.984mil|Location2.X=3949.234mil|Location1.Y=2886.355mil|Location2.Y=2897.605mil|Absolute=True">Silk To Silk Clearance Constraint: (2.343mil &lt; 10mil) Between Text "R4" (-51mil,-246mil) on Bottom Overlay And Track (-118.15mil,-221.024mil)(-90mil,-221.024mil) on Bottom Overlay Silk Text to Silk Clearance [2.343mil]</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5162.161mil|Location2.X=5169.827mil|Location1.Y=4085.462mil|Location2.Y=4093.128mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=5162.161mil|Location2.X=5169.827mil|Location1.Y=4085.462mil|Location2.Y=4093.128mil|Absolute=True">Silk To Silk Clearance Constraint: (Collision &lt; 10mil) Between Text "R51" (1180mil,950mil) on Bottom Overlay And Track (1107.48mil,976.575mil)(1135.63mil,976.575mil) on Bottom Overlay Silk Text to Silk Clearance [0mil]</acronym></a><br></td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br></body>
+</html>

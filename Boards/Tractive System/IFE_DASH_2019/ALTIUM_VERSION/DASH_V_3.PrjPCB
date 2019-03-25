@@ -12,7 +12,7 @@ SeparateFolders=0
 TemplateLocationPath=
 PinSwapBy_Netlabel=1
 PinSwapBy_Pin=1
-AllowPortNetNames=0
+AllowPortNetNames=1
 AllowSheetEntryNetNames=1
 AppendSheetNumberToLocalNets=0
 NetlistSinglePinNets=0
@@ -69,7 +69,7 @@ ClassGenCCAutoRoomEnabled=1
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
-DocumentUniqueId=
+DocumentUniqueId=DQHKJZQR
 
 [Document3]
 DocumentPath=..\..\..\..\..\..\..\..\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib
@@ -86,7 +86,7 @@ ClassGenCCAutoRoomEnabled=1
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
-DocumentUniqueId=
+DocumentUniqueId=VHUBEPKW
 
 [Document4]
 DocumentPath=..\..\..\..\..\..\..\..\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.SchLib
@@ -103,7 +103,7 @@ ClassGenCCAutoRoomEnabled=1
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
-DocumentUniqueId=
+DocumentUniqueId=LQSNODNZ
 
 [Document5]
 DocumentPath=DASH_V_3_POTS.SchDoc
@@ -154,7 +154,28 @@ ClassGenCCAutoRoomEnabled=1
 ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
-DocumentUniqueId=
+DocumentUniqueId=LIJCDTBT
+
+[Document8]
+DocumentPath=DASH_V_3.PcbDoc
+AnnotationEnabled=1
+AnnotateStartValue=1
+AnnotationIndexControlEnabled=0
+AnnotateSuffix=
+AnnotateScope=All
+AnnotateOrder=-1
+DoLibraryUpdate=1
+DoDatabaseUpdate=1
+ClassGenCCAutoEnabled=1
+ClassGenCCAutoRoomEnabled=1
+ClassGenNCAutoScope=None
+DItemRevisionGUID=
+GenerateClassCluster=0
+DocumentUniqueId=LTPMAEOR
+
+[GeneratedDocument1]
+DocumentPath=Project Outputs for DASH_V_3\Design Rule Check - DASH_V_3.html
+DItemRevisionGUID=
 
 [Configuration1]
 Name=Sources
