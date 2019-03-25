@@ -1,7 +1,7 @@
 Protel Design System Design Rule Check
 PCB File : C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc
 Date     : 3/24/2019
-Time     : 10:25:49 PM
+Time     : 10:44:08 PM
 
 WARNING: Unplated multi-layer pad(s) detected
    Pad X?-P$5(1890mil,180mil) on Multi-Layer on Net RESET
@@ -17,51 +17,12 @@ Processing Rule : Short-Circuit Constraint (Allowed=No) (All),(All)
 Rule Violations :0
 
 Processing Rule : Un-Routed Net Constraint ( (All) )
-   Violation between Un-Routed Net Constraint: Net GND Between Pad N2-2(1430mil,295mil) on Bottom Layer And Pad C0-1(1495mil,175mil) on Bottom Layer 
-   Violation between Un-Routed Net Constraint: Net GND Between Pad U1-23(1358.583mil,96.417mil) on Bottom Layer And Pad C0-1(1495mil,175mil) on Bottom Layer 
-   Violation between Un-Routed Net Constraint: Net GND Between Pad C0-1(1495mil,175mil) on Bottom Layer And Pad U2-2(1620mil,133.701mil) on Top Layer 
-   Violation between Un-Routed Net Constraint: Net GND Between Pad C1-1(1531.575mil,-270mil) on Bottom Layer And Pad D7-4(1750.12mil,-211.46mil) on Top Layer 
-   Violation between Un-Routed Net Constraint: Net GND Between Pad U1-35(1431.417mil,-153.583mil) on Bottom Layer And Pad C1-1(1531.575mil,-270mil) on Bottom Layer 
-   Violation between Un-Routed Net Constraint: Net GND Between Pad X?-P$2(1890mil,-120mil) on Multi-Layer [Unplated] And Pad C3-1(2010mil,-1.575mil) on Bottom Layer 
-   Violation between Un-Routed Net Constraint: Net GND Between Pad D10-3(1645mil,514.37mil) on Top Layer And Pad C8-1(1780mil,410.472mil) on Top Layer 
-   Violation between Un-Routed Net Constraint: Net GND Between Pad N0-2(1460mil,490mil) on Bottom Layer And Pad C9-1(1505mil,375.472mil) on Top Layer 
-   Violation between Un-Routed Net Constraint: Net GND Between Pad N2-2(1430mil,295mil) on Bottom Layer And Pad C9-1(1505mil,375.472mil) on Top Layer 
-   Violation between Un-Routed Net Constraint: Net GND Between Pad C9-1(1505mil,375.472mil) on Top Layer And Pad U2-8(1570mil,346.299mil) on Top Layer 
-   Violation between Un-Routed Net Constraint: Net GND Between Pad N0-2(1460mil,490mil) on Bottom Layer And Pad D10-3(1645mil,514.37mil) on Top Layer 
-   Violation between Un-Routed Net Constraint: Net GND Between Pad D7-4(1750.12mil,-211.46mil) on Top Layer And Pad X?-P$2(1890mil,-120mil) on Multi-Layer [Unplated] 
-   Violation between Un-Routed Net Constraint: Net GND Between Pad N4-2(-50.63mil,-197.402mil) on Bottom Layer And Pad IC0-2(475.35mil,-85.83mil) on Bottom Layer 
-   Violation between Un-Routed Net Constraint: Net GND Between Pad IC0-2(475.35mil,-85.83mil) on Bottom Layer And Pad U1-8(1108.583mil,-35.472mil) on Bottom Layer 
-   Violation between Un-Routed Net Constraint: Net GND Between Pad N1-2(1455mil,685mil) on Bottom Layer And Pad N0-2(1460mil,490mil) on Bottom Layer 
-   Violation between Un-Routed Net Constraint: Net GND Between Pad N8-2(1175mil,1000.197mil) on Bottom Layer And Pad N1-2(1455mil,685mil) on Bottom Layer 
-   Violation between Un-Routed Net Constraint: Net GND Between Pad R39-1(920mil,320mil) on Bottom Layer And Pad N2-2(1430mil,295mil) on Bottom Layer 
-   Violation between Un-Routed Net Constraint: Net GND Between Pad R28-1(-260.472mil,300mil) on Bottom Layer And Pad N3-2(-70.63mil,957.598mil) on Bottom Layer 
-   Violation between Un-Routed Net Constraint: Net GND Between Pad R16-1(-305.472mil,-990mil) on Bottom Layer And Pad N4-2(-50.63mil,-197.402mil) on Bottom Layer 
-   Violation between Un-Routed Net Constraint: Net GND Between Pad R28-1(-260.472mil,300mil) on Bottom Layer And Pad N4-2(-50.63mil,-197.402mil) on Bottom Layer 
-   Violation between Un-Routed Net Constraint: Net GND Between Pad X?-P$4(-1505.04mil,-287.17mil) on Top Layer And Pad N4-2(-50.63mil,-197.402mil) on Bottom Layer 
-   Violation between Un-Routed Net Constraint: Net GND Between Pad R50-1(985mil,-930mil) on Bottom Layer And Pad N9-2(1070mil,-384.803mil) on Bottom Layer 
-   Violation between Un-Routed Net Constraint: Net GND Between Pad N9-2(1070mil,-384.803mil) on Bottom Layer And Pad U1-47(1181.417mil,-226.417mil) on Bottom Layer 
-   Violation between Un-Routed Net Constraint: Net GND Between Pad U1-23(1358.583mil,96.417mil) on Bottom Layer And Pad U1-35(1431.417mil,-153.583mil) on Bottom Layer 
-   Violation between Un-Routed Net Constraint: Net GND Between Pad U1-44(1240.473mil,-226.417mil) on Bottom Layer And Pad U1-35(1431.417mil,-153.583mil) on Bottom Layer 
-   Violation between Un-Routed Net Constraint: Net GND Between Pad U1-47(1181.417mil,-226.417mil) on Bottom Layer And Pad U1-44(1240.473mil,-226.417mil) on Bottom Layer 
-   Violation between Un-Routed Net Constraint: Net GND Between Pad U1-8(1108.583mil,-35.472mil) on Bottom Layer And Pad U1-47(1181.417mil,-226.417mil) on Bottom Layer 
-   Violation between Un-Routed Net Constraint: Net SWCLK Between Pad X?-P$1(1890mil,-220mil) on Multi-Layer [Unplated] And Pad X?-P$1(1890mil,-220mil) on Multi-Layer [Unplated] 
-   Violation between Un-Routed Net Constraint: Net SWCLK Between Pad X?-P$1(1890mil,-220mil) on Multi-Layer [Unplated] And Pad X?-P$1(1890mil,-220mil) on Multi-Layer [Unplated] 
-   Violation between Un-Routed Net Constraint: Net SWCLK Between Pad X?-P$1(1890mil,-220mil) on Multi-Layer [Unplated] And Pad X?-P$1(1890mil,-220mil) on Multi-Layer [Unplated] 
    Violation between Un-Routed Net Constraint: Net SWCLK Between Pad X?-P$1(1890mil,-220mil) on Multi-Layer [Unplated] And Pad X?-P$1(1890mil,-220mil) on Multi-Layer [Unplated] 
    Violation between Un-Routed Net Constraint: Net GND Between Pad X?-P$2(1890mil,-120mil) on Multi-Layer [Unplated] And Pad X?-P$2(1890mil,-120mil) on Multi-Layer [Unplated] 
-   Violation between Un-Routed Net Constraint: Net GND Between Pad X?-P$2(1890mil,-120mil) on Multi-Layer [Unplated] And Pad X?-P$2(1890mil,-120mil) on Multi-Layer [Unplated] 
-   Violation between Un-Routed Net Constraint: Net GND Between Pad X?-P$2(1890mil,-120mil) on Multi-Layer [Unplated] And Pad X?-P$2(1890mil,-120mil) on Multi-Layer [Unplated] 
-   Violation between Un-Routed Net Constraint: Net GND Between Pad X?-P$2(1890mil,-120mil) on Multi-Layer [Unplated] And Pad X?-P$2(1890mil,-120mil) on Multi-Layer [Unplated] 
    Violation between Un-Routed Net Constraint: Net SWDIO Between Pad X?-P$3(1890mil,-20mil) on Multi-Layer [Unplated] And Pad X?-P$3(1890mil,-20mil) on Multi-Layer [Unplated] 
-   Violation between Un-Routed Net Constraint: Net SWDIO Between Pad X?-P$3(1890mil,-20mil) on Multi-Layer [Unplated] And Pad X?-P$3(1890mil,-20mil) on Multi-Layer [Unplated] 
-   Violation between Un-Routed Net Constraint: Net SWDIO Between Pad X?-P$3(1890mil,-20mil) on Multi-Layer [Unplated] And Pad X?-P$3(1890mil,-20mil) on Multi-Layer [Unplated] 
-   Violation between Un-Routed Net Constraint: Net SWDIO Between Pad X?-P$3(1890mil,-20mil) on Multi-Layer [Unplated] And Pad X?-P$3(1890mil,-20mil) on Multi-Layer [Unplated] 
-   Violation between Un-Routed Net Constraint: Net +3.3V Between Pad X?-P$4(1890mil,80mil) on Multi-Layer [Unplated] And Track (2010mil,51.575mil)(2010mil,270mil) on Bottom Layer 
+   Violation between Un-Routed Net Constraint: Net +3.3V Between Pad X?-P$4(1890mil,80mil) on Multi-Layer [Unplated] And Via (1975mil,305mil) from Top Layer to Bottom Layer 
    Violation between Un-Routed Net Constraint: Net RESET Between Pad X?-P$5(1890mil,180mil) on Multi-Layer [Unplated] And Pad X?-P$5(1890mil,180mil) on Multi-Layer [Unplated] 
-   Violation between Un-Routed Net Constraint: Net RESET Between Pad X?-P$5(1890mil,180mil) on Multi-Layer [Unplated] And Pad X?-P$5(1890mil,180mil) on Multi-Layer [Unplated] 
-   Violation between Un-Routed Net Constraint: Net RESET Between Pad X?-P$5(1890mil,180mil) on Multi-Layer [Unplated] And Pad X?-P$5(1890mil,180mil) on Multi-Layer [Unplated] 
-   Violation between Un-Routed Net Constraint: Net RESET Between Pad X?-P$5(1890mil,180mil) on Multi-Layer [Unplated] And Pad X?-P$5(1890mil,180mil) on Multi-Layer [Unplated] 
-Rule Violations :44
+Rule Violations :5
 
 Processing Rule : Modified Polygon (Allow modified: No), (Allow shelved: No)
 Rule Violations :0
@@ -140,6 +101,6 @@ Processing Rule : Height Constraint (Min=0mil) (Max=1000mil) (Prefered=500mil) (
 Rule Violations :0
 
 
-Violations Detected : 90
+Violations Detected : 51
 Waived Violations : 0
-Time Elapsed        : 00:00:01
+Time Elapsed        : 00:00:00
