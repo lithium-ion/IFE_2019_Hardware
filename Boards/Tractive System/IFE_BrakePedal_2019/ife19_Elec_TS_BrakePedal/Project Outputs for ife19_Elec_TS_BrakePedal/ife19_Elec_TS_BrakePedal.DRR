@@ -1,0 +1,17 @@
+----------------------------------------------------------------------------------------------------------------------------------
+NCDrill File Report For: ife19_Elec_TS_BrakePedal.PcbDoc   3/24/2019  6:34:29 PM
+----------------------------------------------------------------------------------------------------------------------------------
+
+Layer Pair : Top Layer to Bottom Layer
+ASCII RoundHoles File : ife19_Elec_TS_BrakePedal-RoundHoles.TXT
+ASCII SlotHoles File : ife19_Elec_TS_BrakePedal-SlotHoles.TXT
+
+Tool       Hole Size               Hole Tolerance               Hole Type       Hole Count   Plated         Tool Travel
+----------------------------------------------------------------------------------------------------------------------------------
+T1      12mil (0.3mm)                                             Slot              3         PTH        0.00inch (0.00mm)
+T2      28mil (0.711mm)                                           Round             1         PTH        0.00inch (0.00mm)
+T3      89mil (2.26mm)                                            Round             2         PTH        0.00inch (0.00mm)
+----------------------------------------------------------------------------------------------------------------------------------
+Totals                                                                              6
+
+Total Processing Time (hh:mm:ss) : 00:00:00
