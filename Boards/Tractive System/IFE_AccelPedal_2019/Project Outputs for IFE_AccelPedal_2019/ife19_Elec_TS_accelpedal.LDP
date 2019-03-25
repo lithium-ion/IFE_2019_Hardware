@@ -1,0 +1,3 @@
+Layer Pairs Export File for PCB: C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_AccelPedal_2019\ife19_Elec_TS_accelpedal.PcbDoc
+LayersSetName=Top_Bot_Thru_Holes|DrillFile=ife19_elec_ts_accelpedal-roundholes.txt|DrillLayers=gtl,gbl
+LayersSetName=Top_Bot_Slot_Holes|DrillFile=ife19_elec_ts_accelpedal-slotholes.txt|DrillLayers=gtl,gbl
