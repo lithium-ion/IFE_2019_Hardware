@@ -1,17 +1,13 @@
 Protel Design System Design Rule Check
-PCB File : C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_AIL_Buck_2019\ife18_TS_AIL_Buck\ife18_TS_AIL_Buck.PcbDoc
-Date     : 2/11/2019
-Time     : 7:31:55 AM
+PCB File : C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_AIL_Buck_2019\v3\ife18_TS_AIL_Buck.PcbDoc
+Date     : 4/3/2019
+Time     : 11:44:28 AM
+
+Processing Rule : Clearance Constraint (Gap=0.8mm) (All),(All)
+Rule Violations :0
 
 Processing Rule : Clearance Constraint (Gap=0.2mm) ((IsPad OR OnLayer('Keep-Out Layer'))),(All)
 Rule Violations :0
-
-Processing Rule : Clearance Constraint (Gap=0.8mm) (All),(All)
-   Violation between Clearance Constraint: (0.798mm < 0.8mm) Between Track (23.7mm,19.812mm)(27.018mm,19.812mm) on Bottom Layer And Track (27.018mm,20.762mm)(27.018mm,21.971mm) on Bottom Layer 
-   Violation between Clearance Constraint: (0.798mm < 0.8mm) Between Track (27.018mm,20.762mm)(27.018mm,21.971mm) on Bottom Layer And Track (27.018mm,22.921mm)(29.431mm,22.921mm) on Bottom Layer 
-   Violation between Clearance Constraint: (0.798mm < 0.8mm) Between Track (27.018mm,22.921mm)(29.431mm,22.921mm) on Bottom Layer And Track (29.431mm,20.762mm)(29.431mm,21.971mm) on Bottom Layer 
-   Violation between Clearance Constraint: (0.798mm < 0.8mm) Between Track (29.431mm,19.812mm)(31.293mm,19.812mm) on Bottom Layer And Track (29.431mm,20.762mm)(29.431mm,21.971mm) on Bottom Layer 
-Rule Violations :4
 
 Processing Rule : Short-Circuit Constraint (Allowed=No) (All),(All)
 Rule Violations :0
@@ -29,25 +25,27 @@ Processing Rule : Power Plane Connect Rule(Relief Connect )(Expansion=0.508mm) (
 Rule Violations :0
 
 Processing Rule : Hole Size Constraint (Min=0.025mm) (Max=2.54mm) (All)
-   Violation between Hole Size Constraint: (2.946mm > 2.54mm) Pad Free-H1(12.5mm,27mm) on Multi-Layer Actual Hole Size = 2.946mm
-   Violation between Hole Size Constraint: (2.946mm > 2.54mm) Pad Free-H2(32.5mm,12.5mm) on Multi-Layer Actual Hole Size = 2.946mm
+   Violation between Hole Size Constraint: (3mm > 2.54mm) Pad Free-H1(10.42mm,29.764mm) on Multi-Layer Actual Hole Size = 3mm
+   Violation between Hole Size Constraint: (3mm > 2.54mm) Pad Free-H2(40.42mm,12.364mm) on Multi-Layer Actual Hole Size = 3mm
 Rule Violations :2
 
 Processing Rule : Hole To Hole Clearance (Gap=0.254mm) (All),(All)
 Rule Violations :0
 
 Processing Rule : Minimum Solder Mask Sliver (Gap=0.254mm) (All),(All)
-   Violation between Minimum Solder Mask Sliver Constraint: (0.124mm < 0.254mm) Between Pad Free-H2(32.5mm,12.5mm) on Multi-Layer And Pad Q1-10(29.975mm,12.125mm) on Top Layer [Top Solder] Mask Sliver [0.124mm]
-   Violation between Minimum Solder Mask Sliver Constraint: (0.184mm < 0.254mm) Between Pad Free-H2(32.5mm,12.5mm) on Multi-Layer And Pad Q1-11(29.975mm,13.395mm) on Top Layer [Top Solder] Mask Sliver [0.184mm]
-   Violation between Minimum Solder Mask Sliver Constraint: (0.097mm < 0.254mm) Between Pad LED1-A(27.018mm,19.812mm) on Bottom Layer And Pad LED1-K(27.018mm,20.762mm) on Bottom Layer [Bottom Solder] Mask Sliver [0.097mm]
-   Violation between Minimum Solder Mask Sliver Constraint: (0.097mm < 0.254mm) Between Pad LED2-A(27.018mm,21.971mm) on Bottom Layer And Pad LED2-K(27.018mm,22.921mm) on Bottom Layer [Bottom Solder] Mask Sliver [0.097mm]
-   Violation between Minimum Solder Mask Sliver Constraint: (0.097mm < 0.254mm) Between Pad LED3-A(29.431mm,22.921mm) on Bottom Layer And Pad LED3-K(29.431mm,21.971mm) on Bottom Layer [Bottom Solder] Mask Sliver [0.097mm]
-   Violation between Minimum Solder Mask Sliver Constraint: (0.097mm < 0.254mm) Between Pad LED4-A(29.431mm,20.762mm) on Bottom Layer And Pad LED4-K(29.431mm,19.812mm) on Bottom Layer [Bottom Solder] Mask Sliver [0.097mm]
-   Violation between Minimum Solder Mask Sliver Constraint: (0.017mm < 0.254mm) Between Pad Q1-6(25.025mm,13.395mm) on Top Layer And Via (24mm,14.2mm) from Top Layer to Bottom Layer [Top Solder] Mask Sliver [0.017mm]
+   Violation between Minimum Solder Mask Sliver Constraint: (0.097mm < 0.254mm) Between Pad LED1-A(23.17mm,15.474mm) on Bottom Layer And Pad LED1-K(23.17mm,16.774mm) on Bottom Layer [Bottom Solder] Mask Sliver [0.097mm]
+   Violation between Minimum Solder Mask Sliver Constraint: (0.097mm < 0.254mm) Between Pad LED2-A(21mm,24.35mm) on Bottom Layer And Pad LED2-K(21mm,25.65mm) on Bottom Layer [Bottom Solder] Mask Sliver [0.097mm]
+   Violation between Minimum Solder Mask Sliver Constraint: (0.097mm < 0.254mm) Between Pad LED3-A(29mm,24.15mm) on Bottom Layer And Pad LED3-K(29mm,22.85mm) on Bottom Layer [Bottom Solder] Mask Sliver [0.097mm]
+   Violation between Minimum Solder Mask Sliver Constraint: (0.097mm < 0.254mm) Between Pad LED4-A(30.75mm,15.9mm) on Bottom Layer And Pad LED4-K(30.75mm,14.6mm) on Bottom Layer [Bottom Solder] Mask Sliver [0.097mm]
+   Violation between Minimum Solder Mask Sliver Constraint: (0.192mm < 0.254mm) Between Pad Q1-5(30.635mm,27.289mm) on Top Layer And Via (32mm,27.276mm) from Top Layer to Bottom Layer [Top Solder] Mask Sliver [0.192mm]
+   Violation between Minimum Solder Mask Sliver Constraint: (0.002mm < 0.254mm) Between Pad Q1-7(33.175mm,27.289mm) on Top Layer And Via (32mm,27.276mm) from Top Layer to Bottom Layer [Top Solder] Mask Sliver [0.002mm]
+   Violation between Minimum Solder Mask Sliver Constraint: (0.017mm < 0.254mm) Between Pad Q1-9(34.445mm,32.239mm) on Top Layer And Via (35.3mm,32.239mm) from Top Layer to Bottom Layer [Top Solder] Mask Sliver [0.017mm]
 Rule Violations :7
 
 Processing Rule : Silk To Solder Mask (Clearance=0.254mm) (IsPad),(All)
-Rule Violations :0
+   Violation between Silk To Solder Mask Clearance Constraint: (0.15mm < 0.254mm) Between Pad F_HV-2(21.85mm,11.95mm) on Top Layer And Text "+" (20.5mm,14.85mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.15mm]
+   Violation between Silk To Solder Mask Clearance Constraint: (0.2mm < 0.254mm) Between Pad Q1-1(25.555mm,27.289mm) on Top Layer And Text "Chaitanya Sindagi" (16.7mm,22.9mm) on Top Overlay [Top Overlay] to [Top Solder] clearance [0.2mm]
+Rule Violations :2
 
 Processing Rule : Silk to Silk (Clearance=0.254mm) (All),(All)
 Rule Violations :0
@@ -56,10 +54,9 @@ Processing Rule : Net Antennae (Tolerance=0mm) (All)
 Rule Violations :0
 
 Processing Rule : Board Clearance Constraint (Gap=0mm) (All)
-Rule Violations :0
-
-Processing Rule : Room ife18_TS_AIL_Buck (Bounding Region = (0mm, 0mm, 50.8mm, 40.5mm) (InComponentClass('ife18_TS_AIL_Buck'))
-Rule Violations :0
+   Violation between Board Outline Clearance(Outline Edge): (Collision < 0.2mm) Between Arc (10.42mm,29.764mm) on Bottom Layer And Board Edge 
+   Violation between Board Outline Clearance(Outline Edge): (Collision < 0.2mm) Between Arc (40.42mm,12.364mm) on Bottom Layer And Board Edge 
+Rule Violations :2
 
 Processing Rule : Height Constraint (Min=0mm) (Max=25.4mm) (Prefered=12.7mm) (All)
 Rule Violations :0

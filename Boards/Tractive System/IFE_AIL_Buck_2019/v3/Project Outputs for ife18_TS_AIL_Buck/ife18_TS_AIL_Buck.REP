@@ -2,6 +2,80 @@
 FileName = ife18_TS_AIL_Buck.GBR
 AutoAperture = True
 *************************************************************
+Generating : Keep-Out Layer
+      File : ife18_TS_AIL_Buck.GKO
+
+    Adding Layer      : Keep-Out Layer
+
+
+Used DCodes :
+    D40
+*************************************************************
+
+*************************************************************
+Generating : Bottom Solder
+      File : ife18_TS_AIL_Buck.GBS
+
+    Adding Layer      : Bottom Solder
+
+    Adding Layer      : Bottom Layer
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D21
+    D22
+    D37
+    D38
+    D39
+*************************************************************
+
+*************************************************************
+Generating : Top Layer
+      File : ife18_TS_AIL_Buck.GTL
+
+    Adding Layer      : Top Layer
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D12
+    D23
+    D24
+    D25
+    D26
+    D27
+    D28
+    D29
+    D30
+    D31
+    D32
+    D33
+*************************************************************
+
+*************************************************************
+Generating : Bottom Layer
+      File : ife18_TS_AIL_Buck.GBL
+
+    Adding Layer      : Bottom Layer
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D12
+    D29
+    D31
+    D32
+    D33
+    D34
+    D35
+    D36
+*************************************************************
+
+*************************************************************
 Generating : Bottom Overlay
       File : ife18_TS_AIL_Buck.GBO
 
@@ -23,7 +97,6 @@ Generating : Top Solder
 
 
 Used DCodes :
-    D14
     D15
     D16
     D17
@@ -31,24 +104,7 @@ Used DCodes :
     D19
     D20
     D21
-*************************************************************
-
-*************************************************************
-Generating : Bottom Layer
-      File : ife18_TS_AIL_Buck.GBL
-
-    Adding Layer      : Bottom Layer
-
-    Adding Layer      : Multi-Layer
-
-
-Used DCodes :
-    D28
-    D31
-    D32
-    D33
-    D34
-    D35
+    D22
 *************************************************************
 
 *************************************************************
@@ -63,58 +119,6 @@ Used DCodes :
     D11
     D12
     D13
-*************************************************************
-
-*************************************************************
-Generating : Keep-Out Layer
-      File : ife18_TS_AIL_Buck.GKO
-
-    Adding Layer      : Keep-Out Layer
-
-
-Used DCodes :
-    D39
-*************************************************************
-
-*************************************************************
-Generating : Bottom Solder
-      File : ife18_TS_AIL_Buck.GBS
-
-    Adding Layer      : Bottom Solder
-
-    Adding Layer      : Bottom Layer
-
-    Adding Layer      : Multi-Layer
-
-
-Used DCodes :
-    D20
-    D21
-    D36
-    D37
-    D38
-*************************************************************
-
-*************************************************************
-Generating : Top Layer
-      File : ife18_TS_AIL_Buck.GTL
-
-    Adding Layer      : Top Layer
-
-    Adding Layer      : Multi-Layer
-
-
-Used DCodes :
-    D22
-    D23
-    D24
-    D25
-    D26
-    D27
-    D28
-    D29
-    D30
-    D31
-    D32
+    D14
 *************************************************************
 
