@@ -1,7 +1,7 @@
 Protel Design System Design Rule Check
 PCB File : C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\DASH_BOARD_2019_V3\DASH_V_3.PcbDoc
 Date     : 4/10/2019
-Time     : 5:11:12 AM
+Time     : 5:16:44 AM
 
 Processing Rule : Clearance Constraint (Gap=0.152mm) (All),(All)
 Rule Violations :0
@@ -44,7 +44,7 @@ Processing Rule : Minimum Solder Mask Sliver (Gap=0.254mm) (All),(All)
    Violation between Minimum Solder Mask Sliver Constraint: (0.247mm < 0.254mm) Between Pad C11-1(23.829mm,-7.588mm) on Bottom Layer And Pad C11-2(22.479mm,-7.588mm) on Bottom Layer [Bottom Solder] Mask Sliver [0.247mm]
    Violation between Minimum Solder Mask Sliver Constraint: (0.131mm < 0.254mm) Between Pad C1-2(39.684mm,-4.909mm) on Bottom Layer And Via (38.599mm,-4.631mm) from Top Layer to Bottom Layer [Bottom Solder] Mask Sliver [0.131mm]
    Violation between Minimum Solder Mask Sliver Constraint: (0.247mm < 0.254mm) Between Pad C3-1(25.291mm,-5.809mm) on Bottom Layer And Pad C3-2(26.641mm,-5.809mm) on Bottom Layer [Bottom Solder] Mask Sliver [0.247mm]
-   Violation between Minimum Solder Mask Sliver Constraint: (0.132mm < 0.254mm) Between Pad D1-A(32.502mm,18.229mm) on Top Layer And Via (33.887mm,18.238mm) from Top Layer to Bottom Layer [Top Solder] Mask Sliver [0.132mm]
+   Violation between Minimum Solder Mask Sliver Constraint: (0.184mm < 0.254mm) Between Pad D1-A(32.45mm,18.229mm) on Top Layer And Via (33.887mm,18.238mm) from Top Layer to Bottom Layer [Top Solder] Mask Sliver [0.184mm]
    Violation between Minimum Solder Mask Sliver Constraint: (0.149mm < 0.254mm) Between Pad D3-K(-7.002mm,26.538mm) on Top Layer And Via (-5.351mm,25.369mm) from Top Layer to Bottom Layer [Top Solder] Mask Sliver [0.149mm]
    Violation between Minimum Solder Mask Sliver Constraint: (0.153mm < 0.254mm) Between Pad D9-K(24.772mm,-8.325mm) on Top Layer And Via (24.199mm,-9.731mm) from Top Layer to Bottom Layer [Top Solder] Mask Sliver [0.153mm]
    Violation between Minimum Solder Mask Sliver Constraint: (0.117mm < 0.254mm) Between Pad N1-3(34.957mm,18.349mm) on Bottom Layer And Via (33.887mm,18.238mm) from Top Layer to Bottom Layer [Bottom Solder] Mask Sliver [0.117mm]
