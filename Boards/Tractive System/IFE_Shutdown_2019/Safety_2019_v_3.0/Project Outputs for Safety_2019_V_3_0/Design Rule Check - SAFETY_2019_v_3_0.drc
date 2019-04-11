@@ -1,7 +1,7 @@
 Protel Design System Design Rule Check
 PCB File : C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_Shutdown_2019\Safety_2019_v_3.0\SAFETY_2019_v_3_0.PcbDoc
 Date     : 4/10/2019
-Time     : 2:59:35 AM
+Time     : 10:50:07 PM
 
 Processing Rule : Clearance Constraint (Gap=0.152mm) (All),(All)
 Rule Violations :0
@@ -50,7 +50,8 @@ Processing Rule : Minimum Solder Mask Sliver (Gap=0.2mm) (All),(All)
    Violation between Minimum Solder Mask Sliver Constraint: (0.123mm < 0.2mm) Between Pad IC0-5(99.731mm,49.189mm) on Top Layer And Via (99.731mm,50.489mm) from Top Layer to Bottom Layer [Top Solder] Mask Sliver [0.123mm]
    Violation between Minimum Solder Mask Sliver Constraint: (0.132mm < 0.2mm) Between Pad P1-2(39.12mm,92.884mm) on Top Layer And Via (39.025mm,92mm) from Top Layer to Bottom Layer [Top Solder] Mask Sliver [0.132mm]
    Violation between Minimum Solder Mask Sliver Constraint: (0.036mm < 0.2mm) Between Pad R55-1(59.853mm,87.005mm) on Top Layer And Pad RP2-2(59.851mm,86.092mm) on Top Layer [Top Solder] Mask Sliver [0.036mm]
-   Violation between Minimum Solder Mask Sliver Constraint: (0.094mm < 0.2mm) Between Pad R66-1(65.048mm,25.132mm) on Top Layer And Via (64.552mm,26mm) from Top Layer to Bottom Layer [Top Solder] Mask Sliver [0.094mm]
+   Violation between Minimum Solder Mask Sliver Constraint: (0.168mm < 0.2mm) Between Pad R65-1(61.753mm,25.067mm) on Top Layer And Pad R66-2(62.798mm,25.945mm) on Top Layer [Top Solder] Mask Sliver [0.168mm]
+   Violation between Minimum Solder Mask Sliver Constraint: (0.168mm < 0.2mm) Between Pad R65-2(61.753mm,26.567mm) on Top Layer And Pad R66-2(62.798mm,25.945mm) on Top Layer [Top Solder] Mask Sliver [0.168mm]
    Violation between Minimum Solder Mask Sliver Constraint: (0.178mm < 0.2mm) Between Pad R76-2(35.342mm,30.075mm) on Top Layer And Via (36mm,31mm) from Top Layer to Bottom Layer [Top Solder] Mask Sliver [0.178mm]
    Violation between Minimum Solder Mask Sliver Constraint: (0.119mm < 0.2mm) Between Pad R78-1(25.702mm,49.631mm) on Top Layer And Via (26.325mm,48.754mm) from Top Layer to Bottom Layer [Top Solder] Mask Sliver [0.119mm]
    Violation between Minimum Solder Mask Sliver Constraint: (0.173mm < 0.2mm) Between Pad R79-1(24.166mm,46.71mm) on Top Layer And Via (23.241mm,46.101mm) from Top Layer to Bottom Layer [Top Solder] Mask Sliver [0.173mm]
@@ -169,9 +170,7 @@ Processing Rule : Minimum Solder Mask Sliver (Gap=0.2mm) (All),(All)
    Violation between Minimum Solder Mask Sliver Constraint: (0.098mm < 0.2mm) Between Pad U2-8(47.987mm,32.54mm) on Top Layer And Pad U2-9(48.487mm,32.54mm) on Top Layer [Top Solder] Mask Sliver [0.098mm]
    Violation between Minimum Solder Mask Sliver Constraint: (0.133mm < 0.2mm) Between Via (76.454mm,98.425mm) from Top Layer to Bottom Layer And Via (77.252mm,98.179mm) from Top Layer to Bottom Layer [Top Solder] Mask Sliver [0.133mm] / [Bottom Solder] Mask Sliver [0.133mm]
    Violation between Minimum Solder Mask Sliver Constraint: (0.153mm < 0.2mm) Between Via (80.75mm,49.275mm) from Top Layer to Bottom Layer And Via (81.57mm,49.516mm) from Top Layer to Bottom Layer [Top Solder] Mask Sliver [0.153mm] / [Bottom Solder] Mask Sliver [0.153mm]
-   Violation between Minimum Solder Mask Sliver Constraint: (0.165mm < 0.2mm) Between Via (81.788mm,45.791mm) from Top Layer to Bottom Layer And Via (82.586mm,45.452mm) from Top Layer to Bottom Layer [Top Solder] Mask Sliver [0.165mm] / [Bottom Solder] Mask Sliver [0.165mm]
-   Violation between Minimum Solder Mask Sliver Constraint: (0.129mm < 0.2mm) Between Via (84.355mm,54.95mm) from Top Layer to Bottom Layer And Via (84.613mm,55.739mm) from Top Layer to Bottom Layer [Top Solder] Mask Sliver [0.129mm] / [Bottom Solder] Mask Sliver [0.129mm]
-Rule Violations :140
+Rule Violations :139
 
 Processing Rule : Silk To Solder Mask (Clearance=0mm) (IsPad),(All)
 Rule Violations :0
@@ -202,6 +201,6 @@ Processing Rule : Height Constraint (Min=0mm) (Max=25.4mm) (Prefered=12.7mm) (Al
 Rule Violations :0
 
 
-Violations Detected : 153
+Violations Detected : 152
 Waived Violations : 0
-Time Elapsed        : 00:00:01
+Time Elapsed        : 00:00:00
