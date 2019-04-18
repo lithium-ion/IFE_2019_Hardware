@@ -1,5 +1,5 @@
 ----------------------------------------------------------------------------------------------------------------------------------
-NCDrill File Report For: SAFETY_2019_v_3_0.PcbDoc   3/25/2019  1:17:32 PM
+NCDrill File Report For: SAFETY_2019_v_3_0.PcbDoc   4/18/2019  2:48:16 PM
 ----------------------------------------------------------------------------------------------------------------------------------
 
 Layer Pair : Top Layer to Bottom Layer
@@ -7,13 +7,13 @@ ASCII RoundHoles File : SAFETY_2019_v_3_0.TXT
 
 Tool       Hole Size               Hole Tolerance               Hole Type       Hole Count   Plated         Tool Travel
 ----------------------------------------------------------------------------------------------------------------------------------
-T1      12mil (0.3mm)                                             Round             102       PTH        0.00inch (0.00mm)
+T1      12mil (0.3mm)                                             Round             116       PTH        0.00inch (0.00mm)
 T2      24mil (0.6mm)                                             Round             30        PTH        0.00inch (0.00mm)
 T3      32mil (0.8mm)                                             Round             12        PTH        0.00inch (0.00mm)
 T4      35mil (0.9mm)                                             Round             6         PTH        0.00inch (0.00mm)
 T5      40mil (1.02mm)                                            Round             10        PTH        0.00inch (0.00mm)
 T6      118mil (3mm)                                              Round             4         PTH        0.00inch (0.00mm)
 ----------------------------------------------------------------------------------------------------------------------------------
-Totals                                                                              164
+Totals                                                                              178
 
-Total Processing Time (hh:mm:ss) : 00:00:01
+Total Processing Time (hh:mm:ss) : 00:00:00
