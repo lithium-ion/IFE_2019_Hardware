@@ -1,4 +1,4 @@
-DRC Rules Export File for PCB: C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\ALTIUM_VERSION\DASH_V_3.PcbDoc
+DRC Rules Export File for PCB: C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_DASH_2019\DASH_BOARD_2019_V3\DASH_V_3.PcbDoc
 RuleKind=SolderMaskExpansion|RuleName=SolderMaskExpansion|Scope=Board|Minimum=4.00
 RuleKind=Width|RuleName=Width|Scope=Board|Minimum=10.00
 RuleKind=Clearance|RuleName=Clearance|Scope=Board|Minimum=5.98
