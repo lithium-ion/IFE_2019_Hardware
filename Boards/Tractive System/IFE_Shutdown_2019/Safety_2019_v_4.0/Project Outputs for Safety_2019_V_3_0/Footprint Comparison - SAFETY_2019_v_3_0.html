@@ -1,0 +1,1741 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<style type="text/css">
+		h1, h2, h3, h4, h5, h6 { 
+			font-family : segoe ui;
+			color : black;
+			background-color : #EDE7D9;
+			padding: 0.3em;
+		}
+
+		h1 {
+			font-size: 1.2em;
+		}		
+
+		h2 {
+			font-size: 1.2em;
+		}
+
+		body { 
+			font-family : segoe ui;
+		}
+
+		td, th {  
+			padding: 0.5em;
+			text-align : left;
+		}
+		th { 
+			background-color : #EEEEEE;
+		
+		}
+		th.column1, td.column1 { 
+			width : 50%; 
+		}
+
+        th.column2, td.column2 {
+            width : 25%;
+        }
+
+		table { 
+			width : 100%; 
+            font-size: 0.9em;
+		}
+		.front_matter, .front_matter_column1, .front_matter_column2, .front_matter_column3
+		{
+			left : 0;
+			top : 0;
+			padding: 0em;
+			padding-top : 0.1em;
+			border : 0px solid black;
+			width : 100%;
+			vertical-align: top;
+			text-align: left;
+		}
+
+		.front_matter_column1 {
+			width : 5em;
+			font-weight: bold;
+		}
+
+		.front_matter_column2 {
+			width: 0.1em;
+		}
+
+		.front_matter_column3 {
+			width : auto;
+		}
+
+		.total_column1, .total_column {
+			font-weight : bold;
+		}
+		.total_column1 {
+			text-align : left;
+		}
+		.warning, .error { 
+			color : red;
+			font-weight : bold;
+		}	
+		tr.onmouseout_odd { 
+			background-color : #white;
+		}
+		tr.onmouseout_even { 
+			background-color : #FAFAFA;
+		}
+		tr.onmouseover_odd, tr.onmouseover_even { 
+			background-color : #EEEEEE;
+		} 
+		a:link, a:visited, .q a:link,.q a:active,.q {
+			color: #21489e; 
+		}
+		a:link.callback, a:visited.callback { 
+			color: #21489e;
+		}
+		a:link.customize, a:visited.customize {
+			color: #C0C0C0;
+			position: absolute; 
+			right: 10px;
+		}	
+		p.contents_level1 {
+			font-weight : bold;
+			font-size : 110%;
+			margin : 0.5em;
+		}
+		p.contents_level2 {
+			position : relative;
+			left : 20px;
+			margin : 0.5em;
+		}
+	</style><script type="text/javascript">
+		function coordToMils(coord) {
+			var number = coord / 10000;
+			
+			if (number != number.toFixed(3))
+				number = number.toFixed(3);
+			
+			return number + 'mil'
+		}
+
+		function coordToMM(coord) {
+			var number = 0.0254 * coord / 10000;
+			
+			if (number != number.toFixed(4))
+				number = number.toFixed(4);
+			
+			return number + 'mm'
+		}
+	
+		function convertCoord(coordNode, units) {
+			for (var i = 0; i < coordNode.childNodes.length; i++) {
+				coordNode.removeChild(coordNode.childNodes[i]);		
+			}
+
+			var coord = coordNode.getAttribute('value');
+			if (coord != null) {
+				if (units == 'mm') {	
+					textNode = document.createTextNode(coordToMM(coord));
+					coordNode.appendChild(textNode);
+				} else if (units == 'mil') {
+					textNode = document.createTextNode(coordToMils(coord));		
+					coordNode.appendChild(textNode);	
+				}
+			}
+		}
+	
+		function convertUnits(unitNode, units) {
+			for (var i = 0; i < unitNode.childNodes.length; i++) {
+				unitNode.removeChild(unitNode.childNodes[i]);		
+			}
+		
+			textNode = document.createTextNode(units); 
+			unitNode.appendChild(textNode);
+		}
+	
+		function changeUnits(radio_input, units) {
+			if (radio_input.checked) {
+			
+				var elements = document.getElementsByName('coordinate');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertCoord(elements[i], units);
+					}
+				}
+	
+				var elements = document.getElementsByName('units');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertUnits(elements[i], units);
+					}
+				}
+			}
+		}	
+	</script><title>Footprint Comparison Report</title>
+</head>
+<body onload=""><img ALT="Altium" src="
+			file://C:\Users\Public\Documents\Altium\AD18\Templates\AD_logo.png
+		"><a href="dxpprocess://Client:SetupPreferences?Server=PCB|PageName=Reports" class="customize"><acronym title="dxpprocess://Client:SetupPreferences?Server=PCB|PageName=Reports">customize</acronym></a><h1>Footprint Comparison Report</h1>
+<table class="front_matter">
+<tr class="front_matter">
+<td class="front_matter_column1">Date:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">4/18/2019</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">1:07:42 AM</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Elapsed Time:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3">00:00:00</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Filename:</td>
+<td class="front_matter_column2"></td>
+<td class="front_matter_column3"><a href="file:///C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_Shutdown_2019\Safety_2019_v_4.0\SAFETY_2019_v_3_0.PcbDoc" class="file"><acronym title="C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_Shutdown_2019\Safety_2019_v_4.0\SAFETY_2019_v_3_0.PcbDoc">C:\Users\Nick Tuczak\Desktop\IFE\IFE_GITHUB\IFE_2019_Hardware\Boards\Tractive System\IFE_Shutdown_2019\Safety_2019_v_4.0\SAFETY_2019_v_3_0.PcbDoc</acronym></a></td>
+</tr>
+</table><a name="IDBLOHXMNQA10IJATF0GAGUAQDILVZ5ROXASH3BTJPV2AEMD1E2ZLC"><h2>Contents</h2></a><p class="contents_level1"><a href="#IDBLOHXMNQA10IJATF0GAGUAQDILVZ5ROXASH3BTJPV2AEMD1E2ZLC">Contents</a></p>
+<p class="contents_level1"><a href="#ID4PJNAUIISS4JPM0GQRYNQ0DM4BZXZRGTITLOJG2CUNBLYNBDZ4I">Components Status Summary</a></p>
+<p class="contents_level2"><a href="#IDTPYBDHODJCWON0XS24MCLQMNSL5EJPDG3YSKWDPUGAWBO4SUBI4B">Unmatched Components List<br></a></p>
+<p class="contents_level2"><a href="#ID3SQHLJSBSOSQIM0MNAEXCZALEDXQAZANGUPCGFLYGQXM33L0FONC">Matched Components List<br></a></p>
+<p class="contents_level1"><a href="#IDJ3H252SXUTWMG1CLY20CTRCNUONGK0RXGRB5T3JKKGYNZRPWDOGC">Components Details</a></p>
+<p class="contents_level2"><a href="#IDM5EXG51GSW4GLY4GGT10IDUTDEPATZ0KQSOVAPF4GSV1AING10YP">PCB Difference Details<br></a></p><br><a name="ID4PJNAUIISS4JPM0GQRYNQ0DM4BZXZRGTITLOJG2CUNBLYNBDZ4I"><h2>Components Status Summary</h2></a><h2>Unmatched Components List</h2><a name="IDTPYBDHODJCWON0XS24MCLQMNSL5EJPDG3YSKWDPUGAWBO4SUBI4B"><table>
+<tr>
+<th class="column1">Designator</th>
+<th class="column2">Footprint</th>
+<th class="column3">Footprint reference</th>
+<th class="column4">Path to reference Library</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">D4</td>
+<td style="Width:20%" class="column2">DO41-10</td>
+<td style="Width:20%" class="column3">DO41-10</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">D6</td>
+<td style="Width:20%" class="column2">DO41-10</td>
+<td style="Width:20%" class="column3">DO41-10</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">D8</td>
+<td style="Width:20%" class="column2">DO41-10</td>
+<td style="Width:20%" class="column3">DO41-10</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">D20</td>
+<td style="Width:20%" class="column2">SMB</td>
+<td style="Width:20%" class="column3">SMB</td>
+<td style="Width:60%" class="column4">C:\Users\Public\Documents\Altium\AD18\Library\Miscellaneous Devices.IntLib</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">D25</td>
+<td style="Width:20%" class="column2">SMB</td>
+<td style="Width:20%" class="column3">SMB</td>
+<td style="Width:60%" class="column4">C:\Users\Public\Documents\Altium\AD18\Library\Miscellaneous Devices.IntLib</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">TP1</td>
+<td style="Width:20%" class="column2">Testpoint</td>
+<td style="Width:20%" class="column3">Testpoint</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">TP2</td>
+<td style="Width:20%" class="column2">Testpoint</td>
+<td style="Width:20%" class="column3">Testpoint</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">TP3</td>
+<td style="Width:20%" class="column2">Testpoint</td>
+<td style="Width:20%" class="column3">Testpoint</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">TP4</td>
+<td style="Width:20%" class="column2">Testpoint</td>
+<td style="Width:20%" class="column3">Testpoint</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">TP5</td>
+<td style="Width:20%" class="column2">Testpoint</td>
+<td style="Width:20%" class="column3">Testpoint</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">TP9</td>
+<td style="Width:20%" class="column2">Testpoint</td>
+<td style="Width:20%" class="column3">Testpoint</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">TP21</td>
+<td style="Width:20%" class="column2">Testpoint</td>
+<td style="Width:20%" class="column3">Testpoint</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">TP*</td>
+<td style="Width:20%" class="column2">Testpoint</td>
+<td style="Width:20%" class="column3">Testpoint</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">TP_BR</td>
+<td style="Width:20%" class="column2">Testpoint</td>
+<td style="Width:20%" class="column3">Testpoint</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">TP_CURR</td>
+<td style="Width:20%" class="column2">Testpoint</td>
+<td style="Width:20%" class="column3">Testpoint</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">U0</td>
+<td style="Width:20%" class="column2">STM-LQFP48_M</td>
+<td style="Width:20%" class="column3">STM-LQFP48_M</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\STMicroelectronics STM32 F1.IntLib</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">X9</td>
+<td style="Width:20%" class="column2">POS5_254MM_MALE</td>
+<td style="Width:20%" class="column3">POS5_254MM_MALE</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Conn_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">XTC</td>
+<td style="Width:20%" class="column2">POS5_254MM_MALE</td>
+<td style="Width:20%" class="column3">POS5_254MM_MALE</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Conn_Library.PcbLib</td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><h2>Matched Components List</h2><a name="ID3SQHLJSBSOSQIM0MNAEXCZALEDXQAZANGUPCGFLYGQXM33L0FONC"><table>
+<tr>
+<th class="column1">Designator</th>
+<th class="column2">Footprint</th>
+<th class="column3">Footprint reference</th>
+<th class="column4">Footprint to reference Library</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">1</td>
+<td style="Width:20%" class="column2">505575-05</td>
+<td style="Width:20%" class="column3">505575-05</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\MOLEX Micro-Lock.IntLib</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">AIR</td>
+<td style="Width:20%" class="column2">505575-02</td>
+<td style="Width:20%" class="column3">505575-02</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\MOLEX Micro-Lock.IntLib</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">B0</td>
+<td style="Width:20%" class="column2">BUZZER_MAS806Q</td>
+<td style="Width:20%" class="column3">BUZZER_MAS806Q</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">BMS_RELAY</td>
+<td style="Width:20%" class="column2">RELAY-DPDT_EC2</td>
+<td style="Width:20%" class="column3">RELAY-DPDT_EC2</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">C0</td>
+<td style="Width:20%" class="column2">CAP-0603</td>
+<td style="Width:20%" class="column3">CAP-0603</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">C1</td>
+<td style="Width:20%" class="column2">CAP-0603</td>
+<td style="Width:20%" class="column3">CAP-0603</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">C2</td>
+<td style="Width:20%" class="column2">CAP-0603</td>
+<td style="Width:20%" class="column3">CAP-0603</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">C3</td>
+<td style="Width:20%" class="column2">CAP-0603</td>
+<td style="Width:20%" class="column3">CAP-0603</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">C4</td>
+<td style="Width:20%" class="column2">CAP-0603</td>
+<td style="Width:20%" class="column3">CAP-0603</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">C5</td>
+<td style="Width:20%" class="column2">CAP-0603</td>
+<td style="Width:20%" class="column3">CAP-0603</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">C6</td>
+<td style="Width:20%" class="column2">CAP-0603</td>
+<td style="Width:20%" class="column3">CAP-0603</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">C7</td>
+<td style="Width:20%" class="column2">CAP-0603</td>
+<td style="Width:20%" class="column3">CAP-0603</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">C8</td>
+<td style="Width:20%" class="column2">CAP-0603</td>
+<td style="Width:20%" class="column3">CAP-0603</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">C9</td>
+<td style="Width:20%" class="column2">CAP-0603</td>
+<td style="Width:20%" class="column3">CAP-0603</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">C10</td>
+<td style="Width:20%" class="column2">CAP-0603</td>
+<td style="Width:20%" class="column3">CAP-0603</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">C11</td>
+<td style="Width:20%" class="column2">CAP-0603</td>
+<td style="Width:20%" class="column3">CAP-0603</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">C12</td>
+<td style="Width:20%" class="column2">CAP-0603</td>
+<td style="Width:20%" class="column3">CAP-0603</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">C13</td>
+<td style="Width:20%" class="column2">CAP-0603</td>
+<td style="Width:20%" class="column3">CAP-0603</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">C15</td>
+<td style="Width:20%" class="column2">CAP-0603</td>
+<td style="Width:20%" class="column3">CAP-0603</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">C16</td>
+<td style="Width:20%" class="column2">CAP-0603</td>
+<td style="Width:20%" class="column3">CAP-0603</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">C17</td>
+<td style="Width:20%" class="column2">CAP-0603</td>
+<td style="Width:20%" class="column3">CAP-0603</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">C18</td>
+<td style="Width:20%" class="column2">CAP-0603</td>
+<td style="Width:20%" class="column3">CAP-0603</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">C19</td>
+<td style="Width:20%" class="column2">CAP-0603</td>
+<td style="Width:20%" class="column3">CAP-0603</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">C20</td>
+<td style="Width:20%" class="column2">CAP-0603</td>
+<td style="Width:20%" class="column3">CAP-0603</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">C21</td>
+<td style="Width:20%" class="column2">CAP-0603</td>
+<td style="Width:20%" class="column3">CAP-0603</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">C22</td>
+<td style="Width:20%" class="column2">CAP-0603</td>
+<td style="Width:20%" class="column3">CAP-0603</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">C23</td>
+<td style="Width:20%" class="column2">CAP-0603</td>
+<td style="Width:20%" class="column3">CAP-0603</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">C24</td>
+<td style="Width:20%" class="column2">CAP-0603</td>
+<td style="Width:20%" class="column3">CAP-0603</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">C25</td>
+<td style="Width:20%" class="column2">CAP-0603</td>
+<td style="Width:20%" class="column3">CAP-0603</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">C26</td>
+<td style="Width:20%" class="column2">CAP-0603</td>
+<td style="Width:20%" class="column3">CAP-0603</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">C27</td>
+<td style="Width:20%" class="column2">CAP-0603</td>
+<td style="Width:20%" class="column3">CAP-0603</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">C28</td>
+<td style="Width:20%" class="column2">CAP-0603</td>
+<td style="Width:20%" class="column3">CAP-0603</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">C29</td>
+<td style="Width:20%" class="column2">CAP-0603</td>
+<td style="Width:20%" class="column3">CAP-0603</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">C30</td>
+<td style="Width:20%" class="column2">CAP-0603</td>
+<td style="Width:20%" class="column3">CAP-0603</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">C31</td>
+<td style="Width:20%" class="column2">CAP-0603</td>
+<td style="Width:20%" class="column3">CAP-0603</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">C32</td>
+<td style="Width:20%" class="column2">CAP-0603</td>
+<td style="Width:20%" class="column3">CAP-0603</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">C33</td>
+<td style="Width:20%" class="column2">CAP-0603</td>
+<td style="Width:20%" class="column3">CAP-0603</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">C34</td>
+<td style="Width:20%" class="column2">CAP-0603</td>
+<td style="Width:20%" class="column3">CAP-0603</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">C82</td>
+<td style="Width:20%" class="column2">CAP-0603</td>
+<td style="Width:20%" class="column3">CAP-0603</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">C84</td>
+<td style="Width:20%" class="column2">CAP-0603</td>
+<td style="Width:20%" class="column3">CAP-0603</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">C85</td>
+<td style="Width:20%" class="column2">CAP-0603</td>
+<td style="Width:20%" class="column3">CAP-0603</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">C86</td>
+<td style="Width:20%" class="column2">CAP-0603</td>
+<td style="Width:20%" class="column3">CAP-0603</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">C87</td>
+<td style="Width:20%" class="column2">CAP-0603</td>
+<td style="Width:20%" class="column3">CAP-0603</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">C88</td>
+<td style="Width:20%" class="column2">CAP-0603</td>
+<td style="Width:20%" class="column3">CAP-0603</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">C89</td>
+<td style="Width:20%" class="column2">CAP-6.3D7.7H-SMD</td>
+<td style="Width:20%" class="column3">CAP-6.3D7.7H-SMD</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">C90</td>
+<td style="Width:20%" class="column2">CAP-0603</td>
+<td style="Width:20%" class="column3">CAP-0603</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">CAN</td>
+<td style="Width:20%" class="column2">505575-02</td>
+<td style="Width:20%" class="column3">505575-02</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\MOLEX Micro-Lock.IntLib</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">COMP0</td>
+<td style="Width:20%" class="column2">SOIC8</td>
+<td style="Width:20%" class="column3">SOIC8</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">COMP1</td>
+<td style="Width:20%" class="column2">SOIC8</td>
+<td style="Width:20%" class="column3">SOIC8</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">COMP2</td>
+<td style="Width:20%" class="column2">SOIC8</td>
+<td style="Width:20%" class="column3">SOIC8</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">D1</td>
+<td style="Width:20%" class="column2">SOT23</td>
+<td style="Width:20%" class="column3">SOT23</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">D2</td>
+<td style="Width:20%" class="column2">SOD123</td>
+<td style="Width:20%" class="column3">SOD123</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">D3</td>
+<td style="Width:20%" class="column2">LEDBLUE-0603</td>
+<td style="Width:20%" class="column3">LEDBLUE-0603</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">D5</td>
+<td style="Width:20%" class="column2">LEDBLUE-0603</td>
+<td style="Width:20%" class="column3">LEDBLUE-0603</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">D7</td>
+<td style="Width:20%" class="column2">LEDBLUE-0603</td>
+<td style="Width:20%" class="column3">LEDBLUE-0603</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">D9</td>
+<td style="Width:20%" class="column2">LEDRED-0603</td>
+<td style="Width:20%" class="column3">LEDRED-0603</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">D10</td>
+<td style="Width:20%" class="column2">LEDRED-0603</td>
+<td style="Width:20%" class="column3">LEDRED-0603</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">D11</td>
+<td style="Width:20%" class="column2">SOD123</td>
+<td style="Width:20%" class="column3">SOD123</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">D12</td>
+<td style="Width:20%" class="column2">SOD123</td>
+<td style="Width:20%" class="column3">SOD123</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">D13</td>
+<td style="Width:20%" class="column2">SOD123</td>
+<td style="Width:20%" class="column3">SOD123</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">D14</td>
+<td style="Width:20%" class="column2">SOD123</td>
+<td style="Width:20%" class="column3">SOD123</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">D15</td>
+<td style="Width:20%" class="column2">SOD123</td>
+<td style="Width:20%" class="column3">SOD123</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">D16</td>
+<td style="Width:20%" class="column2">SOD123</td>
+<td style="Width:20%" class="column3">SOD123</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">D17</td>
+<td style="Width:20%" class="column2">SOD123</td>
+<td style="Width:20%" class="column3">SOD123</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">D18</td>
+<td style="Width:20%" class="column2">SOD123</td>
+<td style="Width:20%" class="column3">SOD123</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">D19</td>
+<td style="Width:20%" class="column2">SOD123</td>
+<td style="Width:20%" class="column3">SOD123</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">D21</td>
+<td style="Width:20%" class="column2">SOD123</td>
+<td style="Width:20%" class="column3">SOD123</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">D22</td>
+<td style="Width:20%" class="column2">SOD123</td>
+<td style="Width:20%" class="column3">SOD123</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">D23</td>
+<td style="Width:20%" class="column2">SOD123</td>
+<td style="Width:20%" class="column3">SOD123</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">D24</td>
+<td style="Width:20%" class="column2">SOD123</td>
+<td style="Width:20%" class="column3">SOD123</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">D26</td>
+<td style="Width:20%" class="column2">SMB</td>
+<td style="Width:20%" class="column3">SMB</td>
+<td style="Width:60%" class="column4">C:\Users\Public\Documents\Altium\AD18\Library\Miscellaneous Devices.IntLib</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">D27</td>
+<td style="Width:20%" class="column2">SOD123</td>
+<td style="Width:20%" class="column3">SOD123</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">D28</td>
+<td style="Width:20%" class="column2">SOD123</td>
+<td style="Width:20%" class="column3">SOD123</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">D29</td>
+<td style="Width:20%" class="column2">SOD123</td>
+<td style="Width:20%" class="column3">SOD123</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">D30</td>
+<td style="Width:20%" class="column2">SOD123</td>
+<td style="Width:20%" class="column3">SOD123</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">D31</td>
+<td style="Width:20%" class="column2">SOD123</td>
+<td style="Width:20%" class="column3">SOD123</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">D32</td>
+<td style="Width:20%" class="column2">SOD123</td>
+<td style="Width:20%" class="column3">SOD123</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">D33</td>
+<td style="Width:20%" class="column2">SOD123</td>
+<td style="Width:20%" class="column3">SOD123</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">ENABLES</td>
+<td style="Width:20%" class="column2">505575-02</td>
+<td style="Width:20%" class="column3">505575-02</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\MOLEX Micro-Lock.IntLib</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">F0</td>
+<td style="Width:20%" class="column2">MF05A_N</td>
+<td style="Width:20%" class="column3">MF05A_N</td>
+<td style="Width:60%" class="column4">Altium Content Vault</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">F1</td>
+<td style="Width:20%" class="column2">MF05A_N</td>
+<td style="Width:20%" class="column3">MF05A_N</td>
+<td style="Width:60%" class="column4">Altium Content Vault</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">F2</td>
+<td style="Width:20%" class="column2">MF05A_N</td>
+<td style="Width:20%" class="column3">MF05A_N</td>
+<td style="Width:60%" class="column4">Altium Content Vault</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">F3</td>
+<td style="Width:20%" class="column2">MF05A_N</td>
+<td style="Width:20%" class="column3">MF05A_N</td>
+<td style="Width:60%" class="column4">Altium Content Vault</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">F4</td>
+<td style="Width:20%" class="column2">MF05A_N</td>
+<td style="Width:20%" class="column3">MF05A_N</td>
+<td style="Width:60%" class="column4">Altium Content Vault</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">F5</td>
+<td style="Width:20%" class="column2">MF05A_N</td>
+<td style="Width:20%" class="column3">MF05A_N</td>
+<td style="Width:60%" class="column4">Altium Content Vault</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">F6</td>
+<td style="Width:20%" class="column2">MF05A_N</td>
+<td style="Width:20%" class="column3">MF05A_N</td>
+<td style="Width:60%" class="column4">Altium Content Vault</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">F7</td>
+<td style="Width:20%" class="column2">MF05A_N</td>
+<td style="Width:20%" class="column3">MF05A_N</td>
+<td style="Width:60%" class="column4">Altium Content Vault</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">HALL_EFFECTS</td>
+<td style="Width:20%" class="column2">505575-04</td>
+<td style="Width:20%" class="column3">505575-04</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\MOLEX Micro-Lock.IntLib</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">IC0</td>
+<td style="Width:20%" class="column2">SOIC8</td>
+<td style="Width:20%" class="column3">SOIC8</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">IMD_RELAY</td>
+<td style="Width:20%" class="column2">RELAY-DPDT_EC2</td>
+<td style="Width:20%" class="column3">RELAY-DPDT_EC2</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">INUDC1</td>
+<td style="Width:20%" class="column2">IND-6045</td>
+<td style="Width:20%" class="column3">IND-6045</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">N0</td>
+<td style="Width:20%" class="column2">SOT23</td>
+<td style="Width:20%" class="column3">SOT23</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">N1</td>
+<td style="Width:20%" class="column2">SOT23</td>
+<td style="Width:20%" class="column3">SOT23</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">N2</td>
+<td style="Width:20%" class="column2">SOT23</td>
+<td style="Width:20%" class="column3">SOT23</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">N3</td>
+<td style="Width:20%" class="column2">SOT23</td>
+<td style="Width:20%" class="column3">SOT23</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">N4</td>
+<td style="Width:20%" class="column2">SOT23</td>
+<td style="Width:20%" class="column3">SOT23</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">N5</td>
+<td style="Width:20%" class="column2">SOT23</td>
+<td style="Width:20%" class="column3">SOT23</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">N6</td>
+<td style="Width:20%" class="column2">SOT23</td>
+<td style="Width:20%" class="column3">SOT23</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">N7</td>
+<td style="Width:20%" class="column2">SOT23</td>
+<td style="Width:20%" class="column3">SOT23</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">N8</td>
+<td style="Width:20%" class="column2">SOT23</td>
+<td style="Width:20%" class="column3">SOT23</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">N10</td>
+<td style="Width:20%" class="column2">SOT23</td>
+<td style="Width:20%" class="column3">SOT23</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">N11</td>
+<td style="Width:20%" class="column2">SOT23</td>
+<td style="Width:20%" class="column3">SOT23</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">N12</td>
+<td style="Width:20%" class="column2">SOT23</td>
+<td style="Width:20%" class="column3">SOT23</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">N13</td>
+<td style="Width:20%" class="column2">SOT23</td>
+<td style="Width:20%" class="column3">SOT23</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">N15</td>
+<td style="Width:20%" class="column2">SOT23</td>
+<td style="Width:20%" class="column3">SOT23</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">N16</td>
+<td style="Width:20%" class="column2">SOT23</td>
+<td style="Width:20%" class="column3">SOT23</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">N18</td>
+<td style="Width:20%" class="column2">SOT23</td>
+<td style="Width:20%" class="column3">SOT23</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">N19</td>
+<td style="Width:20%" class="column2">SOT23</td>
+<td style="Width:20%" class="column3">SOT23</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">N20</td>
+<td style="Width:20%" class="column2">SOT23</td>
+<td style="Width:20%" class="column3">SOT23</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">N28</td>
+<td style="Width:20%" class="column2">SOT23</td>
+<td style="Width:20%" class="column3">SOT23</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">P0</td>
+<td style="Width:20%" class="column2">SOT23</td>
+<td style="Width:20%" class="column3">SOT23</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">P1</td>
+<td style="Width:20%" class="column2">SOT23</td>
+<td style="Width:20%" class="column3">SOT23</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">P2</td>
+<td style="Width:20%" class="column2">SOT23</td>
+<td style="Width:20%" class="column3">SOT23</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">PIC0</td>
+<td style="Width:20%" class="column2">SOT223</td>
+<td style="Width:20%" class="column3">SOT223</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">PIC1</td>
+<td style="Width:20%" class="column2">SOT223</td>
+<td style="Width:20%" class="column3">SOT223</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">POSITIONS</td>
+<td style="Width:20%" class="column2">505575-02</td>
+<td style="Width:20%" class="column3">505575-02</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\MOLEX Micro-Lock.IntLib</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">PWR</td>
+<td style="Width:20%" class="column2">505575-02</td>
+<td style="Width:20%" class="column3">505575-02</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\MOLEX Micro-Lock.IntLib</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">R0</td>
+<td style="Width:20%" class="column2">RES-0603</td>
+<td style="Width:20%" class="column3">RES-0603</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">R1</td>
+<td style="Width:20%" class="column2">RES-0603</td>
+<td style="Width:20%" class="column3">RES-0603</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">R2</td>
+<td style="Width:20%" class="column2">RES-0603</td>
+<td style="Width:20%" class="column3">RES-0603</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">R3</td>
+<td style="Width:20%" class="column2">RES-0603</td>
+<td style="Width:20%" class="column3">RES-0603</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">R4</td>
+<td style="Width:20%" class="column2">RES-0603</td>
+<td style="Width:20%" class="column3">RES-0603</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">R5</td>
+<td style="Width:20%" class="column2">RES-0603</td>
+<td style="Width:20%" class="column3">RES-0603</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">R6</td>
+<td style="Width:20%" class="column2">RES-0603</td>
+<td style="Width:20%" class="column3">RES-0603</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">R7</td>
+<td style="Width:20%" class="column2">RES-0603</td>
+<td style="Width:20%" class="column3">RES-0603</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">R8</td>
+<td style="Width:20%" class="column2">RES-0603</td>
+<td style="Width:20%" class="column3">RES-0603</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">R9</td>
+<td style="Width:20%" class="column2">RES-0603</td>
+<td style="Width:20%" class="column3">RES-0603</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">R10</td>
+<td style="Width:20%" class="column2">RES-0603</td>
+<td style="Width:20%" class="column3">RES-0603</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">R11</td>
+<td style="Width:20%" class="column2">RES-0603</td>
+<td style="Width:20%" class="column3">RES-0603</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">R12</td>
+<td style="Width:20%" class="column2">RES-0603</td>
+<td style="Width:20%" class="column3">RES-0603</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">R13</td>
+<td style="Width:20%" class="column2">RES-0603</td>
+<td style="Width:20%" class="column3">RES-0603</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">R14</td>
+<td style="Width:20%" class="column2">RES-0603</td>
+<td style="Width:20%" class="column3">RES-0603</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">R15</td>
+<td style="Width:20%" class="column2">RES-0603</td>
+<td style="Width:20%" class="column3">RES-0603</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">R18</td>
+<td style="Width:20%" class="column2">RES-0603</td>
+<td style="Width:20%" class="column3">RES-0603</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">R19</td>
+<td style="Width:20%" class="column2">RES-0603</td>
+<td style="Width:20%" class="column3">RES-0603</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">R20</td>
+<td style="Width:20%" class="column2">RES-0603</td>
+<td style="Width:20%" class="column3">RES-0603</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">R21</td>
+<td style="Width:20%" class="column2">RES-0603</td>
+<td style="Width:20%" class="column3">RES-0603</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">R22</td>
+<td style="Width:20%" class="column2">RES-0603</td>
+<td style="Width:20%" class="column3">RES-0603</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">R23</td>
+<td style="Width:20%" class="column2">RES-0603</td>
+<td style="Width:20%" class="column3">RES-0603</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">R24</td>
+<td style="Width:20%" class="column2">RES-0603</td>
+<td style="Width:20%" class="column3">RES-0603</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">R25</td>
+<td style="Width:20%" class="column2">RES-0603</td>
+<td style="Width:20%" class="column3">RES-0603</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">R26</td>
+<td style="Width:20%" class="column2">RES-0603</td>
+<td style="Width:20%" class="column3">RES-0603</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">R27</td>
+<td style="Width:20%" class="column2">RES-0603</td>
+<td style="Width:20%" class="column3">RES-0603</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">R28</td>
+<td style="Width:20%" class="column2">RES-0603</td>
+<td style="Width:20%" class="column3">RES-0603</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">R29</td>
+<td style="Width:20%" class="column2">RES-0603</td>
+<td style="Width:20%" class="column3">RES-0603</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">R30</td>
+<td style="Width:20%" class="column2">RES-0603</td>
+<td style="Width:20%" class="column3">RES-0603</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">R31</td>
+<td style="Width:20%" class="column2">RES-0603</td>
+<td style="Width:20%" class="column3">RES-0603</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">R32</td>
+<td style="Width:20%" class="column2">RES-0603</td>
+<td style="Width:20%" class="column3">RES-0603</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">R33</td>
+<td style="Width:20%" class="column2">RES-0603</td>
+<td style="Width:20%" class="column3">RES-0603</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">R34</td>
+<td style="Width:20%" class="column2">RES-0603</td>
+<td style="Width:20%" class="column3">RES-0603</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">R35</td>
+<td style="Width:20%" class="column2">RES-0603</td>
+<td style="Width:20%" class="column3">RES-0603</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">R36</td>
+<td style="Width:20%" class="column2">RES-0603</td>
+<td style="Width:20%" class="column3">RES-0603</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">R37</td>
+<td style="Width:20%" class="column2">RES-0603</td>
+<td style="Width:20%" class="column3">RES-0603</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">R38</td>
+<td style="Width:20%" class="column2">RES-0603</td>
+<td style="Width:20%" class="column3">RES-0603</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">R39</td>
+<td style="Width:20%" class="column2">RES-0603</td>
+<td style="Width:20%" class="column3">RES-0603</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">R40</td>
+<td style="Width:20%" class="column2">RES-0603</td>
+<td style="Width:20%" class="column3">RES-0603</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">R41</td>
+<td style="Width:20%" class="column2">RES-0603</td>
+<td style="Width:20%" class="column3">RES-0603</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">R42</td>
+<td style="Width:20%" class="column2">RES-0603</td>
+<td style="Width:20%" class="column3">RES-0603</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">R43</td>
+<td style="Width:20%" class="column2">RES-0603</td>
+<td style="Width:20%" class="column3">RES-0603</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">R44</td>
+<td style="Width:20%" class="column2">RES-0603</td>
+<td style="Width:20%" class="column3">RES-0603</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">R45</td>
+<td style="Width:20%" class="column2">RES-0603</td>
+<td style="Width:20%" class="column3">RES-0603</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">R46</td>
+<td style="Width:20%" class="column2">RES-0603</td>
+<td style="Width:20%" class="column3">RES-0603</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">R47</td>
+<td style="Width:20%" class="column2">RES-0603</td>
+<td style="Width:20%" class="column3">RES-0603</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">R48</td>
+<td style="Width:20%" class="column2">RES-0603</td>
+<td style="Width:20%" class="column3">RES-0603</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">R49</td>
+<td style="Width:20%" class="column2">RES-0603</td>
+<td style="Width:20%" class="column3">RES-0603</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">R50</td>
+<td style="Width:20%" class="column2">RES-0603</td>
+<td style="Width:20%" class="column3">RES-0603</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">R51</td>
+<td style="Width:20%" class="column2">RES-0603</td>
+<td style="Width:20%" class="column3">RES-0603</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">R52</td>
+<td style="Width:20%" class="column2">RES-0603</td>
+<td style="Width:20%" class="column3">RES-0603</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">R53</td>
+<td style="Width:20%" class="column2">RES-0603</td>
+<td style="Width:20%" class="column3">RES-0603</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">R54</td>
+<td style="Width:20%" class="column2">RES-0603</td>
+<td style="Width:20%" class="column3">RES-0603</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">R55</td>
+<td style="Width:20%" class="column2">RES-0603</td>
+<td style="Width:20%" class="column3">RES-0603</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">R56</td>
+<td style="Width:20%" class="column2">RES-0603</td>
+<td style="Width:20%" class="column3">RES-0603</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">R57</td>
+<td style="Width:20%" class="column2">RES-0603</td>
+<td style="Width:20%" class="column3">RES-0603</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">R62</td>
+<td style="Width:20%" class="column2">RES-0603</td>
+<td style="Width:20%" class="column3">RES-0603</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">R63</td>
+<td style="Width:20%" class="column2">RES-0603</td>
+<td style="Width:20%" class="column3">RES-0603</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">R64</td>
+<td style="Width:20%" class="column2">RES-0603</td>
+<td style="Width:20%" class="column3">RES-0603</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">R65</td>
+<td style="Width:20%" class="column2">RES-0603</td>
+<td style="Width:20%" class="column3">RES-0603</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">R66</td>
+<td style="Width:20%" class="column2">RES-0603</td>
+<td style="Width:20%" class="column3">RES-0603</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">R67</td>
+<td style="Width:20%" class="column2">RES-0603</td>
+<td style="Width:20%" class="column3">RES-0603</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">R68</td>
+<td style="Width:20%" class="column2">RES-0603</td>
+<td style="Width:20%" class="column3">RES-0603</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">R69</td>
+<td style="Width:20%" class="column2">RES-0603</td>
+<td style="Width:20%" class="column3">RES-0603</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">R70</td>
+<td style="Width:20%" class="column2">RES-0603</td>
+<td style="Width:20%" class="column3">RES-0603</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">R71</td>
+<td style="Width:20%" class="column2">RES-0603</td>
+<td style="Width:20%" class="column3">RES-0603</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">R72</td>
+<td style="Width:20%" class="column2">RES-0603</td>
+<td style="Width:20%" class="column3">RES-0603</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">R73</td>
+<td style="Width:20%" class="column2">RES-0603</td>
+<td style="Width:20%" class="column3">RES-0603</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">R74</td>
+<td style="Width:20%" class="column2">RES-0603</td>
+<td style="Width:20%" class="column3">RES-0603</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">R75</td>
+<td style="Width:20%" class="column2">RES-0603</td>
+<td style="Width:20%" class="column3">RES-0603</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">R76</td>
+<td style="Width:20%" class="column2">RES-0603</td>
+<td style="Width:20%" class="column3">RES-0603</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">R77</td>
+<td style="Width:20%" class="column2">RES-0603</td>
+<td style="Width:20%" class="column3">RES-0603</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">R78</td>
+<td style="Width:20%" class="column2">RES-0603</td>
+<td style="Width:20%" class="column3">RES-0603</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">R79</td>
+<td style="Width:20%" class="column2">RES-0603</td>
+<td style="Width:20%" class="column3">RES-0603</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">R80</td>
+<td style="Width:20%" class="column2">RES-0603</td>
+<td style="Width:20%" class="column3">RES-0603</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">R81</td>
+<td style="Width:20%" class="column2">RES-0603</td>
+<td style="Width:20%" class="column3">RES-0603</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">R89</td>
+<td style="Width:20%" class="column2">RES-0603</td>
+<td style="Width:20%" class="column3">RES-0603</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">R90</td>
+<td style="Width:20%" class="column2">RES-0603</td>
+<td style="Width:20%" class="column3">RES-0603</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">R91</td>
+<td style="Width:20%" class="column2">RES-0603</td>
+<td style="Width:20%" class="column3">RES-0603</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">R92</td>
+<td style="Width:20%" class="column2">RES-0603</td>
+<td style="Width:20%" class="column3">RES-0603</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">R92</td>
+<td style="Width:20%" class="column2">RES-0603</td>
+<td style="Width:20%" class="column3">RES-0603</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">R93</td>
+<td style="Width:20%" class="column2">RES-0603</td>
+<td style="Width:20%" class="column3">RES-0603</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">R94</td>
+<td style="Width:20%" class="column2">RES-0603</td>
+<td style="Width:20%" class="column3">RES-0603</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">R94</td>
+<td style="Width:20%" class="column2">RES-0603</td>
+<td style="Width:20%" class="column3">RES-0603</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">R95</td>
+<td style="Width:20%" class="column2">RES-0603</td>
+<td style="Width:20%" class="column3">RES-0603</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">R96</td>
+<td style="Width:20%" class="column2">RES-0603</td>
+<td style="Width:20%" class="column3">RES-0603</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">R97</td>
+<td style="Width:20%" class="column2">RES-0603</td>
+<td style="Width:20%" class="column3">RES-0603</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">R98</td>
+<td style="Width:20%" class="column2">RES-0603</td>
+<td style="Width:20%" class="column3">RES-0603</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">R99</td>
+<td style="Width:20%" class="column2">RES-0603</td>
+<td style="Width:20%" class="column3">RES-0603</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">RE2</td>
+<td style="Width:20%" class="column2">RELAY-DPDT_EC2</td>
+<td style="Width:20%" class="column3">RELAY-DPDT_EC2</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">RP0</td>
+<td style="Width:20%" class="column2">RES-0603</td>
+<td style="Width:20%" class="column3">RES-0603</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">RP1</td>
+<td style="Width:20%" class="column2">RES-0603</td>
+<td style="Width:20%" class="column3">RES-0603</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">RP2</td>
+<td style="Width:20%" class="column2">RES-0603</td>
+<td style="Width:20%" class="column3">RES-0603</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">TC0</td>
+<td style="Width:20%" class="column2">SC70-LT6_L</td>
+<td style="Width:20%" class="column3">SC70-LT6_L</td>
+<td style="Width:60%" class="column4">Altium Content Vault</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">THROTTLES</td>
+<td style="Width:20%" class="column2">505575-02</td>
+<td style="Width:20%" class="column3">505575-02</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\MOLEX Micro-Lock.IntLib</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">TR0</td>
+<td style="Width:20%" class="column2">TRIMPOT_PV36W</td>
+<td style="Width:20%" class="column3">TRIMPOT_PV36W</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">TR1</td>
+<td style="Width:20%" class="column2">TRIMPOT_PV36W</td>
+<td style="Width:20%" class="column3">TRIMPOT_PV36W</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">TSAL_POWER</td>
+<td style="Width:20%" class="column2">505575-02</td>
+<td style="Width:20%" class="column3">505575-02</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\MOLEX Micro-Lock.IntLib</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">U1</td>
+<td style="Width:20%" class="column2">SOT95P280X110-5N</td>
+<td style="Width:20%" class="column3">SOT95P280X110-5N</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">U2</td>
+<td style="Width:20%" class="column2">STM-LQFP64_L</td>
+<td style="Width:20%" class="column3">STM-LQFP64_L</td>
+<td style="Width:60%" class="column4">Altium Content Vault</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">U3</td>
+<td style="Width:20%" class="column2">SOIC127P600X175-14N</td>
+<td style="Width:20%" class="column3">SOIC127P600X175-14N</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\ife19_Elec_Library.PcbLib</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">U6</td>
+<td style="Width:20%" class="column2">DBV0005A_L</td>
+<td style="Width:20%" class="column3">DBV0005A_L</td>
+<td style="Width:60%" class="column4">Altium Content Vault</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">X6</td>
+<td style="Width:20%" class="column2">505575-03</td>
+<td style="Width:20%" class="column3">505575-03</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\MOLEX Micro-Lock.IntLib</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">X11</td>
+<td style="Width:20%" class="column2">505575-03</td>
+<td style="Width:20%" class="column3">505575-03</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\MOLEX Micro-Lock.IntLib</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1">X12</td>
+<td style="Width:20%" class="column2">505575-03</td>
+<td style="Width:20%" class="column3">505575-03</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\MOLEX Micro-Lock.IntLib</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1">XANALOG2</td>
+<td style="Width:20%" class="column2">505575-03</td>
+<td style="Width:20%" class="column3">505575-03</td>
+<td style="Width:60%" class="column4">C:\Users\Nick Tuczak\University of Illinois - Urbana\IFE - IFE 2018-19\Electrical\Altium\Libraries\MOLEX Micro-Lock.IntLib</td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br><a name="IDJ3H252SXUTWMG1CLY20CTRCNUONGK0RXGRB5T3JKKGYNZRPWDOGC"><h2>Components Details</h2></a><h2>PCB Difference Details</h2><a name="IDM5EXG51GSW4GLY4GGT10IDUTDEPATZ0KQSOVAPF4GSV1AING10YP"><table>
+<tr>
+<th class="column1">Designator</th>
+<th class="column2">Layers Containing Differences</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="Width:2%" class="column1">D4</td>
+<td class="column2">Top Layer, Bottom Layer, Top Overlay, Top Paste, Bottom Paste, Top Solder, Bottom Solder, Pad Holes</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="Width:2%" class="column1">D6</td>
+<td class="column2">Top Layer, Bottom Layer, Top Overlay, Top Paste, Bottom Paste, Top Solder, Bottom Solder, Pad Holes</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="Width:2%" class="column1">D8</td>
+<td class="column2">Top Layer, Bottom Layer, Top Overlay, Top Paste, Bottom Paste, Top Solder, Bottom Solder, Pad Holes</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="Width:2%" class="column1">D20</td>
+<td class="column2">Top Layer, Mechanical 1, Top Overlay, Top Paste, Top Solder</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="Width:2%" class="column1">D25</td>
+<td class="column2">Top Layer, Mechanical 1, Top Overlay, Top Paste, Top Solder</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="Width:2%" class="column1">TP1</td>
+<td class="column2">Top Layer, Bottom Layer, Top Paste, Top Solder, Bottom Solder, Pad Holes</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="Width:2%" class="column1">TP2</td>
+<td class="column2">Top Layer, Bottom Layer, Top Paste, Top Solder, Bottom Solder, Pad Holes</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="Width:2%" class="column1">TP3</td>
+<td class="column2">Top Layer, Bottom Layer, Top Paste, Top Solder, Bottom Solder, Pad Holes</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="Width:2%" class="column1">TP4</td>
+<td class="column2">Top Layer, Bottom Layer, Top Paste, Top Solder, Bottom Solder, Pad Holes</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="Width:2%" class="column1">TP5</td>
+<td class="column2">Top Layer, Bottom Layer, Top Paste, Top Solder, Bottom Solder, Pad Holes</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="Width:2%" class="column1">TP9</td>
+<td class="column2">Top Layer, Bottom Layer, Top Paste, Top Solder, Bottom Solder, Pad Holes</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="Width:2%" class="column1">TP21</td>
+<td class="column2">Top Layer, Bottom Layer, Top Paste, Top Solder, Bottom Solder, Pad Holes</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="Width:2%" class="column1">TP*</td>
+<td class="column2">Top Layer, Bottom Layer, Top Paste, Top Solder, Bottom Solder, Pad Holes</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="Width:2%" class="column1">TP_BR</td>
+<td class="column2">Top Layer, Bottom Layer, Top Paste, Top Solder, Bottom Solder, Pad Holes</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="Width:2%" class="column1">TP_CURR</td>
+<td class="column2">Top Layer, Bottom Layer, Top Paste, Top Solder, Bottom Solder, Pad Holes</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="Width:2%" class="column1">U0</td>
+<td class="column2">Mechanical 1, Mechanical 13, Mechanical 15</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="Width:2%" class="column1">X9</td>
+<td class="column2">Top Layer, Bottom Layer, Top Overlay, Top Paste, Bottom Paste, Top Solder, Bottom Solder, Pad Holes</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="Width:2%" class="column1">XTC</td>
+<td class="column2">Top Layer, Bottom Layer, Top Overlay, Top Paste, Bottom Paste, Top Solder, Bottom Solder, Pad Holes</td>
+</tr>
+</table></a><hr color="#EEEEEE"><a href="#top" style="font-size: 0.9em">Back to top</a><br><br></body>
+</html>
