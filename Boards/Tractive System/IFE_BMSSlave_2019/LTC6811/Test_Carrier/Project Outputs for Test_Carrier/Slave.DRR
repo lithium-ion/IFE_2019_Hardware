@@ -1,0 +1,19 @@
+----------------------------------------------------------------------------------------------------------------------------------
+NCDrill File Report For: Slave.PcbDoc   4/24/2019  4:23:45 AM
+----------------------------------------------------------------------------------------------------------------------------------
+
+Layer Pair : Top Copper to Bottom Copper
+ASCII RoundHoles File : Slave.TXT
+
+Tool       Hole Size               Hole Tolerance               Hole Type       Hole Count   Plated         Tool Travel
+----------------------------------------------------------------------------------------------------------------------------------
+T1      39mil (1mm)                                               Round             15        PTH        0.00inch (0.00mm)
+T2      236mil (6mm)                                              Round             10        PTH        0.00inch (0.00mm)
+T3      94mil (2.4mm)                                             Round             8         NPTH       0.00inch (0.00mm)
+T4      126mil (3.2mm)                                            Round             16        NPTH       0.00inch (0.00mm)
+T5      136mil (3.45mm)                                           Round             16        NPTH       0.00inch (0.00mm)
+T6      201mil (5.105mm)                                          Round             1         NPTH       0.00inch (0.00mm)
+----------------------------------------------------------------------------------------------------------------------------------
+Totals                                                                              66
+
+Total Processing Time (hh:mm:ss) : 00:00:00
