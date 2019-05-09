@@ -14,14 +14,22 @@ Used DCodes :
 *************************************************************
 
 *************************************************************
-Generating : Bottom Overlay
-      File : Slave.GBO
+Generating : Bottom Copper
+      File : Slave.GBL
 
-    Adding Layer      : Bottom Overlay
+    Adding Layer      : Bottom Copper
+
+    Adding Layer      : Multi-Layer
 
 
 Used DCodes :
-    D25
+    D10
+    D18
+    D19
+    D20
+    D21
+    D22
+    D23
 *************************************************************
 
 *************************************************************
@@ -44,24 +52,6 @@ Used DCodes :
 *************************************************************
 
 *************************************************************
-Generating : Top Mask
-      File : Slave.GTS
-
-    Adding Layer      : Top Mask
-
-    Adding Layer      : Top Copper
-
-    Adding Layer      : Multi-Layer
-
-
-Used DCodes :
-    D14
-    D15
-    D16
-    D17
-*************************************************************
-
-*************************************************************
 Generating : Top Overlay
       File : Slave.GTO
 
@@ -76,22 +66,14 @@ Used DCodes :
 *************************************************************
 
 *************************************************************
-Generating : Bottom Copper
-      File : Slave.GBL
+Generating : Bottom Overlay
+      File : Slave.GBO
 
-    Adding Layer      : Bottom Copper
-
-    Adding Layer      : Multi-Layer
+    Adding Layer      : Bottom Overlay
 
 
 Used DCodes :
-    D10
-    D18
-    D19
-    D20
-    D21
-    D22
-    D23
+    D25
 *************************************************************
 
 *************************************************************
@@ -110,5 +92,23 @@ Used DCodes :
     D20
     D21
     D22
+*************************************************************
+
+*************************************************************
+Generating : Top Mask
+      File : Slave.GTS
+
+    Adding Layer      : Top Mask
+
+    Adding Layer      : Top Copper
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D14
+    D15
+    D16
+    D17
 *************************************************************
 
