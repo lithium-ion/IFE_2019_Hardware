@@ -1,0 +1,8 @@
+DRC Rules Export File for PCB: C:\Users\chait\Documents\WSL\IFE_2019_Hardware\Boards\Tractive System\IFE_BMSMaster_2019\ife18_TS_BMS_Master_STM32\v3\ife18_TS_BMS_Master_STM32.PcbDoc
+RuleKind=Clearance|RuleName=Board Outline|Scope=Board|Minimum=7.87
+RuleKind=MinimumAnnularRing|RuleName=MinimumAnnularRing|Scope=Board|Minimum=3.00
+RuleKind=Clearance|RuleName=Tractive Net Class|Scope=Board|Minimum=31.50
+RuleKind=SolderMaskExpansion|RuleName=SolderMaskExpansion|Scope=Board|Minimum=2.00
+RuleKind=Width|RuleName=Width|Scope=Board|Minimum=6.00
+RuleKind=Clearance|RuleName=Clearance|Scope=Board|Minimum=6.00
+RuleKind=ShortCircuit|RuleName=ShortCircuit|Scope=Board|Allowed=0

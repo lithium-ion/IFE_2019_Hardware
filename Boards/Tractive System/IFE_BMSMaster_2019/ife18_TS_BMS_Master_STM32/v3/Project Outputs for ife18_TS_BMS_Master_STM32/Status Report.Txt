@@ -1,0 +1,12 @@
+Output: NC Drill Files
+Type  : NC Drill
+From  : Project [ife18_TS_BMS_Master_STM32.PrjPcb]
+   Generated File[ife18_TS_BMS_Master_STM32.TXT]
+   Generated File[ife18_TS_BMS_Master_STM32.LDP]
+   Generated File[ife18_TS_BMS_Master_STM32.DRR]
+
+
+Files Generated   : 3
+Documents Printed : 0
+
+Finished Output Generation At 12:44:20 AM On 5/31/2019
